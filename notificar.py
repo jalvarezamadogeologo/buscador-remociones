@@ -11,6 +11,7 @@ import re
 
 import requests
 
+from agrupar import etiqueta_evento, fuentes
 from comun import log
 
 API = "https://api.github.com"
@@ -66,20 +67,22 @@ def urls_notificadas(repo: str, token: str, etiqueta: str) -> set[str]:
 
 
 def _cuerpo(evento: dict) -> str:
-    url = evento.get("url", "")
     lineas = [
+        f"**Evento:** {etiqueta_evento(evento)}",
         f"**Tipo:** {evento.get('tipo_etiqueta') or evento.get('tipo_evento')}",
-        f"**Fecha de publicacion:** {evento.get('fecha_publicacion') or 'sin fecha'}",
+        f"**Fecha:** {evento.get('fecha_publicacion') or 'sin fecha'}",
         f"**Region / comuna:** {evento.get('region') or '-'} / {evento.get('comuna') or '-'}",
-        f"**Fuente:** {evento.get('fuente') or '-'}",
         f"**Detectado:** {evento.get('fecha_deteccion')}",
-        f"**Keywords:** {evento.get('keywords')}",
         "",
-        evento.get("descripcion") or "(sin descripcion)",
-        "",
+        "**Fuentes:**",
     ]
-    if url:
-        lineas.append(f"[Ver noticia]({url})")
+    for fuente in fuentes(evento):
+        medio = fuente.get("medio") or "Fuente"
+        if fuente.get("url"):
+            fecha = (fuente.get("fecha") or "")[:16].replace("T", " ")
+            lineas.append(f"- [{medio}]({fuente['url']}) — {fecha}")
+        else:
+            lineas.append(f"- {medio}")
     lineas += [
         "",
         "---",
@@ -90,8 +93,7 @@ def _cuerpo(evento: dict) -> str:
 
 
 def crear_issue(repo: str, token: str, etiqueta: str, evento: dict) -> int | None:
-    titulo = f"[Remocion] {evento.get('tipo_etiqueta') or 'Evento'}: {evento.get('titulo', '')}"
-    titulo = titulo[:250]
+    titulo = f"[Remocion] {etiqueta_evento(evento)}"[:250]
     payload = {"title": titulo, "body": _cuerpo(evento), "labels": [etiqueta]}
     try:
         resp = requests.post(
@@ -108,7 +110,7 @@ def crear_issue(repo: str, token: str, etiqueta: str, evento: dict) -> int | Non
 def notificar(eventos: list[dict], config: dict, solo_ids: set[str] | None = None) -> int:
     """Crea issues para eventos nuevos pendientes. Devuelve cuantos se crearon.
 
-    `solo_ids` limita la notificacion a los eventos detectados en la corrida
+    `solo_ids` limita la notificacion a los eventos creados en la corrida
     actual; sin el, se notificarian tambien los eventos historicos del catastro.
     """
     repo = _repo(config)
@@ -136,14 +138,14 @@ def notificar(eventos: list[dict], config: dict, solo_ids: set[str] | None = Non
 
     creados = 0
     for evento in pendientes:
-        url = evento.get("url", "")
-        if url and url in ya_notificadas:
-            log(f"  issue ya existente para: {evento.get('titulo', '')[:70]}")
+        urls_evento = [f["url"] for f in fuentes(evento) if f.get("url")]
+        if any(url in ya_notificadas for url in urls_evento):
+            log(f"  issue ya existente para: {etiqueta_evento(evento)}")
             continue
         numero = crear_issue(repo, token, etiqueta, evento)
         if numero:
             evento["issue"] = str(numero)
-            ya_notificadas.add(url)
+            ya_notificadas.update(urls_evento)
             creados += 1
-            log(f"  issue #{numero}: {evento.get('titulo', '')[:70]}")
+            log(f"  issue #{numero}: {etiqueta_evento(evento)}")
     return creados

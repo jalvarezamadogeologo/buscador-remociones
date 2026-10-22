@@ -12,6 +12,7 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
+from agrupar import etiqueta_evento, fuentes
 from comun import DOCS, ahora
 from guardar import CSV, cargar_eventos
 
@@ -82,6 +83,9 @@ PLANTILLA = """<!DOCTYPE html>
   td.titulo a { color:#12507f; }
   .col-mapa { text-align:center; white-space:nowrap; }
   .sin-coords { color:#a6b0ba; }
+  .fuentes-det summary { cursor:pointer; color:#12507f; font-size:12.5px; }
+  .fuentes-det ul { margin:6px 0 0 16px; padding:0; }
+  .fuentes-det li { margin:2px 0; }
   .pie { margin-top:14px; font-size:12px; color:var(--suave); display:flex; gap:18px; flex-wrap:wrap; }
   .vacio { padding:28px; text-align:center; color:var(--suave); }
   @media (max-width:760px){ #mapa{height:340px;} header h1{font-size:19px;} #buscar{min-width:170px;} }
@@ -120,7 +124,7 @@ PLANTILLA = """<!DOCTYPE html>
   <div class="tabla-wrap">
     <table>
       <thead><tr>
-        <th>Fecha</th><th>Tipo</th><th>Titulo</th><th>Region / comuna</th><th>Fuente</th><th>Estado</th><th class="col-mapa">Mapa</th>
+        <th>Fecha</th><th>Tipo</th><th>Evento</th><th>Region / comuna</th><th>Fuentes</th><th>Estado</th><th class="col-mapa">Mapa</th>
       </tr></thead>
       <tbody id="filas"></tbody>
     </table>
@@ -223,7 +227,8 @@ function filtrar(){
     if (selComuna.value && e.comuna !== selComuna.value) return false;
     if (!dentroDeRango(e, ventana)) return false;
     if (q){
-      const txt = norm([e.titulo,e.descripcion,e.region,e.comuna,e.keywords,e.fuente].join(' '));
+      const medios = (e.fuentes || []).map(f=>f.medio).join(' ');
+      const txt = norm([e.evento, e.titulo, e.region, e.comuna, e.tipo_etiqueta, medios].join(' '));
       if (!txt.includes(q)) return false;
     }
     return true;
@@ -239,21 +244,31 @@ function enfocar(id){
   document.getElementById('mapa').scrollIntoView({behavior:'smooth', block:'center'});
 }
 
+function detallesFuentes(lista){
+  if (!lista || !lista.length) return '<span class="sin-coords">-</span>';
+  const items = lista.map(f=>{
+    const medio = esc(f.medio || 'Fuente');
+    return f.url
+      ? `<li><a href="${esc(f.url)}" target="_blank" rel="noopener">${medio}</a></li>`
+      : `<li>${medio}</li>`;
+  }).join('');
+  return `<details class="fuentes-det"><summary>${lista.length} fuente${lista.length===1?'':'s'}</summary><ul>${items}</ul></details>`;
+}
+
 function render(){
   const lista = filtrar();
 
   filas.innerHTML = lista.map(e=>{
     const cls = e.estado==='descartado' ? ' class="descartado"' : '';
-    const enlace = e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.titulo)}</a>` : esc(e.titulo);
     const boton = tieneCoords(e)
       ? `<button class="btn-mapa" type="button" data-id="${esc(e.id)}">Ver</button>`
       : '<span class="sin-coords" title="Sin coordenadas">-</span>';
     return `<tr${cls}>
       <td>${esc(fechaCorta(e.fecha_publicacion||e.fecha_deteccion))}</td>
       <td><span class="tipo" style="background:${colorTipo(e.tipo_evento)}">${esc(etiquetaTipo(e.tipo_evento))}</span></td>
-      <td class="titulo">${enlace}</td>
+      <td class="evento">${esc(e.evento)}</td>
       <td>${esc(e.region||'-')}${e.comuna?' / '+esc(e.comuna):''}</td>
-      <td>${esc(e.fuente||'-')}</td>
+      <td>${detallesFuentes(e.fuentes)}</td>
       <td class="estado-${esc(e.estado||'nuevo')}">${esc(e.estado||'nuevo')}</td>
       <td class="col-mapa">${boton}</td>
     </tr>`;
@@ -266,7 +281,11 @@ function render(){
     const m = L.circleMarker([parseFloat(e.lat), parseFloat(e.lon)],{
       radius:7, color:'#fff', weight:1.5, fillColor:colorTipo(e.tipo_evento), fillOpacity:.9
     });
-    m.bindPopup(`<b>${esc(e.titulo)}</b><br>${esc(etiquetaTipo(e.tipo_evento))} · ${esc(fechaCorta(e.fecha_publicacion||e.fecha_deteccion))}<br>${esc(e.region||'')} ${esc(e.comuna||'')}${e.url?`<br><a href="${esc(e.url)}" target="_blank" rel="noopener">Ver noticia</a>`:''}`);
+    const links = (e.fuentes||[]).map(f=> f.url
+      ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.medio||'Fuente')}</a>`
+      : esc(f.medio||'Fuente')
+    ).join('<br>');
+    m.bindPopup(`<b>${esc(e.evento)}</b><br>${esc(fechaCorta(e.fecha_publicacion||e.fecha_deteccion))}<br>${esc(e.region||'')} ${esc(e.comuna||'')}<br><br>${links}`);
     m.addTo(capa);
     marcadores.set(String(e.id), m);
   });
@@ -374,16 +393,14 @@ def _datos_para_sitio(eventos: list[dict]) -> list[dict]:
                 "fecha_publicacion": e.get("fecha_publicacion", ""),
                 "fecha_deteccion": e.get("fecha_deteccion", ""),
                 "titulo": e.get("titulo", ""),
-                "descripcion": (e.get("descripcion", "") or "")[:400],
-                "url": e.get("url", ""),
-                "fuente": e.get("fuente", ""),
+                "evento": etiqueta_evento(e),
                 "tipo_evento": e.get("tipo_evento", ""),
                 "tipo_etiqueta": e.get("tipo_etiqueta", ""),
                 "region": e.get("region", ""),
                 "comuna": e.get("comuna", ""),
                 "lat": e.get("lat", ""),
                 "lon": e.get("lon", ""),
-                "keywords": e.get("keywords", ""),
+                "fuentes": fuentes(e),
                 "estado": e.get("estado", "nuevo"),
             }
         )

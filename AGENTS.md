@@ -9,8 +9,9 @@ estatico con mapa.
 - `actualizar.py` — orquestador (buscar, clasificar, deduplicar, geocodificar, guardar, sitio, issues).
 - `buscar.py` — fuentes RSS y normalizacion de registros.
 - `clasificar.py` — tipo de evento y filtro geografico Chile.
-- `deduplicar.py` — claves persistentes y duplicados entre medios.
-- `guardar.py` — `data/eventos.csv` (fuente de verdad) y `eventos.json`.
+- `deduplicar.py` — claves persistentes de noticias procesadas.
+- `agrupar.py` — agrupa noticias en eventos (tipo + lugar + fecha) y conserva las 3 primeras fuentes.
+- `guardar.py` — `data/eventos.csv` (eventos agrupados) y `eventos.json`.
 - `geocodificar.py` — Nominatim + cache + overrides manuales.
 - `generar_sitio.py` — `docs/index.html` (tabla + Leaflet).
 - `notificar.py` — GitHub Issues.
@@ -32,6 +33,8 @@ python -m pytest -q
 - `docs/index.html`: buscador con filtros (texto, tipo, region, comuna dependiente de
   la region y periodo en dias) aplicados a tabla y mapa; capas base Calles/Hillshade/
   Satelite; zoom con rueda/doble clic/botones; boton "Ver" por fila que centra el mapa.
+- La tabla muestra un evento por fila ("tipo + lugar") y una lista desplegable de hasta
+  3 fuentes con el medio como texto. El popup del mapa lista las mismas fuentes.
 - Boton "Actualizar": en localhost llama a `POST /actualizar` (servidor.py) y ejecuta
   la busqueda real; en GitHub Pages relee `docs/eventos.json` (ultima version publicada).
 - "Buscar en GitHub" abre la pestana Actions del repo.

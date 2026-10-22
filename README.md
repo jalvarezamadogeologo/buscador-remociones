@@ -2,7 +2,8 @@
 
 Monitoreo automatico de **remociones en masa recientes en Chile** en noticias web.
 Busca en Google News RSS y Bing News (sin API keys), clasifica por tipo de evento,
-deduplica, geocodifica y publica un catastro versionado + una pagina con mapa.
+agrupa las noticias del mismo hecho y conserva hasta 3 fuentes, geocodifica y publica
+un catastro versionado + una pagina con mapa.
 
 ## Interfaz (docs/index.html)
 
@@ -16,6 +17,11 @@ deduplica, geocodifica y publica un catastro versionado + una pagina con mapa.
   en dias como numero entero (0 = todo el historico).
 - **Mapa**: zoom con la rueda del mouse, doble clic y botones +/-; selector de capa
   base entre **Calles** (OpenStreetMap), **Hillshade** (Esri) y **Satelite** (Esri).
+- **Tabla:** cada fila es un **evento**, no una noticia. La columna "Evento" muestra
+  "tipo de remocion + lugar (comuna)"; la columna "Fuentes" despliega hasta 3 enlaces
+  con el **nombre del medio** como texto (las primeras que reportaron el hecho).
+- **Mapa:** al abrir el popup de un punto se listan los enlaces de sus fuentes, con el
+  medio como texto.
 - **Boton "Ver"** en cada fila: centra el mapa en el evento y abre su popup
   (deshabilitado si el evento no tiene coordenadas).
 
@@ -81,7 +87,7 @@ python -m pytest -q
 3. **Settings > Actions > General > Workflow permissions**: marcar *Read and write permissions*
    (el workflow ya declara `contents: write` e `issues: write`).
 4. El workflow `.github/workflows/ejecutar.yml` corre solo:
-   - programado: `0 11 * * *` (07:00 en Chile continental);
+   - programado: `0 */12 * * *` (21:00 y 09:00 en Chile continental);
    - manual: pestana **Actions > Monitoreo de remociones en masa > Run workflow**,
      con `lookback` (horas) y `notificar` (si/no).
 5. Cada corrida busca, actualiza `data/` y `docs/`, y hace commit automatico.
@@ -125,9 +131,11 @@ Notas:
 
 ## Configuracion (`config.yaml`)
 
-- `tipos_evento`: tipos (aluvion, deslizamiento, caida de rocas, alud, socavon) y palabras clave.
-  Las claves se escriben sin tildes; el codigo normaliza el texto.
-- `geografia`: regiones/ciudades chilenas y paises a excluir (evita homonimos).
+- `tipos_evento`: tipos (aluvion, deslizamiento, caida de rocas, alud, socavon, volcamiento,
+  flujo de tierra, avalancha de rocas, desborde/inundacion, lahar, erosion, subsidencia) y
+  palabras clave. Las claves se escriben sin tildes; el codigo normaliza el texto.
+- `geografia`: 16 regiones con sus comunas y paises a excluir (evita homonimos). La comuna
+  detectada asigna automaticamente su region.
 - `fuentes`: Google News, Bing News y feeds RSS directos opcionales.
 - `consulta.max_terminos`: cuantas palabras sueltas se envian en la busqueda
   (la busqueda evita frases: Google deja de respetar `when:Nd`).
@@ -136,16 +144,23 @@ Notas:
 
 ## Modelo de datos (`data/eventos.csv`)
 
+Cada fila es un **evento agrupado** (tipo + lugar + fecha), con hasta 3 fuentes.
+
 | Campo | Descripcion |
 | --- | --- |
-| `id` | hash estable del titulo + dominio |
-| `fecha_publicacion` | fecha de la noticia (America/Santiago) |
-| `fecha_deteccion` | cuando la detecto el sistema |
-| `titulo`, `descripcion`, `url`, `fuente`, `origen` | datos de la noticia |
-| `tipo_evento`, `tipo_etiqueta`, `keywords` | clasificacion |
+| `id` | clave del evento (hash de la primera noticia) |
+| `fecha_publicacion` | fecha de la fuente mas temprana |
+| `fecha_deteccion` | cuando lo detecto el sistema |
+| `titulo` | titulo de la primera noticia (uso interno/busqueda) |
+| `tipo_evento`, `tipo_etiqueta` | clasificacion |
 | `region`, `comuna`, `lat`, `lon` | geografia y coordenadas |
+| `fuente_1..3`, `url_1..3`, `fecha_1..3` | hasta 3 fuentes, ordenadas por fecha ascendente |
 | `estado` | `nuevo` / `confirmado` / `descartado` (lo edita el operador) |
 | `issue` | numero de GitHub Issue asociado |
+
+La agrupacion compara tipo, region/comuna y fecha (ventana de 2 dias). Si no hay
+lugar, exige similitud de titulo. Se conservan las **3 primeras fuentes** por fecha
+de publicacion, para quedarse con los reportes originales y no con derivados tardios.
 
 Los eventos `descartado` no se geocodifican ni se notifican, y no aparecen como
 marcadores en el mapa.
@@ -156,8 +171,9 @@ marcadores en el mapa.
   alternativo, pero esas fuentes son fragiles.
 - **Falsos positivos:** notas de prevencion o de contexto pueden entrar; el operador los
   marca como `descartado` en el CSV.
-- **Duplicados:** la deduplicacion por similitud reduce, no elimina, las notas repetidas
-  del mismo evento entre medios.
+- **Agrupacion:** las noticias del mismo hecho se agrupan por tipo + lugar + fecha; si dos
+  hechos distintos ocurren en la misma comuna el mismo dia, pueden quedar en un solo evento.
+  Se conservan solo 3 fuentes por evento.
 - **Geocodificacion:** es aproximada (comuna o region). Para precision, agregar el paraje
   en `data/georref.json`.
 - **Texto completo:** se trabaja con titulo y resumen del feed; no se descarga la nota.

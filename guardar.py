@@ -1,4 +1,7 @@
-"""Persistencia del catastro: data/eventos.csv (fuente de verdad) y eventos.json."""
+"""Persistencia del catastro: data/eventos.csv (fuente de verdad) y eventos.json.
+
+Cada fila es un evento agrupado con hasta 3 fuentes (fuente_1..fuente_3).
+"""
 
 from __future__ import annotations
 
@@ -7,30 +10,11 @@ import os
 import tempfile
 from pathlib import Path
 
+from agrupar import COLUMNAS
 from comun import DATA, escribir_json, leer_json
 
 CSV = DATA / "eventos.csv"
 JSON = DATA / "eventos.json"
-
-COLUMNAS = [
-    "id",
-    "fecha_publicacion",
-    "fecha_deteccion",
-    "titulo",
-    "descripcion",
-    "url",
-    "fuente",
-    "origen",
-    "tipo_evento",
-    "tipo_etiqueta",
-    "region",
-    "comuna",
-    "lat",
-    "lon",
-    "keywords",
-    "estado",
-    "issue",
-]
 
 ESTADOS = {"nuevo", "confirmado", "descartado"}
 
@@ -45,7 +29,8 @@ def cargar_eventos(ruta: Path = CSV) -> list[dict]:
 
 
 def _ordenar(eventos: list[dict]) -> list[dict]:
-    """Ordena por fecha de publicacion/deteccion descendente."""
+    """Ordena por fecha de publicacion descendente."""
+
     def clave(e: dict) -> str:
         return e.get("fecha_publicacion") or e.get("fecha_deteccion") or ""
 
@@ -60,7 +45,6 @@ def guardar_eventos(eventos: list[dict], csv_ruta: Path = CSV, json_ruta: Path =
             e["estado"] = "nuevo"
         for col in COLUMNAS:
             e.setdefault(col, "")
-        # Normaliza campos numericos vacios
         for col in ("lat", "lon"):
             if e.get(col) in ("None", None):
                 e[col] = ""
@@ -79,21 +63,7 @@ def guardar_eventos(eventos: list[dict], csv_ruta: Path = CSV, json_ruta: Path =
             os.unlink(tmp)
         raise
 
-    escribir_json(
-        json_ruta,
-        {"total": len(eventos), "eventos": eventos},
-    )
-
-
-def fusionar(existentes: list[dict], nuevos: list[dict]) -> list[dict]:
-    """Agrega los nuevos al inicio y deduplica por id (gana el existente)."""
-    ids = {e.get("id") for e in existentes}
-    resultado = list(existentes)
-    for e in nuevos:
-        if e.get("id") not in ids:
-            resultado.append(e)
-            ids.add(e.get("id"))
-    return _ordenar(resultado)
+    escribir_json(json_ruta, {"total": len(eventos), "eventos": eventos})
 
 
 def leer_json_eventos(ruta: Path = JSON) -> list[dict]:

@@ -1,4 +1,4 @@
-"""Orquestador del catastro: busca, clasifica, deduplica, geocodifica, guarda,
+"""Orquestador del catastro: busca, clasifica, agrupa, geocodifica, guarda,
 genera el sitio y notifica.
 
 Uso:
@@ -15,13 +15,14 @@ import argparse
 import time
 from typing import Sequence
 
+from agrupar import agregar_fuente, buscar_evento, crear_evento
 from buscar import buscar
 from clasificar import clasificar
 from comun import a_iso, ahora, cargar_config, log
-from deduplicar import clave_registro, cargar_vistos, es_duplicado, guardar_vistos
+from deduplicar import clave_registro, cargar_vistos, guardar_vistos
 from generar_sitio import generar_sitio
 from geocodificar import geocodificar_eventos
-from guardar import cargar_eventos, fusionar, guardar_eventos
+from guardar import cargar_eventos, guardar_eventos
 from notificar import notificar
 
 
@@ -58,93 +59,63 @@ def main(argv: Sequence[str] | None = None) -> int:
     clasificados = [c for r in registros if (c := clasificar(r, config))]
     log(f"clasificados como remocion en Chile: {len(clasificados)}")
 
-    # 2) Deduplicacion persistente + duplicados entre medios
+    # 2) Agrupacion en eventos (tipo + lugar + fecha) con hasta 3 fuentes
     vistos = cargar_vistos()
-    existentes = cargar_eventos()
-    dedup_cfg = config.get("deduplicacion") or {}
-    umbral = float(dedup_cfg.get("umbral", 0.62))
-    umbral_evento = float(dedup_cfg.get("umbral_mismo_evento", 0.20))
-    umbral_sin_lugar = float(dedup_cfg.get("umbral_sin_lugar", 0.35))
-    dias = int(dedup_cfg.get("dias", 4))
+    eventos = cargar_eventos()
     deteccion = a_iso(ahora())
-    nuevos: list[dict] = []
     claves_nuevas: dict[str, dict] = {}
-    duplicados = 0
+    ids_nuevos: set[str] = set()
+    eventos_nuevos = 0
+    fuentes_nuevas = 0
     for reg in clasificados:
         clave = clave_registro(reg)
         if clave in vistos or clave in claves_nuevas:
-            continue
-        reg["fecha_publicacion"] = a_iso(reg.get("publicado"))
-        if es_duplicado(
-            reg,
-            existentes + nuevos,
-            umbral=umbral,
-            dias=dias,
-            umbral_evento=umbral_evento,
-            umbral_sin_lugar=umbral_sin_lugar,
-        ):
-            duplicados += 1
-            claves_nuevas[clave] = {
-                "titulo": reg.get("titulo", ""),
-                "url": reg.get("url", ""),
-                "fecha": deteccion,
-                "duplicado": True,
-            }
             continue
         claves_nuevas[clave] = {
             "titulo": reg.get("titulo", ""),
             "url": reg.get("url", ""),
             "fecha": deteccion,
         }
-        evento = dict(reg)
-        evento.pop("publicado", None)
-        evento.update(
-            {
-                "id": clave,
-                "fecha_deteccion": deteccion,
-                "lat": "",
-                "lon": "",
-                "estado": "nuevo",
-                "issue": "",
-            }
-        )
-        nuevos.append(evento)
-    log(f"eventos nuevos (no vistos): {len(nuevos)} | duplicados entre medios: {duplicados}")
+        evento = buscar_evento(eventos, reg)
+        if evento is None:
+            evento = crear_evento(reg, deteccion, clave)
+            eventos.append(evento)
+            ids_nuevos.add(evento["id"])
+            eventos_nuevos += 1
+            fuentes_nuevas += 1
+        elif agregar_fuente(evento, reg):
+            fuentes_nuevas += 1
+    log(f"eventos nuevos: {eventos_nuevos} | fuentes agregadas: {fuentes_nuevas}")
 
-    # 3) Fusion con el catastro existente
-    eventos = fusionar(existentes, nuevos)
-
-    # 4) Geocodificacion (incluye pendientes de corridas anteriores)
+    # 3) Geocodificacion (incluye pendientes de corridas anteriores)
     geocodificados = 0
     if not args.sin_geocodificar:
         geocodificados = geocodificar_eventos(eventos, config, args.max_geocodificaciones)
         log(f"geocodificados en esta corrida: {geocodificados}")
 
-    # 5) Persistencia (vistos solo si hay claves nuevas, para no generar diffs
-    # en corridas sin novedades)
+    # 4) Persistencia (vistos solo si hay claves nuevas)
     guardar_eventos(eventos)
     if claves_nuevas:
         vistos.update(claves_nuevas)
         guardar_vistos(vistos, actualizado=deteccion)
 
-    # 6) Sitio estatico
+    # 5) Sitio estatico
     if not args.sin_sitio:
         destino = generar_sitio(eventos, config)
         log(f"sitio generado: {destino}")
 
-    # 7) Notificacion por issues
+    # 6) Notificacion por issues (solo eventos creados en esta corrida)
     creados = 0
     if not args.sin_notificar:
-        # Solo se notifican los eventos detectados en esta corrida; el catastro
-        # historico no genera issues retroactivos.
-        creados = notificar(eventos, config, solo_ids={e["id"] for e in nuevos})
+        creados = notificar(eventos, config, solo_ids=ids_nuevos)
         if creados:
             guardar_eventos(eventos)
 
     transcurrido = time.time() - inicio
     log(
-        f"fin | nuevos {len(nuevos)} | duplicados {duplicados} | geocodificados {geocodificados} | "
-        f"issues {creados} | total catastro {len(eventos)} | {transcurrido:.1f} s"
+        f"fin | eventos nuevos {eventos_nuevos} | fuentes {fuentes_nuevas} | "
+        f"geocodificados {geocodificados} | issues {creados} | "
+        f"total eventos {len(eventos)} | {transcurrido:.1f} s"
     )
     return 0
 
