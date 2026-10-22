@@ -1,4 +1,4 @@
-"""Agrupacion de noticias en eventos y seleccion de las primeras fuentes.
+﻿"""Agrupacion de noticias en eventos y seleccion de las primeras fuentes.
 
 Un evento es un hecho (tipo + lugar + fecha). De todas las noticias que lo
 reportan se conservan como maximo 3 fuentes, ordenadas por fecha de publicacion
@@ -13,7 +13,7 @@ from comun import a_iso
 from deduplicar import jaccard, palabras_clave
 
 MAX_FUENTES = 3
-DIAS_MISMO_EVENTO = 2
+DIAS_MISMO_EVENTO = 5
 UMBRAL_TITULO_SIN_LUGAR = 0.50
 
 COLUMNAS = [
@@ -157,3 +157,4 @@ def crear_evento(noticia: dict, deteccion: str, clave: str) -> dict:
     )
     agregar_fuente(evento, noticia)
     return evento
+

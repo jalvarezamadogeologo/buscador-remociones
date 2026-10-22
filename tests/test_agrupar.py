@@ -88,3 +88,12 @@ def test_una_fuente_por_medio():
     otra = _noticia("B", "https://a2.cl", "2026-10-22T11:00:00-03:00", "BioBioChile")
     assert agregar_fuente(evento, otra) is False
     assert len(fuentes(evento)) == 1
+
+def test_agrupa_mismo_evento_hasta_cuatro_dias():
+    evento = crear_evento(
+        _noticia("A", "https://a.cl", "2026-10-17T15:45:00-03:00", "Medio A", comuna="Portillo"),
+        "2026-10-17T16:00:00-03:00",
+        "id1",
+    )
+    otra = _noticia("B", "https://b.cl", "2026-10-21T15:24:00-03:00", "Medio B", comuna="Portillo")
+    assert buscar_evento([evento], otra) is evento
