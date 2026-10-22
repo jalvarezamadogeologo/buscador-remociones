@@ -87,7 +87,7 @@ python -m pytest -q
 3. **Settings > Actions > General > Workflow permissions**: marcar *Read and write permissions*
    (el workflow ya declara `contents: write` e `issues: write`).
 4. El workflow `.github/workflows/ejecutar.yml` corre solo:
-   - programado: `0 */12 * * *` (21:00 y 09:00 en Chile continental);
+   - programado: `0 */6 * * *` (21:00, 03:00, 09:00 y 15:00 en Chile continental);
    - manual: pestana **Actions > Monitoreo de remociones en masa > Run workflow**,
      con `lookback` (horas) y `notificar` (si/no).
 5. Cada corrida busca, actualiza `data/` y `docs/`, y hace commit automatico.
@@ -95,14 +95,15 @@ python -m pytest -q
 ### Monitoreo automatico
 
 Si. Una vez que el workflow esta en el repositorio, GitHub Actions lo ejecuta solo
-segun el `cron` configurado (por defecto **cada 12 horas**: 00:00 y 12:00 UTC, o sea
-21:00 y 09:00 en Chile continental), y ademas se puede disparar a mano cuando el
-operador lo requiera. La frecuencia la define el operador editando el YAML.
+segun el `cron` configurado (por defecto **cada 6 horas**: 00:00, 06:00, 12:00 y
+18:00 UTC, o sea 21:00, 03:00, 09:00 y 15:00 en Chile continental), y ademas se
+puede disparar a mano cuando el operador lo requiera. La frecuencia la define el
+operador editando el YAML.
 
 Limite de GitHub: el intervalo minimo de un workflow programado es **5 minutos**, pero
 GitHub no garantiza puntualidad (puede retrasar u omitir ejecuciones en horas de carga).
-A frecuencias altas tambien se castigan las fuentes con demasiadas consultas. Por eso el
-valor por defecto es 12 horas; si se necesita mas frescura, usar 6 h, 1 h o 15 min.
+A frecuencias altas tambien se castigan las fuentes con demasiadas consultas. El valor
+por defecto es 6 horas; si se necesita mas frescura, usar 1 h o 15 min.
 
 Nota: subir `.github/workflows/` requiere que el token de `gh` tenga el scope `workflow`.
 Si el push falla con "refusing to allow an OAuth App to create or update workflow",
@@ -119,7 +120,8 @@ Editar el `cron` del workflow:
 | cada 30 min | `*/30 * * * *` |
 | cada 1 h | `0 * * * *` |
 | cada 6 h | `0 */6 * * *` |
-| cada 12 h (por defecto) | `0 */12 * * *` |
+| cada 6 h (por defecto) | `0 */6 * * *` |
+| cada 12 h | `0 */12 * * *` |
 | 1 vez al dia | `0 11 * * *` |
 
 Notas:

@@ -1,13 +1,14 @@
 name: Monitoreo de remociones en masa
 
 on:
-  # Cada 12 horas: 00:00 y 12:00 UTC (21:00 y 09:00 en Chile continental).
+  # Cada 6 horas: 00:00, 06:00, 12:00 y 18:00 UTC
+  # (21:00, 03:00, 09:00 y 15:00 en Chile continental).
   # El minimo que acepta GitHub Actions es 5 minutos, pero no garantiza
   # puntualidad a esa frecuencia y castiga las fuentes con demasiadas consultas.
-  # Alternativas: cada 6 h "0 */6 * * *", cada hora "0 * * * *",
+  # Alternativas: cada 12 h "0 */12 * * *", cada hora "0 * * * *",
   # cada 15 min "*/15 * * * *".
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */6 * * *"
 
   # Ejecucion manual desde la pestana Actions ("Run workflow").
   workflow_dispatch:
