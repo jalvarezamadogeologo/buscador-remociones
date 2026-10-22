@@ -7,6 +7,12 @@ idioma: es
 pais: CL
 zona_horaria: America/Santiago
 
+# Repositorio publico (para el enlace "Buscar en GitHub" del sitio)
+repo: jalvarezamadogeologo/catastro-remociones
+
+# Servidor local (boton "Actualizar" en modo local)
+puerto_local: 8770
+
 # Ventana por defecto (horas hacia atras) cuando no se pasa --lookback
 lookback_horas: 24
 

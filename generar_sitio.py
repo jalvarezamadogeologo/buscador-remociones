@@ -1,7 +1,8 @@
-"""Genera docs/index.html (tabla + mapa Leaflet) a partir de data/eventos.csv.
+"""Genera docs/index.html (buscador con tabla + mapa Leaflet) y docs/eventos.json.
 
-El HTML es autocontenido en datos: los eventos se incrustan como JSON para que
-funcione tanto en GitHub Pages como abierto localmente con file://.
+El HTML es autocontenido en datos (funciona abierto con file://) y ademas deja
+`eventos.json` junto al HTML para que el boton "Actualizar" refresque los datos
+desde GitHub Pages o desde el servidor local.
 """
 
 from __future__ import annotations
@@ -26,16 +27,26 @@ PLANTILLA = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Catastro de remociones en masa - Chile</title>
+<title>Buscador de remociones en masa - Chile</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
-  :root { --borde:#d9dee5; --texto:#1f2933; --suave:#5b6773; --fondo:#f5f7fa; --acento:#17456b; }
+  :root { --borde:#d9dee5; --texto:#1f2933; --suave:#5b6773; --fondo:#f5f7fa; --acento:#17456b; --acento2:#25638f; }
   * { box-sizing: border-box; }
-  body { margin:0; font-family: "Segoe UI", Roboto, Arial, sans-serif; color:var(--texto); background:var(--fondo); }
-  header { background:var(--acento); color:#fff; padding:18px 22px; }
+  body { margin:0; font-family:"Segoe UI",Roboto,Arial,sans-serif; color:var(--texto); background:var(--fondo); }
+  header { background:var(--acento); color:#fff; padding:16px 22px; }
+  .head-inner { max-width:1500px; margin:0 auto; display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
   header h1 { margin:0 0 4px; font-size:22px; letter-spacing:.2px; }
   header p { margin:0; font-size:13px; opacity:.9; }
-  main { padding:16px 22px 40px; max-width:1500px; margin:0 auto; }
+  .acciones { display:flex; gap:8px; align-items:center; }
+  .btn-primario, .btn-secundario, .btn-mapa { font:inherit; cursor:pointer; border-radius:6px; padding:8px 14px; font-size:14px; }
+  .btn-primario { background:#fff; color:var(--acento); border:1px solid #fff; font-weight:600; }
+  .btn-primario:disabled { opacity:.65; cursor:wait; }
+  .btn-secundario { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.55); text-decoration:none; }
+  .btn-mapa { background:#eef4fa; color:var(--acento); border:1px solid #c8d8e8; padding:4px 10px; font-size:12.5px; }
+  .btn-mapa:hover { background:#dcebf8; }
+  main { padding:0 22px 40px; max-width:1500px; margin:0 auto; }
+  .estado { display:none; margin:12px 0 0; padding:9px 12px; border-radius:6px; background:#e8f1f8; color:#17456b; font-size:13.5px; border:1px solid #c8ddef; }
+  .estado.visible { display:block; }
   .resumen { display:flex; gap:12px; flex-wrap:wrap; margin:16px 0; }
   .tarjeta { background:#fff; border:1px solid var(--borde); border-radius:8px; padding:12px 16px; min-width:150px; }
   .tarjeta b { display:block; font-size:24px; color:var(--acento); }
@@ -44,8 +55,9 @@ PLANTILLA = """<!DOCTYPE html>
   .campo { display:flex; flex-direction:column; gap:4px; }
   .campo label { font-size:11px; text-transform:uppercase; letter-spacing:.4px; color:var(--suave); }
   input, select { font:inherit; font-size:14px; padding:7px 9px; border:1px solid var(--borde); border-radius:6px; background:#fff; color:var(--texto); }
-  #buscar { min-width:260px; }
-  #mapa { height:420px; margin:16px 0; border:1px solid var(--borde); border-radius:8px; }
+  #buscar { min-width:250px; }
+  .btn-limpiar { background:#fff; color:var(--suave); border:1px solid var(--borde); cursor:pointer; font:inherit; font-size:13.5px; padding:8px 12px; border-radius:6px; }
+  #mapa { height:460px; margin:16px 0; border:1px solid var(--borde); border-radius:8px; }
   .tabla-wrap { background:#fff; border:1px solid var(--borde); border-radius:8px; overflow:auto; }
   table { border-collapse:collapse; width:100%; font-size:13.5px; }
   th, td { padding:9px 10px; border-bottom:1px solid var(--borde); text-align:left; vertical-align:top; }
@@ -58,25 +70,38 @@ PLANTILLA = """<!DOCTYPE html>
   .estado-descartado { color:#8a94a0; text-decoration:line-through; }
   tr.descartado td { opacity:.55; }
   td.titulo a { color:#12507f; }
+  .col-mapa { text-align:center; white-space:nowrap; }
+  .sin-coords { color:#a6b0ba; }
   .pie { margin-top:14px; font-size:12px; color:var(--suave); display:flex; gap:18px; flex-wrap:wrap; }
   .vacio { padding:28px; text-align:center; color:var(--suave); }
-  @media (max-width:700px){ #mapa{height:320px;} header h1{font-size:19px;} }
+  @media (max-width:760px){ #mapa{height:340px;} header h1{font-size:19px;} #buscar{min-width:170px;} }
 </style>
 </head>
 <body>
 <header>
-  <h1>Catastro de remociones en masa - Chile</h1>
-  <p>Deteccion automatica en noticias web. Actualizado: <span id="actualizado">__ACTUALIZADO__</span></p>
+  <div class="head-inner">
+    <div>
+      <h1>Buscador de remociones en masa - Chile</h1>
+      <p>Deteccion automatica en noticias web. Actualizado: <span id="actualizado">__ACTUALIZADO__</span></p>
+    </div>
+    <div class="acciones">
+      <button id="btn-actualizar" class="btn-primario" type="button">Actualizar</button>
+      <a id="btn-github" class="btn-secundario" href="__URL_ACCIONES__" target="_blank" rel="noopener">Buscar en GitHub</a>
+    </div>
+  </div>
 </header>
 <main>
+  <div id="estado" class="estado"></div>
   <div class="resumen" id="resumen"></div>
 
   <div class="barra">
     <div class="campo"><label for="buscar">Buscar</label>
-      <input id="buscar" type="search" placeholder="Titulo, region, keyword..."></div>
+      <input id="buscar" type="search" placeholder="Titulo, lugar, keyword..."></div>
     <div class="campo"><label for="tipo">Tipo</label><select id="tipo"></select></div>
-    <div class="campo"><label for="estado">Estado</label><select id="estado"></select></div>
+    <div class="campo"><label for="estado-f">Estado</label><select id="estado-f"></select></div>
     <div class="campo"><label for="region">Region</label><select id="region"></select></div>
+    <div class="campo"><label for="comuna">Comuna / localidad</label><select id="comuna"></select></div>
+    <div class="campo"><label for="fuente">Fuente</label><select id="fuente"></select></div>
     <div class="campo"><label for="rango">Periodo</label>
       <select id="rango">
         <option value="7">Ultimos 7 dias</option>
@@ -85,6 +110,7 @@ PLANTILLA = """<!DOCTYPE html>
         <option value="365">Ultimo anio</option>
         <option value="0">Todo</option>
       </select></div>
+    <button id="btn-limpiar" class="btn-limpiar" type="button">Limpiar filtros</button>
   </div>
 
   <div id="mapa"></div>
@@ -92,7 +118,7 @@ PLANTILLA = """<!DOCTYPE html>
   <div class="tabla-wrap">
     <table>
       <thead><tr>
-        <th>Fecha</th><th>Tipo</th><th>Titulo</th><th>Region / comuna</th><th>Fuente</th><th>Estado</th>
+        <th>Fecha</th><th>Tipo</th><th>Titulo</th><th>Region / comuna</th><th>Fuente</th><th>Estado</th><th class="col-mapa">Mapa</th>
       </tr></thead>
       <tbody id="filas"></tbody>
     </table>
@@ -100,120 +126,200 @@ PLANTILLA = """<!DOCTYPE html>
   </div>
 
   <div class="pie">
+    <span id="contador">0 de 0 eventos</span>
     <span>Datos: <a href="eventos.csv">eventos.csv</a></span>
     <span>Fuentes: Google News RSS, Bing News RSS</span>
-    <span>Los eventos son detecciones automaticas y requieren verificacion.</span>
+    <span>Las detecciones automaticas requieren verificacion.</span>
   </div>
 </main>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const EVENTOS = __DATOS__;
+let EVENTOS = __DATOS__;
+let ACTUALIZADO = "__ACTUALIZADO__";
 const COLORES = __COLORES__;
 const ETIQUETAS = __ETIQUETAS__;
+const ES_LOCAL = ["127.0.0.1", "localhost"].includes(location.hostname);
 
 function esc(s){ const d=document.createElement('div'); d.textContent=s==null?'':String(s); return d.innerHTML; }
+function norm(s){ return (s||'').toString().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase(); }
 function fechaCorta(iso){ return iso ? iso.slice(0,16).replace('T',' ') : '-'; }
-function claveTipo(t){ return t || 'otro'; }
+function fechaMs(e){ const s=e.fecha_publicacion||e.fecha_deteccion||''; const t=Date.parse(s); return isNaN(t)?null:t; }
+function dentroDeRango(e,dias){ if(!dias) return true; const t=fechaMs(e); return t===null || t >= Date.now()-dias*86400000; }
 function colorTipo(t){ return COLORES[t] || '#7f7f7f'; }
 function etiquetaTipo(t){ return ETIQUETAS[t] || (t || 'Otro'); }
+function tieneCoords(e){ return e.lat !== '' && e.lon !== '' && e.lat != null && e.lon != null; }
 
-// ---- mapa ----
-const mapa = L.map('mapa',{scrollWheelZoom:false}).setView([-35.5,-71.0],5);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-  maxZoom:18, attribution:'&copy; OpenStreetMap'
-}).addTo(mapa);
+// ---- mapa (zoom con rueda, doble clic y botones) ----
+const mapa = L.map('mapa', {scrollWheelZoom:true, zoomControl:true, doubleClickZoom:true, touchZoom:true}).setView([-35.5,-71.0],5);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18, attribution:'&copy; OpenStreetMap'}).addTo(mapa);
 const capa = L.layerGroup().addTo(mapa);
+const marcadores = new Map();
 
-// ---- filtros ----
-const selTipo=document.getElementById('tipo');
-const selEstado=document.getElementById('estado');
-const selRegion=document.getElementById('region');
-const selRango=document.getElementById('rango');
-const inputBuscar=document.getElementById('buscar');
+const buscar = document.getElementById('buscar');
+const selTipo = document.getElementById('tipo');
+const selEstado = document.getElementById('estado-f');
+const selRegion = document.getElementById('region');
+const selComuna = document.getElementById('comuna');
+const selFuente = document.getElementById('fuente');
+const selRango = document.getElementById('rango');
+const filas = document.getElementById('filas');
+const btnActualizar = document.getElementById('btn-actualizar');
+const cajaEstado = document.getElementById('estado');
 
 function opciones(sel, valores, etiquetaTodos){
-  sel.innerHTML='<option value="">'+etiquetaTodos+'</option>'+valores.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');
+  const prev = sel.value;
+  sel.innerHTML = '<option value="">'+etiquetaTodos+'</option>' +
+    valores.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');
+  sel.value = valores.includes(prev) ? prev : '';
 }
-const tipos=[...new Set(EVENTOS.map(e=>e.tipo_evento).filter(Boolean))].sort();
-const estados=[...new Set(EVENTOS.map(e=>e.estado).filter(Boolean))].sort();
-const regiones=[...new Set(EVENTOS.map(e=>e.region).filter(Boolean))].sort();
-opciones(selTipo,tipos,'Todos');
-opciones(selEstado,estados,'Todos');
-opciones(selRegion,regiones,'Todas');
 
-function fechaDe(e){
-  const s=e.fecha_publicacion||e.fecha_deteccion||'';
-  const t=Date.parse(s);
-  return isNaN(t)?null:t;
+function unicos(campo, filtro){
+  const base = filtro ? EVENTOS.filter(filtro) : EVENTOS;
+  return [...new Set(base.map(e=>e[campo]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
 }
-function dentroDeRango(e,dias){
-  if(!dias) return true;
-  const t=fechaDe(e); if(t===null) return true;
-  return t >= Date.now() - dias*86400000;
+
+function poblarFiltros(){
+  opciones(selTipo, unicos('tipo_evento'), 'Todos');
+  opciones(selEstado, unicos('estado'), 'Todos');
+  opciones(selRegion, unicos('region'), 'Todas');
+  const region = selRegion.value;
+  opciones(selComuna, unicos('comuna', e=>!region || e.region===region), 'Todas');
+  opciones(selFuente, unicos('fuente'), 'Todas');
 }
 
 function filtrar(){
-  const q=inputBuscar.value.trim().toLowerCase();
-  const fTipo=selTipo.value, fEstado=selEstado.value, fRegion=selRegion.value;
-  const dias=parseInt(selRango.value,10)||0;
+  const q = norm(buscar.value.trim());
+  const dias = parseInt(selRango.value,10) || 0;
   return EVENTOS.filter(e=>{
-    if(fTipo && e.tipo_evento!==fTipo) return false;
-    if(fEstado && e.estado!==fEstado) return false;
-    if(fRegion && e.region!==fRegion) return false;
-    if(!dentroDeRango(e,dias)) return false;
-    if(q){
-      const txt=[e.titulo,e.descripcion,e.region,e.comuna,e.keywords].join(' ').toLowerCase();
-      if(!txt.includes(q)) return false;
+    if (selTipo.value && e.tipo_evento !== selTipo.value) return false;
+    if (selEstado.value && e.estado !== selEstado.value) return false;
+    if (selRegion.value && e.region !== selRegion.value) return false;
+    if (selComuna.value && e.comuna !== selComuna.value) return false;
+    if (selFuente.value && e.fuente !== selFuente.value) return false;
+    if (!dentroDeRango(e, dias)) return false;
+    if (q){
+      const txt = norm([e.titulo,e.descripcion,e.region,e.comuna,e.keywords,e.fuente].join(' '));
+      if (!txt.includes(q)) return false;
     }
     return true;
   });
 }
 
+function enfocar(id){
+  const e = EVENTOS.find(x=>String(x.id)===String(id));
+  if (!e || !tieneCoords(e)) return;
+  mapa.setView([parseFloat(e.lat), parseFloat(e.lon)], 12, {animate:true});
+  const m = marcadores.get(String(e.id));
+  if (m) m.openPopup();
+  document.getElementById('mapa').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
 function render(){
-  const lista=filtrar();
-  // tabla
-  const filas=document.getElementById('filas');
-  filas.innerHTML=lista.map(e=>{
-    const cls=e.estado==='descartado'?' class="descartado"':'';
-    const color=colorTipo(e.tipo_evento);
-    const enlace=e.url?`<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.titulo)}</a>`:esc(e.titulo);
+  const lista = filtrar();
+
+  filas.innerHTML = lista.map(e=>{
+    const cls = e.estado==='descartado' ? ' class="descartado"' : '';
+    const enlace = e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.titulo)}</a>` : esc(e.titulo);
+    const boton = tieneCoords(e)
+      ? `<button class="btn-mapa" type="button" data-id="${esc(e.id)}">Ver</button>`
+      : '<span class="sin-coords" title="Sin coordenadas">-</span>';
     return `<tr${cls}>
       <td>${esc(fechaCorta(e.fecha_publicacion||e.fecha_deteccion))}</td>
-      <td><span class="tipo" style="background:${color}">${esc(etiquetaTipo(e.tipo_evento))}</span></td>
+      <td><span class="tipo" style="background:${colorTipo(e.tipo_evento)}">${esc(etiquetaTipo(e.tipo_evento))}</span></td>
       <td class="titulo">${enlace}</td>
       <td>${esc(e.region||'-')}${e.comuna?' / '+esc(e.comuna):''}</td>
       <td>${esc(e.fuente||'-')}</td>
       <td class="estado-${esc(e.estado||'nuevo')}">${esc(e.estado||'nuevo')}</td>
+      <td class="col-mapa">${boton}</td>
     </tr>`;
   }).join('');
-  document.getElementById('vacio').style.display=lista.length?'none':'block';
+  document.getElementById('vacio').style.display = lista.length ? 'none' : 'block';
 
-  // mapa
   capa.clearLayers();
-  lista.filter(e=>e.lat&&e.lon&&e.estado!=='descartado').forEach(e=>{
-    const m=L.circleMarker([parseFloat(e.lat),parseFloat(e.lon)],{
+  marcadores.clear();
+  lista.filter(e=>tieneCoords(e) && e.estado!=='descartado').forEach(e=>{
+    const m = L.circleMarker([parseFloat(e.lat), parseFloat(e.lon)],{
       radius:7, color:'#fff', weight:1.5, fillColor:colorTipo(e.tipo_evento), fillOpacity:.9
     });
     m.bindPopup(`<b>${esc(e.titulo)}</b><br>${esc(etiquetaTipo(e.tipo_evento))} · ${esc(fechaCorta(e.fecha_publicacion||e.fecha_deteccion))}<br>${esc(e.region||'')} ${esc(e.comuna||'')}${e.url?`<br><a href="${esc(e.url)}" target="_blank" rel="noopener">Ver noticia</a>`:''}`);
     m.addTo(capa);
+    marcadores.set(String(e.id), m);
   });
 
-  // resumen
-  const porTipo={};
+  const porTipo = {};
   lista.filter(e=>e.estado!=='descartado').forEach(e=>{
-    const t=e.tipo_evento||'otro'; porTipo[t]=(porTipo[t]||0)+1;
+    const t = e.tipo_evento || 'otro';
+    porTipo[t] = (porTipo[t]||0)+1;
   });
-  const hace7=EVENTOS.filter(e=>e.estado!=='descartado'&&dentroDeRango(e,7)).length;
-  document.getElementById('resumen').innerHTML=
-    `<div class="tarjeta"><b>${lista.length}</b><span>Eventos en filtro</span></div>`+
-    `<div class="tarjeta"><b>${hace7}</b><span>Ultimos 7 dias</span></div>`+
+  const hace7 = EVENTOS.filter(e=>e.estado!=='descartado' && dentroDeRango(e,7)).length;
+  document.getElementById('resumen').innerHTML =
+    `<div class="tarjeta"><b>${lista.length}</b><span>En el filtro</span></div>` +
+    `<div class="tarjeta"><b>${hace7}</b><span>Ultimos 7 dias</span></div>` +
     Object.keys(porTipo).sort().map(t=>`<div class="tarjeta"><b>${porTipo[t]}</b><span>${esc(etiquetaTipo(t))}</span></div>`).join('');
+
+  document.getElementById('contador').textContent = `${lista.length} de ${EVENTOS.length} eventos`;
 }
-['input','change'].forEach(ev=>{
-  inputBuscar.addEventListener(ev,render);
-  [selTipo,selEstado,selRegion,selRango].forEach(s=>s.addEventListener(ev,render));
+
+function limpiar(){
+  buscar.value = '';
+  [selTipo, selEstado, selRegion, selComuna, selFuente].forEach(s=>{ s.value=''; });
+  selRango.value = '90';
+  poblarFiltros();
+  render();
+}
+
+async function actualizar(){
+  btnActualizar.disabled = true;
+  btnActualizar.textContent = 'Actualizando...';
+  cajaEstado.textContent = ES_LOCAL ? 'Buscando nuevas remociones...' : 'Descargando la ultima version...';
+  cajaEstado.classList.add('visible');
+  try {
+    if (ES_LOCAL){
+      const resp = await fetch('/actualizar', {method:'POST'});
+      const res = await resp.json().catch(()=>({ok:false, mensaje:'respuesta invalida'}));
+      if (!resp.ok || !res.ok) throw new Error(res.mensaje || 'fallo la busqueda');
+    }
+    const resp = await fetch('eventos.json?t=' + Date.now(), {cache:'no-store'});
+    if (!resp.ok) throw new Error('no se pudo leer eventos.json');
+    const datos = await resp.json();
+    EVENTOS = Array.isArray(datos) ? datos : (datos.eventos || []);
+    ACTUALIZADO = (datos && datos.actualizado) || ACTUALIZADO;
+    document.getElementById('actualizado').textContent = ACTUALIZADO;
+    poblarFiltros();
+    render();
+    cajaEstado.textContent = 'Actualizado: ' + new Date().toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit'});
+    setTimeout(()=>cajaEstado.classList.remove('visible'), 6000);
+  } catch (err) {
+    if (ES_LOCAL){
+      cajaEstado.textContent = 'Error: ' + err.message;
+    } else {
+      cajaEstado.textContent = 'Recargando la pagina...';
+      location.reload();
+      return;
+    }
+  } finally {
+    btnActualizar.disabled = false;
+    btnActualizar.textContent = 'Actualizar';
+  }
+}
+
+filas.addEventListener('click', ev=>{
+  const id = ev.target.getAttribute('data-id');
+  if (id) enfocar(id);
 });
+
+[selTipo, selEstado, selRegion, selComuna, selFuente, selRango].forEach(s=>{
+  s.addEventListener('change', ()=>{
+    if (s === selRegion) poblarFiltros();
+    render();
+  });
+});
+buscar.addEventListener('input', render);
+document.getElementById('btn-limpiar').addEventListener('click', limpiar);
+btnActualizar.addEventListener('click', actualizar);
+
+poblarFiltros();
 render();
 </script>
 </body>
@@ -247,7 +353,7 @@ def _datos_para_sitio(eventos: list[dict]) -> list[dict]:
 
 
 def generar_sitio(eventos: list[dict] | None = None, config: dict | None = None) -> Path:
-    """Genera docs/index.html y docs/eventos.csv. Devuelve la ruta del HTML."""
+    """Genera docs/index.html, docs/eventos.json y docs/eventos.csv."""
     eventos = cargar_eventos() if eventos is None else eventos
     config = config or {}
     DOCS.mkdir(parents=True, exist_ok=True)
@@ -256,21 +362,33 @@ def generar_sitio(eventos: list[dict] | None = None, config: dict | None = None)
     for tipo, defn in (config.get("tipos_evento") or {}).items():
         etiquetas[tipo] = defn.get("etiqueta", tipo)
 
+    repositorio = config.get("repo", "jalvarezamadogeologo/catastro-remociones")
+    url_acciones = f"https://github.com/{repositorio}/actions"
+    actualizado = ahora().strftime("%Y-%m-%d %H:%M")
+
     datos = _datos_para_sitio(eventos)
     datos_json = json.dumps(datos, ensure_ascii=False).replace("</", "<\\/")
-    colores_json = json.dumps(COLORES, ensure_ascii=False)
-    etiquetas_json = json.dumps(etiquetas, ensure_ascii=False)
 
     html_final = (
-        PLANTILLA.replace("__ACTUALIZADO__", ahora().strftime("%Y-%m-%d %H:%M"))
+        PLANTILLA.replace("__ACTUALIZADO__", actualizado)
         .replace("__DATOS__", datos_json)
-        .replace("__COLORES__", colores_json)
-        .replace("__ETIQUETAS__", etiquetas_json)
+        .replace("__COLORES__", json.dumps(COLORES, ensure_ascii=False))
+        .replace("__ETIQUETAS__", json.dumps(etiquetas, ensure_ascii=False))
+        .replace("__URL_ACCIONES__", url_acciones)
     )
     destino = DOCS / "index.html"
     destino.write_text(html_final, encoding="utf-8")
 
-    # Copia del CSV para descarga desde el sitio
+    # Datos para el boton "Actualizar" (Pages y servidor local).
+    (DOCS / "eventos.json").write_text(
+        json.dumps(
+            {"actualizado": actualizado, "total": len(datos), "eventos": datos},
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
     if CSV.exists():
         shutil.copyfile(CSV, DOCS / "eventos.csv")
 

@@ -173,6 +173,9 @@
       "issue": ""
     },
     {
+      "id": "d42525d905e7",
+      "fecha_publicacion": "2026-10-22T08:23:00-03:00",
+      "fecha_deteccion": "2026-10-22T15:15:52-03:00",
       "titulo": "Tras la avalancha en Chile, el Paso Cristo Redentor volvió a habilitarse con restricciones",
       "descripcion": "Tras la avalancha en Chile, el Paso Cristo Redentor volvió a habilitarse con restricciones Diario 13 San Juan",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQSHFlQm16cC1SQ2M2VHVMZXZpNzN3bmZiSU5fVlFqTUZVRmMzak1pMlZWbzJwSVFyTkpBbEU2V2dRU004R0RBeDhHZVpVbHo0ZUItSnBJTTQ2UVlkNTlHQ28wUktGSmEyZjlVT1M3NWhwMzBlcHBjUEhtRUxwckptbzdEVVZPanJBeFJjVGJBbGswbVpuYWdwaDMzc0k2TlduMmlDUzF2b3ZXWmxCU0tGZ296dFlBVnNxWTRSS2ZDMUE4ZEp5SVk3ZHRZdE5kTHN6Q0RpS0tMQWJZN3JxOTlqN2RQVzRSVnlvR3lR0gH6AUFVX3lxTFBkNTlzRFdqaTllY25qTHl6YmdzZzZ1Q2pYRURjM3FsV3FZZGYwODRId0dsdkFuVnRKeXViY2R4YUU2eWREMGFYWnNqbGF5VFRCaFpQTGpxRXFyVzVwMXc3dDg0WklaeEpYc0ZCb0paRDM0V1M5bkE0SVBTZEh4WjBGLTJrUU1HWXhfcVgxeGY5ei1zNHVsR1J5d285cDFicXF0Y2lwQ2UxS01iTmFNTlpBRl96Y3NLZlRvbWYzQXhIRkZ3YlNZOFdHeVJ0OFNpTk8tZUFmMGY0YTAxMDJJblYxSE5EQkhhNi13RUFPdGZZYWk2MWxqaDBOdUE?oc=5",
@@ -180,14 +183,11 @@
       "origen": "google_news",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
-      "keywords": "avalancha",
       "region": "",
       "comuna": "",
-      "fecha_publicacion": "2026-10-22T08:23:00-03:00",
-      "id": "d42525d905e7",
-      "fecha_deteccion": "2026-10-22T15:15:52-03:00",
       "lat": "",
       "lon": "",
+      "keywords": "avalancha",
       "estado": "nuevo",
       "issue": ""
     },
@@ -268,6 +268,9 @@
       "issue": ""
     },
     {
+      "id": "34ddb84d6afe",
+      "fecha_publicacion": "2026-10-21T20:37:36-03:00",
+      "fecha_deteccion": "2026-10-22T15:15:52-03:00",
       "titulo": "Una avalancha de nieve complicó el tránsito en el paso a Chile",
       "descripcion": "Una avalancha de nieve complicó el tránsito en el paso a Chile Diario Mendoza",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQY1gtd2xRQVNLdnZ0VFl0a3haVFhuM2dSZ1NabXFsMXNHWHYtWFNDWWFHMEdlX3lJOHpxaUJNTDdXQTI0Ulhud2lMNTdEbmNkVUhNMHlVZmxRT0FlS3ZKYWxYODNyQlRNdzIzUXNSR3Q4SDJEMGg4ME83WkVXUy1lWmMwYkZpcU80VDc4dUdtcnY5MUZIbEJpNDNiV21KRlRoN2paLdIBpAFBVV95cUxQY1gtd2xRQVNLdnZ0VFl0a3haVFhuM2dSZ1NabXFsMXNHWHYtWFNDWWFHMEdlX3lJOHpxaUJNTDdXQTI0Ulhud2lMNTdEbmNkVUhNMHlVZmxRT0FlS3ZKYWxYODNyQlRNdzIzUXNSR3Q4SDJEMGg4ME83WkVXUy1lWmMwYkZpcU80VDc4dUdtcnY5MUZIbEJpNDNiV21KRlRoN2paLQ?oc=5",
@@ -275,14 +278,11 @@
       "origen": "google_news",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
-      "keywords": "avalancha",
       "region": "",
       "comuna": "",
-      "fecha_publicacion": "2026-10-21T20:37:36-03:00",
-      "id": "34ddb84d6afe",
-      "fecha_deteccion": "2026-10-22T15:15:52-03:00",
       "lat": "",
       "lon": "",
+      "keywords": "avalancha",
       "estado": "nuevo",
       "issue": ""
     },

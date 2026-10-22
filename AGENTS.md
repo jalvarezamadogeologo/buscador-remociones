@@ -22,8 +22,19 @@ estatico con mapa.
 
 ```powershell
 python actualizar.py --lookback 24 --sin-notificar
+python servidor.py                 # sitio local con boton Actualizar (127.0.0.1:8770)
+iniciar.cmd                        # lo mismo, doble clic
 python -m pytest -q
 ```
+
+## Interfaz
+
+- `docs/index.html`: buscador con filtros (texto, tipo, estado, region, comuna, fuente,
+  periodo) aplicados a tabla y mapa; zoom con rueda/doble clic/botones; boton "Ver"
+  por fila que centra el mapa en el evento.
+- Boton "Actualizar": en localhost llama a `POST /actualizar` (servidor.py) y ejecuta
+  la busqueda real; en GitHub Pages relee `docs/eventos.json` (ultima version publicada).
+- "Buscar en GitHub" abre la pestana Actions del repo.
 
 ## Reglas del proyecto
 

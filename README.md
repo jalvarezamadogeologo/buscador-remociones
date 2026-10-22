@@ -4,6 +4,18 @@ Monitoreo automatico de **remociones en masa recientes en Chile** en noticias we
 Busca en Google News RSS y Bing News (sin API keys), clasifica por tipo de evento,
 deduplica, geocodifica y publica un catastro versionado + una pagina con mapa.
 
+## Interfaz (docs/index.html)
+
+- **Boton "Actualizar"**:
+  - en local con `iniciar.cmd`: ejecuta la busqueda real y recarga datos;
+  - en GitHub Pages: vuelve a leer `eventos.json` (ultima version publicada por el workflow);
+  - **"Buscar en GitHub"**: abre la pestana Actions para disparar el workflow a mano.
+- **Filtros** aplicados a la vez a la tabla y al mapa: texto libre, tipo, estado,
+  region, comuna/localidad, fuente y periodo (7/30/90/365 dias o todo).
+- **Mapa**: zoom con la rueda del mouse, doble clic y botones +/-.
+- **Boton "Ver"** en cada fila: centra el mapa en el evento y abre su popup
+  (deshabilitado si el evento no tiene coordenadas).
+
 ## Que genera
 
 - `data/eventos.csv` — catastro (fuente de verdad, editable a mano).
@@ -11,7 +23,8 @@ deduplica, geocodifica y publica un catastro versionado + una pagina con mapa.
 - `data/vistos.json` — claves ya procesadas (deduplicacion persistente).
 - `data/geocache.json` — cache de geocodificacion (Nominatim).
 - `data/georref.json` — coordenadas manuales por lugar (ganan sobre Nominatim).
-- `docs/index.html` — pagina autocontenida con tabla + mapa Leaflet.
+- `docs/index.html` — buscador autocontenido (tabla + mapa Leaflet + filtros).
+- `docs/eventos.json` — datos que lee el boton "Actualizar".
 - `docs/eventos.csv` — copia descargable del catastro.
 - GitHub Issues — un issue por evento nuevo (etiqueta `remocion-en-masa`).
 
@@ -27,7 +40,26 @@ python actualizar.py --fuentes google_news
 python actualizar.py --sin-geocodificar --max-geocodificaciones 0
 ```
 
-Abrir `docs/index.html` en el navegador, o servirlo:
+### Modo local con boton "Actualizar" funcional
+
+```powershell
+proyectos\catastro-remociones\iniciar.cmd
+```
+
+o directamente:
+
+```powershell
+python servidor.py              # http://127.0.0.1:8770
+python servidor.py --lookback 48 --puerto 9000
+```
+
+El servidor sirve `docs/` y expone `POST /actualizar`: al pulsar el boton, ejecuta
+`actualizar.py` y el sitio recarga los datos.
+
+### Solo ver el sitio (sin servidor)
+
+Abrir `docs/index.html` (funciona con `file://`, pero el boton Actualizar no puede
+escribir ni buscar; solo recarga la pagina) o:
 
 ```powershell
 python -m http.server 8000 --directory docs
@@ -50,6 +82,17 @@ python -m pytest -q
    - manual: pestana **Actions > Monitoreo de remociones en masa > Run workflow**,
      con `lookback` (horas) y `notificar` (si/no).
 5. Cada corrida busca, actualiza `data/` y `docs/`, y hace commit automatico.
+
+### Monitoreo automatico
+
+Si. Una vez que el workflow esta en el repositorio, GitHub Actions lo ejecuta solo
+segun el `cron` configurado (diario por defecto; cada 6/2/1 h descomentando la linea),
+y ademas se puede disparar a mano cuando el operador lo requiera. La frecuencia la
+define el operador editando el YAML.
+
+Nota: subir `.github/workflows/` requiere que el token de `gh` tenga el scope `workflow`.
+Si el push falla con "refusing to allow an OAuth App to create or update workflow",
+ejecutar `gh auth refresh -s workflow` y volver a hacer push.
 
 ### Frecuencias
 
