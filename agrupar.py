@@ -111,13 +111,13 @@ def agregar_fuente(evento: dict, noticia: dict) -> bool:
     if url and any(f["url"] == url for f in actuales):
         return False
 
-    actuales.append(
-        {
-            "medio": noticia.get("fuente", ""),
-            "url": url,
-            "fecha": a_iso(noticia.get("publicado")),
-        }
-    )
+    medio = noticia.get("fuente", "")
+    fecha = a_iso(noticia.get("publicado"))
+    # Google News a veces entrega la misma nota con dos URLs distintas.
+    if medio and fecha and any(f["medio"] == medio and f["fecha"] == fecha for f in actuales):
+        return False
+
+    actuales.append({"medio": medio, "url": url, "fecha": fecha})
     # Las 3 primeras que reportaron: orden por fecha ascendente.
     actuales.sort(key=lambda f: f["fecha"] or "9999")
     actuales = actuales[:MAX_FUENTES]

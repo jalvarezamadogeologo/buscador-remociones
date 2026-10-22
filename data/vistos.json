@@ -1,671 +1,446 @@
 {
-  "actualizado": "2026-10-22T16:48:12-03:00",
-  "total": 133,
+  "actualizado": "2026-10-22T16:51:38-03:00",
+  "total": 88,
   "claves": {
     "d7b69219688b": {
       "titulo": "Avalancha en Los Andes chilenos causa al menos tres fallecidos en centro de esquí El Portillo",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZk1fcWJKeWx1S2ZvVmtydTY3dVNZeS1xRkZ2dzk3enR1RFVLM2FiN1VYUS01U3d6eTd1WVYwSmg5cVZ2RjF1WXlkYnpZNHRrMXhNbkNnN1g4SDMwWVFhVHpBNkgxeFJaQzc0VXh0ZUVHOU9tdXVTem9WdzVtU1p3bXMwUGZsZHJabUhpZE4yTGNtWm5RSF9RUGYyOVktQkNoeDZIbFFrX3Q5MF9NaUN2Tk9FdkpnRkJwR0hQZFFBVGJwVEVrTldBSWY0b9IBywFBVV95cUxQcjgwdi1NbmNvWFNEc0hTVkRDY0dXZVYxS2xtN3doS0dUVTJxeTkxSlZjT0FIdnh1MkZzR0J3RTFWNWN0Qlh1RXNBdE5QN2Q2MkY1WWxqcG9FUUtGOXJvQWtEZ3ktV2FLN2J2eE96R0NkZllPelBwdzVfangzX240cjZxZkpwRVhZT3ZNY2JaWUJoWU1zdmlGWV9PdEJad2xjNUlxNC0zemVYN29iY244MXNSaDdmb1lad2E5RkZIcEpneFdURS1sRnlkVQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "6044f4fd787f": {
       "titulo": "Mueren tres excursionistas chilenos tras una avalancha en los Andes",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcDh6MTdiOEpVMGdVeDNZT2hXeThtYjZ5UXpXd0dWWDJnLVVxcUJJMmxjS0tNQjc3MGxiWHh0WE9aMXdnVWpUcjVTNEh1Rzd0M3BxV1BUdzNuZ09lSDNEVHQ3V2JtSUFhTTc1dkt6aXRaZkhjRlNYQ3FjWjJaTnpnT2d4M1V1cnIwR2dWeTVCcVJlVzMyY2FiUmNDbVRQU0dpRkhhUm9zNEhzYjVWY2Vv0gHDAUFVX3lxTE51dGF6MlB5RENrbzJYbjYyYm5NeWJLbDM5aXRHZGFtMlF3bHZhcUxWYmQ3b2NJN0V5QnN6aGplTS15dWM0eHZ6ZEtqTFBVcVRMTmV6amFHTGFOalhGOXVJdUVORE5VUVhiMy1oYWhhRE1IOHA5RG9YMWpMeEI1V0pkTmloZWhXaGMxLVV4TzREN2VXZmYyTVpJaHVrUmR4TC01b2FndEQySy1aZ1dxb2U2RzE5ZVJEZXBVaFlXX0E3T0tabw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "ad9352187b86": {
       "titulo": "Avalancha en Los Andes: confirman tres fallecidos tras deslizamiento de nieve cerca de Portillo",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMXZoaGpmV0N5Z3RzYVREdUZGMjM5MFdCZmF6d2JUYnctT29DczJqR0NmeWpLX045OUgySzJhS29hUFNtUVJVS3d5LWFPZ1h0Ym5zRjVpWUJiXzZmRUNlVWF4ZVJsVUtJdmlnM2VhWkJvTDNlZnNoQWt6OEdSODFXRUQyUUpUaThKS05xVkp5MU5iS0xyUGRXSXJUNnZ3YjNzLUxIaHVEY0NUNDhHQUl5ZE5iM0RpUTZraVdBeDVkVHY5RE5HV09qMEZn?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "9b2765799558": {
       "titulo": "Avalancha fatal en Portillo: búsqueda se retoma el jueves y expertos alertan de propensión de nuevos eventos ante lluvias",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOc1lSWTd3MmRSR0dkS0FiZ0YwVEV5WGJOOHJFZm45aHlBM0Z3dUstX05UbnpQWmlneUVfY3JndklFWGNjZjE4Z1EwRGk4RkZlU29Ha3kzX3MxNmM4YWxjTy1udS1VdzRiN0R0UzRzbGRVSnkyTmVvZV9TRFVSOG9ZeGNEUFVsZzlnOTRnenNrQ0VsSWs4dFYwS0VVV2JwaTZTRE1WYlVpREhBZ2IyM2thUWJHV1dpaWti0gHaAUFVX3lxTFByS2JXUDVmWW1lR0ZnV3lvS3MybktqcnFFZ0VIdWVrb3ZKS2FNZV9nVHI2Z3BKbm96Q1REeTlxQjNwQVJYUEdwRlQ3ekxlaHBveTNvblltMjJkMzFwM3FqeWhLMy1yQzRyLU1JZ2lSY0ZqaTVxbkJoUUNiZHllMmdXT0pzenQyVlN5WWJDSzI4VHJtMUd5TGRFbXU0WVNrU1BKTzJIekl0THlkVVJQcWphbzJhd0Y2YnRHb19qb09tY2lpTTVuM0o1MFJaNG5iOTU5Q01OaFZwbHdR?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "e08ea0df863d": {
       "titulo": "Piden evacuar a más de 150 familias por socavón de medio kilómetro y declaran Alerta Roja para Arauco",
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPTUlWQnR6amtzenkxdzVQd1Faa2RVMzNXUUdwVjBYVk5oSXpyOWRrWkxPRkJMSWtuTW95aERKcWVKaHFKTGdMdkc2NnN2d0FGMzBLZ1I1ZXNETkpIbjNXdWUtbGxaWncwQ2ZvUnZQQ0k0Q1lSbC1MMmpmUUtwVk5Ga1ljWGNTQkMtblRiWlBwaHQ0WFZveGZjNVRlQ09fNEpaV1hBdGtvc0JqWHNCZ0c3VXVqTzVTVzF6MGxwQ3JnNmxmTWp0QVcyOXBxcG03WXcxMldyNTZxNlJUbUtyaS1FMEx2V2RiM0U1bkpzVXNaUDN6Mm5idl9zUTRYdUJFU3NGSkVTekxKN0s?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "03116c808075": {
       "titulo": "Avalancha en Portillo deja dos muertos, un desaparecido y cuatro heridos",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNak9YZDNKWmRfYlQ4UnNuLTdJUmU4WGdSOUFlekE4TXBsLXJRM3h6dHlNcGFHeXVyb2ZFdXdTdnJfN1BhSElhNGlrcVZoVHc0cXhDWDJHSy1qOU9TYXpQdmlNdjMtQkdsRTBLYU9MWFpMRW9JTnBJbVpCRm1WY2RmbDM3cjJsREtpUGNYYzNNWFB6UFhsbW1qejVHX25kUUJuTXlFcFh2WGZTUzZ2RG5aM050UHNjcUZ0blF5UVZCVGVudw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "b360734ef2e1": {
       "titulo": "Confirman hallazgo de cuerpo del tercer montañista fallecido en avalancha de Portillo",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNZnNXcTFId1ZLQkR5MmZ6c3BiRHRWMG5Gb09pYUMwUlc1c0VwZzVEWjB3eDJkeVVDdld4dHlIcmk5aGFvSDNtOVYyTmJHOHgtNlVtNzV6M2ExNUo5Zm5MakgyYXlVWkcwaktHdDBWeXRrSlJTbnNZLVNaVWZmZDdsdDdVUzBPdjdycFpVYVJJemNWVk41RUNBVlNBYlg5MW5WNGFCTDJuX2J2eGdheWtGUXJiVmgzWEVCeHBEaUszcUQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "87577c31283d": {
       "titulo": "Una de las víctimas de la avalancha en Los Andes era hija de la actriz chilena Luz Jiménez",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcHZXY3Uta3EtZGZ6NS1QS2JJdXFWdl9aVUM3UjQzbHdhdmdMX252WllrR2lVUGFJYjZnUUZDMzkyQWMtX1ZxclVYWXlOTjFIWjZIZmN2ampUVEU2QmdndXlLRnFtU2M5ZTVnZ20yZ2VaRm9EczJWUERwcG81dUxTMlV1clAxS3hQcnlqa1BsS01ITHVYVUI1dnBYYmhwd3BSbnZPWmZwbmN3c3FCUHZIalFHajR6b0JDY2NqYWZoY0ZrVERzYXhmT3BXb9IB3wFBVV95cUxNRXBSLW5sTVlCZnNwSDhCblh1aG9GZXhKdngxeE14WEJLUllaM1BsY05KM0pra3VHRURYbXJzVHpDWUR3TFlDSXgxRndpM2hlTGRHbzNtU1FuZmJhRTdyNGhKVzNiRWFQdmFfd05xZWF3YVlSSmlFWGdUVXZBYkN1U1VMWUt5ZlNDNTAtWVowZE5PX0U4TldUX3VoQjd0XzZheWV0LTdXb0Y4b0FqY3NlQnQ0TzBCZzUyaW40NkllZ0lFeGk5VFBpaG44b1REX0dMU0pBMmFaZHhRazJ0bGhF?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "819828c52630": {
       "titulo": "Gobierno monitorea sector de aluvión de Las Condes y afirma que medidas preventivas “hasta el momento han funcionado”",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNLW44Q2VIWFRrb3hPOTNyZzlwR3ozZTFxSU9NNGpjODhJSFVyWWVjOTQ1U2xjaHBwTVlWRktuWjJnR1ZWR0V4NEhkZ0p2YWZjMXVacThlZFcxTU5YSWs5amwycFJINmx1MUhqandHSzJsOTBKNUxGQm1RQmpybEw0LWJuRUFBTFNIdnZ5WnNndFFlNzRCTmRsbUJic0ZiX245bHhtZ2RabmJQWnNHdk1HcDVHZHNVN2xESUl2MmN3MmMycWhWQ1A5MUk1bXlyTlhVamlQaWVfOGRLMXl4eExyWlZhVnA5bFdoQ1ZOZUFwZVTSAZICQVVfeXFMT1ZoRUlGMVB2UFhIODNhLUwxNmVlNGJndUZpNEIwaDQ0UHR2TU0tZTFhR3JBUXZ3NEJVaGQ4cVpZcmt0bU9fY3ptd2gzOWNZZC1mMFZieGl6Y1AwZFJHSTk0RWtZbUFXUGZkbG1xNzNla2VOek1LTXhCQ01iejhJLUwxOUhZVFgzX21DNERjbW15c0pidkdjN0lQTUR6VXZjUUgtWExzbllnUWhsOXNFUGJtaWxvcDhxalpNTUR0bmlLd0RyWHhSdVo1WTlBc3U3U3gyRGEzMThJcnkteHZmdXJ5MUxaeDE5WkdZS1BhQldLTlQ0NExCNlgwVnhmamRGQzE3QnJwZ0Roci0zSFZxaVBvUQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "02bf13a5db40": {
       "titulo": "VIDEO I Así fue la avalancha que cobró la vida de tres montañistas en Los Andes",
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOLWwwbU1iNndNNUlYY2FocWpFSFdOcXlMaU9vX1k4ZVNJSGVvSzlqTXJUMWJnWk1QSk9CZGlKMUJfZ1ljV25YS1JLVVFQSFhVZkpaZmNENmVCTUtnMzJkSXIxa1ZFMUJYdWRnU3hTR1Njd0VyeVlzeWJvQXBncmY4MGNBTkQwU0g0ajF3cDVueGdmTFdkWkc3TXoxMlQxcGlPY1RrQXAyWFlfdFktRzBHNGRiZUoxc1FfR2xod0NTa0NiT00xMmZnSUtvQUI0eVNjZmlsb1dTS1RqUUxJZE1oSFNaQTdXeUtqM2ZPdXc1MkRMVnRf?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "228e5eb5a7e1": {
       "titulo": "Avalancha en Laguna del Inca: Senapred confirma tres fallecidos",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTVE1TVZpVkR5M3ZVWHBZc1JiNlV0aXFYSzZUUV9teUdHNjJvd29EXzhWODVRRC1ZbDJSOWI5Z054enVWcjFMbEk0ajBBTlZLMTNnMFVoUnhBWnhZclZfRXVuT3Q2VjlSQ0JMOHpsXzhHcWpGdmlqTWpwUG9DbVpnR01rRElHRXVyWXBOT0VqaXl5WDM1R0Q0MkdjSnBrbTk0djlQMk5ZSDZPeGRma2c1VVN1T21rbV9yVmlzenRB?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "dccd5199a710": {
       "titulo": "Avalancha en Portillo: Fiscalía confirma tres fallecidos, cuatro lesionados y anuncia rescate pendiente en Laguna del Inca",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQMjFKMWo3dkVzRUtoaGEzeGVEY3RXZ3Zpdl8wU0NSLWtGRTVyTXVCRG50ekhlUmtYU3R6Vko3V1JZVlM3R3dhTnVUbmRRUTVZWlVuRjhaZlRlSGFzU3FlOG81M283ZGI4eEItTzJRVXNmM1AxSUQ2aGlXUU9CdDNxb3VtQUc3d05OTGxWS2NoandQYk1FT29JSDNObjdNeTd1a3pIX2twX0NfVXRrbURKbnFVZ0tuM3JWTDJpMzVoMG4tcHppeGNaYWdKaTBQaFHSAfABQVVfeXFMTkN0WkRqYXlCLXlLMnZVZlZ4MU9jdjR0NmVIU0pmV2hRNmVSNmR1YnVweGUweU50NUxTWWFFWWZPYWNSbVd5NGJwamJrc0NQeElBdTRkb1lTNDQ5ajdWZjR4SzR3YkhUYWhFdlI0aDZOV3JMYVg1cm5zLUVMSHNNQXUzZS1vNzFQQkFuR1hmLUdDbDJ0VUplOTloMk9WM0RxNzI4UlcyamN0YXFBUHdDdG5OR3B2VUpDUFQwdktlY2xra0ZocW05c2Z6TzBQb1ptOVNGYWdxQnJsblE2dndpYjNfOFEzeHJUNXZJQ3kzcS0z?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "e6181110de3a": {
       "titulo": "Ski Portillo confirma que fatal avalancha en Los Andes ocurrió fuera de zona habilitada",
       "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPLWlpYldpR281SG1HVE1CaXQyTms0WEJtbzhlbmtuUDZaWXRYMUVBTTBQSFp1cE9KeGQ4TEg3NGRtRGViVTZZVlBjTWt0cUE4UXRWaTJqaHlXYVViRGlEMkxRNkJ5T0NGeld4TklVSWtSZERqVS1WWjU5SGpNMDNrdWYtUU5Kb1I2a2E5MThacXFYYkQ1ZHRpNjdXV3FCcWNaWVk1eDVFaHY1WVpsTkE0NkFfdEhvanNvNzZIQWE3ci1kMGl5bkNYZ0JWN0Ezb281bWNrSnAxamhXVTl2VE5TcTRDdy1lMEhXOTU0VkgtTjdxUjFRWjNxUlp1MzBNMWM?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "839c1d09416c": {
       "titulo": "Identifican a dos de los tres montañistas muertos en una avalancha en los Andes",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZWdTVmpkTlh4TW96NXhPM3FYc2JZX3REbEEwQjhxVE85N0p5UDJKeWxDUlRzM3dRMmhsTVpHaEZlNFNrN0drQkp2U3N1UnFNdm9SVjhzUldyMDFYdFZhZ2ZXZ1V6SWR4dTR5REc0alhLTGFQRXNobnV5cHlzOW95NDNjUlpZYlhkM3Y3dW1melZmRHRMLVVmZ29rZHE2SWR4dS1RaXhzdGM4ZG8yYW1VUWdKV3oxdlpta3UyedIB0AFBVV95cUxQSkdZXzJhVjc5SDdfQWJVVVh4RnlHdVc3bFRVcWwxY1FlalV2ZUhmLTJucjc4WXdlaWQxU2VnV0s5VTNCcjdBZ3A4bVRfZjc3bUNYdTM3ZXNLclZkNFBqbW9UcXRUM1IxbTZ1M3llQ2NLcU93a0pSLWpnV0p6emZtNkVPNmtZN0tabU5QTjZ4cTZDT0J4am5QRkJaZncyYnpxUk5IenhxbU5zbVVqUlVKVjNkWnVKMUhGaWtRN3ZrcXpFRlpxZ0JmbEt0anpHX2Zi?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "34043bb9c215": {
       "titulo": "Gobierno llama a evacuar viviendas afectadas por aluvión en Las Condes antes de las 10.00 horas del martes",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPejlmdUpWT1ZCbmV2dFVrRFl4QUVqM0llWV94YWxmNElRYlFjZkI4dTVlUG1DOE9LVHpXQ19zU1BWWGxCaEdaZkFLOER1WkppMXBmV3ltSGVoeWgtX2xxV2tOcWxXdTFJOG9RVFdOWHhyRk1rTkV5aHVxZUJhXzZCWkFzQlZPMVVjbXJ2X25LZUJrMzBIODItVnVrRHJlUzJWaWxYSDNDSEFhN3BZNmVlQjNrR0FSVHkzZ2ppSHMwVlM4bDk1RW9hdGtiV0F1b1JsNVNtZWxuVlozcWZCOUtfRF9wWdIBhAJBVV95cUxOTXRaMHE0X3hXdlNBWE1mQ1p2V18zYURmcDhod2EzbFB5YjE1VFZyQWp6dGNfRmQzY2wtcXVwb3NrMm5WWGRWYzRsdTg3Y0FYZ2NUTTJrckl0cGtkNHpRemg1LVhodkRnODBJTUt5Y1l2WXh0LW8zTkM0VGRFQnZvU00ycDZ6RlhUbVp4RmwwQXN1dFQwcjN3eU01UDVjOWVoNU1XRDl1aTVDR3FoQW9oZFZtTktJd2xST0xXOTU4cVgwRWtzcklxZFI2eVhOV1VBdmNMOXVyMGdSSTZscFhlZ3lqUmFVMTgxSnUxT2JvRDRrbHZLUkg1NWE0WGdJUTlKWVd1aw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "9cbfda30e63e": {
       "titulo": "\"Necesitamos salvar vidas\": San Martín llama a evacuar sector afectado por aluvión en Las Condes",
       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOUllpTWZmRlI3amhNa3MzMkV1bVphS0VETjVXR3J2YnFkMkN5MUw3dWFLWkU4a2h2Ym9RZUNJOTRKbUJVdzRnMm81SElnYzVxR3c5MkdyU2hrRzBYNm5qRC1HUmx1ZjFtc2duTUJYQU5UWllfQjB1SXl0akptMUFRVTZzRmRPcGdSNGhYME5tZlRsN181Z0ZqRFQ2dldjQWNTekNUb2V0TkVGOUVMV1Y5YXNqcjFWZHoyUS1FdE5RR2NKZmhEUDBOa0pMN1FIdWtiV0tFbWV5bzNkQnZxbmdyWlRvSm9sdENXRlVDRHA4VUtTS3R5dkFLUE8ya0MxeDJ2LW0xWmRrdw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "0edd4eca9fcd": {
       "titulo": "Suspenden búsqueda de tercera víctima de avalancha en portillo: trabajos se retomarán el jueves",
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPUy16Q2J2OGpGZElxZ3lEUlh3aGpYSlJtY1dFYV9UaEF3VHRoN1FpZldmLVk0Q1JEellOUnNidHVEWUZXS01sVl9QcDlUdmVWNlJWY2t3N1NoUE5YeWpZZ0o4MFhMbm85aFZ6MklDQmpPc3ZwVF8yT1NUSEtweXNLb0NRTVl5amxYbFluRHhFT19iQ0FQYXZCRHdzQzhEQThmVm5FcF9ZQWJpWHEtdzBMQWtiMTlTZTNBcWhHV2tGeGZHbS1FVEN3T1JTM0ptRFFiNzh5a2FpYjhhOGl5eGd3Tko3VHhhZ2JLTTgxUGRSbnZCQ196MHhmRTktZ09VWU1ic0E2akdiZUc?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "0a4a51fbfe64": {
       "titulo": "Siete montañistas son arrastrados por deslizamiento de nieve en Los Andes: tres de ellos murieron",
       "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOZFY4YngyYUd2TmJGZktLcWtzM2JXdjZXSFZuR1BhMWJtRHo0MUlTRE5STlVkYTEyWS1xRE9zdUFzajhqX3RUN0R1MXowbkNyMmNJNlN3cE5YLVVfSHlfMVlUSXl6eTJiaEFuVkhpVVN4TEI4Tm5zRFlLU2FwS05nRERrWm0xT0dTVUM3NlR0N2o4Zm1NQlpOMVFSc1RJdHktQWxja1NhUnY3U2UxTmt5ZmpRRVo4N21TS1Q2RTNuWUlJTy1PbHpKOXZUYjE4OHM4VFR3WEZwVXZxcDBMUjc3bXFWTmNmMEZRVklMcTktRlRXTW42SFVRNWxiczBVR2pqN2prUlRJa1F6aWRRb0tz?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "a90cbd0042fa": {
       "titulo": "Encuentran cuerpo del tercer montañista fallecido en avalancha de Portillo en Los Andes",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPWjkweVhoYm1feEtYcjB3QmFOQmNXMWl2WkZ2R2hTbEFYRUR3UW5wMUxUdW9nVjU5bzBnaWREZU9BaWMtQWhBbk9Ia1JydHd4UzZJRGtZVW1UU3JkME9hMEJ1bHBhU29mdkcwWkQtaVJOZ0RkQVdqRi1tc1A1MC1rSFFKTWo5QU9KY0NjQWt1S3B0UEY4Ty1DcXltdjVEVVlDaFhhTWpxWmJYUFFWS0g3ZWlBXzdXRVFsTUlzQkFxbVUxZFlTS2hMUVRlOENFUmdSMkw2U1NHM0NVdUhnLWVBZFV3NWZ1MjVxdHBTREpR?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "c4d5005eec43": {
       "titulo": "Más de 20 familias son evacuadas por socavón de medio kilómetro en Arauco",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOS3hnUGJEdF9PaW9BcmR0YS1nc0xrN0pEU2F2VGc2Qnl3TjNsZVl3V2lzQzRFVm83cEp0ZWVEejdpWjk2SEJhMExBME84OFZGdXYxX29MVDdjX0JWa1U3Y2JBdGJBQmVJdWs0cnZOam1rQVVvQnlRMkVQUzRJY0xKWVBtVmxoeEpwTTVnSzh2UWVXdkRZVEdNVktzNkE3X25sdXB3cE9zd1pqWWJtTV9CUGdqekM5eWpocTFCeE83b3poaVo3WTdJWTJZbVB3b3RSRkE2ZG1oaHJZbC1tZTNoeFZSRXdQRzctcUE?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "f15c6bf0fa67": {
       "titulo": "“Zona de muerte”: alcalde de Los Andes revela nuevos detalles tras avalancha que dejó tres fallecidos en Portillo",
       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNOWljOENLN2xDaVU3SWNzM3QxYXEtMVBNSW5CWG0tbG1SRi1zTWpBUzZYQ0V3czVKUW5PbW5LdEZmTTlXdzNoODhkSkMtclVsZGNpOV93dkRKcTJMQzdJRExUZ3N4Uy1KRkduRVZ6cGdOeE9xMWhyUjZhN1FPeG5BZnVtRXNzUW5DazdMVXowYy1tc2hnMThEc3F5YUtScXozV1dCZzI5TFVaNTJZVXRSbE1SSzd2RUk5WHo2S1Z3OGJIZEdkaVlHbDBlTndfMHBWZ25sTWZqejIzNERZT2RndzFmRW5ucThPQ041MdIBjgJBVV95cUxNdi0xT0JvX3VpY29lU2VZMkpEWHUtLTBBeG5RVDJuQnVEYWtsOEVsdGVDb2VjMmVOaGtCclRpakd1aHdadXZNOEZWM1QzNWxOVzN1dnhZNURWR3lHbVhGdkJrQXZHa1ZpVEE0Wm9pWXpNbXp0YUZVbkxwWjRYal9lSTRZUTA0bTBHVVNRRXVCYllVV2ZyZ05Ed19scGFWVDRPTk5tVHE1cFE4MEMxbWlMbHdWVkdtVEVqV1dScnVRMWo0YThCT0FMdFBDRnZjTUhURmFGN194LW9RdEU5QVR3MFptUEFUZ3pYWG11dWJfZ0V5bGgxYnp4RlZwSkZZb0p5d0J6UVZZRGp4VzVrdEE?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "5502fa978777": {
       "titulo": "Delegado presidencial ratifica tres fallecidos en avalancha en la Laguna del Inca",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNYkhaSnRXQWRDX0Q1RDFjdEw3OWlSczJPVlc2MUpmblhFdnpCazk2b29hTTJqM2VUVDhCMHZXdVBnZTZxa1NHWmdfMkVBTlpwNTB2TmFLcTlmUWJsR3EzUWZjcE5WS2lIY1MtR1FxM2tBcHNDOWt0NnQ0OW5WcFhuQ1BWNHFGX2gzQ2tUMXJHM3pfOUJzM1h3ejFOVXV3cVZlWVJ5cWpMZV9KM0xPSjh6NUkxMUVOZXRnVzdValdJc9IBxAFBVV95cUxNT0twY1NCZGZvZ3hYZF9aSGpIM052Ym1BSmdabW1HR25ZanNsQVR5d29DTldJZHRVTDEzWG5sc2hTTEstdGQwb3ZXc0loZEJkOWdmemF4QUF4MWcwbXprenZWQ1hSbHJEbERXZkt6QnNNOVA2Z1FOeUFGeU1TdzFOZnk1LWRVT0xyR0poZFdMYWt4bzU5Q0V3amRqTDVkVnZmMnRoMzBzWFdvd2tCSGs5bmQzay1TMmJmTFdiajdOWnlsS1BO?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "0de29adca817": {
       "titulo": "Tras reanudación de labores de búsqueda: encuentran cuerpo de tercera víctima de avalancha en Portillo",
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxORl9ET1NYZkpYeXZZYmlEd3dMMVJ4Zk50UjQzMjFSYzNHemtjcmgtRWFoWnRrM2F1R2NrX2s5RUVfMmQ5eVUteWk2bXZUWFp2U19sblN6WWswcHY0aUZyMnBHbUk3bEJpSnlELVZJTjJPSVhmcVRndTFmdnNHZ3h0aF9oRUVic19IWE9KT1FvdTQwVnVfcGVzSUJsaUhEZFBZX0hFekNYR1Utc0xvdndSU2VKV2JCMkFqX1dnd1QyZ0thWFN4VXVnWjdYTjIzSVJEYUtnZFAtQWprVmk5czhTbWtDMTVuMTjSAYgCQVVfeXFMTVIxeTVNdGxaU0dObU40UmxFYVRoSWxLVXBRTDdGTHpfZGlNQU9BZ0ZXcXhaNDNtMDhHOVlPWWE2WGhrbEJ1LTYyREd5VTBWVnV2SUc3SFRlSk93OVd3RUd0REI2Z2tMSE9VektqX3BJc1Vsb3p2c0daVnIxWmRuMGFSZUJSaEZmNlhLT3oxWW96OVFabFkzS01vbndGbDdHczNkWkVxOGdaVl92RVdhczJNTXl3OWlGVGwwVTZRZVl2SVlsRmlwY2JFSlIxeURUbi1BZ0pqR2R4a0hOYWVYT3l0ZHh2VDlxSjBXZWl3V1VBTFQ3c1YwYnhfTUxQQWVJQTd3UHJoMFRv?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "f569ccb85429": {
       "titulo": "Avalancha de nieve en Portillo deja tres personas muertas",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTjlJSTlVV3NFUGdSYTFub01ETlBGLU5kM1o3ejZZd1JOR05SQ0J5RnZWRk1WRkZCeWo5VEJZWExrT3BnYWNZcVgxeDNoZU9yVlFUeUVDVFJ3UGIwODBJQllKdTlwVnk2TDJpeENGTURnSzZRZTl3ZlRNTGswdndhSXV4bW1mMW9PVlkzemw3TVpFY1pTNEtFbXhRUzlrRE0?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "22748a536d5e": {
       "titulo": "Los Andes: Al menos cuatro personas fallecidas y cuatro heridas tras avalancha en Portillo",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdkRyRWhERXdUOFJLQ0E5SVZJd1BkbFVRWVM5WDBkbDMtQmUzWUJKZFA2UlZJS05qaWdGOU5RUGl5VDhMTGJWOVBsdEsyQ2E4Q1ZvTXpPT0VFYXY5YVRjSzNJdnlNMlljSUVESEJmYUxXNEYxYURUVkxBT2M2NERjLUJXdFlMbEMweUJCbzg5ZExLNTlyVHJjSVFSOWVYMFgtSlFGd2ktajEybmZJaDZ5UUJEb21uZEtiZmZLUQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "ad94adc7ef3a": {
       "titulo": "Lluvias provocan desprendimiento de asfalto en ruta que une Pirque y Puente Alto",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNOGkxb1NZbXNwaHpHTjROTk93eDU4ai1TVVRpQzBWRWprdVVESk1CNXJqdjVBR0IzUTBWUUlEZWxWMEFNc2FKdE4zYlloMVRhNVVkNGRHSkk4RkJUU3VXTE1DUHJoRUlmZExzVUlSY1Z1THcwa3BraVBsc3N4UHFqd1JjLWVLcHFHck9BLUx5dzFDeExDMlVlYkk5cGZHUUh0MHRqdlpuYUVJZkFvZDJNQ19ldElUWndKOHJjNTA0bGR6UdIB4wFBVV95cUxOQ24zWVktMEdTWXpoVEpNaHBQNTdOUU9scWowVXlqaFpmaFJDc1EzMmxRTjk3a1pPanI0Q2dwSDdYcGZRbGNqOWRRMmlSNWx5SjhHSVVwdU5ZTkYxOG9ocmhrWmJZRUV0bVd3Y3MwcDFiRkIwd016R0FITzVTOEZzX3lyR0ZPUDZTcjkxMHc2WWVBR2p2eEF4Rl9oVTBHbTJzMzFQbW94bmIwNDRWOGt0czlKV0xQMUhRejE3N21rQUdDSXJWeG9QOXc2bTIwYXhiNWNNd2hKZUZzX292cEhIY1h6aw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "cc5b305f8069": {
       "titulo": "Tragedia en Portillo: hija de la destacada actriz Luz Jiménez murió en avalancha que dejó tres fallecidos",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUzVEVHJ5XzhORG4zVXo5VGFxc3dpaWlmT1BDX05fWkJIaWpJMXFaSjNVbF9VTy15RVd3QWdYVHlPbDJJN210OUpoNFdBLWtjdmpVX0J4RWlhdXZjZ2NxLUpuck1hTS1VZVJYYzVRbzNFc0V1UkhuTFZRd1BzVTVNdFNnZW1VQ1d0cHRpdzR2RjF0bFhKZi1QQVlSYWdXNWZ2VklhWXA1cFhTdVJ6MUZOQzFGNVoxQnY5ZHpfNWE1a0NYcmJf?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "7904f3331d2a": {
       "titulo": "Testigos relatan la arriesgada expedición que terminó avalancha en Portillo: \"La nieve estaba muy blanda\"",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTHVHbzE0Uk1KUk9WTE1aLXhGWVpOSjJ5QzR2SXRzRTN0NGRwYW8zaV9jc1AtdjZtTk9NZVNJUnBXNmhXblZjbWlvbEVGVWREMEo4dU1JQmlWY2VyU1hnRTQ2UEhUR1pnbzMyZ2VabEJXQThjUzBwb3lzSVQ1TDdXU19jdzFaZ1l3NDlUT0Z2ckpUX2NiMHByOHhVT2FiU0N5eTBIMm1JdHBDdHBIb1NpY3hIWXRmNXRnVjVz0gHAAUFVX3lxTE5BREViWW9VaWNvWW5Id0ZLc2d6cEEwc1FBakZERjRySl9nUmpGMVBQbFYtSXBTUklIaU1sMWVsM2g3MEtJa3kwSDJZMlQ0c3lnSVJtaElneVZYbkNZRlVhYjNZSGhoTWVyVTJZWm5XTlgtQkctSnJiMS14dUs4SEJSa3g0MWlkT0pQTnV1TmlyeGhVNTZqZkZ3RVJFQUNGTmhsUGtaeEhmUmJhUi1jbXJiLVlMLVU0V0cyNm5jUVhFWg?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "98f6456c912b": {
       "titulo": "Cerca de 150 familias se niegan a evacuar viviendas ante gigantesco socavón en Arauco: temen a robos",
       "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOYUxEZkdRdzMzamlPTEpEamUzYXhLYU5GYWRrRVRUUGJVdmx4VlZKd0tMRHBDQVhZdloxeWJYZ3RkTmRjb0ppTWw5cTZwQUhGRUVmckxMYmVqSjlXSHlmb0ZkYkU4UUEwSGxyalVpakFib0UyWkliamJSdU45SkZsZjNuaDU1VDVmd2JHSnlldGxFN0ZWT2RXOTl3ZDhrLU10Q29YUURwUUtSclRwZGdJSGNyMTMzTEo3Qk9YYTFjN1VhSUF3RHhHVWJLNHlVdGJ1YWROZ21UQzV3cERtT1hxQjdIRTdnSTMteGZQQUlQRDJEaFU0bk9TVFNlX1h6OW5jOExJSlFBTlFmUTMx?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "e18a99baa843": {
       "titulo": "Armada de Chile despliega sus capacidades para reforzar búsqueda ante avalancha en Portillo",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNNm5rbGVRVGxiel9hdXNPY2ZiTUZuZlFocnlDY1hMeWVvOVpOT3h3STFBTThUVkRHOTlkZDE1dDRqVnNJbXp2SE5PSGJGMTZtV2lKR1BWUlVxVlp3NktUYlJjT1NVOVdnYVpoLXJBS0RUZ1ZJMFdWSWZ6bnFBWHVEZW1pUWNuUnBoNEZleGdHU2FzcEJCeGc?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "881ae0a71bc9": {
       "titulo": "Aluvión en Juan Riquelme reactivó emergencia en Concepción por sistema frontal",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNd1cxLVpKaXl0SC1kVnF0MHhjS0hTZkJmLVZIRXdRRFp0WFl2X0ZfRDBPNmhGZlVzbXJETUdKX0czNTRONW9fbjJzUFYtN1czNDZib3BOY0NudXdTb0t0dHotNVFxSkRMdGRzWEt5YW1Dcm5VbVFqZ05TajVLVjBsc2JCR0pla0dKelpSYmQ0bTJmMmsxbEJiSnRFTUlWbjdldGIweG9Ua05BTVoyNEduSklGc2JiYXl1Wnh1aG9ISQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "ab79910cda0a": {
       "titulo": "Avalancha en Portillo: confirman las identidades de dos fallecidos en la tragedia de Los Andes",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQczVyZ1NLVGlJa1RYa3FESWNMdGNuWDMyaUVTcllXMHc3WkVKOFJaUzl2SmV4bXZKOWlhQ2ZyREtZbFIzMEpwYjQtSDNwVmhhT3hySGFFU0s4am9ENkdHR0llODVUSlJRSXE0ZDJvY1NZNUZjaTJOSXJuVXhoMXVyeFJfLWY1S25tTTJwUk9ZaDJZZFJ0OW9uS2xEZ1gta2NpczRJeFB6YjJCWnZ6dzNnTFlseXBXSlVkWG8yb011dEtWTFNDUWZpY0tGemo3MDNlLUVkOE9xeG5BQjdQNW9YQg?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "6eefd90abcea": {
       "titulo": "Concepción: lluvias activan aluvión y deslizamiento de tierra en Juan Riquelme",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUGdtdmlkOF9SQmJPaE5jQmxqRjhfYTZRWlNqMUZtTThZTWVhNGJIVzNzZm5CUFBqOTVIZThWNlNCcHl0SHNwMkwxTXViZnliUkNQY0U0dTVpQnJIaTB6NnVraXhmaEQyNEJoeGFPdUJ4OHdMWlNORWw3OTVZWThaRUJuQ2lscXNVSFkwaXdmcmXSAZgBQVVfeXFMT2JzSzhLckpmSW40ckFUcC1Tb1dkNzVPdEF0VXloZGpXU0doeTdlX1E0TTdwbXlxdDBZVW4wTXRVMmRGTWo0aXB6RUZ1Y1ZSOVc0SWk5QXB2WE05SUtRMzJNWmpUZVVBTW9fUGZiRFU4aVBQN1NFNW5iNHRKR0FNVkU1TGUxcHZESGV5SXhnWHBxamQ2RWwyd1c?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "e3dce9d7ad2d": {
       "titulo": "Recuperado el cadáver de la tercera víctima de la avalancha de Portillo en Los Andes",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWHd1eXJqcVpmdDRPODJtalVYbVJpdkJIdUtiQkxnYUdoWFNjMTg4aTJGRXhTZUxEamxyeTZVeU40d19hV0ZNazdQQUdVRFM0XzFmTnJjVkRJdE1kdHNwSWRaRV9XS1ZncE1DUEk3b09WUHJxNmJjWW9XRGFzeUI2R0ljdXhJc1hsQmZUdXVkYVF4RkVNLW1iRUpuZVlWZE9vZGJHLXJ6WDl0TWdHdzdHUklmdmxEamFnRjJEeTNxOVBTVUnSAdcBQVVfeXFMTVdiYWp1LWVXRmRIeWktSk1EazB0bTdjdk0yTktGMDU0SWl1Z0tHMXFSTU9zYWVIMEVCeGpETGc2QjJVUE5vNnQyMGV1NFB3SGsxM2hPQ2k3YXg1NXFpNXV5cE53RnVCRnZzOWlHamIyZE41eGE0Mmg0Z1BhNk5KZlJadXlXaHJ3bjJYRDB6OTNhX3k2MXptbTZ0VHR6YzFlOXBxZ0JiMDhTWk5kc2xiVXp4MlQxT29PTDdoX3FUdVFodWxQV2UtTFYtTjFiVVNtUUtHdHpSc28?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "aa1c79ec0292": {
       "titulo": "Avalancha en Portillo: tres muertos, un herido en riesgo vital y un cuerpo aún sin recuperar",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOM0JORmZ4TXptYVhjV1BGMk9EbmRPR2taRE96NWhiZTlZb1AyWUFVOGxwWnRkYjdYUHdMUXNyUVZKMGxKMFFGU29RblZNaUdxa21lTF9Ib1AxWGpBNERYa3Z3OWFVaUVydkkydHo0T2lZS09TdTVFY0tjcTlsU2tzSzQ1SUhlOVhPU1k4azI3NVNpTmVSemtialN2V1pNWkZ3NG51c1dMRnMxOTR1TnlpZy1DUUxKLVd0NVdzVllRZFBxTW1xcEZTcFFrZ3JqTlU0eFhSWkpuR2hTU3c?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "57f1422147e7": {
       "titulo": "Alcalde de La Reina: \"Las piscinas decantadoras disminuirían las probabilidades de un aluvión\"",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNS25VOG5ULURoeU55amFXZ1Z6WWhHa1h4SDBwY0VrbFJvdzlBN1MxSXNGTHFqT0UyUTRKOEt6LWlna0FldXJSeDAtZzFiZVd6ZTlFdnMwazM2Z2ZybXNVdVlnOVktaFl2MWtzVk9DZEhsZ211RnNEbnk5MVp6TEJrei1JcXkwNnduOGZ0aFRnOGdrSmluNVhhdnJoMEo0TFdMZ2xVV01uWnNfT1lHb2NxZ2MxY1hKN09vYzU1cHI5VHZVSlM5MVE?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "c2a5d74fab45": {
       "titulo": "Calle intransitable por el barro: deslizamiento de tierra afecta a sector Juan Riquelme de Concepción",
       "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdGtoZWM0dkdoaVMwS25CaUVxbTZ1WklkQWFxUXU0eHJQdHhVOHM3a1NmVzZMU2hoUWlsaVY4cmk1cllGMHFFcUlrclhSaXpaeVZNbGY1WWRtNEpNTG9pdnE3T01oWWtKbzJBYlN2cWhyYjdYUEhjY0h0ckhYWGI5anNHWXU0dEI1clQ1ejJNSVhPcGtLYm9zVEVyUTBnVUhidlZOaHBIOExsMlVyMGh5Zk0xbU5DLUNZd1RqTWdKNGgtWS1CbW1NTjd5Smc0R19qQWlaOXNwZDhfUVBCZWttRjdYMTYwNTNCTFRCc3l1NUtGTUxBaG9LWXR2SE5hS19CMi1ZZ3M4REtGNUdHVEE?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "0bb4ef658e82": {
       "titulo": "Avalancha en Centro de Ski Portillo deja al menos dos montañistas fallecidos, cuatro heridos y un desaparecido",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPWFRUMGZkUFBDXzlHOUxyQ19kMmVyNXNNcXZuSjVzSmh0THV6STNyRmc2emQzWWV3OUxzdXVmdkVZd2g0NVpxVkhaYWFGY3ZIblVEa0NydEIxQWxSLXNrYmZ2d2F6OVhYcWx6SDBKOTVSOHpUeXdHQnlqVUswTTdVbUx2aXhSQ0xxTWVpZ1htdkljYTNPOE11MFRQRDU3c2J4bVc0UkdGWEU1WmF2blJjNVFVRW9UNS01a0FHOQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "ac3063120f76": {
       "titulo": "“Estamos a punto de que nuestro cerro se caiga”: socavón de casi medio kilómetro amenaza a más de 150 viviendas en Arauco",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPejZtVy1sODB2OENwS1kzV0s1UEM1eHMwemMyeDZiZVBjUUh5ZXdPX3ZyWURBR2VoYWp6SDNwWmlzS0xWTDVqVXBjT19zOFFSQVRoQ3dnZE1nd3NvbTdzOUQzM2tRSU9kWlFSTFlpQU84S0FOU3E4eHp2VEhYZTF5bDRvR3VuS0s1dkZISjNiWXJZVWVyVjlSU1FSMDNEOUR4SFk0YnpwYUtlcmQteFczRDdSOFU2TUVFUVBlTnEyeFVfZw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "d9122f5820bb": {
       "titulo": "Aluvión en Concepción: Barro colapsó viviendas y automóviles en la población Juan Riquelme",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZjRaQTdIalpMSkN0QnNVM1MwTFdsNFNXRm9WQmxDcUZuVGI0X1VWdTVRN1pKTXFyVlBjU25ZY3d0Mkg5VlFGTEJIT3E4Q1RiLVJZMF90YjFUaTJzYTV6bTN6a3ZpelVZT0VVbTBmMkQwS1JabXhsdXdwblZzRmlNaWZqMkNyTl9KWWNqU3NGZmVqbUZpNU9QWHhfVTdkWmx2S2F6SWhmTzFzMnp3Y016dWRpamNWOG1PQ0JFVXgzQTVzRGM?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "962a67649cc6": {
       "titulo": "40 casas corren peligro de derrumbe hacia acantilado en Puente Alto por intensas lluvias",
       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQRXBtaHRyaFZIR09hNFV2WnFWWDZUWkhuam85N0VPT241WVhZb3h4b1NYS1NIUS1HNDU0Q2s2aUNhRFpwbmtwM2dTaVFmM1VCRlVONzBwVy1JY2FmQnFaczdkell5alhyZ2tEalcxbUhLQ1RiRHhNbkRGbS1vN3ZubUxZVk5zcjRvNV9mcWFKWFFNODZ3OHNpVnZhNkxHaHRmVGd5Sy00b2UwX3dMSk5VaUcwQVBHTEhIVTc3XzRIbDczcm11Q2xIZ3JhZWI2OEZzNjZVYXVBaHNBdVlIV3F0WkZwbTU5TlZQLWg2cE84bTBrR0o5Xzc0OFFjMVVfcTRp?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "65972745c9d8": {
       "titulo": "Avalancha fatal cerca de un centro de esquí en Chile: al menos tres muertos",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOakt5cGowN01RTXo3aGI1NE5nTF9SbWJfZTVmVnI1bDQ1Nm9mcFFVMVlRMTJHSkp5WmxwQWlwWXRwcDN4cms2dGJpbVFOZ0RuWnRfOFpXRW1uMzNUTkJWdkRPWmZkZVZYeV9xak8wMHZvRmNnV0s3bmxnWWN2dzIycmhzcl8xUmpmXzRF?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "cd8d0e3a5fed": {
       "titulo": "Intensas lluvias provocan aluvión en sector rural de Concepción: Vecinos temen nuevos deslizamientos",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOV1p0dUF2OVZleURvUHhJbGxjNFdrR3hCalZqUEZ0SktHbHdzLTZEMmtBT3lWYXVkY0l3SDM0TjNwWTBtM0FjdlRoYzlfQTBQLVNaLUFtWDNrMU9KbXBzLVZWekN4bGFVSzA0R1RLOFBiMlBsSnNILVBuZ1hEemQtZm9FaE1URVdSREVoRzZDM0dPZkNwdzJfQ3pMRjZ0cFJmLXB6a3ZyZ2NjcjNMTllsVmV6X0M0OVhpcHA5a3RiU0lMdnhoeXJwVGp1SDRwYlFkd3M0emJTTEkwQjVmS0VxVDNqUdIB6AFBVV95cUxObTcwd3VqRWxyLWRxRWVkWEJubW50cjBiaFhrWHl0QTQteWxtUzYxZHo5NGgzdmtVdHprVVlPcWhZX25LQXBfbU5ZM3E4UmRMU3ZLYXl1UFNfOTFvSi1mam9sMTE4MVp1aWdTWmptM2ViUThUOFZsSTBFSHZ1azFQOUN4dWtid1RwQlQwRVVRV2p1OUFhaWh2Q3RuWThaNkh4NFhhckhac1ozQzR0bzAtbExmcU5RVm15WGNzd3RTcEY4QkhwTTBvZ1JBbU9zME9qeXRrM0c1OTRKUlBzYy1DUkJ2Y2RBaW9q?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "f5632b7ace52": {
       "titulo": "Este jueves se retoma búsqueda de tercera víctima fatal en avalancha de Portillo: aumentarán recursos",
       "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQLWIwSl9QUzYyVGFaNU5PVHBYTXY2NW1WOEM2SjYxU3V5ZkRRQlVoRWM5eTBKVGVGbjJ0QS1zNGhkbm10WnZqWWFPU2lNa05zdkRFOTM4bUpENUc2TXNERFFGcEI1TFRfaF8zWnpLSDFNSV9QTktuZjNQc2RyUWh6eDRnZXh2YTdOVlVhczl2MXdKTnN1Y2hPQkJ1N3pNaTlsOXNfWTQ5QmFWSEk4RHpsaURIN09wSzQ1TVRVRDZvN2dpdDQ0dVB4SE5pUXk1eUhxUVRpZlJDNWp6R0E4cjlWN2M5cldnWVlhWHJRZFdDVldlM3ExU3p2eGlMSWJYUzMtcXhHSDVmNi1YWlRYYU85Qg?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "a9855bc65ad2": {
       "titulo": "Avalancha en Portillo: club de montaña identifica a dos víctimas fatales de la tragedia en la región de Valparaíso",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPSE84U0RaaVV5X2w0aEdEQzdMeFVMY0UteDhkVS1OQzctcjlhY1V6eUdkcWZWMU1OUkFqVVdBSVgxZGxyTU82MFlsd3lyVGxEMkxkMExoOWVacXhNdHBYLU0yRmFQZ2ZNd1U0bks2Vk5yRVlkQkRabVpEWC1zdzQ3NVRPNnB2QTJQWEpqMjNMWmRzSEVTVzlJT1p1UHZUcWhuRnVrcEFMU0ZadnRvZzlQak13dGQxVzFVUDFka1M0TUh3bGt2aW55VFdoNVhhYVRLUHVhZUtVSzB6ZzJWQkZ5UzYzNNIB9wFBVV95cUxQa1NGajl6Q3p1dUpPY3l3VUZ6cTVpWDFPZXB1X3Y4alV6MDZ4S1AxS2F4WnhNaHJPeDJwbXdHdG5weFdPa1dvbzJDckFsUDRxdEVwVnN4ZkVrQnVKNmh2VmdFUlVyR0JCeHZmY1UzVFBfdlYyUnd2YnlSZEtyZFo3b3BHc002R1lJbUpIYW9SMW5WVzVuZWJDTExUc1hHdU11dEg2T2VNYkRZc1Y4UkVyUFlCLUF4Q1hZNWlIQW9VWVJqT3J2S2JsMjZQbmRqTWoybTdfNlk1VmpxZkl2NW1QaFI1d3pNN042S2NYeC0tbXBQSzJZeG9v?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "d0ab8f7da2b9": {
       "titulo": "Una de las hijas de la destacada actriz Luz Jiménez murió en avalancha de Portillo",
       "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOT25nX0U1OTM3SHgyanNzc0JldW85Z0c5VmJZRnAzR2tHWTdyTndLLU92OVlxbUNYY1k2cVJhTDJKUkJETGJTUzRBTExqNWJLaUdyVm1VWl9Wb1BUSlZVRUV4cWp5c2dfUjBncUxEWW4yTlc0SGk0Nl92WTNjTjZyd2UxVWFmNEg1UzFwRGV0NUhZX3VFMWR0MFBrX3V2NzFCUlJYVzBQekkzUDZVUFNCOEMtekljN3hKMUlIRDJlY0hLbTJIeHNsOFRfYWlpVUgyaElwNDBoR3ppMEQ5SmdpdmR5b2FwRmdHd1NjV1pybmlwSUx1bkVJblpTd1prRU1BazNnRw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "87a15474ba87": {
       "titulo": "Aluvión provocó daños en viviendas del sector Juan Riquelme en Concepción",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQTm1kbVpESHp3d3pQS1Yyb09vbmNIUGotNXdHTDg4UVlyQm1wc1diTFFpRUlOTWo1cW9xOGYxWkU0MVZsTkJqMEYzYjR2bGR5UEJGR1hyU1Z1SnpsejUwVE43WUJfaTVGWlZGbFlXdXVBSUh6Ym1oelJUTktYeFQxeEo3X1l0c1c2Q2VPcTNLOUh6MGh6N1VybEN3NzRzVHlMZ0pHM2pBZ3Q1WXhIRVBYU1h4WGZOM0NiUEtwTTRsTzE1bTYxeUJMXzZoR21vbjZvb29aSU02VTVfaXBlcVFlU0RqYUJRN0dIcGJEZVRrcW_SAYwBQVVfeXFMTV92WmQ3ekxROTVYTFpmTC1DRUJxTExKTXFxTEdIaWxjRmpkVmpuUzJhVXc3djhVRGtTaUw0UWlHUFVrWW1MSkgzRjlJcVdfNC1HdjdvMUFmVmd4Yzh5M3ppOEJZV3dEMGhTR2gtTDdEdURWUkFqcmFkcFJTeUpmSUNRaV9IV1BsbEpGS1I?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "97fcf921f891": {
       "titulo": "Director regional de Senapred por socavón en Arauco: “El riesgo es inminente, los organismos técnicos ya lo han dicho”",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNN3pSU2NnMmZ5SVllWmpKei1QMWxLanJaeW1qa2JTYzRXTUZhRjJROFBrQnVxaDI1MjFCTFJSNXg5QVd6aTN2WGhxMHliS0xTMlg1Y2JEXzktNERHbTZld2w4MWV2U202S2hVdDAwTVBkYzJGaURwRTJ1ZGJQR3VvZUFTWUJZa1M2WnRzSmNVZlQ0Sk12b3BJQ0V5eEwwRjUwWC1Vd2V1Ti1rSFRjdUxlZUZVY1ZKZzB2TElKZGdIckNLb2ltaGJ4MDA2M0hlYzRTV1BadjBUc214UHBSaFhvZ2hWMHhDc21mem9J0gGMAkFVX3lxTE11MlNWOW1rTWFZN3ZyVEFhU3lJYzBYMGR6cGZ1MURUS05TZlE5RURxMVoyZzhYTkpQMTRNR2Z2OU5nOUZNVE1WNENnb21ZRGw0VjRuUUQzM011djVCNTZDcER0STFJRlduVFo0X0U5em84bnNmU0xNTmt3ZHI2M2ZUUnZpSEg4a3pEdzZGYXlxbUJId3VKTjlTS3ZycFFQY2p6SjZtbmVFam5lUHktdFUwVjZzVzNiV2ViN3EwTGZrb19DdUZwU0lPTDZGTWxRejNOV2xlaEk5Vm12SE1YY2lXOHBaWnpDRGpiejBGQ3RjVFI4U0otNkJ5VGlkWE5jQUtJcmx2Q1RCeTFtUFo?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "f0302b156084": {
       "titulo": "Avalancha en Portillo: Armada utiliza robot submarino para buscar a víctima en Laguna del Inca",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOSDYteko2eVJKRTcyWFlOdW5aTjNzb21lc1lTZHZ4Rlo0NlZkcFVDdE95OUJkWFFUWG9XUER2bWx4SkU5di1kUE1qSnh2RVVjSjVSTEduZmdUTVYzSjV6SV9wd0l2MXBrc1BFN01Bb2FfbzQ2YllBc1FoempzclVqY09mNlpjejZfcU8zeGtDSS01bFZvR0tubEptdW93RUQyMUlKNmV5UmVGWlhjT0c1LWIwNVdIUjlsMzdyMTFzTHE2WkpZd3FGSmp1NVB4MThhNWdDcXJn?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "c0b5722d12e1": {
       "titulo": "Pedro Pascal sorprendió con pregunta sobre aluvión en Las Condes y fija fecha para volver a Chile",
       "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQQWpQbDhLcFMzOHBCaFNpTTI4UGRSdnZtd0VNdzZfVEJWLWtGMGhDWW5VeURjMWVrT01uaEFCcmp5VG5ILWlOV29lNEtWdzkxUjl0YlJCTnpTR3pZOWdiRU1HY2lsZkpuV01oeWcyZmFCR2txbTJrZnY3elNIOGJCcVA4TUJ2WkpBQVhlVGJyUnRKeGpyN3hyaWo2aUtON2lRakM4REpWa0R6c0tIbVBGdTdlNkxnX3A4NHRfOEpoMlVRaXVodXpvcmVPQ0Z2WXJFOXdqcEtLVWxTenl1LTI1Z1h1aUVUZTZUbEIyYmpQbDVYUzZRTWhfNXJ3bXVKNXJ3aXJreUN6VnFuVHRaQnc?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
-    },
-    "2c4aad594d58": {
-      "titulo": "Aluvión afecta viviendas en sector Juan Riquelme de Concepción",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcHJVRjNPbHBKZTJ1ZE5NX1l0SzhTUWxJT29mR3NsSnR6ZUtmY1NwOWFRUDQzU2ZVdEx3UDJJd19zT0NSNWJnSU9OSEh5U3ViTFJhd3NibGRrOF9MbTk4VE9wVVAzOXhkSnZvX2JtYzJ0end6T0NlZ1BDUV90SXdyQmdualdjdU93eFVCYmt3?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "62049a6e8cb4": {
       "titulo": "Reanudan búsqueda de tercera víctima por avalancha en Portillo; sumarán más recursos",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPOTA2ZWpGa2E3SXIzNF9lNWxpSW1aVDJRaEM3X25NT09iSzNIQ0ZyRHVSTEZ4WlFrWndLdVlGV3RwRXZwdGQyYkpic2R2bmJSMmdRN0JoeGNkVm9IWUVYbWprcVY3R3RXNW1wUDJqdE5kZjlsMHFmUzNUU3F1ZW1hUTduZFNoR3o1RHJxd3FDUWV6V2pqenZZX21xV2Rlc09JdkdqckQ1LWcxalhvZk1vcHBkRE5SVi1NYlJVZlRtd1RwYUxwNzZ0cEVRSXlIN3pYa0dlclJ1djBtUlk?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "7b212d0d46bf": {
       "titulo": "Bomberos de Los Andes confirma tres personas fallecidas tras avalancha en Laguna del Inca",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVGZ5TmFkdXJfT3d5bUhwY2xkNjNtNl9uRFNtSFJWaFRoN0dBMmp0ZTBxajc1RFhnTVUyUGZxcTEwdjZSdjlhRW8tZl9Tb3FZbC1tTnlPRTZsajNVQ3JkT3VYdkl6bGxfaU1MekdYUWFDUmtITGc5ZFlpbC1uS19Dd3RwUFAzQWNwX2RWZG90QmNkRUVSYlFoeEt2a0JSUml6T1czNVh6U1BpLVhaQnNvb2ZFUXdNcnJCemgxZ01wSVFLSHNwZWtySTg5Ql9Da0hmRUd3bWlUYmR3TzJSUFFGWWE5dnhyeGVl0gHuAUFVX3lxTE9kZnpUbFJkUFJIWXFaTFdoNWh6c1B2OHdiejFWeXUwZlF5WVhrcHpNTEV2NU9UcWowcjBwY0g5SWk4a2pEV1FwWS11eHdhVXdKcWhzMmdrbGF0M1ZOcUU4T0NkOG9tY2I0alg3X0dkTlNnTDZLNHY3eFpCdTdEQWxPWWJxNV9kamdtS1AxWEwwbDJyT1JqM0Uwa2JwWDNtaWlfZE15bk9jSFpOeG5kek9TOUlIdm9QUmREZ1NLVkpVNzlPMVJHZ2xmZFRYOGUzMDVESXhqc3FRS2FUZ0NKQTYtR3dlVmRMSWQwaGpYeUE?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "afde0d3748a9": {
       "titulo": "“Siempre es lo mismo”: Aluvión en Concepción afecta al menos 10 casas en Villa Juan Riquelme",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMjNwUVZpaHBYUHVJMklJRVBpSUN3Slp2TnNDVzBuQjVaMGN1aGJ2ck52eHpxanF4ekxvcVZTaW0wYWV6bHJ2dm1RMGNBeDRMX1RnbUVhQWphdXdQcU8zaTl6VGxac3VabDNXZ0JGM04tSmx6bHNDdWtUblp5S0FidWhQbk05Z3pjM2R1VjAwazU3QlprbklUYzhGS1UwS1AzTURxRzk1TUptajFHOWJUMHplYUVjR1JTaTg1akk0RnBDbEHSAdcBQVVfeXFMUE5TNVlfTUJUYjdCVVQyQXluYmlQcm11N014MmlRNlllbWJUWUhnc3UtVkJVY3U5TXEta0N5cVBnTDFPYkNNTEJrakdkeEJMaFA3YlM3dFk4TVpsTVl3RWtZbnRRclNDMVBHdXF2WDhmZDF4bEFMOS1CWGMtR1VKWG40YlBhUHMwRVdXZmd4YkxqTDBsM1JPbnFoWmV2aGpGS0dzbm1RLVNzR1NhSXp1MjFiZWRqLVpMYng5RzZaVllTMzJCUENibXBvbmdRbUR3TGswVW8xYlU?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "7f5ec26008b1": {
       "titulo": "Derrumbe en Lota: las señales que podrían advertir una nueva emergencia",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRFNjdk44UktxUjdxaE5zZzJ1RTJZOVlxdlhZNlZUaUVHckx0MkVLc29iRWR2WFVqbkp1SkNVc2dwbXBtQjFkNWoxN2dIdWllZ3k4UXJ1M0ZPbm51b2RHazVBbnh1eTFka3MyVF9uRWRLcEVsWW9MVXJpaTZNRnVwbE1wN0VkUnFzZFg2czBTMnV0M1VMbFpIdnZGYUtSUjc3LS1OaXc0SQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "c9b8f9446f2b": {
       "titulo": "Alcalde de Arauco acusó demoras en evaluación de socavón que motivó desalojo de 152 familias",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOTUR5aVJHMHlzZjRkODlwZFlVTDJDTmpMMTJaeGs3TERxcndWUjZaRUNUeGI2RlFWcENuZEhlWU1hSGxMWVpkc2RrWXVISVY2V0dzX2FRLTRNbmtURzdwTi1RaXJLcFlyTGZZLTBzQ05kYjl3UWh3R2ZaME1HTW1zcHFlNzFOOTlscXVjQUdyZVE4bW81VW1MbVhyaFRPNHF2RUZxLTFwT1NzcGZjUzk1LXV3ZWY2d05SU0xoT3F5WkRfWlhmT1hHWl9iOGdlRWJpcG81Z1Vwdnpla3poclNnSWtKNNIBjAFBVV95cUxQUkE0MDFWN1BoYkRoRVp2UXNqVl9RUGJ1aWZESFFjUlA1S19YMDdRb2lJcE9vazdzUE1IZDZIN0k3SGk4SUhRVmhBZWQtTWdtWm9CS3F2VG9ScUFnRms4OTVGTkM2Tk1tdUVUMVlyQVBIX0JYeGd3OVBhekZaMmw1dFQtcDRDdHdQMXZhNA?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "8b0a1d2dff11": {
       "titulo": "Reportan avalancha en Los Andes: Equipos de emergencia buscan a personas atrapadas",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZHJHZjVvWTB1YTF3MUhxcWFJRk81c3BlOU5EQVpMWEMxY0t1aDNwX245ejNJU3RDNXBhQ2ZKMEhSTGVrT1c5WjVRMmxfaHNkREtyYnRzV1ZvdHdON0p4RGdxTG5abWJsQTN2Q3ZkV05vVnhILVYwSEU2cS0tZ0o4U2hWRlZnNHk0QXJGZXlWSTJpVW1KSElBUWpEZUJlWFlPS2V4cjVuQ2laM1phcXBoaGZB?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "5734b3288c0f": {
       "titulo": "Los Andes: Club Andino confirma identidad de dos fallecidos en avalancha en Laguna del Inca",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVHZoTGVMUzZMVzhRc2hWM1ZuanJNTGVYMFdKbE04NlN1TnE0cml2SmNyWTRCN0VNenhqN2FzUTJiWDJSbVE1MnozSkswZldpUTdlUXF2NmttTDVFZUJ3eGZlalBwXzdiMFpPOGhTV3dIUFY3VFluRnJ6MDdycHZNLUlZRE00RjFLRG44c1ctZVFuZFV6S1NPTU9mQXphRFV1MHloSVg4VHJMT3h3ZjVJNEQySEtPbExhNEIyMG9n?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "e43cbb391378": {
       "titulo": "Tragedia en Portillo: Encuentran cuerpo de tercer excursionista fallecido tras avalancha",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQajVqZ20weXJnVnc0TUhSOUdIVmpDY1I0cXZxZUo5T3k5TVNwdjR2c3ZfVVZiMEVuZUlxMm9qSGdYZi1LSGlhaFdFa0dxSWdXd25FTTJTeVZYZmt2V213ZldsWk45YVFhcXFMLUhmbkg4d3E4aElYN2xWY3ZEWDZRc3dpeHcwWDR0ZWZLT3FTVUlUZzdvdkluUDRLd0xUajVVQjZiMFpINzJzWXptY3RYZHFabWNuMnI0VEZCc1JtQUhzakpla1RJUmpwWHBKdw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "3ac5600cae6c": {
       "titulo": "Tragedia: avalancha en sector de Portillo dejó un saldo de tres muertos",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNLXlRbWFwd1o4S2JFUjhaVTlqODJIZ0UwMmNnM3RRTkM5U3NmWlMtVnlkNS1fZDA2WUh3U0IxR1NGN0l6ZkVNbUtjX1JHUU9fZjZhMk1TWXc2bXgzSmN5WkROSE1TWjJENjZsVnM3ZUcxRVE2b0NyVlA5bXliakxxd25XY0o5cmI4Um1CRGN1bFNEaTJSbldndS1ld3B0SXdVU3Z2RU5tNHQwNENKWW1CSVpXT2JzMGFPbExselZfcXdqUk1qeUE5UWVGMjNzMkhGcEphbXlndXZ2d1dqWTNWTjJDR01XZ2Fja2Uw0gGMAUFVX3lxTE04eDMtZDJQdUFPSzRybTljVkwxVF9wMkVRdllwQmVIOFRVYVh0cFVYN1VPUk5oWjZFSzVuNUtXdUs1M3J5ZmFJTGtwU1pYV1cySXBFeTgxVExJc2NUdDV4Nmk3NXBDSmw3SmRabTZ0VW1haHBnN1dmX2w1ckZWS2lfTjVVdVZpeHpqaHot?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "da15439cf25e": {
       "titulo": "Vecino alerta por afectación en salud mental tras socavón en Arauco y confirma nuevas grietas en Villa",
       "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOSXowUHM2Z1lGbUhLMHY4ekgySzUtekZuaDFkM3JHSk81dGIza0pwdDFNR2NNb1RrQkEyZ0UtV1g4b2FOOUZnaG9xRFM0ellSc0ZOUEpxYjFLMGk3WHV3eFRDUi1KcWJTV1JMWXNkUGVCYXREZmRsMXFMSmxfZXNIak1IMUdkRWpFbXdiRndUQzVpdmFCa1N3STJoXzRhb2ZJV1pLRERRUThpc0NUZ0M2Vm11TDZ6dTdOLXFlcEhGSnp1U0RmLU1vdk93YkNmeGJIV01mNW12VUFicHdYTTIyTm1rV2J2SVZyRG02X0c0THRPYU5xUUVSbE81MUJKTG5PaXNMLVpxUlRQR19qUlJxVQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
-    },
-    "d4c1cdc36879": {
-      "titulo": "Socavón en Constitución sigue creciendo y vecinos advierten riesgo de nuevos derrumbes",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQM29KcEtsQUwtVmloQWRueWtySmEzOU5YXzF5ejA1UjBraXZiWkZDN2lqR1NvRXRmWEdNV29jLW82MmJyWHl3aVRaaEYxLXZ1ZF9WVkM2akJZNlBPXzU0VnI3cG1GVVp4bVR5WnpXN3NpWWprT1JmcF9GWi15c01qNHNOdzJJWVgxR0prb25jVEM4VDJhZjBUREt3Z24xaEZUQ1l0Wkg5V3hFS2QtNENaaDh1dS1KU2JLMVdvQzVEYnd0THBwZ1B6NWlodjJ0Mm000gHQAUFVX3lxTFAzb0pwS2xBTC1WaWhBZG55a3JKYTM5TlhfMXl6MDVSMGtpdmJaRkM3aWpHU29FdGZYR01Xb2MtbzYyYnJYeXdpVFpoRjEtdnVkX1ZWQzZqQlk2UE9fNTRWcjdwbUZVWnhtVHlaelc3c2lZamtPUmZwX0ZaLXlzTWo0c053MklZWDFHSmtvbmNUQzhUMmFmMFRES3dnbjFoRlRDWXRaSDlXeEVLZC00Q1poOHV1LUpTYksxV29DNURid3RMcHBnUHo1aWh2MnQybTQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "f2f7613e853a": {
       "titulo": "Senapred en alerta en el Biobío por riesgo de derrumbe de casas ante tormentas eléctricas",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdmhVMk5WUjRucVZVYlNhbU1xeWVHMW9sM0o0VXFPbGtLMi1qRGZ0MmFuTnFIbllCQUpWMzBzZDBCWVdlMHlsbGlLQmdGbWpqa29raGgyZk11S3hzUHpFYzVITjJRR2ZfX2pvU19XSHl3X2NDODBVLVRpRDhITDh6NXd0WWJCVmd2anh4REVsdDRKSnl4WW1yWjJTb1ItS1ZhWmtaYlJ1anVRY1BSaGlnbm1TcHVEVDZGcDNTeGs3U0drV3NNcDVKTnR2NlVod1Y5TmE1WkdR0gGMAUFVX3lxTFBROEZxM0VFc0FiLW14SGFOLUllUmE4b2NBb1pOUXVGd004SE1ESzhySHNMZFlIb1NjN3ZuX2laSVp6Zk51OG00cjAxY0UxWWZSNFp2UTEwUXB3TXowSkN4aThLTm11b2N1MnQ1eTl4MnJDRUZsQzh3Y3p1SmdTLUFIME90Z09hVGdSNEtG?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "45203114552a": {
       "titulo": "Arauco decreta Alerta Roja por riesgo de derrumbe: 152 familias deben evacuar y vecinos se resisten",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxObzlFdzhrUGhfVmk1UzNiYUpPWGZhRXBpenhuVVVOXy0zVXRBX1U2THpHZHZ2a2FDLU9ZSjJaYTc4TmVNa2NTYmJWa0JxY3VXS1dqTVdTb2h2T0JlekRxa0lDWkhyc3dhS3lZckRJdm5qQklYQkx2bW9fMHNtN2JMcEdtMUZDN05jNHNMY3I4OU5WZmNsVTZxc2Z1Q3JWNTJlQnBzVFJvbnQwTkEwalgxcndBY3d1VE5B0gG-AUFVX3lxTE40LWkzbTJKcHRSYUotNWZvTVIwNHlTcmdiVTRxSFVNLThjLWVaWnRZRDVWa2JNU1Y4QWlnNzJ6ZmRmSFNIamlmWDlsbUNNZjBHNnBxNS1FNDljeTdLWWJETEVJMmNzTldDTHBOY3J6VVkzT3hqSXEtbzhJQkhQVDZISkRVRjYwYVI3c1g1TFMzUVFLRmplR0h3aU4zMXo5bDVNSl9kMUg0X2lkZzhlNTZ6YnhBcWk2NVJwVjB2NkE?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "5edca9599795": {
       "titulo": "Portillo: Rescatan cuerpo de tercer montañista fallecido tras avalancha en Laguna del Inca",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVVE0M3YwZEJXZHNhbXYtS192cENOamxOMHAwOEZkWTBDNFYyNTExZXo2NjdYWS1OSVJXckFEdEtaYng5YmFiNXN6XzE1M2dWNWFzQ2w0Tll4dWxyc3VoSGYzWUFsYlpiYzhnV2JWcUxMZFltQVJBaGR5aGVjWTVhck1ITEtnOTZFQUYwRG5LTEM5QmI4QjRLYm80ZEZzSE51VjF1eTloRXBwWmdsWE1TNWM5YnVpd0FDUTMzTQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
+    },
+    "2c4aad594d58": {
+      "titulo": "Aluvión afecta viviendas en sector Juan Riquelme de Concepción",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcHJVRjNPbHBKZTJ1ZE5NX1l0SzhTUWxJT29mR3NsSnR6ZUtmY1NwOWFRUDQzU2ZVdEx3UDJJd19zT0NSNWJnSU9OSEh5U3ViTFJhd3NibGRrOF9MbTk4VE9wVVAzOXhkSnZvX2JtYzJ0end6T0NlZ1BDUV90SXdyQmdualdjdU93eFVCYmt3?oc=5",
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "ac0a6f20391b": {
       "titulo": "Avalancha en Laguna del Inca: Encuentran cuerpo de la última persona que permanecía desaparecida",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPQlJOaWR6OEg4R283bUVQMmhhRkR0aEdIOEpEbUxwMUNDejdPN3d0ZXBRckJHQ3o4SWQwc2VmV2pFQ1hWdkZXWjh3YkJrM1U2QjZ5aFJfUTdiODJzTFZGQjJLUmxhTC0zVWxLeVMyV1pRMzJqc2NPSUNPNmVCb1dVV2FyVlR4cWl6OHVXN3RkOGlQTEZGRXl2QWsyMmZkbzFHUjQyWVdtQkZqdWJXQTVvcC1SYXI1WlRJc29URHpJRko5YnpscVVhcTZZS1NuYmpRdkptVVM2a1E0VnRrZXl30gHkAUFVX3lxTFBGSkJmQTJhcDZBdjJvczRfTlJsZnQtQlhvTkQwdFNGTXVqdGNLRlAwVkFSWWtxLVJJWGtya1c3cGgwVFJLUENfdV9fRFl4ckdIY1hwOWcxR2lXSzRSQUdXeUxKUDJ4aWREQkp2ak9MVE8xRGFWVGZvdXJNSXAtekp2NUx6MU1uQWttZXVKdGVOQ0RGOElQRFVWaXpoSTRscUVnOFYzQ3NXcGd4QzJkQ1o1d1lFelZ2NV90bUlpTkN3TG5RQ1F0R2xveDRUOEdZM25UYXRYeUJoMXdvdjRoaUh3YkZ1bg?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "ec415b9727d0": {
       "titulo": "A cinco días de la fatal avalancha, recuperaron tercer y último cuerpo en Portillo",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPUjlmN3hBWlp0dUdvUEpOYURfMTRkSDVKWmhxTmUtZ0xuN1ltUkVscy1LcHFqNmF4QkwyTFc3V00wMk5tdUpud3hOVkhqT1JmaUtISzZWby1iWGdqQUpDUEVuWjFfTi1UYlpRR3dGOTJoNmFYdkw0SFlaRy10eGwzOGJNTHdjT1ZIeV9Gb29SZnVFUWM2LXhQZ0NMWDBYc3hUUGhGYWVGbGQydnlERzMxRXVEUkEwRUE2eFp0TkZNZ3QwQW5wWXVjbG5rdmJ0bWoza2c0aXRVWjZLeDVZY1ltTlF5SHFtcGkzOHfSAYwBQVVfeXFMT24ybWxybDRkS1ZscnlnTlBFYWVQelVmdkt0N19pUW1MNHB0TkxId1lfMU1CSVo1T192X3JTZDlVdkhjWGNqNlBRMHRFVHhrQU45QTk4RmRHdS0wc0ZhWF8zTnhfY0xJOHo0N3JPLWh5bVpQME9odkFCUXdtR0h0d1daSEhVVDdPRUVucVI?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "9cbd6b7ab60e": {
       "titulo": "“En cinco minutos se perdió todo”: el relato de joven que salvó de milagro tras derrumbe de su casa en Viña del Mar",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNakpBX3lzb0F0MUdtR19nclNNMy1LZTg2TGpVbkFFYTRPT2NrSWdaS1I0RTZyQW1qWlE4ajhTbVdrMEYtRXpGNDREUVB6ZGhheGRTazZMdERMNERBTXVlcXJpT25ycHZlUTVUOWJIZnJqcXhfanh5SWdIQURYSTlyWXJHbnJJdUp0YnljRGNmeFlyX2RVMl9MY0ZZOTJLZTRlQkhrNlc3NE1jazluUHg4QnA1a2RIM2xIRTFTc1pielZMQQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "459f36147e3c": {
       "titulo": "Alcaldesa San Martín insistió en evacuar zona afectada por aluvión en Las Condes: \"Hay que salvar vidas\"",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOVUE2TUxZREd2QVp6WmpzYXBHZUUxYW9UUEpSWUhvRDlsRnNqeElsQzlHOFlhci0xQUlYZU9LT011dVJ3SjBTTy12VVN2bDNSckFfYjFMdnBEcThaVFJzbmNxRUFIYW9FNk1xeHI3b2R5MGIyZUN1eDlGbFN5TUp3Qmt6a2tocmt5djJBOGkwdC0xTjVwSHdIRDFHTTFody1UUkVvOTZwU01fOGVOZ2RyQzFFVFhCU3p0SlRhamx1dmRrV0g4WTQtVXNGNE1KRnlyOWc?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "606c6c782b1f": {
       "titulo": "PDI sobre avalancha en Portillo: \"Se estaban devolviendo por temor a una desgracia”",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSFVzd1oydXJRazBiU0Ixb25jam9nbXVyUDU0Slp5STY4OEp4VU94WjBJd3VpU3N1bTlvOHFQSlhnejQ2WTFOSkNuUUROMkFReXN1VWw2WU9HT3EtQ2ZjTFNlNFo0aGF4cktOWVYxc05iVUJwS3pMZFhFWjhsX2NlTUpwOHV1X1FCenFFby1mLWR0UHJqWjA5aF9RaUUyMGIzb2dUV2ZwdkQ1bU41ZnhMbHBTNHpsS3A4a3dwUU9jLVJoN3M?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
+    },
+    "d4c1cdc36879": {
+      "titulo": "Socavón en Constitución sigue creciendo y vecinos advierten riesgo de nuevos derrumbes",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPN1JJZ1ZRc2hoS0w4VlpvZ3NhQV9uSGhtR1JsTWNrTjhDSWV0aGtLVWZ0eVA5Y2h4dVlnT0Q4b2VTWS13dXgzcmF4V1ZjY0hOc3lFTVFiMmZkOUlrNUdUZ2Zrdm5oM3JycUxDVFZScWZfZmNCcTV1d2s3cXdPMmlMMzRvY2doMlNvaUpQZHNlc3FKMjF1dmhIRHhRQ1g0Vng4VHNaa3otWWxGTXRTNTRCNV9XVHFBMFJGWHZmcEdpZUhHQ3U2cnVrbG9Rb9IB0AFBVV95cUxQM29KcEtsQUwtVmloQWRueWtySmEzOU5YXzF5ejA1UjBraXZiWkZDN2lqR1NvRXRmWEdNV29jLW82MmJyWHl3aVRaaEYxLXZ1ZF9WVkM2akJZNlBPXzU0VnI3cG1GVVp4bVR5WnpXN3NpWWprT1JmcF9GWi15c01qNHNOdzJJWVgxR0prb25jVEM4VDJhZjBUREt3Z24xaEZUQ1l0Wkg5V3hFS2QtNENaaDh1dS1KU2JLMVdvQzVEYnd0THBwZ1B6NWlodjJ0Mm00?oc=5",
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "6760704b49ec": {
       "titulo": "Socavón mantiene en riesgo a Villa El Mirador: 152 familias deben evacuar en Arauco",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMzY3M09yeGl5UTB6dk9OZ3JmQWRWV1I5OVQybnloenJiZzBRSEFMRXBDRzRpOEZSZzRkZkV2dDJlV1dHbWE2NFJybm5paUd5TnY0MEluQzRBZTVtRmFyUTY3cExLdUdDMmdpU3hIbjk2TGtkQXZjY1VtWVdRZW5OaVpCMl9MRWk4UWotZTBseHhLVzl4ZFQwOGNkU3N0eUU2alViSUVaWnJ5Vm1Q?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "8e81fe9cf2e9": {
       "titulo": "Aluvión afectó este jueves al sector Juan Riquelme en Concepción",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNOGpzcG1NeWh6eDMtSHhHVS1ZRzg4RFpicDd4Z0xZVlVDNG9sTWIwOU5laFlXT1JXallOWmdDM2lnekdDQmJqZXVaTi01a2UwSm5MTUFONXc3TmFmR3JobFB2d29uTTE4T1hnOGF6QnF6RWZwU0FCMG1fdjNHYVF6QzRSZTlwQXVqQnNNaFhnd0lXdGs?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "5533d2f4c6a7": {
       "titulo": "Declaran Alerta Roja en Arauco y evacúan 152 familias por socavón activo",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVnJqdmNtT29nSklDTHk1VXM3NC1CaEw0a0ZRM0RreTh0SkplUEprYklfdTVZc3NweTRPV2hLa0ladkRXaG9HZ2J1Y3B0TWM4X0UzVkdYeEI2Y3BMYUJLakQ1MDlRV3dkNWdMdWFMYkhLVDFwWUg5a1J6QWpZN2FKTjVuTUJnSDVEZk13OGZSV08yZmdwX20yRFhZdw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "8f3b267c1acd": {
       "titulo": "Senapred confirma riesgo por socavón en Villa El Mirador de Arauco",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPV0FRdm94Yl92NXhZOVhwX3FMeEZjUXllUG5zcWJYRjBqNzZiNWpmaFhHY3NfenpUVDY5WlQ3X3RySmhFQkxQTjBqTWtPY2ZBci0ySDNHeUFHUGRNSkNDVDBzczg1LVNfUTl1NGt6LUdpcmRuV3ZRdEJCQXVmN2JCTHRuRUVFMHJxM2E2Y2gxQXppS2c?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "a86d392557c9": {
       "titulo": "Retoman búsqueda de tercera víctima de avalancha en Portillo: dron submarino descenderá hasta 300 metros",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOeDhzbnVVYkFBYWtvTVVHMEZxT0plNDhIWXREYk5Wa2VkYmtMOURfamE5ZmYyb3VLTGNvTkRKRHRwZFNJUkF1SUtUTFVjZFhKQkNoQ0Z4UUtIaTR3QmdGWExuNExya2p4YkljT0dKdTJsRUVkZTZzX1RmMlVZVVR3Y0h5dFhmOENHcjJUSndYRVZMbUJob1pnMlNSUmVHOUEyY2QxTW9PaHNPMFkyMkdVMXI5QTJlZFo5Y05aZHJSS0JOSFlPZFlzT0RnVmkwenNEQkVwVVVzS2RkOU1vMGRETGt5Yw?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "52561854ee0e": {
       "titulo": "Arauco: ordenan evacuar a 152 familias por enorme socavón tras lluvias de más de 70 milímetros",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNQlRaZE5ORDJWUkxIbW1xUXhFSFZqYkV0eEpON0VBaFM5cE9MelUxOC01VkNZb0duMkZwWS1YNk1yS2FfM0ZVYVREU1M4aW02dm1TbTg0c2pFVkxxYTVGeE5yNU9jZUNFbDJqYU50d3FzQUhWcVpQVTdZTERxWUhNUk96NGVaeUtrLXBHNzFqcjUwVE5QMDdoNEJCWElkU3BJcFJNOUdQR0E1dWNEcm83X2E3Q0lHdHU4bERkNzlOY2FadlFQcTdsZ3E1dlBOaWNkazNQRi1wT09NZEktLXc?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "45b12951b4e9": {
       "titulo": "Geógrafo analizó las causas de deslizamientos de tierra y avance de socavón en Arauco",
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNMmxqc3BnNWJIRXNCd1YzUk9DckpFdEpndl84MG43QlV2MXFtbjd6R01tVDE2d1F5S0xYYkdISjZ3NF9yZHBTcWxHcWRsVEZQNDdTWnEwR2s1RndXX1dScXRSWGp1RmluWVJDMGpfYXl5ZG45X245VUo4UzdlNmtMSk1sdVkxbGNHV0REczdva2pfVGdBYkEyRC1HMnBNcjlUQlRuUzdLTDA1VHZxMF9VTzh2RVB2eHZCaXRoRkJWQTdmUWVha3NnQS0yd3JCVmNEMC04WTVqdzlkWmJy?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "c95a28147b81": {
       "titulo": "Continúa alerta roja en Arauco por socavón que motivó evacuación preventiva de más de 150 familias",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNUVRMTkg5UWlpbml4RWhxdVpiMGRXT2xfem5ieDFWWVFWbWJZS1ZOR1g0dzZoWFRyQnc0MEJBWjBfM0g5c2hPWEp1OXVCbGxHbVA4ZEVlcGJYYjNUVFJUX1RwTWlRVGVMNmdueEMxaUVsQ1dIY2NzMXhWdEdwZS1WcWRVQWJSRjBmQXk5Z21leG1lQXFrcTN0TWxjYlF2Ym9xRFF1bl9iY1FEUGRZam02Q0cxZnNFRm1XMWEyQW5Nc1c2bGtZMFBmNm9oQVppd2N1UWlzc05KZTluMW1ueFhZ0gGMAUFVX3lxTE1mbndGNDBIMWx0ZGl3dW5xeGRST0gtRDJTY3d6Mm54Vko1aEJxUUJQNlFOR256QTFEVms5UVFZN0tIR0Z3Q2J6MDVPU25BaEVudlBkZkp4OWExRjdFRFY3blFLWkhld2t2NWZUZmhqZE1zczVmeUhGRjhVd3lmdTZHZjZJZHJRNDN6R1lG?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "4dfc21f84537": {
       "titulo": "Al menos cuatro muertos y cuatro heridos tras avalancha en centro de esquí de Portillo",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOMy1aZWdsNm1MZXdNLUZ1eENfcjRzdk5hQVpHa2tva1pzNDF4TTVUVXVuRk50SFpRblQ0QkpIWVpnemQtS1k2dWJ1R1VBSzFxN3EzdlVCekppaWVTWW9KVVBramk0SERCeXJ3YjNWN3RNMjZSbUZyM2JNQXBhRGs1Mm1oVWxranFrT2hlbDZxR1VkTTI4elZFY0dYZDRmc1pEQ0l4RjFnaFlHWTVkQWZsMTZrNkdfcUVYSHlyOHVXOVdMSWpoWUlqUGpCelVjTTZ1aXlxVkZpMXJOSG1acWZseXBuX0xOWW5S?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "4e3a5f7c0092": {
       "titulo": "Vecino denuncia impacto en salud mental por socavón en Arauco y reporta nuevas grietas en Villa",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNTWlTcVdwU2FmRVdUOHVhekwzSHQtR2FiTktQRkdlMXhRbnRTdGZ1Qkg4VTN6WUR3akd1amplMFJvc19LYXdnck5tU2NmVDNERnFFb2hSdExMajVmREJUZkdpXzFWSm9JVnJCUUJ0TjgzQnV5XzFMaUVmaGpxOWdBWHlYNlVCRHlxUVZjQ00weEgyZTBZc2R4Sjllb1VUdFVaeE1CZHVSLW5OOGMwenNGdnZSQXllUHdVSWVsX24yWmZJMmRldjNYaEFZRHdsaERIQldwU0FhV2FoaTM2d3c?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
-    },
-    "34aa2a732933": {
-      "titulo": "Socavón en Arauco: dirigente pide más apoyo de las autoridades y compara respuesta con aluvión en Las Condes",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONHlpTmIwZGp0RjVoSElHTEZEeFNscDZWVzI4d3pNZWRzQThHNGhfSFQ4S2dnX3F6dDZocXNERXZCeGNRYWp3VGxPbk5iT3JwZUlraG0xQVBQeUpFYTNOVUw1N1FGSHRhbWJzYU9hQjM5LTF0WDlFX1hzMTN5MUhZVWNGSHE3LVVjT2xIaVpYTWhyeE9nejdGUVlTVlBXWFNtbVc2LXdEbW5wWm1MRkR5dktsRzBDUQ?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "7148d740eb9c": {
       "titulo": "Ordenan evacuar a más de 150 familias tras socavón de 500 m y declaran Alerta Roja en Arauco",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOQUpLYTFMYmlaYnhfU1hWQkNFbUN2c2NXdkRDeENOQXZwamJydWpsd2R5YzlCdllpbjZkX0FaNG8wV3Y4VEVJZy16Wmp1cWViQS0tcEdIZ1l1QXFCNUdYeTU1RHJEMk8xODNPeG83cmRLWnlBZTlTb3pacjNJaGNsWHVpR1FWUlpwN1daQW1SYzZDVVM4RlN2Nlpsc1dLaV9BN2hWMXdSQmtzaWhhQ2ttd0kwc05RYlBoWW55aDZiTkRWZ0twMVJmcnRJOGFkUjFkUXFsM25B?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "f54ea746a905": {
       "titulo": "Armada refuerza despliegue para recuperar cuerpo de tercera víctima de avalancha en Portillo",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPdzZfZzlLUXk2d2FoN0lLMkFtVzhQX1pucGY3Rm5RZVJOTEFFc0VtX1dmZFQtamN6TmdMbHpZZGZiZlQ4Ym90bTFILUJNLXJ1WEUtekhsNENBcVQtcndzbVQtS3ZsOHluSko3NmFjc2NOZWVDZ09IZDhld0RYWl9URnRXUGhIRXJ3aFZWS2pnelFyWEZYU0FMbHVWejZiN2xid2MtbGZDU2tzVVN3N183b211X3J5dnFiajBOM2JrS2tSXzJWU3pVZ2dPZmxIa0U5OUo3d09GeXJvaktScTVJNGdNVDFJMW9RVzlN0gGMAUFVX3lxTFBSSThHb1Fab05mclAyQnpncGtnSDRnMWtvMEpLOVRzZUdlUHRzb0llZ3JNUjNoVl9WSUtmV0VWem5CZ004cXctcHpiVFpPZzhZcExuM1UtaHNFanh5OTUxU1pIS0Z1RjZySHpCMW5MUkliRVh3Z3pvWW1QQ2xqUjVlQ1ZPcmxLWldEOGNC?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "0709bc8f58ab": {
       "titulo": "Derrumbe de vivienda en Viña del Mar: Joven perdió su casa y pide ayuda tras el colapso",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPb1B3RlA2WktVSk9EXzlXWlRXV3VUUjk0bURDTVpUR004amRQdzNiTmYyNjBXYlBmV2wtY1ZxLW9OYmpWUmhMV3FEMmc3b1Z4cFZITWhUbFRob3pWWWZ4c2Rpa1V6LTZ5Ul83NnJ4R0M5d2VqbmtSZFRmc0FjQUJhX2JweU5ac0lvRjA0V081bV8xSTBBc3NXbjlxWXVBZ25RZ0hRZHQ2N3RhbHg1OV9sczNCS01NcFXSAbwBQVVfeXFMT3JPMEI1UjVpR3p5cGYzeTAwX1Y0QnVneVJFZWNQTWJkS1M3Q3laNFY3SjczX2pRUnV6a2RnbXdobXhXUVk1XzNfNTk2Z2FMdnJleFFRbVA0ZDVtRjl1czlTNDktcTNfV01fX0N1SXVwaVpaYzRVNTBYcExNc1pUc2FzejE3aUtxZ1l0amlsUl9KTHlnTmNWbjRrbm9nRUViNTJSX2dSdjlGel8wOEM3LU9aYkNHeE5GV0hES2c?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "e1054d4bb289": {
       "titulo": "Derrumbe parcial de casona en Santiago: Bomberos busca a personas atrapadas",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPdW41WU1BSEM2N3JxUmlXZWhyVmRyeXBVdjcxSXMyaHhlU2d5U05lb0hpMzh2cVJlRXMzaUZtdDdBRFFlM05QdC1NeEtjWVZFOTNDNHY1VHEyX1JJSGZqOU1lVkkweDNTZUFsTndxTTdsUTREamdMdklWbWNkQkVJaHdSQUtKUzF1QmRQZ21MNWVVZ3RGSVRwOGQxTzdvV3JSbk4wSGdjM051enZESkRId0FDSmoyNHBleE5SZkh5RzRLa2lGdDR4ajdYQUcxZHhSalA4dkh6ZFdZaUFwRmdBWNIBjAFBVV95cUxOek1jTTdsczRqbTVRb1JmMV8teTBpOTlVYUNPV1AxMEwxUEtxOXA3Q0hPZDBaT0ZxZFdRNklUMEdDR3dDa0hyTEJhZkhKazR6MUJqVjZOcEJJRTFNOVJyQTVFMndrQlQ1eE0yUm9CV3phQXVzWG8xelJhQXA5NzZGYVRkYkxBbGV3aTRLQg?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "6b1b3a5f0709": {
       "titulo": "Calle intransitable por barro tras deslizamiento en sector Juan Riquelme, Concepción",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOM3h1M3JGcURqM2pmVm1zSlU5UkR4NU1WaEptZXZzSmRSZXNXQUJnX2JNbWJyZkRJOTRXbnZoaldyRmZ4V2dNbEdsN1NSRm5IOTc5TzBrLVp3STFlNU9SdzVIY21FUDFuU0NDTWxEazI1RnRBVXQtOFJJVWphOGpscWxOQWlnRF8wOExzT0ltSFZhMWhuWEZTeVdCeDRXam9nclFCeGpoeHR0TDYzR2xlbTFrWndKNHZ3bHJacFVDSjktZDRT?oc=5",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
+    },
+    "34aa2a732933": {
+      "titulo": "Socavón en Arauco: dirigente pide más apoyo de las autoridades y compara respuesta con aluvión en Las Condes",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONHlpTmIwZGp0RjVoSElHTEZEeFNscDZWVzI4d3pNZWRzQThHNGhfSFQ4S2dnX3F6dDZocXNERXZCeGNRYWp3VGxPbk5iT3JwZUlraG0xQVBQeUpFYTNOVUw1N1FGSHRhbWJzYU9hQjM5LTF0WDlFX1hzMTN5MUhZVWNGSHE3LVVjT2xIaVpYTWhyeE9nejdGUVlTVlBXWFNtbVc2LXdEbW5wWm1MRkR5dktsRzBDUQ?oc=5",
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "280af4a7ce3a": {
       "titulo": "Evacúan a más de 150 familias por enorme socavón y declaran alerta roja para la comuna de Arauco",
       "url": "https://www.msn.com/es-cl/noticias/other/evac%C3%BAan-a-m%C3%A1s-de-150-familias-por-enorme-socav%C3%B3n-y-declaran-alerta-roja-para-la-comuna-de-arauco/ar-AA2fH5Wn",
-      "fecha": "2026-10-22T16:47:02-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     },
     "7353cd51c693": {
       "titulo": "Socavón mantiene en riesgo a 150 familias en la comuna de Arauco",
       "url": "https://www.lanacion.cl/socavon-mantiene-en-riesgo-a-150-familias-en-la-comuna-de-arauco/",
-      "fecha": "2026-10-22T16:47:02-03:00"
-    },
-    "b7651aaa3ec8": {
-      "titulo": "Aluvión en Concepción: barro cubrió las calles de la población Juan Riquelme",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOdnNIRHdrX3Y2UnZLYTZ6SmpBYmdkME5JOXkzVmh4RVBNcnRjRUlvVjhDbWJNRjZ0Y0h0NmRMZGZ2cmxjaGJVY01ETUg0RWhEWjdhUlNvR3VGZWhxWF84c3NWX3dJT3VpeV9Xamw4Sm5aQm9BdkJqWHpHczdKU1NtZ2k5QTBlQzV6RHhmdzhCRVd2MEFlbGtTU05aQ21SMkRDVmJZazVyVWJJSnc4b19ZekRYWngxc0JpYUxfenZsZkdoLURNTjdySEY0ek9hY1U?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "cd495f0cf30d": {
-      "titulo": "Intensas precipitaciones y tormentas eléctricas provocan aluvión en Concepción en el sector de Chaimávida",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdmxoSDBYSzYxdzBEQS1vcXJmejJiZGt5UGc0SmtCS1VBUURXd2tuSzFzaDA5UzdSeVIxNzNVZ0JQU2tCNmRkWEFkUDItMmY0NlVPQXczTER5cUFDdzFVZC1DQklsdmR6ZTJNenMtTXRtYWpleDNlQ1N1QzBpT084QlJCbklzTXR1SnpQcUZhUDhTdnlVYXhWaHlWUXRkTFBjZDlj?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "12784b52d7d1": {
-      "titulo": "Aluvión afecta al sector Juan Riquelme en Concepción: barro ingresó a viviendas",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOVUxRcjNCcElNVEpSRGZUME9xbmJacGR0VTdrUzdmWXRySVpYcm1ZSDlyallaaEQwYzF3ZVFqb045QkxkRERfWjRfejR5R2dqTHBPdDBrazA2ZW1xQUFuTmxkRXlHcEt4Wjc3VF9aWFhqajBkbHFvODNldlNINEZ6Y002d21YS1d2S0JmejdweHNwVmhsclI2cFB2VXFqS1VXWnY4WGFfUm1OdDVsM3BkbWdnakN2ZHAxM0FKek0zamVqajFfMWNzUElWcDk2czjSAdcBQVVfeXFMUEozRVRRcVprS095S2FQOTVKS3d2NzVpdTdycUpfdzZpTktJclEzTllEZkN1cTM1anRsa3BVRlh5WUhyTWdQWmNmekZJS0lqZlBsMzZiVEtwLUFjRUd2VWdJa3l3a1VxSDBlX01MMlhBbjUtV2l0UTZmTUdlSVQxUEZaZkJJQUI1VllaNk4wMzctWnRRU3ZCY3NqSlVaMWItdVYxdldZeEsxUm1JS2Zpb0JROTNfQjhLQUdOdGRqdlBUcndYaDBoYlltYmhSdzVNbTJFZHN4a3c?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "f6d506bae91e": {
-      "titulo": "Hallan cuerpo de la tercera víctima de la avalancha en Portillo",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPY29GSFN0YTJJcWJ3OFFLSTBIQndIazZ3cFJ2RWE1R2hYMjVpNkJoVzBMRXluaG9QU2FhQVZsdTdMQ21lSHJpX2FLZEVEeXl4OHdSRjBGcTVPeFkwQUpmdDlhWmtUSkxEc0NhV3VCVmxuLUlDYVhCSEdtSk0tMkFna0YzMDJ0MFVUQV9UOU5nZHRYUQ?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "462aea8f6961": {
-      "titulo": "Encuentran cuerpo de tercer víctima fatal en avalancha de Portillo",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQkowZGoxclZGck5vMlE3aHRhV1RJQTNFTlVUSl9aeGRQdTFsQUU2U2lFR1d3UWdyaE9oa1FXa0pTUEFDbmloLTc3TlA1a1V5Q052RjdHRTFFMlplOGR2TUJLVlp0RWlSME8talE3cDZkRnBrZkc3Wkl0ZDkydDhYeUhGTHNQOEh5aFVxWXFQSTgxNlRueXk0WFl0WDlSSlpjME1ET0V3?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "bc0d8c9cb350": {
-      "titulo": "Amplio operativo permitió recuperar el tercer cuerpo tras la fatal avalancha en Portillo",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRjN6RWFvSEpzdXVVUFJSNW5CQ2hNclMxSG11X1pDeU1DWlEwcTJOV25MenItOXBwZ3g2Yl96bkJuNXN3UnVIQlFLcEota0kxV2dUbmxvREotWWJHbnlzOHNBSjhlMUI1MlBLVFpfTm5rR1FFS0RrMmlmMHdhY1hZeDBJTGNZNUZYNEVBTFJ2SEs1bXZkLTJ4R1dKN05HUjl3bmZTOGJFd1JfZzZtdEFiYw?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "ef4b34bf4c3b": {
-      "titulo": "Aluvión deja al menos 10 casas afectadas en Villa Juan Riquelme en Concepción",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQWtaanJQWmlFbkdxR3pWcVQ3Q05nTVpKOWh1ZklZNERjb1NYcjV0a2lVZ0ZhUmQ3YUJHeThIZFhHRk5MdWI0aGZYWUpWblM2a2NvdGNtVWFpT1J0dFluaHE4emRVNW9DaDZBVDg4Sy1oVzBLSzIwMW43d29nM1RXZnFLWHFXLTNpMVFsVWdJZ0w0M2RtcUNxR1VsbE91ZEVh0gGmAUFVX3lxTE45aTZ6d0V2VXBHd0R6UXZOa0NCNEg5cTFhWFMycGhsUE5Zdk01akw4RVJLcFY2cW8zNTBGeUZtTVZucDNCZm0xVk9GYkVtR2U3QUZjTUxQQWdfYThCQ2Y4d1ZzWWNaNDZYb3J4UmxfSER5V3A3M0ZwQlFVRGg4eS1iTEs0TmtscEpwbnNiQzNDTWpGd19UVzByUkRGbEx5eURQbXZMckE?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "d5abb96bcc42": {
-      "titulo": "Hallan cadáver del tercer montañista muerto en la avalancha de Portillo",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPeUszdl9JREdvbGRCTGx3LV9yY3pRVHpwX2pQWE5XOElWMmMwTkVTUjhHQkFnN1dpWjR4SmNGc3Q0cWY4NkMtRk85SEU1ZmJicUE1MmdXcS1JbzhCWEhUT2ZOSGtZRHcxZHprYXZVTm1XMlVvcklNMy1HbW1TRWZyY1ZwMUhCNEhvR3Z6cGs4Z0E2bmhiU2tSekpPbDFUY3E3LWNma3Awcno5ODJrSmJ0ZEJWcnhySkZH?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "a5724d5784f5": {
-      "titulo": "Hallan cuerpo del tercer montañista fallecido en avalancha en Portillo",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWnE5MGNPb043T0ZwRWJTMDVsQlV1MkJjSWNDZXE0RmRxR2VOY1FUVkpjMDg4emtMWEhrSnRRY1NTaFBXaEZQRzJKS0tlM25QVC0tc01DSFZUMTNCYjVsSWdmUEgwbGlYWllZYVAzX3pUT2x4RmFkS2prd251bjRsOGhUa2ktMVFaR2xJTlZiZk4ydVZsbjNXd1ltZHhzbS1JemZWN0ZBTEhELW0tbFE?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "b5f69fb5a826": {
-      "titulo": "Inundaciones y desprendimientos de tierra: intensas lluvias siguen provocando estragos en el Gran Concepción",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQaEh3TTRBT0xCWk5ONklfVmFvelh5NVVvSzNncnB2cm1TdXBRM29Sb2lILVBGblpScU1wVXFuNkpwM0o1WDlxM3Z3YzdtZWNvemYyRk42dXVJbU1sRmZSN1FLem5WdXQtSHl5WTMwU19WU3NOZG9xdFdQcWo0cXEzbjRGNTlESGMxaE5sQUNoMlhTZXFyRzRpNzFxNDAxdkc3X2J5S1NvRVlyS1dK?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "e9bb0a6af179": {
-      "titulo": "Reanudan búsqueda de tercera víctima de avalancha en Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRE05WjMxUzh6a1dVM1JXT3pHRzdfdGlnYWlkTkg4bXFwU1JhdlMyQTc1dGtPQXdnaElaLVgyaHBYWmN1ZjZHeHduZ0gybmpBOG9nQ3JPNm9iNEJua29IYk9TaG1ZbTRXTi0tc0IyTnc4MXZ4WjRDaU5BbjdsUk1qQnF6WVRiZG1oWURnM3ZGaVNLQWVpamdVclBFNlZHNW9IX0MzdGpxZE1PRGc?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "12cf4e520229": {
-      "titulo": "Aluvión en Concepción provoca daños en viviendas y autos en medio del sistema frontal",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPeEZrX1Mta3BfNUR2YXNhZ1dIVEExZHdILVhqMjV4WkhsVVVTNGhtd2VTNndOdUxoQUhXLVo2WkVpaDVDWHVOb21NQUpHTnFkVDJoTVNoQXJvQkgzRTB1Q0lla2h6c0NydlJHVFZteWZpemJlOGtxTUdrc0JrbVB0cl9McVp1SndBYUVjaXVGOUtLTzRpSXpTa1JBOVZBRU1IaVc5UTd4R21weHBGYXpRetIBtgFBVV95cUxNWTNJaE9fZEpNSEJ4TDlJbFZ6czhONU8zdDlIUjJUSzhFSHFJTXd4ZVJlTldPQkp3b0NKUFVYdllHOE1fcmFIVGlKR3ZfMW8tSXVEdlVSc09TMlNGcldwRHM5bkRWbjd1bVdnWXZBTmhpQ2FybnN0MVQzM29YLVVnUUUyeUxOVUYxSjZhdERmc3dMUV9iTzNSTUNTdThkRDdwMkpqaHVPNExqU3QwX09zSTFnLTB5QQ?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "56de90558e32": {
-      "titulo": "Encuentran el cuerpo de la tercera víctima de la avalancha en Portillo",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRF9kS080Q2JWNUNuNTJreTRkREZwUXBjSlhVVnVhUXpMNEE3Q1hwMGliQnZWMFlmMlM0SjNEZ3RpcV9RbDM4NEEtNVk5ci1kSm5KOWRXZXVhWWhNNWJnSm5iTFFuVEU5blhXemM5VzcyT3BJb0R3UDFORUl1VlZJQWhXUEg1UkF6Zk1ZZFBpSHlkeHc?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "5595a03d0130": {
-      "titulo": "Encuentran cuerpo de excursionista desaparecido tras avalancha en Laguna del Inca: operativo se reanudó este jueves",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQSkh4UGg4MjlTX1ZkUjVTOGdoTkJDQy1objVCbXJoSWxFMzlOOVREekZkUC1fOUpQeVBCX3R4OFkwa051U2F1SXRaUUFDd0Q5ZmRLVkJnZENVMG80V2Zva0prOUJmaWFBdUE2ZVdkNVVJZ2lueXg1eG1KWjJQVFFnR0Z2SEczZTdTYldMMVVaZmQ2R29pUHNac3lzd0xHNmJQT0tFVDg5M1hOWi1kcU1ic3doOHZRVmM1RjNHMmk0dzhwV3ZId3hnd3lyTGxIZVR3alYxTS1OVnJrUk9qT2U2NnNB?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "855f1836f94a": {
-      "titulo": "Encuentran cuerpo de último excursionista desaparecido tras avalancha en Portillo",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNb1A2VWNGN1dMcmxLTFIyZW1laUwyaHlEamotWGhESFRPZ1gxQWxZT1hwYkJaYnZzUWFiRlB3eFAwRms2N3pGeDNjY09wWWxnYi1Ga2NlWE5fYzNDQ2cySlJjdkM5Q3UtRE5DZVh5Zm9RRy1kaVFDbE5kaVFaT3AxU1lNYVNrUExjMmp0WWxTeUtTU1VEVV9Ga1BDU2VBUS1ycjJlcWNMaUdzSlJ4?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "d4be05af64fa": {
-      "titulo": "Avalancha en Portillo: hallan el cuerpo de la tercera víctima tras cinco días de búsqueda",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPREJCV3RkN0Vhek9nd2ZrbzY4QUh4M0NoWDA1WUl3NlJuS0VrMjJ1elRoeTIxWDVSaDhrWTd2NWNJR3E1X2p4LXphTER0NG1MNXJYVFZPQnBjYjJPMUVkTUNERExYNHItdl9GZ2J6N0hrVmdPekJCTnNuYUs2azYwREszRmNTcXRJRWhTM2k1RWVYS1hUSTU0bGp0NXdUUC0tZ2VzQklFdTE1eXpzZXpYLTZaTFRoZDI5QkFsRWJBc3RQSU9lMUl4c3ZmRGNtTUg5REpZQmtDSUg5ZTg1M3VoV2lB?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "ccba7ae3171a": {
-      "titulo": "Tragedia en Portillo: Encuentran el cuerpo del tercer montañista fallecido tras la avalancha en la Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOcUgydEU2MnlDLVc2Q2dlNlg1VU1jZFFMX0JiUnJnRTdENVZwQW9qcnF6cjNoMkRHazRuaGZmRVN6Qk5SNWQzZjJPek1scWdSM2J5TmpMdXphb3pTbGxzbVN1UUNhc3E2SHlJYlhZYkR5YlhmTHJKQWlXN1JralFuVXF4bnQ1RGx3QkMyVlRvbjdTSjRwNnIzVW00QndYN09yUVRybEd0WGh1cVl0blktaDg2dkJRM2lvUkFRWVRBNHltVW9BMy05NWJRNm8zdEVkakxOaGFuSC1WZEpMNm9FV1FaelV3elVRY2EyUnRHa0NGdw?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "72b9c07b7d71": {
-      "titulo": "Confirman hallazgo del tercer fallecido en trágica avalancha en Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOa0xaaTlESzl4SjNuQ0lqVjR6Uk15LWZvZWdtQjZFV2djZWZaTkpxRG9qU1BmcUhRZDBnajE2cUJfUjY5cW5JZ0RuNTA1RkQ3VTdYRUJtOXFGN0RPN2ZxY3FDaFhUeVBkd3FCaEMyMDk4V0VMbWxXbzRFWTRCaHo0VV94R0g5b1ZnaGxHTW1LdUljOGU0MWRWdFdMbTRnR2VKaFp1a0F2U2hzVVZxRDhCTUpxM2dWaEVYY0HSAboBQVVfeXFMTmtMWmk5REs5eEozbkNJalY0elJNeS1mb2VnbUI2RVdnY2VmWk5KcURvalNQZnFIUWQwZ2oxNnFCX1I2OXFuSWdEbjUwNUZEN1U3WEVCbTlxRjdETzdmcWNxQ2hYVHlQZHdxQmhDMjA5OFdFTG1sV280RVk0Qmh6NFVfeEdIOW9WZ2hsR01tS3VJYzhlNDFkVnRXTG00Z0dlSmhadWtBdlNoc1VWcUQ4Qk1KcTNnVmhFWGNB?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "605ea9b5681f": {
-      "titulo": "Hallan cuerpo de la tercera víctima de avalancha en Portillo tras la reactivación de labores de búsqueda",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQNGdCOFJ0TERGclRQdVdzYndQclVvQW12M0JoQ1FpYi1ENHctQ2lKY0FMSlc1RlhOd1daWmJnZFJ6TW9FMVlTWGZlUzAxM3M1Wm1mLU1GQWlhYmVuN3dFYXlUc1lHQmtlUnprN2Jtb2VTM2xFeXhmYXRKaHIxdElJOTlfMVg1RHR5MHpoZTVNZGtZcC1kaVJJRkhqRHV1ZkZFVFJpVnNmR09KNHRHUmFqUUpaOVJSU2YyRmR4dTZyc1hjS2NiT2FrdHl2V3hzbHQyTEJLdkZoUkpyNW9wOThCb0VVZw?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "d4a0e588582b": {
-      "titulo": "Avalancha en Portillo: encuentran el cuerpo de la tercera víctima fatal en la Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOcE9vSldoNllQZkl4T0hJMWVQSGJTOEpXcGI0clQ5SlFicUhjcnBDTUJhSXhsTFdxU2dGTTBUQzMxXzZuSUZzcnVEQW85SWJfeHJ5enR3eHhhRXh5ODN2eU90V3RvT1hETTc4SC1YNVJiejJfTkJIUzI4MlZMZDNUWExPaTIwZ1Qwak5QLW51Zml3WW1lbjlMUzdBVmVzdWRUQTJYRkpaZGZYSHdqZmhOc3AyNlpZbmQybGJEQnRKTDNCanBKeUVj0gHbAUFVX3lxTE9iVlhCWUxpNWtONGEwUXNpbEpra05vZU4tV3lBSDdyWERvRWxBWV9fblFlbWlGeDBqMWdNdmZaa2VzZFZCXzczdFpTTzctWXRiRzN4aW1Sb3JXZnVCN0FTNFZ1VEdESlVKZlJZTHdwWl9FTTJONHctVDV6ejNWV3lLRE1scVFHaF9kQi11ZjVCbk1BVERULXJXd09NMlRCb29qR183RVcyT0tUTFUzd3dWNXhVSG9JVnVaNWpSQUo5SFJpWlVDNG1tTjdsbEozX0U1U1NNRUFsc1RfWQ?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "4b15d566aafe": {
-      "titulo": "Rescatan cuerpo de tercera víctima de avalancha en Portillo tras cinco días de búsqueda",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNazlMYnl2dUhzV1JyMGE2TjctZlo2VGlmRWtKUGVfTHJ6LTh5SkZzNm1ISlZnSk9BTHMybk5FQUtua1JfLUFyMUtwMHJnaW9TcjVWRWx4Q19fa1dZbHlLRU1BRlhDcU5iUzl6RFhZeXRIcnhpS0lBNEltTjdyTkc2R2twUjQ3RVFNMk9Ga3NjVURwLVZBcEo1RVFCYmlxVmx3S3RVdjllSzlXalRiUHo2eVFnVE5fcmVvLTl0enRTeXZTeEU?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "841b7a00b505": {
-      "titulo": "CONDUCTOR RESULTÓ LESIONADO TRAS VOLCAMIENTO EN RUTA NUEVA ALDEA–QUILLÓN.",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSE1wNmFPM1RUVC1wMjM3TmQ5akFtbzY4b1pWVnZVOTJKcVNacWRJZkpGbTUyOGJwYmIzMjBKcjhfZEZCQnZnbWhxUE9CRDR6OWFDRXRMVmZ5cVpNaUo5eEZTY2VUOGxJb3JxUk82aWM1dTZTdmYzajBJd3p2bXpIUmtIdm93WEVzQ2Nwc1c3YUFVRnFRWVA5Yms2TWQ?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "989015c75d70": {
-      "titulo": "Lota: nuevo deslizamiento en cementerio preocupa a vecinos por riesgo de caída de urnas a sus patios",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPX2IzUDVKX1hjTy1kYUZSQks1YnlDLS0zN2U0WnVFUnRvVlZmX3k3Vmt1a29aYzdEUmdvb1k1cU5rRjNJZ052T1Z6eFY0ZEI5V09oWE1lRWVPejVkMWE1ZFBfU3dMRkJ3YUJ6eWFoQ0JJZFAyWDA1dl9JdkZpRTBGWkoyNVJZVkJVRlFxX3Q1Y1NyekM2NHE1YTJxV0lxa1lmd1VTUUtEZFR5N09pNkR4U1V6UnlwcFNzbXlZYjlDUXJxM3pranNTMXFrSW04RWx5VUhTcHpQVV8xUQ?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "77e4548a1e80": {
-      "titulo": "Lota: nuevo deslizamiento en cementerio amenaza viviendas y vecinos temen caída de urnas a patios",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNOUhDX1RhNnc4MlYyZlptZ0tJRHVPTlpzazF3SmFfN0dRX3hHN2pabHJVOGdrbG10SzNYT1lJRmgwTWVCWFprMkxuODNxMUdnTXpHMUVfdi05NjQ5Qi11SHlDbnUxRFBvR1NWM0lhaXViNndaaFM0d1hsZ0l0ZW5KVDFRbjExd3F3YXBzbjVTZjg2TVl5Nl9xZEZyS3pDck5TdjdzeVhDT2Q1UUlVaGF1dmNMSHJLZENSVVM3VWVVUUFwZThHeVBFYXYwUTVTdERWaUJEWlJtWkVQZmhpdGotYWZR?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "015aca0e82be": {
-      "titulo": "“Esto no es un estilo de vida”: Vecina de Concepción denuncia falta de soluciones tras nuevo aluvión",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOM3I4RGJ2YWE0WmRrOUtjOGZwTW1QLVc5X1IwNng4aW1QT3l6MGdoRkNqWVpfc19EemlnUVFDRXEwTlFZbE94SzJ3Rm1CMmJjYUtMSFVFU0Q3SFFRR3RnZ3AyUGxaMDBFQWhSSFBNdnhPcktHc1R6RjNoVDNYcGN1VUdiTGZMV3JnRjg5TWZGQWZzZE5KV0psRkJlQlNqbkc5VzRuM1RESVdjYUdNeVg5czhpZENsdHNpMmRRMHpiczNUYlBVQjZWWE5kVzlldnFiR0dxUDlRUTRJY1Z1RlJoZnViV2I0QlVCcGc?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "bcc066bdb47d": {
-      "titulo": "Avalancha en Portillo: hallan cuerpo de tercera víctima en laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObmxCNFZaUHkyWk5DOXpkaGc5ZUFXRUs2bnFPbERHUVVtd00zaE43T3lBbW5WTS0zUVB5VUVqX1VQLTdTeHg4eGhjTTF1Ylowa1Rna19iUG1xRW50T3k0Q1Z2Nk54WUVTVTFqRGZvM0Izemp1cVlNVEtOc252Z0ZDTUJLRC10SjBsWjZoNF8ySmFlSHVuMnpKbWVmTGFndWhWNE5JejVVXzZEX03SAasBQVVfeXFMTm5sQjRWWlB5MlpOQzl6ZGhnOWVBV0VLNm5xT2xER1FVbXdNM2hON095QW1uVk0tM1FQeVVFal9VUC03U3h4OHhoY00xdWJaMGtUZ2tfYlBtcUVudE95NENWdjZOeFlFU1UxakRmbzNCM3pqdXFZTVRLTnNudmdGQ01CS0QtdEowbFo2aDRfMkphZUh1bjJ6Sm1lZkxhZ3VoVjROSXo1VV82RF9N?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "adf04c982727": {
-      "titulo": "Operativo interinstitucional logra hallazgo del cuerpo de la tercera víctima fatal de la avalancha en la Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNT0lxWHhqYjhGVDMzS3VNMEJCdDIyQkZzalk1QU9zTzk0d3JNY3dNRVhwck1NblJnOU9kOHVzbXJaenMxdlU3c205N3daZ1BTRVY2bWRXaHB5VmRKaWs5b0RUVjlyWlJVN0loQVl0enRDM0RrdjBPdnZrTjZ6cjdlcTJWZ3d6SW5MUTFiSkwya1U2V19OOFpjcTlVbExZUzZEVDRrc2x1RExsZnhTWmRoSFdzTk9ZX3l4NURJbTB0T3hBWG5EQ05oRXZlQk9MSDhza2x2aEpFOXAwTHR3TTlGOHNzN0l0X3pveW1VcTl2SkFCUlA0cmh2T0xsTFhUWlE?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "cb89c5e9be9a": {
-      "titulo": "Retoman la búsqueda del tercer fallecido en avalancha de Portillo",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUgzQnFhNUhZQWRaYmlwOFNub3hMdXRuTFFLSnpvYjJIdllteEstYUIwVVhYMHlJU2VwUHB6eHB0eTZGVVdQdmRmS0tKcWN0NWNSSklwWjNnTmFTUHBPQ2lKb0RMVjI0M1VfYVF2MDU5MUVWWFYtcElhZUpyclEzdG80Z2pqTGVxY2I5cHZNVWIzN1JlVWVBcWIwS0lXRkM0dnZnRldlQ0JESDJva0Y0?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "a9c9e25e2346": {
-      "titulo": "Aluvión en el Biobío provoca derrumbe de cerro y afecta viviendas en sector Juan Riquelme",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUkg2cDFUSHhseWxLVER2NnlrbHRvZGJ2YlRnV1dRYUVNWUROQ0FKRUNWcWMzZmFrdmhoSzNlZVFBM2U4bVdmOEhOU1lmUVlLaUJ5cXYwLVJkN2owZzFMbHF5ZVRtSjFNSFhQQVAyUU9jdHMxaUhLLXlHVDk1OXh2QmlkZEhfNHZtVUN0aG00X3AxSUNaVGhybFI5U2ZDQnd2VmI3a0hnNV82Vk1ZRGc3MFRwc2tPc3VkaWdJVWdLR3RfeXF2R3c?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "76589063f844": {
-      "titulo": "La tierra volvió a ceder: Aluvión afecta a sector de Concepción y lluvias dejan decenas de viviendas anegadas",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZDFhOElNWWFmQlFjclEtOHBRWm1pVE9JdDdueEpGNk1oaVRNT3hWaF9BOVRsVWVMWGZFNV8tSlo2OEQ0WTVLM0dQTFdFdVZBcUpnYTBzNUhnTlZqU1d1Y2Fub0l6WmFZdllDVHlSYnY4U3N6bFc2SzdmTWhvTndRQnhaSzRwYWpCeEtJaDhrN2t3dDZPbzlHOG1YOXZXUmZ1UkpLenFFcWV1U1JKYzg5TGxsR0Ixd2NlaVM4WXV2SVMtNzYtNlRTYg?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "42546d09bb97": {
-      "titulo": "ENCUENTRAN EL CUERPO DE PERSONA DESAPARECIDA TRAS AVALANCHA EN LAGUNA DEL INCA",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZlgzb0tYdndSSXU4cDhQZTJ0MDdxTXZYUTlWRGtvcmxlbVZLRWo5M2NGSWZtNDJTS09SNnRUY21kMUFKVmlHQ2U5N2xCb1J4VS1KVkx6d0U5Y3c3cVJzdUYzMWFUNXpJbjBDX3lkSzhMME1wdl81YTloYmh5TTdnb01VcDF3X1ZBQ2xKcVRvSUF6UW1rV2VXcXR1WHdKb2xGVVJSU1Zhcmt0Z3Qw?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "d561b3edb90d": {
-      "titulo": "Portillo retoma búsqueda de tercera víctima de avalancha con más recursos",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaEZWMGE4MnRXTDNVLVNOaFlTaVo0VTExaHd2N2dFZlhkS21iY0xjaDBZSzF4OWtKd09ZWkM1cHExeHZNSGhpQ1hidWsxanNsTUZxYXdQOV9yaThWTWRwSDExRE1ObWhFRHZMLWNBNFRieHFYeVBxYVlqRElETU9sQlhNbE10Q3BsdGRfTWNqMjZsV0FjckliNWxkRDFsV0VXWWZWUE1OUnVfMDg?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "6e2106a59c72": {
-      "titulo": "Hallaron en Chile a la tercera víctima de la avalancha en la Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNXJMWmI3N2JZZldXaGUzUFFIa0VKaWFXMVRPaVg3dXhwZklhMGZtYm5JdzNnWHZhajFReHVuOElWSVB3ZUhlcTUtRHRubHV1R256WldOQVhocmd3djFLR3lyRlRBR0tTQ0JMbGRNdHdJbU9aUFRzRHVCYUNPMzJVT2lIbFNDTFVrZEtNZzg0bjZPRGFCdHNxWHVadTRXaTZrcTZERnJPZkxXNVh60gGmAUFVX3lxTE5WQ0JWSzByckNpNFEtRG5Xci1GRDJfaklqSmt4MVdSZXllRHllRkYwUC16MzBpZzV5cTlYVU56MGVadUN0X3NlYnRZZXlWUEJ2dnZBcTB3Q3RaektYVnZtaGM2cndOalRlUE9ZY1pyenVENF9qZVM5Vnp0VXMwcFkySkpHTlBRa080bVNjcEdJVW9Uem0wVTFNNlVhdTY1N2xBT1dDYkE?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "5128984bb03d": {
-      "titulo": "Concepción: Alud cubre de barro calle del sector rural Juan Riquelme",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWGYyQ1NmVFNaOTRUX1JpZUZ3SzBkMFg1SWxPRUJGQl9HaG0yNjZWYlhGaHkzb2VXRU85dHdrMnRvRmxhaVlmV1BqaU1URTBPSTVaNm9yWHZINWI5bmdZdjlEeXFXUTE4M1JzQ3Q2MG9mbVlhZG9YWUJvVndQRHBuMnBrRzZQQ0dRaDVPZEpYNA?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "c1772d02c8ea": {
-      "titulo": "Inundaciones en Concepción: Fuerte sistema frontal azota a la Región del Biobío durante este jueves mientras se mantiene Alerta Roja en Arauco por riesgo de derrumbe",
-      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQMFNERG52UHlfWTBpX1RjMVFicDNZMk43UlIwbkRBZnNTeFY4NjdXbXRydWx0ejVGUUVIcm9ZWENQbk9Nanp0TXpqQ0VHajhzczZFaDFpNGlOZTJFRWUwby1oRmJtTV9JZHpLLVlKZnhVU2VvRzluTEZvck9zako4WmRabXFZN0pSbkxvT0xzNVNadGRmZmh3UDdsNEpEdXljWldycFlaaFRCU19ROFFiWFB1UnlXMFJJZWRxVmR0ZXM3SEFLYXdMaXNCN2hhSnc0V0hvZkQzWjNMVk00UWhwZ19uVE0wZG5nVmxWMUh2Mm9tODVJRDd0VTJGRDk2TS10SzZCN0hFX29GbUMwSmxUTzZNM2toMEhsVVdzeWlXUmw?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "9dbd32075884": {
-      "titulo": "Hallan el cuerpo de la tercera víctima fatal tras la avalancha en la Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPSzZRT3FYTFhDdDFGdkFuTjc0emUzYkhicDlON0REYXd4Y25NWGFpcEVrUWZfTWdDZldBWGtfVlNYQVRYX2ItSDkxeFhyd0p5YnRSVVhsLWMzVTJ5UFVHX19wcEJQWi1xTUFPdjNNUUcyektqTUJBX3d6SVhFUWZTTWs2Mnd4blBMbzFIdElsVVRadEdLaHFmYlVtNUR0aFgzaDdlMFAyUkJHZ0VWNmZhb0Nlc1NBa2ltYTY0VzdPSTdYMmFxRExIc2h4aWo2MURhZDBfZGw5YVROemJFV1g0UGZ6bkprTUxpd0E?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "f21d9da47ccd": {
-      "titulo": "Rescataron el cuerpo del tercer montañista muerto en la avalancha en Portillo, Chile",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSW1lV2w5U3ZxSHluYUZldkt2bFJSVkR4YnZmd2NOdXhUMk5kWEVZdF9DUjJ6MzA3Y2c0WVhMRTcwVDdvZUxtUkFUVFlqanFzVVMwbWVXLXFyMXFSUjV4RXVvUjhyV181UHVkYlM1MXRNM1FscDc4OHpnajBXdFlLOXJHb0o0VEF3SE5yQlJhck9faWFaRjRFVUlsbjE4dzZoZWxUR0tYN3JvZGFMelI3TlN1N1RyelA1bXVQODltUWlMQdIBxwFBVV95cUxPTDVlUE1zU2JJR3RwaXI4SWRZMGdZTEFhWjlaTWRNc093bTlXSEZLY3pfcWt3d21GSWZacENlU2E1NWt4N2VEbHNwTVBtdFdWZEI3RkZkWEFKOU9Rb2c0U3RzQ2szWF8zOFBGYzBwZDJyelFjeHhCbVRmZGpMRVY4TWMzaVBBMnJQMGhCczFtd09KS2lQd2dXdzlrRTFPTkFwN0xENEJFSUlGTnhQaGQzNE1lUjVpOFhLbVEtRjVmR2J4MkFNSXZJ?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "1b6b9ccf23aa": {
-      "titulo": "Hallaron el cuerpo del andinista tras la avalancha en la Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZV9uOE84dDBtS2w1ai11WThUOG1teE1ySWRpVlgzSXk2bHZWdE10SjNEdm9vSXNhY1oxMVl0VjNhakx6Y3lxel8yM25PcTZ3Y25GQ1k0eU03Mm4wbW5ZOXVwWmVTRW4zLXRaYW8ydWM1NjQxRXl2MlFUT1pSMTFPY09LR1VOQWFHY01wQW45aHQtYXZuVUQyQlB1Um1HazBuaXNhUi1tUHZxcndrZWR6Zjhn0gGyAUFVX3lxTE5lX244Tzh0MG1LbDVqLXVZOFQ4bW14TXJJZGlWWDNJeTZsdlZ0TXRKM0R2b29Jc2FjWjExWXRWM2FqTHpjeXF6XzIzbk9xNndjbkZDWTR5TTcybjBtblk5dXBaZVNFbjMtdFphbzJ1YzU2NDFFeXYyUVRPWlIxMU9jT0tHVU5BYUdjTXBBbjlodC1hdm5VRDJCUHVSbUdrMG5pc2FSLW1QdnFyd2tlZHpmOGc?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "eadeef4dddd0": {
-      "titulo": "Alerta Roja en Arauco: socavón de 500 metros amenaza a 152 familias que enfrentan dificultades para abandonar sus viviendas",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQQkRUWGdFamM5MGcyU3JFOXU1RXpVWmlpNGtCQzNOSDBpYTg5ZFJUalN4WXZTWUdydkFCR3ZoMWFlZTZJLWlDazBid2JncU5FRm5BdnBZa0o2TU1qQTVNY2dOTTM3dk5UUnFKMmpLNDdpS29aem80cjJmRGhraGo5QkRzRFRmV180aTE5VFR6dmZJckR1eDFwUF9DaUd2S1ZzSnBYaGZEUXozMmxhQVVGTFVHT3hrbDQyZFNnQmxoUGl0Nms2UnctdFhTVWRwclVyWWZray1xUTM5aXE3ckE?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "29e44c428b99": {
-      "titulo": "Hallaron el cuerpo del tercer fallecido en la Laguna del Inca tras la avalancha en Portillo",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRlJHbERmLXdReWhROEE3RG9WR19QZU9ZQnV5ZTFaMDY5WkJLajRyTEFxcWYtTjMwNk43QTQyeENCTmlXclRkTDBGbDFhS0NVYXJMU2stdmFzUUU4N2szbWQ0YjYyNzJYM0oxRXEtQl9EYnNyZHUwUE9vZk9pZEpJd2lwU0Jmclk2R2dKdTlERW03cU5RYnBCWmlYRng0eU1jd0Zka3dhLTFFT1VhT0pJQlktU08zaEZUQURfSWx5ano?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "1a9bed4bf28a": {
-      "titulo": "Tragedia en Laguna del Inca: hallaron a la tercera víctima de la avalancha en Chile",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUzJFbXNWbGh4bFZGaU9oWkNydnJGdjZKQmlLVDdyU1NBTVVTN3pfcXpJWFVieE03eklJVW1XWjI1Z3Y2NUdXM1VXM2RabmlzWkxsR1dPcjBWOF9KajBkTmtKdmhwY2tpcDhLeEYxTXMwR0VLWVNkY1puS0tyYWpkTnpyb3AyZEFZb0ZuVlJxM3VOOVMtV2ZrTXhuNWVfWkd5eGhqS2VnTDM3WWZ0aVQ1aGNMWVBybzUwN0hXTWRWNHpTNm9YeklEQjVDdnVrWHdZT3dBWnZLWUtfblU?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "dae0e7e0eb3a": {
-      "titulo": "Retoman hoy la búsqueda del tercer cuerpo en la Laguna del Inca tras la avalancha en Portillo",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcGZ6Z25xNHlLTjRsQWRodTRndFZYNnVhR2JObUFnNHRUSmZXUF84cFNtbC1FUjB2QlVkSmhwM3NNWDJvMC16cW5pVERfUXBXbW0yQUc2R0JXS3hGMXpjVWxSdll0T08tdy1qMHB5eDlWMzBreXM2cXFLbDU3T3dBVjFfWmJmOVFnM09pckdqbzNvS3lhbWpqX21nRlJ1TURBeTJqYXBVcUNxTWRIREVMcTcxUS1paEk5bmNRN1BGaV9JU0U?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "865f8fccf2aa": {
-      "titulo": "Retoman la búsqueda del andinista que cayó a la Laguna del Inca tras una avalancha",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQS0xxZHFXU2dOVGdxSkx1YzFGX0ppOXNHUUEtcm1IZlUtUkRzRFlEb0NadzZSZWV4OFRtOW5UN0Zncl91NlV5aEExOG10ak52Znp3ZVYzNWNfLVhJU0YzUHVNbzQwbjFLZ2xMQ3JfdEozVmVrSkhGVldYaElUTlhTOVVESVdic2VwX2M4eFlPaTJjSnR1VnJpUXNCNTBPSVdmSkhqelVYbkl0NER4d1Ewbk5YR09RUEMx?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "706709e40398": {
-      "titulo": "Chile: hallaron el cuerpo de la tercera víctima de la avalancha en la Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQOUpnQy1rZDVVTGMtQ19zQjRocmxGa2F1YlZRZ0ZsUHI1VWNDUUt6Y1o5UGw3WGQtdmJCTlJoNWx2R3NjTkFiNUhaN3JmcFNobkJIRUxDWERidnNndFBkV1pCb3RyVkNSVkVseThZM2xSMnE1TVpqcEZ1TGEzQk5CbE1uWUJhVGtJbWUtaHY4R3NvYXBsYTFlSjI4VTdjcVFmbEg3QWNRSlphUFJydGJkVEdIUjM?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
-    },
-    "ff275015a96a": {
-      "titulo": "Encontraron el cuerpo del tercer andinista desaparecido tras la avalancha en la Laguna del Inca",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOak9PWGtmS25QNzlPdzlRWFZRLTJhclFLUGJqUGxrVkkyWUttbjc5UktlSjZXc1plVmxDOE9qTVFQalRFWlZOVnJEcnluX0xybmk0YlBwZERvU1YzM1VXSk9PRkx3dlNiUkVhbTdqc1U0NWdjaldjQW9Xa0NLd0FUWEJUOTNsenJYZGZjNzM2Y0pzc2ZmbmpFVzdMaXV0end0ZGJOVUp2N0tRNlFCQUZvaDhwdHk5UWVVRlI3VkY1QnJBdlNyZ0xGZ0VRRdIBywFBVV95cUxOak9PWGtmS25QNzlPdzlRWFZRLTJhclFLUGJqUGxrVkkyWUttbjc5UktlSjZXc1plVmxDOE9qTVFQalRFWlZOVnJEcnluX0xybmk0YlBwZERvU1YzM1VXSk9PRkx3dlNiUkVhbTdqc1U0NWdjaldjQW9Xa0NLd0FUWEJUOTNsenJYZGZjNzM2Y0pzc2ZmbmpFVzdMaXV0end0ZGJOVUp2N0tRNlFCQUZvaDhwdHk5UWVVRlI3VkY1QnJBdlNyZ0xGZ0VRRQ?oc=5",
-      "fecha": "2026-10-22T16:48:12-03:00"
+      "fecha": "2026-10-22T16:51:38-03:00"
     }
   }
 }

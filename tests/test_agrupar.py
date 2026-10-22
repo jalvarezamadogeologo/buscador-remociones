@@ -71,3 +71,10 @@ def test_eventos_de_distinta_comuna_no_se_agrupan():
 def test_etiqueta_evento_usa_tipo_y_comuna():
     evento = {"tipo_etiqueta": "Aluvion", "comuna": "Concepcion", "region": "Biobio"}
     assert etiqueta_evento(evento) == "Aluvion en Concepcion"
+
+def test_no_duplica_mismo_medio_y_fecha():
+    noticia = _noticia("A", "https://a1.cl", "2026-10-22T10:00:00-03:00", "Cooperativa")
+    evento = crear_evento(noticia, "2026-10-22T12:00:00-03:00", "id1")
+    otra_url = _noticia("B", "https://a2.cl", "2026-10-22T10:00:00-03:00", "Cooperativa")
+    assert agregar_fuente(evento, otra_url) is False
+    assert len(fuentes(evento)) == 1
