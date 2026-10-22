@@ -1,0 +1,26 @@
+{
+  "concepcion chile": {
+    "lat": -36.8270698,
+    "lon": -73.0502064
+  },
+  "los andes chile": {
+    "lat": -32.8336867,
+    "lon": -70.5981609
+  },
+  "biobio chile": {
+    "lat": -37.3391407,
+    "lon": -72.4106825
+  },
+  "laguna del inca chile": {
+    "lat": -32.8224585,
+    "lon": -70.1330868
+  },
+  "arauco chile": {
+    "lat": -37.246248,
+    "lon": -73.3176399
+  },
+  "portillo chile": {
+    "lat": -32.8364183,
+    "lon": -70.1290835
+  }
+}

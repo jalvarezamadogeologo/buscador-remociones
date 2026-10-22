@@ -1,0 +1,200 @@
+# Configuracion del catastro de remociones en masa (Chile)
+#
+# Las palabras clave se escriben sin tildes: el codigo normaliza el texto
+# (minusculas, sin tildes, sin puntuacion) antes de comparar.
+
+idioma: es
+pais: CL
+zona_horaria: America/Santiago
+
+# Ventana por defecto (horas hacia atras) cuando no se pasa --lookback
+lookback_horas: 24
+
+# Maximo de eventos nuevos a notificar por corrida (0 = sin limite)
+max_notificaciones: 20
+
+# Maximo de geocodificaciones nuevas por corrida (Nominatim: 1 req/s)
+max_geocodificaciones: 15
+
+# Etiqueta de GitHub Issues para las notificaciones
+etiqueta_issue: remocion-en-masa
+
+# Deduplicacion de la misma noticia entre medios
+deduplicacion:
+  umbral: 0.62              # titulos casi iguales (Jaccard 0-1)
+  umbral_mismo_evento: 0.20 # mismo tipo+lugar+fecha y >=2 palabras en comun
+  umbral_sin_lugar: 0.35    # mismo tipo+fecha y titulos parecidos (sin localidad)
+  dias: 4                   # ventana de comparacion por fecha
+
+# ---------------------------------------------------------------------------
+# Tipos de evento. La primera clave de cada tipo se usa en la busqueda web.
+# ---------------------------------------------------------------------------
+tipos_evento:
+  aluvion:
+    etiqueta: "Aluvion / flujo de detritos"
+    claves:
+      - aluvion
+      - flujo de detritos
+      - flujo de barro
+      - corriente de detritos
+      - colada de barro
+      - deslizamiento de lodo
+      - deslizamiento de barro
+  deslizamiento:
+    etiqueta: "Deslizamiento"
+    claves:
+      - deslizamiento
+      - derrumbe
+      - remocion en masa
+      - movimiento en masa
+      - deslizamiento de tierra
+      - corrimiento de tierra
+  caida_rocas:
+    etiqueta: "Caida de rocas"
+    claves:
+      - caida de rocas
+      - caida de piedras
+      - desprendimiento
+      - desprendimiento de rocas
+      - desprendimiento de cerro
+      - rocas en la calzada
+  alud:
+    etiqueta: "Alud / avalancha"
+    claves:
+      - alud
+      - avalancha
+      - deslizamiento de nieve
+  socavon:
+    etiqueta: "Socavon"
+    claves:
+      - socavon
+      - socavamiento
+
+# ---------------------------------------------------------------------------
+# Filtro geografico: se acepta el evento si menciona Chile o una region/ciudad
+# chilena; si solo hay coincidencia debil y ademas se menciona otro pais, se
+# descarta (evita homonimos como Santiago de Cuba).
+# ---------------------------------------------------------------------------
+geografia:
+  pais_claves:
+    - chile
+    - chileno
+    - chilena
+  instituciones_chile:
+    - senapred
+    - sernageomin
+    - onemi
+  regiones:
+    - "Arica y Parinacota"
+    - "Tarapaca"
+    - "Antofagasta"
+    - "Atacama"
+    - "Coquimbo"
+    - "Valparaiso"
+    - "Metropolitana"
+    - "O'Higgins"
+    - "Maule"
+    - "Nuble"
+    - "Biobio"
+    - "La Araucania"
+    - "Los Rios"
+    - "Los Lagos"
+    - "Aysen"
+    - "Magallanes"
+  ciudades:
+    - "Santiago"
+    - "Valparaiso"
+    - "Vina del Mar"
+    - "Concepcion"
+    - "La Serena"
+    - "Coquimbo"
+    - "Antofagasta"
+    - "Iquique"
+    - "Arica"
+    - "Temuco"
+    - "Puerto Montt"
+    - "Valdivia"
+    - "Osorno"
+    - "Chillan"
+    - "Talca"
+    - "Rancagua"
+    - "Curico"
+    - "Copiapo"
+    - "Calama"
+    - "Punta Arenas"
+    - "Coyhaique"
+    - "La Ligua"
+    - "Los Andes"
+    - "San Antonio"
+    - "Quilpue"
+    - "Villa Alemana"
+    - "Puerto Varas"
+    - "Castro"
+    - "Ancud"
+    - "Calbuco"
+    - "Arauco"
+    - "Portillo"
+    - "Laguna del Inca"
+    - "Puerto Aysen"
+    - "Los Vilos"
+    - "Illapel"
+    - "Ovalle"
+    - "Combarbala"
+  paises_excluir:
+    - peru
+    - argentina
+    - bolivia
+    - brasil
+    - colombia
+    - ecuador
+    - mexico
+    - venezuela
+    - paraguay
+    - uruguay
+    - cuba
+    - guatemala
+    - honduras
+    - el salvador
+    - nicaragua
+    - costa rica
+    - panama
+    - estados unidos
+    - canada
+    - espana
+    - portugal
+    - italia
+    - francia
+    - alemania
+    - japon
+    - china
+    - india
+    - australia
+
+# ---------------------------------------------------------------------------
+# Fuentes. Google News y Bing News funcionan sin API key.
+# Los feeds RSS directos son opcionales: agregar aqui los que se quieran.
+# ---------------------------------------------------------------------------
+fuentes:
+  google_news:
+    activa: true
+    base: "https://news.google.com/rss/search"
+    parametros:
+      hl: "es-419"
+      gl: "CL"
+      ceid: "CL:es-419"
+    ventana_operador: true
+  bing_news:
+    activa: true
+    base: "https://www.bing.com/news/search"
+    parametros:
+      format: "rss"
+      mkt: "es-CL"
+  feeds_rss: []
+  # feeds_rss:
+  #   - nombre: "Medio"
+  #     url: "https://ejemplo.cl/rss.xml"
+
+# Terminos principales para armar la consulta web (sin tildes)
+consulta:
+  max_terminos: 8
+  sufijo_ventana: true   # agrega when:Nd en Google News segun --lookback
