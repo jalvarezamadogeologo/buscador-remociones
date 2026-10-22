@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import shutil
+from datetime import datetime
 from pathlib import Path
 
 from comun import DOCS, ahora
@@ -327,6 +328,27 @@ render();
 """
 
 
+def _actualizado(eventos: list[dict]) -> str:
+    """Fecha de la ultima deteccion (estable si no hay eventos nuevos).
+
+    Usar `ahora()` haria que cada corrida genere un diff y un commit aunque no
+    haya cambios; con la ultima deteccion el HTML es identico entre corridas
+    sin novedades.
+    """
+    fechas = []
+    for evento in eventos:
+        valor = evento.get("fecha_deteccion")
+        if not valor:
+            continue
+        try:
+            fechas.append(datetime.fromisoformat(valor))
+        except ValueError:
+            continue
+    if not fechas:
+        return ahora().strftime("%Y-%m-%d %H:%M")
+    return max(fechas).astimezone(ahora().tzinfo).strftime("%Y-%m-%d %H:%M")
+
+
 def _datos_para_sitio(eventos: list[dict]) -> list[dict]:
     salida = []
     for e in eventos:
@@ -364,7 +386,7 @@ def generar_sitio(eventos: list[dict] | None = None, config: dict | None = None)
 
     repositorio = config.get("repo", "jalvarezamadogeologo/catastro-remociones")
     url_acciones = f"https://github.com/{repositorio}/actions"
-    actualizado = ahora().strftime("%Y-%m-%d %H:%M")
+    actualizado = _actualizado(eventos)
 
     datos = _datos_para_sitio(eventos)
     datos_json = json.dumps(datos, ensure_ascii=False).replace("</", "<\\/")

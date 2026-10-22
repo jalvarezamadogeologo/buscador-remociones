@@ -120,10 +120,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         geocodificados = geocodificar_eventos(eventos, config, args.max_geocodificaciones)
         log(f"geocodificados en esta corrida: {geocodificados}")
 
-    # 5) Persistencia
+    # 5) Persistencia (vistos solo si hay claves nuevas, para no generar diffs
+    # en corridas sin novedades)
     guardar_eventos(eventos)
-    vistos.update(claves_nuevas)
-    guardar_vistos(vistos, actualizado=deteccion)
+    if claves_nuevas:
+        vistos.update(claves_nuevas)
+        guardar_vistos(vistos, actualizado=deteccion)
 
     # 6) Sitio estatico
     if not args.sin_sitio:
