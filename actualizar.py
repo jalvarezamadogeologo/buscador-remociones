@@ -133,7 +133,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     # 7) Notificacion por issues
     creados = 0
     if not args.sin_notificar:
-        creados = notificar(eventos, config)
+        # Solo se notifican los eventos detectados en esta corrida; el catastro
+        # historico no genera issues retroactivos.
+        creados = notificar(eventos, config, solo_ids={e["id"] for e in nuevos})
         if creados:
             guardar_eventos(eventos)
 

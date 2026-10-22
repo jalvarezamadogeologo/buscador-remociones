@@ -105,8 +105,12 @@ def crear_issue(repo: str, token: str, etiqueta: str, evento: dict) -> int | Non
     return None
 
 
-def notificar(eventos: list[dict], config: dict) -> int:
-    """Crea issues para eventos nuevos pendientes. Devuelve cuantos se crearon."""
+def notificar(eventos: list[dict], config: dict, solo_ids: set[str] | None = None) -> int:
+    """Crea issues para eventos nuevos pendientes. Devuelve cuantos se crearon.
+
+    `solo_ids` limita la notificacion a los eventos detectados en la corrida
+    actual; sin el, se notificarian tambien los eventos historicos del catastro.
+    """
     repo = _repo(config)
     token = _token()
     etiqueta = config.get("etiqueta_issue", "remocion-en-masa")
@@ -115,7 +119,13 @@ def notificar(eventos: list[dict], config: dict) -> int:
         return 0
 
     maximo = int(config.get("max_notificaciones", 20))
-    pendientes = [e for e in eventos if e.get("estado") == "nuevo" and not e.get("issue")]
+    pendientes = [
+        e
+        for e in eventos
+        if e.get("estado") == "nuevo"
+        and not e.get("issue")
+        and (solo_ids is None or e.get("id") in solo_ids)
+    ]
     if not pendientes:
         return 0
     if maximo:
