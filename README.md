@@ -9,8 +9,7 @@ un catastro versionado + una pagina con mapa.
 
 - **Boton "Actualizar"**:
   - en local con `iniciar.cmd`: ejecuta la busqueda real y recarga datos;
-  - en GitHub Pages: vuelve a leer `eventos.json` (ultima version publicada por el workflow);
-  - **"Buscar en GitHub"**: abre la pestana Actions para disparar el workflow a mano.
+  - en GitHub Pages: vuelve a leer `eventos.json` (ultima version publicada por el workflow).
 - **Filtros** aplicados a la vez a la tabla y al mapa: texto libre, tipo (todos los
   tipos de remocion en masa y desbordes/inundaciones), region (las 16 del pais),
   comuna (se habilita al elegir una region y muestra solo sus comunas) y periodo

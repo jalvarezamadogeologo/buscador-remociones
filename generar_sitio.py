@@ -47,10 +47,9 @@ PLANTILLA = """<!DOCTYPE html>
   header h1 { margin:0 0 4px; font-size:22px; letter-spacing:.2px; }
   header p { margin:0; font-size:13px; opacity:.9; }
   .acciones { display:flex; gap:8px; align-items:center; }
-  .btn-primario, .btn-secundario, .btn-mapa { font:inherit; cursor:pointer; border-radius:6px; padding:8px 14px; font-size:14px; }
+  .btn-primario, .btn-mapa { font:inherit; cursor:pointer; border-radius:6px; padding:8px 14px; font-size:14px; }
   .btn-primario { background:#fff; color:var(--acento); border:1px solid #fff; font-weight:600; }
   .btn-primario:disabled { opacity:.65; cursor:wait; }
-  .btn-secundario { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.55); text-decoration:none; }
   .btn-mapa { background:#eef4fa; color:var(--acento); border:1px solid #c8d8e8; padding:4px 10px; font-size:12.5px; }
   .btn-mapa:hover { background:#dcebf8; }
   main { padding:0 22px 40px; max-width:1500px; margin:0 auto; }
@@ -100,7 +99,6 @@ PLANTILLA = """<!DOCTYPE html>
     </div>
     <div class="acciones">
       <button id="btn-actualizar" class="btn-primario" type="button">Actualizar</button>
-      <a id="btn-github" class="btn-secundario" href="__URL_ACCIONES__" target="_blank" rel="noopener">Buscar en GitHub</a>
     </div>
   </div>
 </header>
@@ -421,8 +419,6 @@ def generar_sitio(eventos: list[dict] | None = None, config: dict | None = None)
     for entrada in (config.get("geografia") or {}).get("regiones", []):
         regiones.append(entrada if isinstance(entrada, str) else entrada.get("nombre", ""))
 
-    repositorio = config.get("repo", "jalvarezamadogeologo/catastro-remociones")
-    url_acciones = f"https://github.com/{repositorio}/actions"
     actualizado = _actualizado(eventos)
 
     datos = _datos_para_sitio(eventos)
@@ -434,7 +430,6 @@ def generar_sitio(eventos: list[dict] | None = None, config: dict | None = None)
         .replace("__TIPOS__", json.dumps(tipos, ensure_ascii=False))
         .replace("__REGIONES__", json.dumps(regiones, ensure_ascii=False))
         .replace("__COLORES__", json.dumps(COLORES, ensure_ascii=False))
-        .replace("__URL_ACCIONES__", url_acciones)
     )
     destino = DOCS / "index.html"
     destino.write_text(html_final, encoding="utf-8")

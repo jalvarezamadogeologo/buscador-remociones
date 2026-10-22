@@ -37,7 +37,7 @@ python -m pytest -q
   3 fuentes con el medio como texto. El popup del mapa lista las mismas fuentes.
 - Boton "Actualizar": en localhost llama a `POST /actualizar` (servidor.py) y ejecuta
   la busqueda real; en GitHub Pages relee `docs/eventos.json` (ultima version publicada).
-- "Buscar en GitHub" abre la pestana Actions del repo.
+  No hay enlace a GitHub en la pagina publica.
 
 ## Reglas del proyecto
 
