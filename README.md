@@ -10,9 +10,12 @@ deduplica, geocodifica y publica un catastro versionado + una pagina con mapa.
   - en local con `iniciar.cmd`: ejecuta la busqueda real y recarga datos;
   - en GitHub Pages: vuelve a leer `eventos.json` (ultima version publicada por el workflow);
   - **"Buscar en GitHub"**: abre la pestana Actions para disparar el workflow a mano.
-- **Filtros** aplicados a la vez a la tabla y al mapa: texto libre, tipo, estado,
-  region, comuna/localidad, fuente y periodo (7/30/90/365 dias o todo).
-- **Mapa**: zoom con la rueda del mouse, doble clic y botones +/-.
+- **Filtros** aplicados a la vez a la tabla y al mapa: texto libre, tipo (todos los
+  tipos de remocion en masa y desbordes/inundaciones), region (las 16 del pais),
+  comuna (se habilita al elegir una region y muestra solo sus comunas) y periodo
+  en dias como numero entero (0 = todo el historico).
+- **Mapa**: zoom con la rueda del mouse, doble clic y botones +/-; selector de capa
+  base entre **Calles** (OpenStreetMap), **Hillshade** (Esri) y **Satelite** (Esri).
 - **Boton "Ver"** en cada fila: centra el mapa en el evento y abre su popup
   (deshabilitado si el evento no tiene coordenadas).
 

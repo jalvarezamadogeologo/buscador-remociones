@@ -38,3 +38,27 @@ def test_descarta_nota_fuera_de_tema():
 
 def test_requiere_mencion_geografica_chilena():
     assert clasificar(reg("Deslizamiento bloquea una carretera"), CONFIG) is None
+
+def test_region_se_infiere_de_la_comuna():
+    r = clasificar(reg("Aluvion afecta viviendas en Concepcion"), CONFIG)
+    assert r is not None
+    assert r["comuna"] == "Concepcion"
+    assert r["region"] == "Biobio"
+
+
+def test_inundacion_se_clasifica():
+    r = clasificar(reg("Inundacion afecta viviendas en Valparaiso"), CONFIG)
+    assert r is not None
+    assert r["tipo_evento"] == "desborde_inundacion"
+
+
+def test_volcamiento_se_clasifica():
+    r = clasificar(reg("Volcamiento de estratos en un talud de Coquimbo"), CONFIG)
+    assert r is not None
+    assert r["tipo_evento"] == "volcamiento"
+
+
+def test_todas_las_regiones_tienen_comunas():
+    regiones = CONFIG["geografia"]["regiones"]
+    assert len(regiones) == 16
+    assert all(isinstance(r, dict) and r.get("comunas") for r in regiones)

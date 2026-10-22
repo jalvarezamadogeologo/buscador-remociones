@@ -21,6 +21,13 @@ COLORES = {
     "caida_rocas": "#ff7f0e",
     "alud": "#9467bd",
     "socavon": "#8c564b",
+    "volcamiento": "#e377c2",
+    "flujo_tierra": "#17becf",
+    "avalancha_rocas": "#bcbd22",
+    "desborde_inundacion": "#2ca02c",
+    "lahar": "#7f7f7f",
+    "erosion": "#aec7e8",
+    "subsidencia": "#ffbb78",
 }
 
 PLANTILLA = """<!DOCTYPE html>
@@ -31,7 +38,7 @@ PLANTILLA = """<!DOCTYPE html>
 <title>Buscador de remociones en masa - Chile</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
-  :root { --borde:#d9dee5; --texto:#1f2933; --suave:#5b6773; --fondo:#f5f7fa; --acento:#17456b; --acento2:#25638f; }
+  :root { --borde:#d9dee5; --texto:#1f2933; --suave:#5b6773; --fondo:#f5f7fa; --acento:#17456b; }
   * { box-sizing: border-box; }
   body { margin:0; font-family:"Segoe UI",Roboto,Arial,sans-serif; color:var(--texto); background:var(--fondo); }
   header { background:var(--acento); color:#fff; padding:16px 22px; }
@@ -57,8 +64,10 @@ PLANTILLA = """<!DOCTYPE html>
   .campo label { font-size:11px; text-transform:uppercase; letter-spacing:.4px; color:var(--suave); }
   input, select { font:inherit; font-size:14px; padding:7px 9px; border:1px solid var(--borde); border-radius:6px; background:#fff; color:var(--texto); }
   #buscar { min-width:250px; }
+  #periodo { width:110px; }
+  select:disabled { background:#f0f2f5; color:#9aa5b1; cursor:not-allowed; }
   .btn-limpiar { background:#fff; color:var(--suave); border:1px solid var(--borde); cursor:pointer; font:inherit; font-size:13.5px; padding:8px 12px; border-radius:6px; }
-  #mapa { height:460px; margin:16px 0; border:1px solid var(--borde); border-radius:8px; }
+  #mapa { height:480px; margin:16px 0; border:1px solid var(--borde); border-radius:8px; }
   .tabla-wrap { background:#fff; border:1px solid var(--borde); border-radius:8px; overflow:auto; }
   table { border-collapse:collapse; width:100%; font-size:13.5px; }
   th, td { padding:9px 10px; border-bottom:1px solid var(--borde); text-align:left; vertical-align:top; }
@@ -99,18 +108,10 @@ PLANTILLA = """<!DOCTYPE html>
     <div class="campo"><label for="buscar">Buscar</label>
       <input id="buscar" type="search" placeholder="Titulo, lugar, keyword..."></div>
     <div class="campo"><label for="tipo">Tipo</label><select id="tipo"></select></div>
-    <div class="campo"><label for="estado-f">Estado</label><select id="estado-f"></select></div>
     <div class="campo"><label for="region">Region</label><select id="region"></select></div>
-    <div class="campo"><label for="comuna">Comuna / localidad</label><select id="comuna"></select></div>
-    <div class="campo"><label for="fuente">Fuente</label><select id="fuente"></select></div>
-    <div class="campo"><label for="rango">Periodo</label>
-      <select id="rango">
-        <option value="7">Ultimos 7 dias</option>
-        <option value="30">Ultimos 30 dias</option>
-        <option value="90" selected>Ultimos 90 dias</option>
-        <option value="365">Ultimo anio</option>
-        <option value="0">Todo</option>
-      </select></div>
+    <div class="campo"><label for="comuna">Comuna</label><select id="comuna" disabled></select></div>
+    <div class="campo"><label for="periodo">Periodo (dias)</label>
+      <input id="periodo" type="number" min="0" step="1" value="90" title="0 = todo el historico"></div>
     <button id="btn-limpiar" class="btn-limpiar" type="button">Limpiar filtros</button>
   </div>
 
@@ -138,8 +139,9 @@ PLANTILLA = """<!DOCTYPE html>
 <script>
 let EVENTOS = __DATOS__;
 let ACTUALIZADO = "__ACTUALIZADO__";
+const TIPOS = __TIPOS__;
+const REGIONES = __REGIONES__;
 const COLORES = __COLORES__;
-const ETIQUETAS = __ETIQUETAS__;
 const ES_LOCAL = ["127.0.0.1", "localhost"].includes(location.hostname);
 
 function esc(s){ const d=document.createElement('div'); d.textContent=s==null?'':String(s); return d.innerHTML; }
@@ -148,22 +150,34 @@ function fechaCorta(iso){ return iso ? iso.slice(0,16).replace('T',' ') : '-'; }
 function fechaMs(e){ const s=e.fecha_publicacion||e.fecha_deteccion||''; const t=Date.parse(s); return isNaN(t)?null:t; }
 function dentroDeRango(e,dias){ if(!dias) return true; const t=fechaMs(e); return t===null || t >= Date.now()-dias*86400000; }
 function colorTipo(t){ return COLORES[t] || '#7f7f7f'; }
-function etiquetaTipo(t){ return ETIQUETAS[t] || (t || 'Otro'); }
+function etiquetaTipo(t){ return TIPOS[t] || (t || 'Otro'); }
 function tieneCoords(e){ return e.lat !== '' && e.lon !== '' && e.lat != null && e.lon != null; }
 
-// ---- mapa (zoom con rueda, doble clic y botones) ----
+// ---- mapa: capas base seleccionables (calles, hillshade, satelite) ----
 const mapa = L.map('mapa', {scrollWheelZoom:true, zoomControl:true, doubleClickZoom:true, touchZoom:true}).setView([-35.5,-71.0],5);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18, attribution:'&copy; OpenStreetMap'}).addTo(mapa);
+const capasBase = {
+  "Calles": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom:18, attribution:'&copy; OpenStreetMap'
+  }),
+  "Hillshade": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom:18, attribution:'Esri, USGS, NOAA'
+  }),
+  "Satelite": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom:18, attribution:'Esri, Maxar, Earthstar Geographics'
+  })
+};
+capasBase["Calles"].addTo(mapa);
+L.control.layers(capasBase, null, {position:'topright'}).addTo(mapa);
+L.control.scale({imperial:false, position:'bottomleft'}).addTo(mapa);
+
 const capa = L.layerGroup().addTo(mapa);
 const marcadores = new Map();
 
 const buscar = document.getElementById('buscar');
 const selTipo = document.getElementById('tipo');
-const selEstado = document.getElementById('estado-f');
 const selRegion = document.getElementById('region');
 const selComuna = document.getElementById('comuna');
-const selFuente = document.getElementById('fuente');
-const selRango = document.getElementById('rango');
+const inputPeriodo = document.getElementById('periodo');
 const filas = document.getElementById('filas');
 const btnActualizar = document.getElementById('btn-actualizar');
 const cajaEstado = document.getElementById('estado');
@@ -175,30 +189,39 @@ function opciones(sel, valores, etiquetaTodos){
   sel.value = valores.includes(prev) ? prev : '';
 }
 
-function unicos(campo, filtro){
-  const base = filtro ? EVENTOS.filter(filtro) : EVENTOS;
-  return [...new Set(base.map(e=>e[campo]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));
+function poblarComunas(){
+  const region = selRegion.value;
+  if (!region){
+    selComuna.innerHTML = '<option value="">Selecciona una region</option>';
+    selComuna.value = '';
+    selComuna.disabled = true;
+    return;
+  }
+  const comunas = [...new Set(
+    EVENTOS.filter(e=>e.region===region).map(e=>e.comuna).filter(Boolean)
+  )].sort((a,b)=>a.localeCompare(b,'es'));
+  const prev = selComuna.value;
+  selComuna.disabled = false;
+  selComuna.innerHTML = '<option value="">Todas</option>' +
+    comunas.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
+  selComuna.value = comunas.includes(prev) ? prev : '';
 }
 
 function poblarFiltros(){
-  opciones(selTipo, unicos('tipo_evento'), 'Todos');
-  opciones(selEstado, unicos('estado'), 'Todos');
-  opciones(selRegion, unicos('region'), 'Todas');
-  const region = selRegion.value;
-  opciones(selComuna, unicos('comuna', e=>!region || e.region===region), 'Todas');
-  opciones(selFuente, unicos('fuente'), 'Todas');
+  opciones(selTipo, Object.keys(TIPOS), 'Todos');
+  opciones(selRegion, REGIONES, 'Todas');
+  poblarComunas();
 }
 
 function filtrar(){
   const q = norm(buscar.value.trim());
-  const dias = parseInt(selRango.value,10) || 0;
+  const dias = parseInt(inputPeriodo.value, 10);
+  const ventana = (isNaN(dias) || dias < 0) ? 0 : dias;
   return EVENTOS.filter(e=>{
     if (selTipo.value && e.tipo_evento !== selTipo.value) return false;
-    if (selEstado.value && e.estado !== selEstado.value) return false;
     if (selRegion.value && e.region !== selRegion.value) return false;
     if (selComuna.value && e.comuna !== selComuna.value) return false;
-    if (selFuente.value && e.fuente !== selFuente.value) return false;
-    if (!dentroDeRango(e, dias)) return false;
+    if (!dentroDeRango(e, ventana)) return false;
     if (q){
       const txt = norm([e.titulo,e.descripcion,e.region,e.comuna,e.keywords,e.fuente].join(' '));
       if (!txt.includes(q)) return false;
@@ -264,9 +287,10 @@ function render(){
 
 function limpiar(){
   buscar.value = '';
-  [selTipo, selEstado, selRegion, selComuna, selFuente].forEach(s=>{ s.value=''; });
-  selRango.value = '90';
-  poblarFiltros();
+  selTipo.value = '';
+  selRegion.value = '';
+  inputPeriodo.value = 90;
+  poblarComunas();
   render();
 }
 
@@ -310,12 +334,9 @@ filas.addEventListener('click', ev=>{
   if (id) enfocar(id);
 });
 
-[selTipo, selEstado, selRegion, selComuna, selFuente, selRango].forEach(s=>{
-  s.addEventListener('change', ()=>{
-    if (s === selRegion) poblarFiltros();
-    render();
-  });
-});
+selRegion.addEventListener('change', ()=>{ poblarComunas(); render(); });
+[selTipo, selComuna].forEach(s=>s.addEventListener('change', render));
+inputPeriodo.addEventListener('input', render);
 buscar.addEventListener('input', render);
 document.getElementById('btn-limpiar').addEventListener('click', limpiar);
 btnActualizar.addEventListener('click', actualizar);
@@ -329,12 +350,7 @@ render();
 
 
 def _actualizado(eventos: list[dict]) -> str:
-    """Fecha de la ultima deteccion (estable si no hay eventos nuevos).
-
-    Usar `ahora()` haria que cada corrida genere un diff y un commit aunque no
-    haya cambios; con la ultima deteccion el HTML es identico entre corridas
-    sin novedades.
-    """
+    """Fecha de la ultima deteccion (estable si no hay eventos nuevos)."""
     fechas = []
     for evento in eventos:
         valor = evento.get("fecha_deteccion")
@@ -380,9 +396,13 @@ def generar_sitio(eventos: list[dict] | None = None, config: dict | None = None)
     config = config or {}
     DOCS.mkdir(parents=True, exist_ok=True)
 
-    etiquetas = {}
+    tipos = {}
     for tipo, defn in (config.get("tipos_evento") or {}).items():
-        etiquetas[tipo] = defn.get("etiqueta", tipo)
+        tipos[tipo] = defn.get("etiqueta", tipo)
+
+    regiones = []
+    for entrada in (config.get("geografia") or {}).get("regiones", []):
+        regiones.append(entrada if isinstance(entrada, str) else entrada.get("nombre", ""))
 
     repositorio = config.get("repo", "jalvarezamadogeologo/catastro-remociones")
     url_acciones = f"https://github.com/{repositorio}/actions"
@@ -394,14 +414,14 @@ def generar_sitio(eventos: list[dict] | None = None, config: dict | None = None)
     html_final = (
         PLANTILLA.replace("__ACTUALIZADO__", actualizado)
         .replace("__DATOS__", datos_json)
+        .replace("__TIPOS__", json.dumps(tipos, ensure_ascii=False))
+        .replace("__REGIONES__", json.dumps(regiones, ensure_ascii=False))
         .replace("__COLORES__", json.dumps(COLORES, ensure_ascii=False))
-        .replace("__ETIQUETAS__", json.dumps(etiquetas, ensure_ascii=False))
         .replace("__URL_ACCIONES__", url_acciones)
     )
     destino = DOCS / "index.html"
     destino.write_text(html_final, encoding="utf-8")
 
-    # Datos para el boton "Actualizar" (Pages y servidor local).
     (DOCS / "eventos.json").write_text(
         json.dumps(
             {"actualizado": actualizado, "total": len(datos), "eventos": datos},

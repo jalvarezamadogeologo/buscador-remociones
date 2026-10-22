@@ -22,5 +22,37 @@
   "portillo chile": {
     "lat": -32.8364183,
     "lon": -70.1290835
+  },
+  "puente alto chile": {
+    "lat": -33.6095279,
+    "lon": -70.5754736
+  },
+  "lota chile": {
+    "lat": -37.0944533,
+    "lon": -73.1564024
+  },
+  "constitucion chile": {
+    "lat": -35.3318306,
+    "lon": -72.4118998
+  },
+  "la reina chile": {
+    "lat": -33.442282,
+    "lon": -70.5432729
+  },
+  "las condes chile": {
+    "lat": -33.4084548,
+    "lon": -70.5671489
+  },
+  "vina del mar chile": {
+    "lat": -33.0244535,
+    "lon": -71.5517636
+  },
+  "nuble chile": {
+    "lat": -36.6331577,
+    "lon": -71.9384821
+  },
+  "santiago chile": {
+    "lat": -33.4376995,
+    "lon": -70.6510671
   }
 }

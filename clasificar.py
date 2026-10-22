@@ -39,24 +39,39 @@ def _detectar_tipo(texto: str, config: dict) -> tuple[str, str, list[str], dict]
 
 
 def _detectar_geografia(texto: str, config: dict) -> tuple[str, str, bool]:
-    """Devuelve (region, ciudad, mencion_fuerte_de_chile)."""
+    """Devuelve (region, comuna, mencion_fuerte_de_chile).
+
+    La comuna se busca en el mapa region -> comunas y se elige la que aparece
+    primero en el texto; su region se asigna automaticamente.
+    """
     geo = config.get("geografia") or {}
     fuerte = any(contiene(texto, c) for c in geo.get("pais_claves", []))
     fuerte = fuerte or any(contiene(texto, c) for c in geo.get("instituciones_chile", []))
 
     region = ""
-    for nombre in geo.get("regiones", []):
-        if contiene(texto, nombre):
-            region = nombre
-            break
+    comuna = ""
+    mejor_pos = None
+    for entrada in geo.get("regiones", []):
+        if isinstance(entrada, str):
+            nombre, comunas = entrada, []
+        else:
+            nombre, comunas = entrada.get("nombre", ""), entrada.get("comunas", [])
+        for candidata in comunas:
+            if contiene(texto, candidata):
+                pos = texto.find(normalizar(candidata))
+                if pos >= 0 and (mejor_pos is None or pos < mejor_pos):
+                    mejor_pos = pos
+                    comuna = candidata
+                    region = nombre
 
-    ciudad = ""
-    for nombre in geo.get("ciudades", []):
-        if contiene(texto, nombre):
-            ciudad = nombre
-            break
+    if not region:
+        for entrada in geo.get("regiones", []):
+            nombre = entrada if isinstance(entrada, str) else entrada.get("nombre", "")
+            if nombre and contiene(texto, nombre):
+                region = nombre
+                break
 
-    return region, ciudad, fuerte
+    return region, comuna, fuerte
 
 
 def clasificar(registro: dict, config: dict) -> dict | None:

@@ -37,7 +37,7 @@ deduplicacion:
 # ---------------------------------------------------------------------------
 tipos_evento:
   aluvion:
-    etiqueta: "Aluvion / flujo de detritos"
+    etiqueta: "Aluvión / flujo de detritos"
     claves:
       - aluvion
       - flujo de detritos
@@ -56,7 +56,7 @@ tipos_evento:
       - deslizamiento de tierra
       - corrimiento de tierra
   caida_rocas:
-    etiqueta: "Caida de rocas"
+    etiqueta: "Caída de rocas"
     claves:
       - caida de rocas
       - caida de piedras
@@ -71,15 +71,66 @@ tipos_evento:
       - avalancha
       - deslizamiento de nieve
   socavon:
-    etiqueta: "Socavon"
+    etiqueta: "Socavón"
     claves:
       - socavon
       - socavamiento
+  volcamiento:
+    etiqueta: "Volcamiento"
+    claves:
+      - volcamiento
+      - toppling
+      - vuelco de estratos
+  flujo_tierra:
+    etiqueta: "Flujo de tierra / reptación"
+    claves:
+      - flujo de tierra
+      - flujo de suelo
+      - solifluxion
+      - reptacion
+      - creep
+  avalancha_rocas:
+    etiqueta: "Avalancha de rocas"
+    claves:
+      - avalancha de rocas
+      - avalancha de detritos
+      - avalancha de escombros
+  desborde_inundacion:
+    etiqueta: "Desborde / inundación"
+    claves:
+      - desborde
+      - desborde de rio
+      - inundacion
+      - inundaciones
+      - anegamiento
+      - crecida
+      - riada
+  lahar:
+    etiqueta: "Lahar / flujo volcánico"
+    claves:
+      - lahar
+      - flujo volcanico
+      - flujo de lodo volcanico
+  erosion:
+    etiqueta: "Erosión / carcavamiento"
+    claves:
+      - erosion de ribera
+      - erosion fluvial
+      - carcavamiento
+      - gully
+      - socavacion
+  subsidencia:
+    etiqueta: "Subsidencia / colapso"
+    claves:
+      - subsidencia
+      - hundimiento de terreno
+      - colapso de terreno
 
 # ---------------------------------------------------------------------------
-# Filtro geografico: se acepta el evento si menciona Chile o una region/ciudad
+# Filtro geografico. Se acepta el evento si menciona Chile o una region/comuna
 # chilena; si solo hay coincidencia debil y ademas se menciona otro pais, se
 # descarta (evita homonimos como Santiago de Cuba).
+# Las comunas se usan tambien para completar la region del evento.
 # ---------------------------------------------------------------------------
 geografia:
   pais_claves:
@@ -91,61 +142,38 @@ geografia:
     - sernageomin
     - onemi
   regiones:
-    - "Arica y Parinacota"
-    - "Tarapaca"
-    - "Antofagasta"
-    - "Atacama"
-    - "Coquimbo"
-    - "Valparaiso"
-    - "Metropolitana"
-    - "O'Higgins"
-    - "Maule"
-    - "Nuble"
-    - "Biobio"
-    - "La Araucania"
-    - "Los Rios"
-    - "Los Lagos"
-    - "Aysen"
-    - "Magallanes"
-  ciudades:
-    - "Santiago"
-    - "Valparaiso"
-    - "Vina del Mar"
-    - "Concepcion"
-    - "La Serena"
-    - "Coquimbo"
-    - "Antofagasta"
-    - "Iquique"
-    - "Arica"
-    - "Temuco"
-    - "Puerto Montt"
-    - "Valdivia"
-    - "Osorno"
-    - "Chillan"
-    - "Talca"
-    - "Rancagua"
-    - "Curico"
-    - "Copiapo"
-    - "Calama"
-    - "Punta Arenas"
-    - "Coyhaique"
-    - "La Ligua"
-    - "Los Andes"
-    - "San Antonio"
-    - "Quilpue"
-    - "Villa Alemana"
-    - "Puerto Varas"
-    - "Castro"
-    - "Ancud"
-    - "Calbuco"
-    - "Arauco"
-    - "Portillo"
-    - "Laguna del Inca"
-    - "Puerto Aysen"
-    - "Los Vilos"
-    - "Illapel"
-    - "Ovalle"
-    - "Combarbala"
+    - nombre: "Arica y Parinacota"
+      comunas: ["Arica", "Putre", "Camarones"]
+    - nombre: "Tarapaca"
+      comunas: ["Iquique", "Alto Hospicio", "Pozo Almonte", "Huara", "Colchane"]
+    - nombre: "Antofagasta"
+      comunas: ["Antofagasta", "Calama", "Tocopilla", "Mejillones", "Taltal", "San Pedro de Atacama"]
+    - nombre: "Atacama"
+      comunas: ["Copiapo", "Vallenar", "Caldera", "Chanaral", "Diego de Almagro", "Huasco"]
+    - nombre: "Coquimbo"
+      comunas: ["La Serena", "Coquimbo", "Ovalle", "Illapel", "Los Vilos", "Combarbala", "Vicuna", "Salamanca", "Monte Patria"]
+    - nombre: "Valparaiso"
+      comunas: ["Valparaiso", "Vina del Mar", "Quilpue", "Villa Alemana", "San Antonio", "Quillota", "Los Andes", "San Felipe", "La Ligua", "Limache", "Concon", "Portillo", "Laguna del Inca"]
+    - nombre: "Metropolitana"
+      comunas: ["Santiago", "Puente Alto", "Maipu", "La Florida", "Las Condes", "Penalolen", "Colina", "Melipilla", "Talagante", "San Bernardo", "La Reina", "Vitacura", "Lo Barnechea"]
+    - nombre: "O'Higgins"
+      comunas: ["Rancagua", "San Fernando", "Santa Cruz", "Pichilemu", "Rengo", "Machali"]
+    - nombre: "Maule"
+      comunas: ["Talca", "Curico", "Linares", "Constitucion", "Cauquenes", "San Javier", "Molina"]
+    - nombre: "Nuble"
+      comunas: ["Chillan", "San Carlos", "Bulnes", "Quirihue", "Coelemu"]
+    - nombre: "Biobio"
+      comunas: ["Concepcion", "Talcahuano", "Los Angeles", "Arauco", "Coronel", "Lota", "Curanilahue", "Lebu", "Canete", "Nacimiento", "Mulchen"]
+    - nombre: "La Araucania"
+      comunas: ["Temuco", "Villarrica", "Pucon", "Angol", "Padre Las Casas", "Lautaro"]
+    - nombre: "Los Rios"
+      comunas: ["Valdivia", "Panguipulli", "Rio Bueno"]
+    - nombre: "Los Lagos"
+      comunas: ["Puerto Montt", "Osorno", "Castro", "Ancud", "Puerto Varas", "Calbuco", "Quellon"]
+    - nombre: "Aysen"
+      comunas: ["Coyhaique", "Puerto Aysen", "Puerto Cisnes", "Chile Chico", "Cochrane"]
+    - nombre: "Magallanes"
+      comunas: ["Punta Arenas", "Puerto Natales", "Porvenir", "Puerto Williams"]
   paises_excluir:
     - peru
     - argentina
@@ -202,5 +230,5 @@ fuentes:
 
 # Terminos principales para armar la consulta web (sin tildes)
 consulta:
-  max_terminos: 8
+  max_terminos: 10
   sufijo_ventana: true   # agrega when:Nd en Google News segun --lookback

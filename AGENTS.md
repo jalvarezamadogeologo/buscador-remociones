@@ -29,9 +29,9 @@ python -m pytest -q
 
 ## Interfaz
 
-- `docs/index.html`: buscador con filtros (texto, tipo, estado, region, comuna, fuente,
-  periodo) aplicados a tabla y mapa; zoom con rueda/doble clic/botones; boton "Ver"
-  por fila que centra el mapa en el evento.
+- `docs/index.html`: buscador con filtros (texto, tipo, region, comuna dependiente de
+  la region y periodo en dias) aplicados a tabla y mapa; capas base Calles/Hillshade/
+  Satelite; zoom con rueda/doble clic/botones; boton "Ver" por fila que centra el mapa.
 - Boton "Actualizar": en localhost llama a `POST /actualizar` (servidor.py) y ejecuta
   la busqueda real; en GitHub Pages relee `docs/eventos.json` (ultima version publicada).
 - "Buscar en GitHub" abre la pestana Actions del repo.
