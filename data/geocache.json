@@ -54,5 +54,25 @@
   "santiago chile": {
     "lat": -33.4376995,
     "lon": -70.6510671
+  },
+  "san carlos chile": {
+    "lat": -36.3792284,
+    "lon": -72.0179525
+  },
+  "chillan chile": {
+    "lat": -36.6066616,
+    "lon": -72.1033194
+  },
+  "valparaiso chile": {
+    "lat": -32.5976089,
+    "lon": -70.8529753
+  },
+  "santa cruz chile": {
+    "lat": -34.6403243,
+    "lon": -71.3661297
+  },
+  "metropolitana chile": {
+    "lat": -33.5739341,
+    "lon": -70.6205518
   }
 }

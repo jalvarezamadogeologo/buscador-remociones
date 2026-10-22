@@ -8,6 +8,7 @@ estatico con mapa.
 
 - `actualizar.py` — orquestador (buscar, clasificar, deduplicar, geocodificar, guardar, sitio, issues).
 - `buscar.py` — fuentes RSS y normalizacion de registros.
+- `buscar_redes.py` — X/Instagram/Facebook via Google News con `site:` (sin API keys).
 - `clasificar.py` — tipo de evento y filtro geografico Chile.
 - `deduplicar.py` — claves persistentes de noticias procesadas.
 - `agrupar.py` — agrupa noticias en eventos (tipo + lugar + fecha) y conserva las 3 primeras fuentes.
@@ -23,6 +24,7 @@ estatico con mapa.
 
 ```powershell
 python actualizar.py --lookback 24 --sin-notificar
+python actualizar.py --sin-redes   # sin X/Instagram/Facebook
 python servidor.py                 # sitio local con boton Actualizar (127.0.0.1:8770)
 iniciar.cmd                        # lo mismo, doble clic
 python -m pytest -q

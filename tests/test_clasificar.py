@@ -62,3 +62,16 @@ def test_todas_las_regiones_tienen_comunas():
     regiones = CONFIG["geografia"]["regiones"]
     assert len(regiones) == 16
     assert all(isinstance(r, dict) and r.get("comunas") for r in regiones)
+
+def test_post_de_red_acepta_una_clave_en_la_descripcion():
+    registro = {
+        "titulo": "Urgente en Las Condes",
+        "descripcion": "aluvion en la quebrada",
+        "url": "https://x.com/i/status/1",
+        "fuente": "X",
+        "origen": "x",
+        "publicado": None,
+    }
+    resultado = clasificar(registro, CONFIG)
+    assert resultado is not None
+    assert resultado["tipo_evento"] == "aluvion"

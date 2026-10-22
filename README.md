@@ -1,9 +1,10 @@
 # catastro-remociones
 
-Monitoreo automatico de **remociones en masa recientes en Chile** en noticias web.
-Busca en Google News RSS y Bing News (sin API keys), clasifica por tipo de evento,
-agrupa las noticias del mismo hecho y conserva hasta 3 fuentes, geocodifica y publica
-un catastro versionado + una pagina con mapa.
+Monitoreo automatico de **remociones en masa recientes en Chile** en noticias y redes.
+Busca en Google News RSS, Bing News y en X/Instagram/Facebook via Google News con
+`site:` (todo sin API keys), clasifica por tipo de evento, agrupa las noticias del
+mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versionado
++ una pagina con mapa.
 
 ## Interfaz (docs/index.html)
 
@@ -46,6 +47,7 @@ python actualizar.py --dias 7             # ultimos 7 dias
 python actualizar.py --sin-notificar      # sin GitHub Issues
 python actualizar.py --fuentes google_news
 python actualizar.py --sin-geocodificar --max-geocodificaciones 0
+python actualizar.py --sin-redes           # no consultar X/Instagram/Facebook
 ```
 
 ### Modo local con boton "Actualizar" funcional
@@ -138,6 +140,8 @@ Notas:
 - `geografia`: 16 regiones con sus comunas y paises a excluir (evita homonimos). La comuna
   detectada asigna automaticamente su region.
 - `fuentes`: Google News, Bing News y feeds RSS directos opcionales.
+- `redes`: busqueda en X, Instagram y Facebook via Google News con `site:` (sin API keys),
+  redes activas y maximo de publicaciones por red.
 - `consulta.max_terminos`: cuantas palabras sueltas se envian en la busqueda
   (la busqueda evita frases: Google deja de respetar `when:Nd`).
 - `deduplicacion`: umbrales para agrupar la misma noticia publicada por varios medios.
@@ -168,8 +172,9 @@ marcadores en el mapa.
 
 ## Limitaciones conocidas
 
-- **Redes sociales:** X/Twitter exige API de pago; no se usa. Se puede agregar un feed RSS
-  alternativo, pero esas fuentes son fragiles.
+- **Redes sociales:** se buscan via Google News con `site:` (X, Instagram, Facebook), sin
+  API keys. La cobertura depende de lo que Google indexe de cada red y no es tiempo real;
+  la API oficial de X es pay-per-use y las de Meta requieren apps/tokens que expiran.
 - **Falsos positivos:** notas de prevencion o de contexto pueden entrar; el operador los
   marca como `descartado` en el CSV.
 - **Agrupacion:** las noticias del mismo hecho se agrupan por tipo + lugar + fecha; si dos

@@ -17,6 +17,7 @@ from typing import Sequence
 
 from agrupar import agregar_fuente, buscar_evento, crear_evento
 from buscar import buscar
+from buscar_redes import buscar_redes
 from clasificar import clasificar
 from comun import a_iso, ahora, cargar_config, log
 from deduplicar import clave_registro, cargar_vistos, guardar_vistos
@@ -32,6 +33,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--lookback", type=int, default=None, help="horas hacia atras")
     parser.add_argument("--dias", type=float, default=None, help="dias hacia atras (alternativa a --lookback)")
     parser.add_argument("--fuentes", default=None, help="fuentes separadas por coma (google_news,bing_news,nombre_feed)")
+    parser.add_argument("--sin-redes", action="store_true", help="no buscar en X/Instagram/Facebook")
     parser.add_argument("--sin-geocodificar", action="store_true", help="no consultar Nominatim")
     parser.add_argument("--sin-sitio", action="store_true", help="no regenerar docs/index.html")
     parser.add_argument("--sin-notificar", action="store_true", help="no crear issues")
@@ -56,6 +58,11 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     # 1) Busqueda y clasificacion
     registros = buscar(config, lookback_horas=lookback, activas=fuentes)
+    if not args.sin_redes:
+        de_redes = buscar_redes(config, lookback_horas=lookback)
+        if de_redes:
+            log(f"registros de redes: {len(de_redes)}")
+            registros.extend(de_redes)
     clasificados = [c for r in registros if (c := clasificar(r, config))]
     log(f"clasificados como remocion en Chile: {len(clasificados)}")
 

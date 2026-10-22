@@ -81,14 +81,15 @@ def clasificar(registro: dict, config: dict) -> dict | None:
     if not texto:
         return None
 
-    # El titulo es la senal fuerte: evita falsos positivos de notas de contexto
-    # (prevencion, politica, economia) que solo mencionan el termino en el cuerpo.
+    # Los posts de redes son cortos: se acepta una sola coincidencia en el texto
+    # completo. En noticias, en cambio, una palabra suelta en el cuerpo suele ser
+    # contexto y no el evento.
+    es_red = registro.get("origen") in {"x", "instagram", "facebook"}
+
     tipo, etiqueta, claves, conteo = _detectar_tipo(titulo_n, config)
     if not tipo:
-        # Desde el cuerpo solo se acepta una senal especifica (frase o >=2 claves):
-        # una palabra suelta en el resumen suele ser contexto, no el evento.
         tipo, etiqueta, claves, conteo = _detectar_tipo(texto, config)
-        if tipo and sum(conteo.values()) < 2:
+        if tipo and not es_red and sum(conteo.values()) < 2:
             return None
     if not tipo:
         return None

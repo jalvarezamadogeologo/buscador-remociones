@@ -78,7 +78,7 @@ tipos_evento:
   volcamiento:
     etiqueta: "Volcamiento"
     claves:
-      - volcamiento
+      - volcamiento de estratos
       - toppling
       - vuelco de estratos
   flujo_tierra:
@@ -232,3 +232,12 @@ fuentes:
 consulta:
   max_terminos: 10
   sufijo_ventana: true   # agrega when:Nd en Google News segun --lookback
+
+# ---------------------------------------------------------------------------
+# Redes sociales via Google News con `site:` (sin API keys).
+# La cobertura depende de lo que Google indexe de cada red.
+# ---------------------------------------------------------------------------
+redes:
+  activa: true
+  activas: ["x", "instagram", "facebook"]
+  max_resultados: 30   # por red y por corrida
