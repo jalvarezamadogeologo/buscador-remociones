@@ -86,14 +86,14 @@ python -m pytest -q
 ### Monitoreo automatico
 
 Si. Una vez que el workflow esta en el repositorio, GitHub Actions lo ejecuta solo
-segun el `cron` configurado (por defecto cada 5 minutos), y ademas se puede disparar
-a mano cuando el operador lo requiera. La frecuencia la define el operador editando el YAML.
+segun el `cron` configurado (por defecto **cada 12 horas**: 00:00 y 12:00 UTC, o sea
+21:00 y 09:00 en Chile continental), y ademas se puede disparar a mano cuando el
+operador lo requiera. La frecuencia la define el operador editando el YAML.
 
 Limite de GitHub: el intervalo minimo de un workflow programado es **5 minutos**, pero
 GitHub no garantiza puntualidad (puede retrasar u omitir ejecuciones en horas de carga).
-A 5 minutos, si no hay noticias nuevas no se genera commit ni reconstruccion de Pages.
-Si las fuentes empiezan a responder vacio o con error por exceso de consultas, subir a
-cada 15 o 30 minutos.
+A frecuencias altas tambien se castigan las fuentes con demasiadas consultas. Por eso el
+valor por defecto es 12 horas; si se necesita mas frescura, usar 6 h, 1 h o 15 min.
 
 Nota: subir `.github/workflows/` requiere que el token de `gh` tenga el scope `workflow`.
 Si el push falla con "refusing to allow an OAuth App to create or update workflow",
@@ -109,6 +109,8 @@ Editar el `cron` del workflow:
 | cada 15 min | `*/15 * * * *` |
 | cada 30 min | `*/30 * * * *` |
 | cada 1 h | `0 * * * *` |
+| cada 6 h | `0 */6 * * *` |
+| cada 12 h (por defecto) | `0 */12 * * *` |
 | 1 vez al dia | `0 11 * * *` |
 
 Notas:

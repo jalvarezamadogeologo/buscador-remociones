@@ -1,13 +1,13 @@
 name: Monitoreo de remociones en masa
 
 on:
-  # Cada 5 minutos: es el intervalo minimo que acepta GitHub Actions.
-  # GitHub no garantiza puntualidad: en horas de carga puede retrasar u omitir
-  # ejecuciones. Si Google/Bing empiezan a responder vacio o con error, subir a
-  # cada 15 o 30 minutos ("*/15 * * * *" o "*/30 * * * *").
-  # Alternativas: cada hora "0 * * * *", diario "0 11 * * *" (07:00 Chile).
+  # Cada 12 horas: 00:00 y 12:00 UTC (21:00 y 09:00 en Chile continental).
+  # El minimo que acepta GitHub Actions es 5 minutos, pero no garantiza
+  # puntualidad a esa frecuencia y castiga las fuentes con demasiadas consultas.
+  # Alternativas: cada 6 h "0 */6 * * *", cada hora "0 * * * *",
+  # cada 15 min "*/15 * * * *".
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 */12 * * *"
 
   # Ejecucion manual desde la pestana Actions ("Run workflow").
   workflow_dispatch:
