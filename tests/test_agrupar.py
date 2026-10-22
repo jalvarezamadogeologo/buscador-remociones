@@ -78,3 +78,13 @@ def test_no_duplica_mismo_medio_y_fecha():
     otra_url = _noticia("B", "https://a2.cl", "2026-10-22T10:00:00-03:00", "Cooperativa")
     assert agregar_fuente(evento, otra_url) is False
     assert len(fuentes(evento)) == 1
+
+def test_una_fuente_por_medio():
+    evento = crear_evento(
+        _noticia("A", "https://a1.cl", "2026-10-22T10:00:00-03:00", "BioBioChile"),
+        "2026-10-22T12:00:00-03:00",
+        "id1",
+    )
+    otra = _noticia("B", "https://a2.cl", "2026-10-22T11:00:00-03:00", "BioBioChile")
+    assert agregar_fuente(evento, otra) is False
+    assert len(fuentes(evento)) == 1

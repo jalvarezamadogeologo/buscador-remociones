@@ -113,9 +113,14 @@ def agregar_fuente(evento: dict, noticia: dict) -> bool:
 
     medio = noticia.get("fuente", "")
     fecha = a_iso(noticia.get("publicado"))
-    # Google News a veces entrega la misma nota con dos URLs distintas.
-    if medio and fecha and any(f["medio"] == medio and f["fecha"] == fecha for f in actuales):
-        return False
+    # Una fuente por medio: si ya hay una nota de ese medio se conserva la mas
+    # temprana (Google News tambien repite la misma nota con URLs distintas).
+    if medio:
+        existente = next((f for f in actuales if f["medio"] == medio), None)
+        if existente is not None:
+            if not fecha or (existente["fecha"] and fecha >= existente["fecha"]):
+                return False
+            actuales.remove(existente)
 
     actuales.append({"medio": medio, "url": url, "fecha": fecha})
     # Las 3 primeras que reportaron: orden por fecha ascendente.

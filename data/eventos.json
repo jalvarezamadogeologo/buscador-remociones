@@ -4,7 +4,7 @@
     {
       "id": "ac0a6f20391b",
       "fecha_publicacion": "2026-10-22T12:59:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Avalancha en Laguna del Inca: Encuentran cuerpo de la última persona que permanecía desaparecida",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
@@ -27,7 +27,7 @@
     {
       "id": "6eefd90abcea",
       "fecha_publicacion": "2026-10-22T09:03:52-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Concepción: lluvias activan aluvión y deslizamiento de tierra en Juan Riquelme",
       "tipo_evento": "deslizamiento",
       "tipo_etiqueta": "Deslizamiento",
@@ -50,7 +50,7 @@
     {
       "id": "881ae0a71bc9",
       "fecha_publicacion": "2026-10-22T08:47:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Aluvión en Juan Riquelme reactivó emergencia en Concepción por sistema frontal",
       "tipo_evento": "aluvion",
       "tipo_etiqueta": "Aluvión / flujo de detritos",
@@ -73,7 +73,7 @@
     {
       "id": "962a67649cc6",
       "fecha_publicacion": "2026-10-21T17:33:16-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "40 casas corren peligro de derrumbe hacia acantilado en Puente Alto por intensas lluvias",
       "tipo_evento": "deslizamiento",
       "tipo_etiqueta": "Deslizamiento",
@@ -96,7 +96,7 @@
     {
       "id": "b360734ef2e1",
       "fecha_publicacion": "2026-10-21T15:24:34-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Confirman hallazgo de cuerpo del tercer montañista fallecido en avalancha de Portillo",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
@@ -119,7 +119,7 @@
     {
       "id": "7f5ec26008b1",
       "fecha_publicacion": "2026-10-21T13:33:46-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Derrumbe en Lota: las señales que podrían advertir una nueva emergencia",
       "tipo_evento": "deslizamiento",
       "tipo_etiqueta": "Deslizamiento",
@@ -142,7 +142,7 @@
     {
       "id": "d4c1cdc36879",
       "fecha_publicacion": "2026-10-21T13:05:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Socavón en Constitución sigue creciendo y vecinos advierten riesgo de nuevos derrumbes",
       "tipo_evento": "socavon",
       "tipo_etiqueta": "Socavón",
@@ -165,7 +165,7 @@
     {
       "id": "57f1422147e7",
       "fecha_publicacion": "2026-10-21T11:57:15-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Alcalde de La Reina: \"Las piscinas decantadoras disminuirían las probabilidades de un aluvión\"",
       "tipo_evento": "aluvion",
       "tipo_etiqueta": "Aluvión / flujo de detritos",
@@ -188,7 +188,7 @@
     {
       "id": "45203114552a",
       "fecha_publicacion": "2026-10-21T01:25:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Arauco decreta Alerta Roja por riesgo de derrumbe: 152 familias deben evacuar y vecinos se resisten",
       "tipo_evento": "deslizamiento",
       "tipo_etiqueta": "Deslizamiento",
@@ -211,7 +211,7 @@
     {
       "id": "ad94adc7ef3a",
       "fecha_publicacion": "2026-10-20T22:28:45-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Lluvias provocan desprendimiento de asfalto en ruta que une Pirque y Puente Alto",
       "tipo_evento": "caida_rocas",
       "tipo_etiqueta": "Caída de rocas",
@@ -234,7 +234,7 @@
     {
       "id": "9cbd6b7ab60e",
       "fecha_publicacion": "2026-10-20T20:36:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "“En cinco minutos se perdió todo”: el relato de joven que salvó de milagro tras derrumbe de su casa en Viña del Mar",
       "tipo_evento": "deslizamiento",
       "tipo_etiqueta": "Deslizamiento",
@@ -257,7 +257,7 @@
     {
       "id": "e08ea0df863d",
       "fecha_publicacion": "2026-10-20T14:45:43-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Piden evacuar a más de 150 familias por socavón de medio kilómetro y declaran Alerta Roja para Arauco",
       "tipo_evento": "socavon",
       "tipo_etiqueta": "Socavón",
@@ -280,7 +280,7 @@
     {
       "id": "f2f7613e853a",
       "fecha_publicacion": "2026-10-20T09:04:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Senapred en alerta en el Biobío por riesgo de derrumbe de casas ante tormentas eléctricas",
       "tipo_evento": "deslizamiento",
       "tipo_etiqueta": "Deslizamiento",
@@ -303,7 +303,7 @@
     {
       "id": "819828c52630",
       "fecha_publicacion": "2026-10-18T21:20:17-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Gobierno monitorea sector de aluvión de Las Condes y afirma que medidas preventivas “hasta el momento han funcionado”",
       "tipo_evento": "aluvion",
       "tipo_etiqueta": "Aluvión / flujo de detritos",
@@ -317,16 +317,16 @@
       "fuente_2": "La Tercera",
       "url_2": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPejlmdUpWT1ZCbmV2dFVrRFl4QUVqM0llWV94YWxmNElRYlFjZkI4dTVlUG1DOE9LVHpXQ19zU1BWWGxCaEdaZkFLOER1WkppMXBmV3ltSGVoeWgtX2xxV2tOcWxXdTFJOG9RVFdOWHhyRk1rTkV5aHVxZUJhXzZCWkFzQlZPMVVjbXJ2X25LZUJrMzBIODItVnVrRHJlUzJWaWxYSDNDSEFhN3BZNmVlQjNrR0FSVHkzZ2ppSHMwVlM4bDk1RW9hdGtiV0F1b1JsNVNtZWxuVlozcWZCOUtfRF9wWdIBhAJBVV95cUxOTXRaMHE0X3hXdlNBWE1mQ1p2V18zYURmcDhod2EzbFB5YjE1VFZyQWp6dGNfRmQzY2wtcXVwb3NrMm5WWGRWYzRsdTg3Y0FYZ2NUTTJrckl0cGtkNHpRemg1LVhodkRnODBJTUt5Y1l2WXh0LW8zTkM0VGRFQnZvU00ycDZ6RlhUbVp4RmwwQXN1dFQwcjN3eU01UDVjOWVoNU1XRDl1aTVDR3FoQW9oZFZtTktJd2xST0xXOTU4cVgwRWtzcklxZFI2eVhOV1VBdmNMOXVyMGdSSTZscFhlZ3lqUmFVMTgxSnUxT2JvRDRrbHZLUkg1NWE0WGdJUTlKWVd1aw?oc=5",
       "fecha_2": "2026-10-19T22:36:39-03:00",
-      "fuente_3": "BioBioChile",
-      "url_3": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOUllpTWZmRlI3amhNa3MzMkV1bVphS0VETjVXR3J2YnFkMkN5MUw3dWFLWkU4a2h2Ym9RZUNJOTRKbUJVdzRnMm81SElnYzVxR3c5MkdyU2hrRzBYNm5qRC1HUmx1ZjFtc2duTUJYQU5UWllfQjB1SXl0akptMUFRVTZzRmRPcGdSNGhYME5tZlRsN181Z0ZqRFQ2dldjQWNTekNUb2V0TkVGOUVMV1Y5YXNqcjFWZHoyUS1FdE5RR2NKZmhEUDBOa0pMN1FIdWtiV0tFbWV5bzNkQnZxbmdyWlRvSm9sdENXRlVDRHA4VUtTS3R5dkFLUE8ya0MxeDJ2LW0xWmRrdw?oc=5",
-      "fecha_3": "2026-10-20T12:50:45-03:00",
+      "fuente_3": "Canal 9 Bío Bío Televisión",
+      "url_3": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOVUE2TUxZREd2QVp6WmpzYXBHZUUxYW9UUEpSWUhvRDlsRnNqeElsQzlHOFlhci0xQUlYZU9LT011dVJ3SjBTTy12VVN2bDNSckFfYjFMdnBEcThaVFJzbmNxRUFIYW9FNk1xeHI3b2R5MGIyZUN1eDlGbFN5TUp3Qmt6a2tocmt5djJBOGkwdC0xTjVwSHdIRDFHTTFody1UUkVvOTZwU01fOGVOZ2RyQzFFVFhCU3p0SlRhamx1dmRrV0g4WTQtVXNGNE1KRnlyOWc?oc=5",
+      "fecha_3": "2026-10-20T15:15:47-03:00",
       "estado": "nuevo",
       "issue": ""
     },
     {
       "id": "65972745c9d8",
       "fecha_publicacion": "2026-10-17T17:59:16-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Avalancha fatal cerca de un centro de esquí en Chile: al menos tres muertos",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
@@ -349,7 +349,7 @@
     {
       "id": "c4d5005eec43",
       "fecha_publicacion": "2026-10-17T17:36:16-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Más de 20 familias son evacuadas por socavón de medio kilómetro en Arauco",
       "tipo_evento": "socavon",
       "tipo_etiqueta": "Socavón",
@@ -372,7 +372,7 @@
     {
       "id": "228e5eb5a7e1",
       "fecha_publicacion": "2026-10-17T16:57:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Avalancha en Laguna del Inca: Senapred confirma tres fallecidos",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
@@ -395,7 +395,7 @@
     {
       "id": "9b2765799558",
       "fecha_publicacion": "2026-10-17T15:45:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Avalancha fatal en Portillo: búsqueda se retoma el jueves y expertos alertan de propensión de nuevos eventos ante lluvias",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
@@ -418,7 +418,7 @@
     {
       "id": "d7b69219688b",
       "fecha_publicacion": "2026-10-17T15:36:25-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Avalancha en Los Andes chilenos causa al menos tres fallecidos en centro de esquí El Portillo",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
@@ -441,7 +441,7 @@
     {
       "id": "e1054d4bb289",
       "fecha_publicacion": "2026-10-16T01:04:00-03:00",
-      "fecha_deteccion": "2026-10-22T16:51:38-03:00",
+      "fecha_deteccion": "2026-10-22T16:57:42-03:00",
       "titulo": "Derrumbe parcial de casona en Santiago: Bomberos busca a personas atrapadas",
       "tipo_evento": "deslizamiento",
       "tipo_etiqueta": "Deslizamiento",
