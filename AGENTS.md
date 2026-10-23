@@ -7,6 +7,7 @@ estatico con mapa.
 ## Estructura
 
 - `actualizar.py` — orquestador (buscar, clasificar, deduplicar, geocodificar, guardar, sitio, issues).
+- `historico.py` — barrido historico dia por dia con `after:`/`before:` (`--dias N`, `--dry-run`).
 - `buscar.py` — fuentes RSS y normalizacion de registros.
 - `buscar_redes.py` — X/Instagram/Facebook via Google News con `site:` (sin API keys).
 - `clasificar.py` — tipo de evento y filtro geografico Chile.
@@ -30,6 +31,8 @@ estatico con mapa.
 python actualizar.py --lookback 24 --sin-notificar
 python actualizar.py --sin-redes   # sin X/Instagram/Facebook
 python actualizar.py --sin-resolver # sin resolver enlaces de Google News
+python historico.py --dias 120      # barrido historico (after/before, dia por dia)
+python historico.py --dias 120 --dry-run
 python resolver_urls.py            # resolver enlaces del catastro existente
 python revisar_catastro.py         # prevencion + toponimos + fuentes con URL
 python servidor.py                 # sitio local con boton Actualizar (127.0.0.1:8770)
@@ -40,17 +43,21 @@ python -m pytest -q
 ## Interfaz
 
 - `docs/index.html`: buscador con filtros (texto, tipo, origen prensa/redes, region, comuna dependiente de
-  la region y periodo en dias) aplicados a tabla y mapa; capas base Calles/Hillshade/
+  la region y rango de fechas desde/hasta) aplicados a tabla y mapa; capas base Calles/Hillshade/
   Satelite; zoom con rueda/doble clic/botones; boton "Ver" por fila que centra el mapa.
+- Encabezados ordenables (Fecha, Tipo, Evento, Region/comuna, Fuentes, Estado): un clic ordena,
+  el segundo invierte; el orden inicial es fecha descendente.
 - La tabla muestra un evento por fila ("tipo + lugar") y una lista desplegable de hasta
   3 fuentes con el medio como texto. El popup del mapa lista las mismas fuentes.
 - Los eventos con `estado=descartado` no se publican: `filtrar()` los excluye, asi que no
   aparecen en la tabla, el mapa, los contadores ni las tarjetas (siguen en el CSV).
 - Ultima columna "Evento validado": checkbox por evento; el estado se guarda en
-  `localStorage` (`catastro_validados`, mapa id->true), no en el CSV. El boton
-  "Descargar Eventos Validados" (bajo la tabla) baja un CSV generado en el navegador
-  con la cabecera del catastro y solo las filas marcadas (`eventos_validados_AAAA-MM-DD.csv`,
-  con BOM, CRLF y las filas tal cual vienen de `docs/eventos.csv`).
+  `localStorage` (`catastro_validados`, mapa id->true), no en el CSV.
+- Descargas bajo la tabla, todas armadas en el navegador (sirven con `file://`):
+  "Descargar CSV (filtrados)" respeta los filtros y el orden de la tabla;
+  "Descargar Eventos Validados" baja solo las filas marcadas (lee `docs/eventos.csv`
+  para conservar las filas tal cual y, si no puede, las arma desde los datos embebidos);
+  "Descargar KMZ" genera un ZIP con `doc.kml` (Placemarks con coordenadas, color por tipo).
 - Boton "Actualizar": en localhost llama a `POST /actualizar` (servidor.py) y ejecuta
   la busqueda real; en GitHub Pages relee `docs/eventos.json` (ultima version publicada).
   No hay enlace a GitHub en la pagina publica. Vive en la barra de filtros, a la derecha
@@ -62,6 +69,10 @@ python -m pytest -q
 - No introducir API keys ni servicios de pago.
 - Las palabras clave y busquedas se escriben sin tildes (el codigo normaliza).
 - Google News deja de respetar `when:Nd` si la consulta lleva comillas; usar palabras sueltas.
+- Google News RSS devuelve como maximo 100 entradas por consulta: `when:90d`, `when:120d` y
+  `when:180d` entregan el mismo conjunto. Para historia usar `after:AAAA-MM-DD before:AAAA-MM-DD`
+  (granularidad de dia, `after` y `before` inclusivos en Google; el filtro local deja
+  `[desde, hasta)` para no solapar tramos). Bing y los feeds directos no conservan historia.
 - El operador corrige `estado` en `data/eventos.csv` (`nuevo`/`confirmado`/`descartado`).
 - No editar a mano `data/vistos.json` salvo para forzar reprocesamiento.
 - Las URLs guardadas deben ser del medio, no de Google News (`news.google.com/rss/articles/...`):
@@ -75,3 +86,7 @@ python -m pytest -q
   confunde con un homonimo, fija sus coordenadas en `georref.json`.
 - El workflow corre `pytest` antes de publicar y avisa por issue (etiqueta `alerta-pipeline`)
   si la resolucion de enlaces se degrada.
+- Las descargas del sitio se arman en el navegador y deben funcionar sin servidor (`file://`).
+  Cada boton necesita su `addEventListener` (el fallo 2026-10-23 fue justamente un boton sin
+  handler). Verificar con Chrome headless interceptando `descargarBlob` que el CSV filtrado,
+  el CSV de validados (con y sin `fetch`) y el KMZ se generan; validar el KMZ con `zipfile`.

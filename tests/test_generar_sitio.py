@@ -57,6 +57,36 @@ def test_genera_html_y_json(tmp_path, monkeypatch):
     assert "__DATOS__" not in html
 
 
+def test_filtro_por_rango_de_fechas_y_orden(tmp_path, monkeypatch):
+    _generar(tmp_path, monkeypatch, [evento()])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+    assert 'id="desde"' in html and 'id="hasta"' in html
+    assert 'id="periodo"' not in html
+    assert "Periodo (dias)" not in html
+    assert "dentroDeFechas" in html
+    assert html.count('class="orden"') == 6
+    assert "ordenarPor" in html and "actualizarFlechas" in html
+
+
+def test_botones_de_descarga_y_handler(tmp_path, monkeypatch):
+    _generar(tmp_path, monkeypatch, [evento()])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+    assert "Descargar CSV (filtrados)" in html
+    assert "Descargar KMZ" in html
+    assert 'id="btn-csv"' in html and 'id="btn-kmz"' in html
+    # Cada boton debe tener su listener: el CSV de validados no funcionaba por faltar el suyo.
+    assert "btnCsv.addEventListener" in html
+    assert "btnKmz.addEventListener" in html
+    assert "btnDescargar.addEventListener('click', descargarValidados)" in html
+    # KMZ: ZIP minimo con doc.kml armado en el navegador.
+    assert "zipUnArchivo('doc.kml'" in html
+    assert "0x04034b50" in html and "0x06054b50" in html
+    assert "application/vnd.google-earth.kmz" in html
+    # El CSV de validados cae a los datos embebidos si no puede leer eventos.csv.
+    assert "descargarBlob" in html
+    assert "COLUMNAS_CSV" in html
+
+
 def test_ordena_por_fecha_descendente(tmp_path, monkeypatch):
     _generar(
         tmp_path,

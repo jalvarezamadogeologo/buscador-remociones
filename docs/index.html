@@ -32,7 +32,7 @@
   .campo label { font-size:11px; text-transform:uppercase; letter-spacing:.4px; color:var(--suave); }
   input, select { font:inherit; font-size:14px; padding:7px 9px; border:1px solid var(--borde); border-radius:6px; background:#fff; color:var(--texto); }
   #buscar { min-width:250px; }
-  #periodo { width:110px; }
+  #desde, #hasta { width:150px; }
   select:disabled { background:#f0f2f5; color:#9aa5b1; cursor:not-allowed; }
   .btn-limpiar { background:#fff; color:var(--suave); border:1px solid var(--borde); cursor:pointer; font:inherit; font-size:13.5px; padding:8px 12px; border-radius:6px; }
   .btn-limpiar.activo { background:var(--acento); color:#fff; border-color:var(--acento); }
@@ -44,6 +44,11 @@
   table { border-collapse:collapse; width:100%; font-size:13.5px; }
   th, td { padding:9px 10px; border-bottom:1px solid var(--borde); text-align:left; vertical-align:top; }
   th { background:#eef2f6; font-size:11.5px; text-transform:uppercase; letter-spacing:.4px; color:var(--suave); position:sticky; top:0; }
+  th.orden { cursor:pointer; user-select:none; white-space:nowrap; }
+  th.orden:hover, th.orden:focus-visible { color:var(--acento); outline:none; }
+  .flecha { display:inline-block; width:11px; margin-left:3px; color:#aab4be; font-size:10px; }
+  th.orden.activa { color:var(--acento); }
+  th.orden.activa .flecha { color:var(--acento); }
   tr:last-child td { border-bottom:none; }
   tr:hover td { background:#f8fafc; }
   tr.validado td { background:#f1f8f3; }
@@ -94,8 +99,10 @@
       </select></div>
     <div class="campo"><label for="region">Region</label><select id="region"></select></div>
     <div class="campo"><label for="comuna">Comuna</label><select id="comuna" disabled></select></div>
-    <div class="campo"><label for="periodo">Periodo (dias)</label>
-      <input id="periodo" type="number" min="0" step="1" value="90" title="0 = todo el historico"></div>
+    <div class="campo"><label for="desde">Desde</label>
+      <input id="desde" type="date" title="Fecha de publicacion minima"></div>
+    <div class="campo"><label for="hasta">Hasta</label>
+      <input id="hasta" type="date" title="Fecha de publicacion maxima"></div>
     <button id="btn-limpiar" class="btn-limpiar" type="button">Limpiar filtros</button>
     <button id="btn-validados" class="btn-limpiar" type="button" aria-pressed="false">Solo validados</button>
     <button id="btn-actualizar" class="btn-primario" type="button">Actualizar</button>
@@ -106,7 +113,13 @@
   <div class="tabla-wrap">
     <table>
       <thead><tr>
-        <th>Fecha</th><th>Tipo</th><th>Evento</th><th>Region / comuna</th><th>Fuentes</th><th>Estado</th><th class="col-mapa">Mapa</th><th class="col-validar">Evento validado</th>
+        <th class="orden" data-orden="fecha" scope="col" tabindex="0" aria-sort="descending">Fecha<span class="flecha"></span></th>
+        <th class="orden" data-orden="tipo" scope="col" tabindex="0">Tipo<span class="flecha"></span></th>
+        <th class="orden" data-orden="evento" scope="col" tabindex="0">Evento<span class="flecha"></span></th>
+        <th class="orden" data-orden="lugar" scope="col" tabindex="0">Region / comuna<span class="flecha"></span></th>
+        <th class="orden" data-orden="fuentes" scope="col" tabindex="0">Fuentes<span class="flecha"></span></th>
+        <th class="orden" data-orden="estado" scope="col" tabindex="0">Estado<span class="flecha"></span></th>
+        <th class="col-mapa">Mapa</th><th class="col-validar">Evento validado</th>
       </tr></thead>
       <tbody id="filas"></tbody>
     </table>
@@ -114,8 +127,10 @@
   </div>
 
   <div class="descarga">
+    <button id="btn-csv" class="btn-primario" type="button">Descargar CSV (filtrados)</button>
     <button id="btn-descargar" class="btn-primario" type="button">Descargar Eventos Validados</button>
-    <span class="descarga-ayuda">Incluye solo los eventos con la casilla "Evento validado" marcada.</span>
+    <button id="btn-kmz" class="btn-primario" type="button">Descargar KMZ</button>
+    <span class="descarga-ayuda">CSV y KMZ incluyen los eventos que cumplen los filtros (el KMZ, solo los que tienen coordenadas). "Eventos Validados" usa solo las filas marcadas.</span>
   </div>
 
   <div class="pie">
@@ -157,6 +172,15 @@ function norm(s){ return (s||'').toString().normalize('NFD').replace(/[\u0300-\u
 function fechaCorta(iso){ return iso ? iso.slice(0,16).replace('T',' ') : '-'; }
 function fechaMs(e){ const s=e.fecha_publicacion||e.fecha_deteccion||''; const t=Date.parse(s); return isNaN(t)?null:t; }
 function dentroDeRango(e,dias){ if(!dias) return true; const t=fechaMs(e); return t===null || t >= Date.now()-dias*86400000; }
+// Fecha local (AAAA-MM-DD) del evento, tal como viene en el ISO con offset.
+function diaEvento(e){ const s=e.fecha_publicacion||e.fecha_deteccion||''; return s ? s.slice(0,10) : ''; }
+function dentroDeFechas(e, desde, hasta){
+  const dia = diaEvento(e);
+  if (!dia) return true;  // sin fecha: no se puede descartar por rango
+  if (desde && dia < desde) return false;
+  if (hasta && dia > hasta) return false;
+  return true;
+}
 function colorTipo(t){ return COLORES[t] || '#7f7f7f'; }
 function etiquetaTipo(t){ return TIPOS[t] || (t || 'Otro'); }
 function tieneCoords(e){ return e.lat !== '' && e.lon !== '' && e.lat != null && e.lon != null; }
@@ -200,13 +224,58 @@ const selTipo = document.getElementById('tipo');
 const selRegion = document.getElementById('region');
 const selComuna = document.getElementById('comuna');
 const selOrigen = document.getElementById('origen');
-const inputPeriodo = document.getElementById('periodo');
+const inputDesde = document.getElementById('desde');
+const inputHasta = document.getElementById('hasta');
 const filas = document.getElementById('filas');
 const btnActualizar = document.getElementById('btn-actualizar');
 const btnDescargar = document.getElementById('btn-descargar');
+const btnCsv = document.getElementById('btn-csv');
+const btnKmz = document.getElementById('btn-kmz');
 const btnValidados = document.getElementById('btn-validados');
 const cajaEstado = document.getElementById('estado');
 let soloValidados = false;
+
+// ---- orden de la tabla ----
+let ordenCol = 'fecha';
+let ordenDir = 'desc';
+const VALORES_ORDEN = {
+  fecha: e => fechaMs(e),
+  tipo: e => norm(e.tipo_etiqueta || e.tipo_evento),
+  evento: e => norm(e.evento),
+  lugar: e => norm(`${e.region||''} ${e.comuna||''}`),
+  fuentes: e => (e.fuentes || []).length,
+  estado: e => ({nuevo:0, confirmado:1, descartado:2})[e.estado] ?? 3,
+};
+
+function ordenarLista(lista){
+  const valor = VALORES_ORDEN[ordenCol] || VALORES_ORDEN.fecha;
+  const dir = ordenDir === 'asc' ? 1 : -1;
+  return [...lista].sort((a,b)=>{
+    const va = valor(a), vb = valor(b);
+    const vacioA = va === null || va === undefined || va === '';
+    const vacioB = vb === null || vb === undefined || vb === '';
+    if (vacioA && vacioB) return 0;
+    if (vacioA) return 1;   // sin dato siempre al final
+    if (vacioB) return -1;
+    if (typeof va === 'number' && typeof vb === 'number') return (va - vb) * dir;
+    return String(va).localeCompare(String(vb), 'es') * dir;
+  });
+}
+
+function actualizarFlechas(){
+  document.querySelectorAll('th.orden').forEach(th=>{
+    const activa = th.getAttribute('data-orden') === ordenCol;
+    th.classList.toggle('activa', activa);
+    th.setAttribute('aria-sort', activa ? (ordenDir === 'asc' ? 'ascending' : 'descending') : 'none');
+    th.querySelector('.flecha').textContent = activa ? (ordenDir === 'asc' ? '▲' : '▼') : '↕';
+  });
+}
+
+function ordenarPor(col){
+  if (col === ordenCol) ordenDir = ordenDir === 'asc' ? 'desc' : 'asc';
+  else { ordenCol = col; ordenDir = (col === 'fecha') ? 'desc' : 'asc'; }
+  render();
+}
 
 function opciones(sel, valores, etiquetaTodos){
   const prev = sel.value;
@@ -241,8 +310,8 @@ function poblarFiltros(){
 
 function filtrar(){
   const q = norm(buscar.value.trim());
-  const dias = parseInt(inputPeriodo.value, 10);
-  const ventana = (isNaN(dias) || dias < 0) ? 0 : dias;
+  const desde = inputDesde.value;
+  const hasta = inputHasta.value;
   return EVENTOS.filter(e=>{
     if (e.estado === 'descartado') return false;  // no se publican en el sitio
     if (soloValidados && !esValidado(e.id)) return false;
@@ -250,7 +319,7 @@ function filtrar(){
     if (selRegion.value && e.region !== selRegion.value) return false;
     if (selComuna.value && e.comuna !== selComuna.value) return false;
     if (selOrigen.value && origenEvento(e) !== selOrigen.value) return false;
-    if (!dentroDeRango(e, ventana)) return false;
+    if (!dentroDeFechas(e, desde, hasta)) return false;
     if (q){
       const medios = (e.fuentes || []).map(f=>f.medio).join(' ');
       const txt = norm([e.evento, e.titulo, e.region, e.comuna, e.tipo_etiqueta, medios].join(' '));
@@ -296,7 +365,8 @@ function detallesFuentes(lista){
 }
 
 function render(){
-  const lista = filtrar();
+  const lista = ordenarLista(filtrar());
+  actualizarFlechas();
 
   filas.innerHTML = lista.map(e=>{
     const clases = [e.estado==='descartado' ? 'descartado' : '', esValidado(e.id) ? 'validado' : '']
@@ -360,7 +430,8 @@ function limpiar(){
   selTipo.value = '';
   selRegion.value = '';
   selOrigen.value = '';
-  inputPeriodo.value = 90;
+  inputDesde.value = '';
+  inputHasta.value = '';
   soloValidados = false;
   btnValidados.classList.remove('activo');
   btnValidados.setAttribute('aria-pressed', 'false');
@@ -368,7 +439,7 @@ function limpiar(){
   render();
 }
 
-// ---- descarga de eventos validados (CSV generado en el navegador) ----
+// ---- descargas (CSV filtrado, validados y KMZ), armadas en el navegador ----
 function avisar(msg, ms){
   cajaEstado.textContent = msg;
   cajaEstado.classList.add('visible');
@@ -398,6 +469,50 @@ function primeraCelda(registro){
   return i < 0 ? registro : registro.slice(0, i);
 }
 
+// Mismas columnas que data/eventos.csv (issue queda vacio: el sitio no lo expone).
+const COLUMNAS_CSV = ['id','fecha_publicacion','fecha_deteccion','titulo','tipo_evento','tipo_etiqueta','region','comuna','lat','lon','fuente_1','url_1','fecha_1','fuente_2','url_2','fecha_2','fuente_3','url_3','fecha_3','estado','issue'];
+
+function campoCsv(valor){
+  const s = (valor === null || valor === undefined) ? '' : String(valor);
+  return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g,'""') + '"' : s;
+}
+
+function filaCsv(e){
+  const f = e.fuentes || [];
+  const fuente = i => f[i] || {};
+  return [
+    e.id, e.fecha_publicacion, e.fecha_deteccion, e.titulo, e.tipo_evento, e.tipo_etiqueta,
+    e.region, e.comuna, e.lat, e.lon,
+    fuente(0).medio || '', fuente(0).url || '', fuente(0).fecha || '',
+    fuente(1).medio || '', fuente(1).url || '', fuente(1).fecha || '',
+    fuente(2).medio || '', fuente(2).url || '', fuente(2).fecha || '',
+    e.estado || 'nuevo', ''
+  ].map(campoCsv).join(',');
+}
+
+function descargarBlob(nombre, contenido, tipo){
+  const url = URL.createObjectURL(new Blob([contenido], {type:tipo}));
+  const enlace = document.createElement('a');
+  enlace.href = url;
+  enlace.download = nombre;
+  document.body.appendChild(enlace);
+  enlace.click();
+  enlace.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 2000);
+}
+
+function nombreConFecha(base, extension){
+  return `${base}_${new Date().toISOString().slice(0,10)}.${extension}`;
+}
+
+function descargarCsvFiltrados(){
+  const lista = ordenarLista(filtrar());
+  if (!lista.length){ avisar('No hay eventos para los filtros seleccionados.', 6000); return; }
+  const contenido = '\uFEFF' + [COLUMNAS_CSV.join(','), ...lista.map(filaCsv)].join('\r\n') + '\r\n';
+  descargarBlob(nombreConFecha('remociones_filtradas','csv'), contenido, 'text/csv;charset=utf-8');
+  avisar(`Descargados ${lista.length} evento${lista.length===1?'':'s'} del filtro actual.`, 7000);
+}
+
 async function descargarValidados(){
   const ids = new Set(Object.keys(VALIDADOS).filter(k=>VALIDADOS[k]));
   if (!ids.size){ avisar('Marca al menos un evento como validado para descargar.', 6000); return; }
@@ -405,25 +520,26 @@ async function descargarValidados(){
   btnDescargar.disabled = true;
   btnDescargar.textContent = 'Preparando...';
   try {
-    const resp = await fetch('eventos.csv?t=' + Date.now(), {cache:'no-store'});
-    if (!resp.ok) throw new Error('no se pudo leer eventos.csv');
-    const texto = await resp.text();
-    const registros = registrosCsv(texto);
-    if (!registros.length) throw new Error('eventos.csv esta vacio');
-    const cabecera = registros.shift();
-    const elegidos = registros.filter(r=>ids.has(primeraCelda(r)));
+    let cabecera = null;
+    let elegidos = [];
+    try {
+      const resp = await fetch('eventos.csv?t=' + Date.now(), {cache:'no-store'});
+      if (!resp.ok) throw new Error('no se pudo leer eventos.csv');
+      const texto = (await resp.text()).replace(/^\uFEFF/, '');
+      const registros = registrosCsv(texto);
+      if (!registros.length) throw new Error('eventos.csv esta vacio');
+      cabecera = registros.shift();
+      elegidos = registros.filter(r=>ids.has(primeraCelda(r)));
+    } catch (err) {
+      // file:// o CSV no publicado: se arma desde los datos embebidos en la pagina.
+      const lista = EVENTOS.filter(e=>ids.has(String(e.id)));
+      if (!lista.length) throw new Error('los eventos validados no estan en el CSV publicado');
+      cabecera = COLUMNAS_CSV.join(',');
+      elegidos = lista.map(filaCsv);
+    }
     if (!elegidos.length) throw new Error('los eventos validados no estan en el CSV publicado');
-    const bom = texto.charCodeAt(0) === 0xFEFF ? '' : '\uFEFF';
-    const contenido = bom + [cabecera, ...elegidos].join('\r\n') + '\r\n';
-    const hoy = new Date().toISOString().slice(0,10);
-    const url = URL.createObjectURL(new Blob([contenido], {type:'text/csv;charset=utf-8'}));
-    const enlace = document.createElement('a');
-    enlace.href = url;
-    enlace.download = `eventos_validados_${hoy}.csv`;
-    document.body.appendChild(enlace);
-    enlace.click();
-    enlace.remove();
-    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+    const contenido = '\uFEFF' + [cabecera, ...elegidos].join('\r\n') + '\r\n';
+    descargarBlob(nombreConFecha('eventos_validados','csv'), contenido, 'text/csv;charset=utf-8');
     avisar(`Descargados ${elegidos.length} evento${elegidos.length===1?'':'s'} validado${elegidos.length===1?'':'s'}.`, 7000);
   } catch (err) {
     avisar('Error al descargar: ' + err.message, 8000);
@@ -431,6 +547,118 @@ async function descargarValidados(){
     btnDescargar.textContent = textoPrevio;
     refrescarBotonDescarga();
   }
+}
+
+// ---- KMZ: ZIP con doc.kml armado en el navegador (sin librerias) ----
+function crc32(bytes){
+  let crc = 0xFFFFFFFF;
+  for (let i=0;i<bytes.length;i++){
+    crc ^= bytes[i];
+    for (let k=0;k<8;k++) crc = (crc & 1) ? ((crc >>> 1) ^ 0xEDB88320) : (crc >>> 1);
+  }
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+
+function zipUnArchivo(nombre, texto){
+  const codificador = new TextEncoder();
+  const datos = codificador.encode(texto);
+  const nombreBytes = codificador.encode(nombre);
+  const crc = crc32(datos);
+  const ahora = new Date();
+  const hora = (ahora.getHours() << 11) | (ahora.getMinutes() << 5) | (ahora.getSeconds() >> 1);
+  const dia = ((ahora.getFullYear() - 1980) << 9) | ((ahora.getMonth() + 1) << 5) | ahora.getDate();
+
+  const local = new Uint8Array(30 + nombreBytes.length + datos.length);
+  const dl = new DataView(local.buffer);
+  dl.setUint32(0, 0x04034b50, true);
+  dl.setUint16(4, 20, true);
+  dl.setUint16(6, 0x0800, true);
+  dl.setUint16(8, 0, true);
+  dl.setUint16(10, hora, true);
+  dl.setUint16(12, dia, true);
+  dl.setUint32(14, crc, true);
+  dl.setUint32(18, datos.length, true);
+  dl.setUint32(22, datos.length, true);
+  dl.setUint16(26, nombreBytes.length, true);
+  dl.setUint16(28, 0, true);
+  local.set(nombreBytes, 30);
+  local.set(datos, 30 + nombreBytes.length);
+
+  const central = new Uint8Array(46 + nombreBytes.length);
+  const dc = new DataView(central.buffer);
+  dc.setUint32(0, 0x02014b50, true);
+  dc.setUint16(4, 20, true);
+  dc.setUint16(6, 20, true);
+  dc.setUint16(8, 0x0800, true);
+  dc.setUint16(10, 0, true);
+  dc.setUint16(12, hora, true);
+  dc.setUint16(14, dia, true);
+  dc.setUint32(16, crc, true);
+  dc.setUint32(20, datos.length, true);
+  dc.setUint32(24, datos.length, true);
+  dc.setUint16(28, nombreBytes.length, true);
+  dc.setUint32(42, 0, true);
+  central.set(nombreBytes, 46);
+
+  const fin = new Uint8Array(22);
+  const df = new DataView(fin.buffer);
+  df.setUint32(0, 0x06054b50, true);
+  df.setUint16(8, 1, true);
+  df.setUint16(10, 1, true);
+  df.setUint32(12, central.length, true);
+  df.setUint32(16, local.length, true);
+
+  const total = new Uint8Array(local.length + central.length + fin.length);
+  total.set(local, 0);
+  total.set(central, local.length);
+  total.set(fin, local.length + central.length);
+  return total;
+}
+
+function escXml(s){
+  return String(s === null || s === undefined ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// KML usa color aabbggrr (alfa + BGR).
+function kmlColor(hex){
+  const h = String(hex || '#7f7f7f').replace('#','').padEnd(6,'0');
+  return ('ff' + h.slice(4,6) + h.slice(2,4) + h.slice(0,2)).toUpperCase();
+}
+
+function descargarKmz(){
+  const lista = ordenarLista(filtrar()).filter(e=>tieneCoords(e));
+  if (!lista.length){ avisar('No hay eventos con coordenadas para los filtros seleccionados.', 7000); return; }
+  const tipos = [...new Set(lista.map(e=>e.tipo_evento).filter(Boolean))];
+  const estilos = tipos.map(t=>`<Style id="t_${escXml(t)}"><IconStyle><color>${kmlColor(colorTipo(t))}</color><scale>1.1</scale></IconStyle></Style>`).join('\n');
+  const placemarks = lista.map(e=>{
+    const enlaces = (e.fuentes||[]).filter(f=>f.url)
+      .map(f=>`<a href="${escXml(f.url)}">${escXml(f.medio || 'Fuente')}</a>`).join(' | ');
+    const descripcion = [
+      `Fecha: ${escXml(fechaCorta(e.fecha_publicacion || e.fecha_deteccion))}`,
+      `Lugar: ${escXml([e.region, e.comuna].filter(Boolean).join(' / ') || '-')}`,
+      `Tipo: ${escXml(etiquetaTipo(e.tipo_evento))}`,
+      `Estado: ${escXml(e.estado || 'nuevo')}`,
+      enlaces ? `Fuentes: ${enlaces}` : ''
+    ].filter(Boolean).join('<br>').split(']]>').join(']] >');
+    return `<Placemark>
+      <name>${escXml(e.evento)}</name>
+      <description><![CDATA[${descripcion}]]></description>
+      ${e.tipo_evento ? `<styleUrl>#t_${escXml(e.tipo_evento)}</styleUrl>` : ''}
+      <Point><coordinates>${parseFloat(e.lon)},${parseFloat(e.lat)},0</coordinates></Point>
+    </Placemark>`;
+  }).join('\n');
+  const kml = `<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Remociones en masa - Chile</name>
+<description>${lista.length} evento(s) segun los filtros del sitio</description>
+${estilos}
+${placemarks}
+</Document>
+</kml>`;
+  descargarBlob(nombreConFecha('remociones','kmz'), zipUnArchivo('doc.kml', kml), 'application/vnd.google-earth.kmz');
+  avisar(`Descargados ${lista.length} evento${lista.length===1?'':'s'} con coordenadas en KMZ.`, 7000);
 }
 
 async function actualizar(){
@@ -488,9 +716,21 @@ filas.addEventListener('change', ev=>{
 
 selRegion.addEventListener('change', ()=>{ poblarComunas(); render(); });
 [selTipo, selComuna, selOrigen].forEach(s=>s.addEventListener('change', render));
-inputPeriodo.addEventListener('input', render);
+[inputDesde, inputHasta].forEach(i=>i.addEventListener('change', render));
 buscar.addEventListener('input', render);
+document.querySelectorAll('th.orden').forEach(th=>{
+  th.addEventListener('click', ()=>ordenarPor(th.getAttribute('data-orden')));
+  th.addEventListener('keydown', ev=>{
+    if (ev.key === 'Enter' || ev.key === ' '){
+      ev.preventDefault();
+      ordenarPor(th.getAttribute('data-orden'));
+    }
+  });
+});
 document.getElementById('btn-limpiar').addEventListener('click', limpiar);
+btnCsv.addEventListener('click', descargarCsvFiltrados);
+btnKmz.addEventListener('click', descargarKmz);
+btnDescargar.addEventListener('click', descargarValidados);
 btnValidados.addEventListener('click', ()=>{
   soloValidados = !soloValidados;
   btnValidados.classList.toggle('activo', soloValidados);

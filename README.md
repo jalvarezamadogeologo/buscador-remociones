@@ -16,7 +16,8 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
 - **Filtros** aplicados a la vez a la tabla y al mapa: texto libre, tipo (todos los
   tipos de remocion en masa y desbordes/inundaciones), **origen** (Prensa o Redes
   sociales), region (las 16 del pais), comuna (se habilita al elegir una region y
-  muestra solo sus comunas) y periodo en dias como numero entero (0 = todo el historico).
+  muestra solo sus comunas) y **rango de fechas** `Desde`/`Hasta` sobre la fecha de
+  publicacion (vacio = sin limite; ambos inclusive).
   Un evento cuenta como "Redes sociales" cuando **todas** sus fuentes son X/Instagram/
   Facebook; si tiene al menos un medio de prensa, cuenta como "Prensa".
 - **Boton "Solo validados"** (barra de filtros): muestra en la tabla y en el mapa solo
@@ -31,12 +32,21 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
 - **Tabla:** cada fila es un **evento**, no una noticia. La columna "Evento" muestra
   "tipo de remocion + lugar (comuna)"; la columna "Fuentes" despliega hasta 3 enlaces
   con el **nombre del medio** como texto (las primeras que reportaron el hecho).
+  Los encabezados **Fecha, Tipo, Evento, Region/comuna, Fuentes y Estado** son
+  ordenables con un clic (flecha arriba/abajo; segundo clic invierte). El orden inicial
+  es fecha descendente.
   La ultima columna, **"Evento validado"**, es una casilla para marcar los eventos que el
   operador da por buenos (se guarda en el navegador, `localStorage`).
-- **Boton "Descargar Eventos Validados"** (bajo la tabla): genera en el navegador un CSV
-  (`eventos_validados_AAAA-MM-DD.csv`) con la cabecera del catastro y **solo las filas
-  marcadas** en la columna "Evento validado". El enlace anterior a `eventos.csv` ya no
-  descarga el catastro completo.
+- **Descargas** (bajo la tabla), armadas en el navegador (funcionan tambien con `file://`):
+  - **Descargar CSV (filtrados):** `remociones_filtradas_AAAA-MM-DD.csv` con los eventos
+    que cumplen los filtros actuales, en el orden de la tabla y con las columnas de
+    `data/eventos.csv` (BOM + CRLF para Excel).
+  - **Descargar Eventos Validados:** `eventos_validados_AAAA-MM-DD.csv` con la cabecera
+    del catastro y **solo las filas marcadas**; si no puede leer `eventos.csv` (por
+    ejemplo con `file://`), arma el CSV desde los datos embebidos en la pagina.
+  - **Descargar KMZ:** `remociones_AAAA-MM-DD.kmz` (ZIP con `doc.kml`, sin librerias) con
+    los eventos filtrados **que tienen coordenadas**, un Placemark por evento y colores
+    por tipo de remocion; se abre en Google Earth.
 - **Mapa:** al abrir el popup de un punto se listan los enlaces de sus fuentes, con el
   medio como texto.
 - **Boton "Ver"** en cada fila: centra el mapa en el evento y abre su popup
@@ -71,7 +81,31 @@ python actualizar.py --sin-resolver        # no resolver enlaces de Google News
 python revisar_catastro.py                 # revisar el catalogo existente (prevencion,
                                            # toponimos y fuentes con URL) y regenerar el sitio
 python revisar_catastro.py --sin-geocodificar --sin-sitio
+python historico.py --dias 120             # barrido historico dia por dia (after/before)
+python historico.py --dias 120 --dry-run   # solo informa, no escribe nada
+python historico.py --desde 2026-07-01 --hasta 2026-07-31
 ```
+
+### Barrido historico (ventanas largas)
+
+`actualizar.py --dias 90` y `--dias 120` producen el mismo resultado: Google News RSS
+devuelve como maximo **100 entradas por consulta**, asi que `when:Nd` se satura mucho antes
+del limite pedido. Medido el 2026-10-23: `when:30d`, `when:90d`, `when:120d` y `when:180d`
+entregaron el mismo conjunto de 100 entradas (la mas antigua, 83 dias atras).
+
+Para historia se usa `after:`/`before:`, que si respetan el rango con granularidad de dia.
+`historico.py` recorre la ventana en tramos de un dia y alimenta el mismo pipeline
+(clasificar, agrupar, geocodificar, resolver enlaces, regenerar sitio):
+
+```powershell
+python historico.py --dias 120                  # ~120 consultas, 3-5 min
+python historico.py --dias 120 --dry-run        # ver cuantos eventos aparecen sin escribir
+python historico.py --dias 120 --sin-geocodificar --sin-sitio --sin-resolver
+```
+
+No crea issues salvo `--notificar` ni corre en el workflow. Avisa al final si algun dia
+llego al tope de 100 entradas (puede faltar cobertura); separar la consulta por termino
+recupera ~60% mas URLs en un dia saturado, pero multiplica las peticiones.
 
 ### Enlaces de las fuentes
 
@@ -214,6 +248,12 @@ sitio**: quedan fuera de la tabla, del mapa, de los contadores y de las tarjetas
 
 ## Limitaciones conocidas
 
+- **Ventanas largas (`when:Nd`):** Google News RSS entrega como maximo 100 entradas por
+  consulta y `when:90d`/`when:120d`/`when:180d` devuelven el mismo conjunto (se satura
+  alrededor de los 83 dias y con los resultados mejor rankeados, no los mas recientes).
+  Para historia usar `historico.py`, que barre con `after:`/`before:` dia por dia. Los dias
+  con mas de 100 entradas en la consulta quedan saturados y pueden perder cobertura; el
+  barrido lo informa al final. Bing y los feeds directos no conservan historia.
 - **Enlaces de Google News:** se resuelven a la URL del medio; si el RPC interno de Google
   falla o cambia, se conserva el enlace de Google News (que puede mostrar el bloqueo
   "automated queries"). Los fallos quedan cacheados en `data/urlcache.json` y no se
