@@ -1,7 +1,122 @@
 {
-  "actualizado": "2026-10-23 00:32",
-  "total": 37,
+  "actualizado": "2026-10-23 08:04",
+  "total": 39,
   "eventos": [
+    {
+      "id": "ddfd47c73f74",
+      "fecha_publicacion": "2026-10-22T23:16:43-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "así está la ruta en alta montaña tras una nueva avalancha en Chile",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "MDZ Online",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQVgxdnlpOEw2QlFKVVdTaHY4b0huX2FxQkVQeWtSbVBUeDVHc3g1VjEwY3YtYlRjcmJldW9UR0ZtS2N6Q2xCdWNyUjVMc3NWU2cwMENIUU9xUjdQdU9uakY3TDFfdUVtMXFsTlg5b29YYlhISmgxbUhTUUVOUzdaQkEzVVpQd1Q5VjFzY3NTZWR1cEd5VW9KLU5MU3Jla2ZrdDZ1aW9USGlkYm5fZ1Z4aWlFbWgzRFF1RWpoNTlsZEc1RzloLWc?oc=5",
+          "fecha": "2026-10-22T23:16:43-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "c75590330c96",
+      "fecha_publicacion": "2026-10-22T20:37:55-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Otra avalancha en el lado chileno dificulta el tránsito en alta montaña (mobile)",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Mendoza 24",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZk90ZHZZdHNYQ2g1R0wwYU1HM0M0U0FCMUdzelNVVEl4Y3F3c3hOdktkYXhpaFBSREJhdHk0bV9FcFNuWG5LTDJRVnJ2dnUzeG9ma0EtVDFybmVFS25PTlhnM3JWTk11ZzAtZlpsWTFtZXg2SzFzUi1pNERTTDlMUS1za0RtY0t2dG5GV1dCakk1TnVfalBma2g2ZFhnRFBwcW9rSWZnMnBoem5nSjlzM2N6RVFiTEdyS21NZQ?oc=5",
+          "fecha": "2026-10-22T20:37:55-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "5f358a8b8d03",
+      "fecha_publicacion": "2026-10-22T19:17:35-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Región Coquimbo. PRECAUCIÓN, deslizamiento de parte de ladera contigua a ruta 5",
+      "evento": "Deslizamiento en Coquimbo",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Coquimbo",
+      "comuna": "Coquimbo",
+      "lat": "-30.754665",
+      "lon": "-70.900554",
+      "fuentes": [
+        {
+          "medio": "Serena y Coquimbo",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcWxlQkJVMXZMVjNGcnpxWHRtWnp4cDU3ZXhiMVlKWjlmT01weHoxMHp2STF4amxjVmQ3SlNTM0s3aDlsaC1zQkw3LU1MTm5HYjlLbEVOYU1XcUphSW92QjR6Vzd4MVpVTXR2QkRPMXpQY2FheVkxXzB3ckVDMUg1anVnYkNGU3I3cExpd3VPekdzalRkd1hlNmtfa19UMFVzZmhVM1U4MEI?oc=5",
+          "fecha": "2026-10-22T19:17:35-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "03acaaa9854d",
+      "fecha_publicacion": "2026-10-22T18:36:00-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Los Andes: rescatan el cuerpo del tercer excursionista fallecido en la avalancha de Portillo",
+      "evento": "Alud / avalancha en Los Andes",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Valparaiso",
+      "comuna": "Los Andes",
+      "lat": "-32.833687",
+      "lon": "-70.598161",
+      "fuentes": [
+        {
+          "medio": "Los Andes",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORUN0WlVrSFNxSi1WbGRWNTM5WHhUT0JJVXJ4RmtjX3FLYk5zZmRHMU9GUVNLY2hrSmRCVzlBZmpoMnl3ZXJUYjFYRlpkZmNEVDY3eEhNaEZzNGh4akZVN09oT3NyRm5EN2xSc3MyZ1NySWd5NEh4dnNTQUVOTkNxRTVrTDMza3dsSGxwMElEdG1ZZ1ljQUk0N3Z6WUxsQmVtQUN6eXpBVXVveWdfRjV1VV93V2I5OU1wdXhBcnQ2X1h0d0NOaXc?oc=5",
+          "fecha": "2026-10-22T18:36:00-03:00"
+        },
+        {
+          "medio": "SoyChile.cl",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUgzQnFhNUhZQWRaYmlwOFNub3hMdXRuTFFLSnpvYjJIdllteEstYUIwVVhYMHlJU2VwUHB6eHB0eTZGVVdQdmRmS0tKcWN0NWNSSklwWjNnTmFTUHBPQ2lKb0RMVjI0M1VfYVF2MDU5MUVWWFYtcElhZUpyclEzdG80Z2pqTGVxY2I5cHZNVWIzN1JlVWVBcWIwS0lXRkM0dnZnRldlQ0JESDJva0Y0?oc=5",
+          "fecha": "2026-10-22T21:45:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "8e3d69eb2a6f",
+      "fecha_publicacion": "2026-10-22T17:56:43-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Cierran subida de vehículos a cerro La Gloria de Talcahuano por socavón",
+      "evento": "Socavón en Talcahuano",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Talcahuano",
+      "lat": "-36.714486",
+      "lon": "-73.114109",
+      "fuentes": [
+        {
+          "medio": "BioBioChile",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQWDl1WXFINUtLeGpvZ09YS2VEeUItWXJKVklFZUZabks3MGZyQUR5UXJHMFVRR3M3LUUzNmVOQVZ0SHNtSUpWcHJndEt6MjBJXzZGLVBnVkFJeEhpcHFFeTJVakVGQnlnQ2VzbnFGblRQZlhzZTZYMG8wN0gyNGtHblo1NnI0V1FxTENhSDlYa2lzR3hYa0YzYU1BTzBTeHFldno4ZVVXMTFCQzJFVWFMZUREZVZ1VkRJbnlyRGZXdC1sTmFfeHVlM3cwWlg2Q1hUVzEwdkF2MUVYRFhhTlBlV1c0dU1ENVU?oc=5",
+          "fecha": "2026-10-22T17:56:43-03:00"
+        },
+        {
+          "medio": "Canal 9 Bío Bío Televisión",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxObVk0aFNOSS1EenpFMFUtTkdMemM0SHpqZ1pBNmxmYkxEVGhseDUxZnFjNmhUTU9uVjhucnBGaUEtSFJfSjM5RWhCYWZ2UmFiZWtERUhfSWhHdE42T0xyYlJuNnRyaXAtVG5tZWw5UU12MWFfYlMxRldMU0FWeTZUdGtJdFNwRDI1U1JrVk5CZmd3dThUbkROYnIzOGZ5RVk5T0VzZTlWTEhYME1ZRV9wZFh2eDlVX1YyczR0Z3U0TVRUY3ZkdnJPei1kQjhLTXpNWXcwTXN0c0xEUXdzU2t4c0lB?oc=5",
+          "fecha": "2026-10-23T06:08:12-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "6cc8e4a31f5d",
       "fecha_publicacion": "2026-10-22T17:40:04-03:00",
@@ -29,6 +144,152 @@
       "estado": "nuevo"
     },
     {
+      "id": "9b84c73824a8",
+      "fecha_publicacion": "2026-10-22T09:38:09-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Fiscalía confirma rescate de cuerpo de tercera víctima de avalancha en Portillo y apunta a que se trató de un accidente",
+      "evento": "Alud / avalancha en Portillo",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Valparaiso",
+      "comuna": "Portillo",
+      "lat": "-32.836418",
+      "lon": "-70.129083",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9BeElmNUNkcmM2Q0pUeDFNSEVWSWlLTlBJNTBacmNvWlRSRUVpWGJ0ZWxYNlVzUGp4NVVMNkZuRHV3T2NFTnhEV1d5X3NjVjFRSUE?oc=5",
+          "fecha": "2026-10-22T09:38:09-03:00"
+        },
+        {
+          "medio": "La Tercera",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOT1A2RGIwNFdBTGktelFPMzktbXJwUWdPdDdMQWY1S1ZtV0stZ1QzMUlhUk81OGlyN0VWWGN0SHR4RmpCbmlvcGhaTGpaU2UyZ3FVQkI3Ym1pcDNtU2tBODRtMzd1NUZ3dkVIYVBPczFDMlp6X0lFWjdZLVlicTlPWDN0emlsY08wUHB4aFhIME9EZXphakV5RVdKTm1IeE9aVVVZcXJyQzVHTjNaWmlpTkRRa1dNNDFjaktPNXVTak92dGQ2c2czbklwX1BmMlo2QThDOE1QX3ZwT2c1YmFtMFFGWjVaZnc5YmJhV01JcVBCWWRESmfSAZcCQVVfeXFMT19uSjA1TXlvR0NRZnRVeWlWeFB0MmxvRHE1VWdhSWpwNC1vTWd5UWNJc0Z6bnFhRFRFSW0xM0t1RG1aNF9ncFN4RkkxWEJveVhIT2ZXUW15ZGtMUGxhWlZiMy1HMGZNZ0MtQ090SzJjNUFpRmoxczRhNEc0eE5STHluVWlLZWMtZjlBZGoxWUxoRGp6U2NzMEFjYnIyM1dTSldTa1pScjVvclBSV0U5cjZ1RERvMllMV2xIbnBGamU1enpnZ296ZndDXzlkRFZuajVpTGJZWlN4aVR6R3V0RlRwNVo1cl9rUnpvMzlMalo3blI3MGFFS3FOaWJyai12eW5TUFRVV2lNZ3lOVkxvNnc5eG9POERr?oc=5",
+          "fecha": "2026-10-22T17:58:18-03:00"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPY29GSFN0YTJJcWJ3OFFLSTBIQndIazZ3cFJ2RWE1R2hYMjVpNkJoVzBMRXluaG9QU2FhQVZsdTdMQ21lSHJpX2FLZEVEeXl4OHdSRjBGcTVPeFkwQUpmdDlhWmtUSkxEc0NhV3VCVmxuLUlDYVhCSEdtSk0tMkFna0YzMDJ0MFVUQV9UOU5nZHRYUQ?oc=5",
+          "fecha": "2026-10-22T18:56:37-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "a017cd853905",
+      "fecha_publicacion": "2026-10-22T11:22:56-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Hallan cuerpo de tercera víctima de avalancha en Laguna del Inca",
+      "evento": "Alud / avalancha en Laguna del Inca",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Valparaiso",
+      "comuna": "Laguna del Inca",
+      "lat": "-32.822459",
+      "lon": "-70.133087",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE13SEp6cldJYlJkZi03bjNPeGpJZnFIQk1SOHQ2S1BIb0prY1I3QnMzamU2Y1dJUHU5UUtUNkdyXzFidE1YbVRmX1QxVHBKZ1ZEcFE?oc=5",
+          "fecha": "2026-10-22T11:22:56-03:00"
+        },
+        {
+          "medio": "MendoVoz",
+          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPSzZRT3FYTFhDdDFGdkFuTjc0emUzYkhicDlON0REYXd4Y25NWGFpcEVrUWZfTWdDZldBWGtfVlNYQVRYX2ItSDkxeFhyd0p5YnRSVVhsLWMzVTJ5UFVHX19wcEJQWi1xTUFPdjNNUUcyektqTUJBX3d6SVhFUWZTTWs2Mnd4blBMbzFIdElsVVRadEdLaHFmYlVtNUR0aFgzaDdlMFAyUkJHZ0VWNmZhb0Nlc1NBa2ltYTY0VzdPSTdYMmFxRExIc2h4aWo2MURhZDBfZGw5YVROemJFV1g0UGZ6bkprTUxpd0E?oc=5",
+          "fecha": "2026-10-22T12:33:19-03:00"
+        },
+        {
+          "medio": "https://auroranoticias.cl/",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQW9tUTNPS2hwaDZxWmI3X0ZQdldycnc5V1RnLWpJcW5CZzNGX1FFY0wzbEdLZGRUOXFBSDRQYnNmZUZ4Rmt0QVBHR0xoYzFHNWhURjhnTFBlcmJwVGk5WXl6d2NQWS1iSk1TWGd0eTZjb0QyN2RLQjlHS0JuNlNTMlB3dDdFRV9PZHhCSXlZQjdwM1dQeXNiU3dqazBYRElJYklNMmFR?oc=5",
+          "fecha": "2026-10-22T16:49:17-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "b5f69fb5a826",
+      "fecha_publicacion": "2026-10-22T15:15:00-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Inundaciones y desprendimientos de tierra: intensas lluvias siguen provocando estragos en el Gran Concepción",
+      "evento": "Desborde / inundación en Concepcion",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Biobio",
+      "comuna": "Concepcion",
+      "lat": "-36.827070",
+      "lon": "-73.050206",
+      "fuentes": [
+        {
+          "medio": "Diario Concepción",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQaEh3TTRBT0xCWk5ONklfVmFvelh5NVVvSzNncnB2cm1TdXBRM29Sb2lILVBGblpScU1wVXFuNkpwM0o1WDlxM3Z3YzdtZWNvemYyRk42dXVJbU1sRmZSN1FLem5WdXQtSHl5WTMwU19WU3NOZG9xdFdQcWo0cXEzbjRGNTlESGMxaE5sQUNoMlhTZXFyRzRpNzFxNDAxdkc3X2J5S1NvRVlyS1dK?oc=5",
+          "fecha": "2026-10-22T15:15:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "3e6cf226e3c9",
+      "fecha_publicacion": "2026-10-22T15:02:58-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Tránsito en Subida de La Gloria queda habilitado únicamente de bajada por socavón",
+      "evento": "Socavón en Concepcion",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Concepcion",
+      "lat": "-36.827070",
+      "lon": "-73.050206",
+      "fuentes": [
+        {
+          "medio": "Diario Concepción",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLVZmMnRndEhFTW01cU9UelA3b2JrdUdtLVJEdm00SXB2dlFBYk53czJhQTUxemZLMUdPQzQyZXRPRThFYkVvMkhXNEVVYVNuY1BWRno2S0pqMXF3WVMtaExWQzBFWVdfUGtjZUtjaHNXNXF1cEVUNzBZVmJMbDRLWUVaNnFOOG12LUpSaGhsZlA?oc=5",
+          "fecha": "2026-10-22T15:02:58-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "ae7489d2dab5",
+      "fecha_publicacion": "2026-10-22T13:31:50-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "🚨🌪️ Fuertes vientos provocaron la caída de árboles y el desprendimiento de techos; luego, la torrencial lluvia del miércoles dejó graves anegamientos en calles y viviendas de varios cantones de Los Ríos 👉🏻 https://lhra.ec/sKmfH5f",
+      "evento": "Caída de rocas en Los Rios",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Los Rios",
+      "comuna": "",
+      "lat": "-39.974275",
+      "lon": "-72.667701",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPR24wck5NZjRVZlpkT3FtOUF0TUdWM0Mxa1hOdGVTVkd2bHJqbmp0Y2FrQUtrTDVTX0RSQi1iV3ZGbldQMm1JWlk5Q0xjUlhWNDJJZFhyeU5CSDFZOG9QdWRkVlBXcFRZUHh1a2oyS21DMGhrYzgydFVwaTJFeDNzYkhXSFR1MkxQOWhTblVxeHVQLTNNcVFEeElpYjF3bHFiQllPMHFkYW95NGpmM3QxbVVVRGNucW9kM2FJTlRQRENJUXBRdDJDYWx2Y3VGZWdlOUhKWE9wdzlkTE16Y0c2MnZLbGo0MDl4MlRNdXV3X2Y1OUpqTkpjMGZNUDAyT0RJdXBXSg?oc=5",
+          "fecha": "2026-10-22T13:31:50-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "a9c9e25e2346",
+      "fecha_publicacion": "2026-10-22T09:32:54-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Aluvión en el Biobío provoca derrumbe de cerro y afecta viviendas en sector Juan Riquelme",
+      "evento": "Aluvión / flujo de detritos en Biobio",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Biobio",
+      "comuna": "",
+      "lat": "-37.339141",
+      "lon": "-72.410682",
+      "fuentes": [
+        {
+          "medio": "Radio Maray",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUkg2cDFUSHhseWxLVER2NnlrbHRvZGJ2YlRnV1dRYUVNWUROQ0FKRUNWcWMzZmFrdmhoSzNlZVFBM2U4bVdmOEhOU1lmUVlLaUJ5cXYwLVJkN2owZzFMbHF5ZVRtSjFNSFhQQVAyUU9jdHMxaUhLLXlHVDk1OXh2QmlkZEhfNHZtVUN0aG00X3AxSUNaVGhybFI5U2ZDQnd2VmI3a0hnNV82Vk1ZRGc3MFRwc2tPc3VkaWdJVWdLR3RfeXF2R3c?oc=5",
+          "fecha": "2026-10-22T09:32:54-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
       "id": "c2a5d74fab45",
       "fecha_publicacion": "2026-10-22T09:03:52-03:00",
       "fecha_deteccion": "2026-10-22T17:50:33-03:00",
@@ -47,14 +308,14 @@
           "fecha": "2026-10-22T09:03:52-03:00"
         },
         {
+          "medio": "Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Ld3hpTlQ2TUIzaElFblNyX29LV0tPUTd0c0lGaU1IT2pWdlJwcFNvNXNRRFhWTUcwVWhXRnZMUEFVckg2ZExqTDdMT1oxeDdyN3M3eGxR?oc=5",
+          "fecha": "2026-10-22T10:22:32-03:00"
+        },
+        {
           "medio": "Facebook",
           "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNeXBzaVBaMm1kX096UXZPU1ZoRWI3clBrZEdEaUc2dnY2TThtTUMzeEhiRVNsRkVDOHhJRjF4bU5McWFnMW5BYnRLUVNNQ0lJbFY1d3g1N1E3RDI4a2x3Rk9yVHN1TVpCMVdvSDBNQ1B1Zncxa01HbXJvOUwta1Q0Mk1zVlJSRXIyTGFWbExEaUhSc1lNd1ZiNmVoaENuVmtSNUlnWlFKT0UzbkhWaEJNblRxYUFYcjNZSE5hcmVWek5UTnlvM19OS2s3YTdad3VpOFFyV0xSeDNHekQxNzhadWh0U2pfdk9mZ1lZ?oc=5",
           "fecha": "2026-10-22T11:11:55-03:00"
-        },
-        {
-          "medio": "BioBioChile",
-          "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdGtoZWM0dkdoaVMwS25CaUVxbTZ1WklkQWFxUXU0eHJQdHhVOHM3a1NmVzZMU2hoUWlsaVY4cmk1cllGMHFFcUlrclhSaXpaeVZNbGY1WWRtNEpNTG9pdnE3T01oWWtKbzJBYlN2cWhyYjdYUEhjY0h0ckhYWGI5anNHWXU0dEI1clQ1ejJNSVhPcGtLYm9zVEVyUTBnVUhidlZOaHBIOExsMlVyMGh5Zk0xbU5DLUNZd1RqTWdKNGgtWS1CbW1NTjd5Smc0R19qQWlaOXNwZDhfUVBCZWttRjdYMTYwNTNCTFRCc3l1NUtGTUxBaG9LWXR2SE5hS19CMi1ZZ3M4REtGNUdHVEE?oc=5",
-          "fecha": "2026-10-22T11:41:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -91,6 +352,48 @@
       "estado": "nuevo"
     },
     {
+      "id": "c3a1e0d2abe6",
+      "fecha_publicacion": "2026-10-22T08:32:06-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "🚨⛰️ #TALCAHUANO | EQUIPOS MUNICIPALES TRABAJAN EN TERRENO TRAS DESPRENDIMIENTO DE CERRO EN SECTOR HIGUERAS ⚠️ Equipos municipales se encuentran trabajando en terreno tras un desprendimiento de tierra registrado en la i",
+      "evento": "Caída de rocas en Talcahuano",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Biobio",
+      "comuna": "Talcahuano",
+      "lat": "-36.714486",
+      "lon": "-73.114109",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE16STZNNmlEUy12akw4ZzNZTDdleU95TnpHSTAwYS1sZTZrWXJfb2VrZDhkMXByQ0EtbVRGTXprT2MzT1JuSl84Zk13LW04NXhPR2c?oc=5",
+          "fecha": "2026-10-22T08:32:06-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "449a208a1664",
+      "fecha_publicacion": "2026-10-22T08:14:13-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "🔴🔴PRECAUCIÓN DERRUMBE LADERA CERRO EN LAS HIGUERAS TALCAHUANO QUILLAY LADERA CERRO ATENTO AUTOMOVILISTAS #concepcion #Clima #lluvia #SistemaFrontal #Noticias",
+      "evento": "Deslizamiento en Talcahuano",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Biobio",
+      "comuna": "Talcahuano",
+      "lat": "-36.714486",
+      "lon": "-73.114109",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5JMWhiV0NxUjk5eWNyellqQ0ZQOFpISkwzdktJRU9ISTlEbko3WVR0MEFTYmxrN092SVJvV181TUJvcnp2WkNXRWVMb2RUUzFhcUJfYTVR?oc=5",
+          "fecha": "2026-10-22T08:14:13-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
       "id": "a46484329029",
       "fecha_publicacion": "2026-10-22T05:43:26-03:00",
       "fecha_deteccion": "2026-10-22T17:50:33-03:00",
@@ -107,6 +410,37 @@
           "medio": "Facebook",
           "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOT1pseEVGWTZpcFVXU2MyLWRlY3NiSmk5cXJwb3BOQ05welNSYmt3dU5VX0FhXzVFZDlvWkNWSlRMSXA5c2dhMzVVRTJKWkI4S2pMOXg0MFZZMlQwN1dUcjZIMWFmRUpFSXlIZHZzSHNXYS1ZRE5IYzFmazRCVFhNMmg0MFY1Mkw3TGxfQTI1eWswOVpUYWw4emdKWjZoNDluZnBSRlF2M0ZyNWkycUYxZF82VXZqZFFUV08tZWRKMGEzT2dfcTdrcU5WUVBlejRUSzdGWXZYOVZIVy1HdjRSLXN3?oc=5",
           "fecha": "2026-10-22T05:43:26-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "60e27cc93f6d",
+      "fecha_publicacion": "2026-10-22T00:57:52-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Clínica UC Christus, el gran damnificado del aluvión en Las Condes: cerrada sin fecha de reapertura",
+      "evento": "Aluvión / flujo de detritos en Las Condes",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "Las Condes",
+      "lat": "-33.408455",
+      "lon": "-70.567149",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA0ZS1KZG9uOTF1MkpKN294dkpTV0pFU0NTUVphN3AzamQtWGlValJHLUNudkZyY1NVVGN4amYzdDlDMWZCNHdRUFRBRU1zQlB3bmVJa093?oc=5",
+          "fecha": "2026-10-22T00:57:52-03:00"
+        },
+        {
+          "medio": "La Tercera",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVHFfM3R5QWpqcm5yT09KSlZ4Zm12T3p3ZXhWb1FuT1B0UmR2eGxYX2daSi1YMnNfZWNZYW1DYXl5Nzk3cXVDenVlNzhvcmVrNnZoRm1DbGhoWmNJUllHcVJNc1NwVWRUSFdaSlNDTmhRSlQ0d2VBcF9XZVNSblNOV0Znb2dHeXV3dWp3N2h2Rmg0LTNVcC1EdThidERqVURjakVPUEFCaWFJaXlxNTlqUnpRVU9acElmcmVqdzh30gHfAUFVX3lxTE9nbWhZakhCbWtaSlozdlRnV1JDeUMzWFJuTWVBOEZTM0o0anE2YWlVN3pvVnBCNktYZ3cyQWJIdWtuTmRrcmltVjBLNWl4Z0p2V0NjVmFOYmhQcHZtQnIxaHdMR2VLZkswS2k0SHd3NFJFd2tUUXhULURLMGxVWWZ2cmctdlYyQUMtckpKRUUtM0NrN3kzbEFEZ3VvLURfTmp2UFlqVTM4dXRtMlZXRWtaSFVWVmx0eUZoTjlQV2JvRTFnX0otaUMyN2RlU2tNWlU2b1lpV1VtcDY5Ylo2NXc?oc=5",
+          "fecha": "2026-10-22T16:00:00-03:00"
+        },
+        {
+          "medio": "BioBioChile",
+          "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQVmhSSzNkUjliaHRESHVZXzMzdGhaQ0kyUlpDQ2JMUzJGdWlfTGhTYjNac3YxZ05HSUljS2tRQ0VEOXg4d29tSmRiakpSVVNISFdwcFFIZUxsRzl6eHdSd0k4WkxvVkl0dGVjQXlQa19UTTRYV0hBSm5rSXpVYUNhdjhoU0hodE56dlRYRmNiZmdFSnRWSmQxdHVrY056Ylhwd2FUVGNqQ0NqTWdKVTVBQXJwaXc2RFZaaGRYZXRfdVRKRTlRRUVzeE4wM0x3bDcxRnNPZlRVMG5FUXNhU3dKQ0Z6SUk3eW96MjhSOThMTUhKR00teDhwRDg2ZDZ2R0NIQk9HMldDZG1RcTJO?oc=5",
+          "fecha": "2026-10-22T17:17:22-03:00"
         }
       ],
       "estado": "nuevo"
@@ -586,321 +920,34 @@
       "estado": "nuevo"
     },
     {
-      "id": "8e3d69eb2a6f",
-      "fecha_publicacion": "2026-10-22T17:56:43-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Cierran subida de vehículos a cerro La Gloria de Talcahuano por socavón",
-      "evento": "Socavón en Talcahuano",
-      "tipo_evento": "socavon",
-      "tipo_etiqueta": "Socavón",
-      "region": "Biobio",
-      "comuna": "Talcahuano",
-      "lat": "-36.714486",
-      "lon": "-73.114109",
-      "fuentes": [
-        {
-          "medio": "BioBioChile",
-          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQWDl1WXFINUtLeGpvZ09YS2VEeUItWXJKVklFZUZabks3MGZyQUR5UXJHMFVRR3M3LUUzNmVOQVZ0SHNtSUpWcHJndEt6MjBJXzZGLVBnVkFJeEhpcHFFeTJVakVGQnlnQ2VzbnFGblRQZlhzZTZYMG8wN0gyNGtHblo1NnI0V1FxTENhSDlYa2lzR3hYa0YzYU1BTzBTeHFldno4ZVVXMTFCQzJFVWFMZUREZVZ1VkRJbnlyRGZXdC1sTmFfeHVlM3cwWlg2Q1hUVzEwdkF2MUVYRFhhTlBlV1c0dU1ENVU?oc=5",
-          "fecha": "2026-10-22T17:56:43-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "9b84c73824a8",
-      "fecha_publicacion": "2026-10-22T16:40:54-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Fiscalía confirma rescate de cuerpo de tercera víctima de avalancha en Portillo y apunta a que se trató de un accidente",
-      "evento": "Alud / avalancha en Portillo",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "Valparaiso",
-      "comuna": "Portillo",
-      "lat": "-32.836418",
-      "lon": "-70.129083",
-      "fuentes": [
-        {
-          "medio": "Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1mTldXbVdLcXJlb1FDNEtlWERjSVVZb2Q5QnlsWnI2X1JJeVRaOGdBXzliRHZxNmRSWlUzX2tKcWd0ai1pRnowb1B2dUZmMlZSVmZhNTBn?oc=5",
-          "fecha": "2026-10-22T16:40:54-03:00"
-        },
-        {
-          "medio": "La Tercera",
-          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOT1A2RGIwNFdBTGktelFPMzktbXJwUWdPdDdMQWY1S1ZtV0stZ1QzMUlhUk81OGlyN0VWWGN0SHR4RmpCbmlvcGhaTGpaU2UyZ3FVQkI3Ym1pcDNtU2tBODRtMzd1NUZ3dkVIYVBPczFDMlp6X0lFWjdZLVlicTlPWDN0emlsY08wUHB4aFhIME9EZXphakV5RVdKTm1IeE9aVVVZcXJyQzVHTjNaWmlpTkRRa1dNNDFjaktPNXVTak92dGQ2c2czbklwX1BmMlo2QThDOE1QX3ZwT2c1YmFtMFFGWjVaZnc5YmJhV01JcVBCWWRESmfSAZcCQVVfeXFMT19uSjA1TXlvR0NRZnRVeWlWeFB0MmxvRHE1VWdhSWpwNC1vTWd5UWNJc0Z6bnFhRFRFSW0xM0t1RG1aNF9ncFN4RkkxWEJveVhIT2ZXUW15ZGtMUGxhWlZiMy1HMGZNZ0MtQ090SzJjNUFpRmoxczRhNEc0eE5STHluVWlLZWMtZjlBZGoxWUxoRGp6U2NzMEFjYnIyM1dTSldTa1pScjVvclBSV0U5cjZ1RERvMllMV2xIbnBGamU1enpnZ296ZndDXzlkRFZuajVpTGJZWlN4aVR6R3V0RlRwNVo1cl9rUnpvMzlMalo3blI3MGFFS3FOaWJyai12eW5TUFRVV2lNZ3lOVkxvNnc5eG9POERr?oc=5",
-          "fecha": "2026-10-22T17:58:18-03:00"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPY29GSFN0YTJJcWJ3OFFLSTBIQndIazZ3cFJ2RWE1R2hYMjVpNkJoVzBMRXluaG9QU2FhQVZsdTdMQ21lSHJpX2FLZEVEeXl4OHdSRjBGcTVPeFkwQUpmdDlhWmtUSkxEc0NhV3VCVmxuLUlDYVhCSEdtSk0tMkFna0YzMDJ0MFVUQV9UOU5nZHRYUQ?oc=5",
-          "fecha": "2026-10-22T18:56:37-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "60e27cc93f6d",
-      "fecha_publicacion": "2026-10-22T00:57:52-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Clínica UC Christus, el gran damnificado del aluvión en Las Condes: cerrada sin fecha de reapertura",
-      "evento": "Aluvión / flujo de detritos en Las Condes",
-      "tipo_evento": "aluvion",
-      "tipo_etiqueta": "Aluvión / flujo de detritos",
-      "region": "Metropolitana",
-      "comuna": "Las Condes",
-      "lat": "-33.408455",
-      "lon": "-70.567149",
-      "fuentes": [
-        {
-          "medio": "Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA0ZS1KZG9uOTF1MkpKN294dkpTV0pFU0NTUVphN3AzamQtWGlValJHLUNudkZyY1NVVGN4amYzdDlDMWZCNHdRUFRBRU1zQlB3bmVJa093?oc=5",
-          "fecha": "2026-10-22T00:57:52-03:00"
-        },
-        {
-          "medio": "La Tercera",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVHFfM3R5QWpqcm5yT09KSlZ4Zm12T3p3ZXhWb1FuT1B0UmR2eGxYX2daSi1YMnNfZWNZYW1DYXl5Nzk3cXVDenVlNzhvcmVrNnZoRm1DbGhoWmNJUllHcVJNc1NwVWRUSFdaSlNDTmhRSlQ0d2VBcF9XZVNSblNOV0Znb2dHeXV3dWp3N2h2Rmg0LTNVcC1EdThidERqVURjakVPUEFCaWFJaXlxNTlqUnpRVU9acElmcmVqdzh30gHfAUFVX3lxTE9nbWhZakhCbWtaSlozdlRnV1JDeUMzWFJuTWVBOEZTM0o0anE2YWlVN3pvVnBCNktYZ3cyQWJIdWtuTmRrcmltVjBLNWl4Z0p2V0NjVmFOYmhQcHZtQnIxaHdMR2VLZkswS2k0SHd3NFJFd2tUUXhULURLMGxVWWZ2cmctdlYyQUMtckpKRUUtM0NrN3kzbEFEZ3VvLURfTmp2UFlqVTM4dXRtMlZXRWtaSFVWVmx0eUZoTjlQV2JvRTFnX0otaUMyN2RlU2tNWlU2b1lpV1VtcDY5Ylo2NXc?oc=5",
-          "fecha": "2026-10-22T16:00:00-03:00"
-        },
-        {
-          "medio": "BioBioChile",
-          "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQVmhSSzNkUjliaHRESHVZXzMzdGhaQ0kyUlpDQ2JMUzJGdWlfTGhTYjNac3YxZ05HSUljS2tRQ0VEOXg4d29tSmRiakpSVVNISFdwcFFIZUxsRzl6eHdSd0k4WkxvVkl0dGVjQXlQa19UTTRYV0hBSm5rSXpVYUNhdjhoU0hodE56dlRYRmNiZmdFSnRWSmQxdHVrY056Ylhwd2FUVGNqQ0NqTWdKVTVBQXJwaXc2RFZaaGRYZXRfdVRKRTlRRUVzeE4wM0x3bDcxRnNPZlRVMG5FUXNhU3dKQ0Z6SUk3eW96MjhSOThMTUhKR00teDhwRDg2ZDZ2R0NIQk9HMldDZG1RcTJO?oc=5",
-          "fecha": "2026-10-22T17:17:22-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "a017cd853905",
-      "fecha_publicacion": "2026-10-22T16:01:27-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Hallan cuerpo de tercera víctima de avalancha en Laguna del Inca",
-      "evento": "Alud / avalancha en Laguna del Inca",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "Valparaiso",
-      "comuna": "Laguna del Inca",
-      "lat": "-32.822459",
-      "lon": "-70.133087",
-      "fuentes": [
-        {
-          "medio": "Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1iSndrMnh2ekx0MExsSGFQLWZWTUlPVG1ZSGhaLTFZWEJCejFZU285TG5ZeTZwMzJ0b0EtbXdsbmFmQ1o5ZS1fbzdlMG9UQ3FLNkE?oc=5",
-          "fecha": "2026-10-22T16:01:27-03:00"
-        },
-        {
-          "medio": "https://auroranoticias.cl/",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQW9tUTNPS2hwaDZxWmI3X0ZQdldycnc5V1RnLWpJcW5CZzNGX1FFY0wzbEdLZGRUOXFBSDRQYnNmZUZ4Rmt0QVBHR0xoYzFHNWhURjhnTFBlcmJwVGk5WXl6d2NQWS1iSk1TWGd0eTZjb0QyN2RLQjlHS0JuNlNTMlB3dDdFRV9PZHhCSXlZQjdwM1dQeXNiU3dqazBYRElJYklNMmFR?oc=5",
-          "fecha": "2026-10-22T16:49:17-03:00"
-        },
-        {
-          "medio": "laconexion.cl",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUjl4RXVadlk3WnI2MURaQWx6ekYzOG9nc2lfV1JaTUtRU254WG1SdDhtVm9QcmVaTWZQcDgyMDQzMzFYT0RWMnk1U1ZHOV9Kc2x2TWNRdFNMOVpiMlJNUmYzQzRIOFE4Zm56Z0dtc3JtTUFQR0J4ZWZSQ0J1eHRYTklySktkR2RxUDBfMFNjSnE?oc=5",
-          "fecha": "2026-10-22T17:07:12-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "3e6cf226e3c9",
-      "fecha_publicacion": "2026-10-22T15:02:58-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Tránsito en Subida de La Gloria queda habilitado únicamente de bajada por socavón",
-      "evento": "Socavón en Concepcion",
-      "tipo_evento": "socavon",
-      "tipo_etiqueta": "Socavón",
-      "region": "Biobio",
-      "comuna": "Concepcion",
-      "lat": "-36.827070",
-      "lon": "-73.050206",
-      "fuentes": [
-        {
-          "medio": "Diario Concepción",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLVZmMnRndEhFTW01cU9UelA3b2JrdUdtLVJEdm00SXB2dlFBYk53czJhQTUxemZLMUdPQzQyZXRPRThFYkVvMkhXNEVVYVNuY1BWRno2S0pqMXF3WVMtaExWQzBFWVdfUGtjZUtjaHNXNXF1cEVUNzBZVmJMbDRLWUVaNnFOOG12LUpSaGhsZlA?oc=5",
-          "fecha": "2026-10-22T15:02:58-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "03acaaa9854d",
-      "fecha_publicacion": "2026-10-22T18:36:00-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Los Andes: rescatan el cuerpo del tercer excursionista fallecido en la avalancha de Portillo",
-      "evento": "Alud / avalancha en Los Andes",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "Valparaiso",
-      "comuna": "Los Andes",
-      "lat": "-32.833687",
-      "lon": "-70.598161",
-      "fuentes": [
-        {
-          "medio": "Los Andes",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORUN0WlVrSFNxSi1WbGRWNTM5WHhUT0JJVXJ4RmtjX3FLYk5zZmRHMU9GUVNLY2hrSmRCVzlBZmpoMnl3ZXJUYjFYRlpkZmNEVDY3eEhNaEZzNGh4akZVN09oT3NyRm5EN2xSc3MyZ1NySWd5NEh4dnNTQUVOTkNxRTVrTDMza3dsSGxwMElEdG1ZZ1ljQUk0N3Z6WUxsQmVtQUN6eXpBVXVveWdfRjV1VV93V2I5OU1wdXhBcnQ2X1h0d0NOaXc?oc=5",
-          "fecha": "2026-10-22T18:36:00-03:00"
-        },
-        {
-          "medio": "SoyChile.cl",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUgzQnFhNUhZQWRaYmlwOFNub3hMdXRuTFFLSnpvYjJIdllteEstYUIwVVhYMHlJU2VwUHB6eHB0eTZGVVdQdmRmS0tKcWN0NWNSSklwWjNnTmFTUHBPQ2lKb0RMVjI0M1VfYVF2MDU5MUVWWFYtcElhZUpyclEzdG80Z2pqTGVxY2I5cHZNVWIzN1JlVWVBcWIwS0lXRkM0dnZnRldlQ0JESDJva0Y0?oc=5",
-          "fecha": "2026-10-22T21:45:00-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "b5f69fb5a826",
-      "fecha_publicacion": "2026-10-22T15:15:00-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Inundaciones y desprendimientos de tierra: intensas lluvias siguen provocando estragos en el Gran Concepción",
-      "evento": "Desborde / inundación en Concepcion",
-      "tipo_evento": "desborde_inundacion",
-      "tipo_etiqueta": "Desborde / inundación",
-      "region": "Biobio",
-      "comuna": "Concepcion",
-      "lat": "-36.827070",
-      "lon": "-73.050206",
-      "fuentes": [
-        {
-          "medio": "Diario Concepción",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQaEh3TTRBT0xCWk5ONklfVmFvelh5NVVvSzNncnB2cm1TdXBRM29Sb2lILVBGblpScU1wVXFuNkpwM0o1WDlxM3Z3YzdtZWNvemYyRk42dXVJbU1sRmZSN1FLem5WdXQtSHl5WTMwU19WU3NOZG9xdFdQcWo0cXEzbjRGNTlESGMxaE5sQUNoMlhTZXFyRzRpNzFxNDAxdkc3X2J5S1NvRVlyS1dK?oc=5",
-          "fecha": "2026-10-22T15:15:00-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "5f358a8b8d03",
-      "fecha_publicacion": "2026-10-22T19:17:35-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Región Coquimbo. PRECAUCIÓN, deslizamiento de parte de ladera contigua a ruta 5",
-      "evento": "Deslizamiento en Coquimbo",
-      "tipo_evento": "deslizamiento",
-      "tipo_etiqueta": "Deslizamiento",
-      "region": "Coquimbo",
-      "comuna": "Coquimbo",
-      "lat": "-30.754665",
-      "lon": "-70.900554",
-      "fuentes": [
-        {
-          "medio": "Serena y Coquimbo",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcWxlQkJVMXZMVjNGcnpxWHRtWnp4cDU3ZXhiMVlKWjlmT01weHoxMHp2STF4amxjVmQ3SlNTM0s3aDlsaC1zQkw3LU1MTm5HYjlLbEVOYU1XcUphSW92QjR6Vzd4MVpVTXR2QkRPMXpQY2FheVkxXzB3ckVDMUg1anVnYkNGU3I3cExpd3VPekdzalRkd1hlNmtfa19UMFVzZmhVM1U4MEI?oc=5",
-          "fecha": "2026-10-22T19:17:35-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "ddfd47c73f74",
-      "fecha_publicacion": "2026-10-22T23:16:43-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "así está la ruta en alta montaña tras una nueva avalancha en Chile",
-      "evento": "Alud / avalancha en Chile",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
+      "id": "82c9364309b1",
+      "fecha_publicacion": "2026-10-22T18:53:59-03:00",
+      "fecha_deteccion": "2026-10-23T08:04:52-03:00",
+      "titulo": "🚨 El desprendimiento se produjo este jueves en la Ruta 60, en el sector conocido como El Japonés, cerca de Caracoles, en Chile. Es el segundo episodio en el mismo lugar en dos días. Los equipos trabajan para despejar la calzada. https://www.elnueve.co",
+      "evento": "Caída de rocas en Chile",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
       "region": "",
       "comuna": "",
       "lat": "",
       "lon": "",
       "fuentes": [
         {
-          "medio": "MDZ Online",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQVgxdnlpOEw2QlFKVVdTaHY4b0huX2FxQkVQeWtSbVBUeDVHc3g1VjEwY3YtYlRjcmJldW9UR0ZtS2N6Q2xCdWNyUjVMc3NWU2cwMENIUU9xUjdQdU9uakY3TDFfdUVtMXFsTlg5b29YYlhISmgxbUhTUUVOUzdaQkEzVVpQd1Q5VjFzY3NTZWR1cEd5VW9KLU5MU3Jla2ZrdDZ1aW9USGlkYm5fZ1Z4aWlFbWgzRFF1RWpoNTlsZEc1RzloLWc?oc=5",
-          "fecha": "2026-10-22T23:16:43-03:00"
+          "medio": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPT3lianBNdXoybFBwNUMycFNFZWZyVnc1bG5TaE8wRFlQR05UcVV5SFZpSmFhMHZNSk5PQlNwNGhCREZobHFBaURtaDBWaHdSRUlLd0FPLWJoc3dlNDFtMVNmT2pCdy1Fbmw4Vi1uQUF4ZFZwcUdIYW1fUkpCeXQyUnc2d2FtRlliaG1hMW9xMXlEUkxUOV9scTIzU3FxNF9MaTBxNW5oejIwU1o5eEkxTFREektZNm15bVBRbUZObDUwbWVIcTE4VGJITU1uUlZYaDUtRXJZczBjdE1T?oc=5",
+          "fecha": "2026-10-22T18:53:59-03:00"
         }
       ],
       "estado": "nuevo"
     },
     {
-      "id": "c75590330c96",
-      "fecha_publicacion": "2026-10-22T20:37:55-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Otra avalancha en el lado chileno dificulta el tránsito en alta montaña (mobile)",
-      "evento": "Alud / avalancha en Chile",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "",
-      "comuna": "",
-      "lat": "",
-      "lon": "",
-      "fuentes": [
-        {
-          "medio": "Mendoza 24",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZk90ZHZZdHNYQ2g1R0wwYU1HM0M0U0FCMUdzelNVVEl4Y3F3c3hOdktkYXhpaFBSREJhdHk0bV9FcFNuWG5LTDJRVnJ2dnUzeG9ma0EtVDFybmVFS25PTlhnM3JWTk11ZzAtZlpsWTFtZXg2SzFzUi1pNERTTDlMUS1za0RtY0t2dG5GV1dCakk1TnVfalBma2g2ZFhnRFBwcW9rSWZnMnBoem5nSjlzM2N6RVFiTEdyS21NZQ?oc=5",
-          "fecha": "2026-10-22T20:37:55-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "a9c9e25e2346",
-      "fecha_publicacion": "2026-10-22T09:32:54-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Aluvión en el Biobío provoca derrumbe de cerro y afecta viviendas en sector Juan Riquelme",
-      "evento": "Aluvión / flujo de detritos en Biobio",
-      "tipo_evento": "aluvion",
-      "tipo_etiqueta": "Aluvión / flujo de detritos",
-      "region": "Biobio",
-      "comuna": "",
-      "lat": "-37.339141",
-      "lon": "-72.410682",
-      "fuentes": [
-        {
-          "medio": "Radio Maray",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUkg2cDFUSHhseWxLVER2NnlrbHRvZGJ2YlRnV1dRYUVNWUROQ0FKRUNWcWMzZmFrdmhoSzNlZVFBM2U4bVdmOEhOU1lmUVlLaUJ5cXYwLVJkN2owZzFMbHF5ZVRtSjFNSFhQQVAyUU9jdHMxaUhLLXlHVDk1OXh2QmlkZEhfNHZtVUN0aG00X3AxSUNaVGhybFI5U2ZDQnd2VmI3a0hnNV82Vk1ZRGc3MFRwc2tPc3VkaWdJVWdLR3RfeXF2R3c?oc=5",
-          "fecha": "2026-10-22T09:32:54-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "449a208a1664",
-      "fecha_publicacion": "2026-10-22T08:14:13-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "🔴🔴PRECAUCIÓN DERRUMBE LADERA CERRO EN LAS HIGUERAS TALCAHUANO QUILLAY LADERA CERRO ATENTO AUTOMOVILISTAS #concepcion #Clima #lluvia #SistemaFrontal #Noticias",
-      "evento": "Deslizamiento en Talcahuano",
-      "tipo_evento": "deslizamiento",
-      "tipo_etiqueta": "Deslizamiento",
-      "region": "Biobio",
-      "comuna": "Talcahuano",
-      "lat": "-36.714486",
-      "lon": "-73.114109",
-      "fuentes": [
-        {
-          "medio": "Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5JMWhiV0NxUjk5eWNyellqQ0ZQOFpISkwzdktJRU9ISTlEbko3WVR0MEFTYmxrN092SVJvV181TUJvcnp2WkNXRWVMb2RUUzFhcUJfYTVR?oc=5",
-          "fecha": "2026-10-22T08:14:13-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "c3a1e0d2abe6",
-      "fecha_publicacion": "2026-10-22T08:32:06-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "🚨⛰️ #TALCAHUANO | EQUIPOS MUNICIPALES TRABAJAN EN TERRENO TRAS DESPRENDIMIENTO DE CERRO EN SECTOR HIGUERAS ⚠️ Equipos municipales se encuentran trabajando en terreno tras un desprendimiento de tierra registrado en la i",
-      "evento": "Caída de rocas en Talcahuano",
-      "tipo_evento": "caida_rocas",
-      "tipo_etiqueta": "Caída de rocas",
-      "region": "Biobio",
-      "comuna": "Talcahuano",
-      "lat": "-36.714486",
-      "lon": "-73.114109",
-      "fuentes": [
-        {
-          "medio": "Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE16STZNNmlEUy12akw4ZzNZTDdleU95TnpHSTAwYS1sZTZrWXJfb2VrZDhkMXByQ0EtbVRGTXprT2MzT1JuSl84Zk13LW04NXhPR2c?oc=5",
-          "fecha": "2026-10-22T08:32:06-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "ae7489d2dab5",
-      "fecha_publicacion": "2026-10-22T13:31:50-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "🚨🌪️ Fuertes vientos provocaron la caída de árboles y el desprendimiento de techos; luego, la torrencial lluvia del miércoles dejó graves anegamientos en calles y viviendas de varios cantones de Los Ríos 👉🏻 https://lhra.ec/sKmfH5f",
-      "evento": "Caída de rocas en Los Rios",
-      "tipo_evento": "caida_rocas",
-      "tipo_etiqueta": "Caída de rocas",
+      "id": "7de8cfeefa5a",
+      "fecha_publicacion": "2026-10-22T16:28:54-03:00",
+      "fecha_deteccion": "2026-10-23T08:04:52-03:00",
+      "titulo": "CALUMA// ALERTA VIAL EN LA ESMERALDA CALUMA/ SOCAVÓN EN PUENTE QUE UNE BOLÍVAR Y LOS RÍOS.",
+      "evento": "Socavón en Los Rios",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
       "region": "Los Rios",
       "comuna": "",
       "lat": "-39.974275",
@@ -908,8 +955,8 @@
       "fuentes": [
         {
           "medio": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPR24wck5NZjRVZlpkT3FtOUF0TUdWM0Mxa1hOdGVTVkd2bHJqbmp0Y2FrQUtrTDVTX0RSQi1iV3ZGbldQMm1JWlk5Q0xjUlhWNDJJZFhyeU5CSDFZOG9QdWRkVlBXcFRZUHh1a2oyS21DMGhrYzgydFVwaTJFeDNzYkhXSFR1MkxQOWhTblVxeHVQLTNNcVFEeElpYjF3bHFiQllPMHFkYW95NGpmM3QxbVVVRGNucW9kM2FJTlRQRENJUXBRdDJDYWx2Y3VGZWdlOUhKWE9wdzlkTE16Y0c2MnZLbGo0MDl4MlRNdXV3X2Y1OUpqTkpjMGZNUDAyT0RJdXBXSg?oc=5",
-          "fecha": "2026-10-22T13:31:50-03:00"
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNUVVXSjQ0R2tta2Q5cUVvMVV4MmZUMUpaZ0UwVHBpMlpwaDNvSXNMSmMyVVJaZ2w1VU1iTHN2TlRpbG1LNm9NQjdMd3JBazhuUEdHZ050eF9SYUhIRGNaTWlUd2JCd3NfeVhWOWU5Mk5QRjdhZ0g3cnNCa0tkNi13ZlpvdzFZcXI3dHRnY1VaSzg0LWl2N1FJekpKSi1fQm9sVFhucnpfUDRqS1FBT0laZUxMZi01dC1MSmJmWFo5YmRsc3VOeWR2X3pQcmNFSlVjVmVGc0V2SVZuaFBZZ2lnaDFrUQ?oc=5",
+          "fecha": "2026-10-22T16:28:54-03:00"
         }
       ],
       "estado": "nuevo"
