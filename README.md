@@ -207,8 +207,8 @@ La agrupacion compara tipo, region/comuna y fecha (ventana de 2 dias). Si no hay
 lugar, exige similitud de titulo. Se conservan las **3 primeras fuentes** por fecha
 de publicacion, para quedarse con los reportes originales y no con derivados tardios.
 
-Los eventos `descartado` no se geocodifican ni se notifican, y no aparecen como
-marcadores en el mapa.
+Los eventos `descartado` no se geocodifican ni se notifican, y **no se muestran en el
+sitio**: quedan fuera de la tabla, del mapa, de los contadores y de las tarjetas.
 
 ## Limitaciones conocidas
 

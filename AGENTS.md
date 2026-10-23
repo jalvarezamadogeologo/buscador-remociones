@@ -44,6 +44,8 @@ python -m pytest -q
   Satelite; zoom con rueda/doble clic/botones; boton "Ver" por fila que centra el mapa.
 - La tabla muestra un evento por fila ("tipo + lugar") y una lista desplegable de hasta
   3 fuentes con el medio como texto. El popup del mapa lista las mismas fuentes.
+- Los eventos con `estado=descartado` no se publican: `filtrar()` los excluye, asi que no
+  aparecen en la tabla, el mapa, los contadores ni las tarjetas (siguen en el CSV).
 - Ultima columna "Evento validado": checkbox por evento; el estado se guarda en
   `localStorage` (`catastro_validados`, mapa id->true), no en el CSV. El boton
   "Descargar Eventos Validados" (bajo la tabla) baja un CSV generado en el navegador

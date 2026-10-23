@@ -260,6 +260,7 @@ function filtrar(){
   const dias = parseInt(inputPeriodo.value, 10);
   const ventana = (isNaN(dias) || dias < 0) ? 0 : dias;
   return EVENTOS.filter(e=>{
+    if (e.estado === 'descartado') return false;  // no se publican en el sitio
     if (soloValidados && !esValidado(e.id)) return false;
     if (selTipo.value && e.tipo_evento !== selTipo.value) return false;
     if (selRegion.value && e.region !== selRegion.value) return false;
@@ -365,7 +366,7 @@ function render(){
     `<div class="tarjeta"><b>${hace7}</b><span>Ultimos 7 dias</span></div>` +
     Object.keys(porTipo).sort().map(t=>`<div class="tarjeta"><b>${porTipo[t]}</b><span>${esc(etiquetaTipo(t))}</span></div>`).join('');
 
-  document.getElementById('contador').textContent = `${lista.length} de ${EVENTOS.length} eventos`;
+  document.getElementById('contador').textContent = `${lista.length} de ${EVENTOS.filter(e=>e.estado!=='descartado').length} eventos`;
   return lista;
 }
 
