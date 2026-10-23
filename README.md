@@ -39,6 +39,7 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
 - `data/eventos.json` — espejo JSON del catastro.
 - `data/vistos.json` — claves ya procesadas (deduplicacion persistente).
 - `data/geocache.json` — cache de geocodificacion (Nominatim).
+- `data/urlcache.json` — cache de resolucion de enlaces de Google News a la URL del medio.
 - `data/georref.json` — coordenadas manuales por lugar (ganan sobre Nominatim).
 - `docs/index.html` — buscador autocontenido (tabla + mapa Leaflet + filtros).
 - `docs/eventos.json` — datos que lee el boton "Actualizar".
@@ -57,6 +58,22 @@ python actualizar.py --sin-notificar      # sin GitHub Issues
 python actualizar.py --fuentes google_news
 python actualizar.py --sin-geocodificar --max-geocodificaciones 0
 python actualizar.py --sin-redes           # no consultar X/Instagram/Facebook
+python actualizar.py --sin-resolver        # no resolver enlaces de Google News
+```
+
+### Enlaces de las fuentes
+
+Google News entrega enlaces `news.google.com/rss/articles/<id>` que en el navegador
+responden *"We're sorry... your computer or network may be sending automated queries"*.
+El pipeline los resuelve a la URL original del medio (sin API keys, con el RPC interno
+`Fbv4je` de Google) antes de guardar y cachea el resultado en `data/urlcache.json`.
+
+Para resolver los enlaces de un catastro ya existente:
+
+```powershell
+python resolver_urls.py                    # todos los pendientes (cache incluido)
+python resolver_urls.py --maximo 25 --pausa 0.3
+python resolver_urls.py --reintentar-fallidos
 ```
 
 ### Modo local con boton "Actualizar" funcional
@@ -181,9 +198,14 @@ marcadores en el mapa.
 
 ## Limitaciones conocidas
 
+- **Enlaces de Google News:** se resuelven a la URL del medio; si el RPC interno de Google
+  falla o cambia, se conserva el enlace de Google News (que puede mostrar el bloqueo
+  "automated queries"). Los fallos quedan cacheados en `data/urlcache.json` y no se
+  reintentan salvo con `resolver_urls.py --reintentar-fallidos`.
 - **Redes sociales:** se buscan via Google News con `site:` (X, Instagram, Facebook), sin
   API keys. La cobertura depende de lo que Google indexe de cada red y no es tiempo real;
   la API oficial de X es pay-per-use y las de Meta requieren apps/tokens que expiran.
+  Algunos enlaces de Facebook/Instagram pueden pedir inicio de sesion.
 - **Falsos positivos:** notas de prevencion o de contexto pueden entrar; el operador los
   marca como `descartado` en el CSV.
 - **Agrupacion:** las noticias del mismo hecho se agrupan por tipo + lugar + fecha; si dos

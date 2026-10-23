@@ -25,6 +25,15 @@ max_geocodificaciones: 15
 # Etiqueta de GitHub Issues para las notificaciones
 etiqueta_issue: remocion-en-masa
 
+# Resolucion de enlaces de Google News a la URL original del medio
+# (sin API keys; usa el RPC interno de Google. Los resultados se cachean en
+# data/urlcache.json y los fallos no se reintentan por defecto)
+resolver_urls:
+  activo: true
+  maximo: 30     # peticiones de red por corrida
+  pausa: 0.4     # segundos entre peticiones
+  timeout: 15    # segundos por peticion
+
 # Deduplicacion de la misma noticia entre medios
 deduplicacion:
   umbral: 0.62              # titulos casi iguales (Jaccard 0-1)

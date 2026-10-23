@@ -14,6 +14,8 @@ estatico con mapa.
 - `agrupar.py` — agrupa noticias en eventos (tipo + lugar + fecha) y conserva las 3 primeras fuentes.
 - `guardar.py` — `data/eventos.csv` (eventos agrupados) y `eventos.json`.
 - `geocodificar.py` — Nominatim + cache + overrides manuales.
+- `resolver_url.py` — resuelve enlaces de Google News a la URL del medio (RPC `Fbv4je`) + cache.
+- `resolver_urls.py` — CLI para resolver los enlaces del catastro existente y regenerar el sitio.
 - `generar_sitio.py` — `docs/index.html` (tabla + Leaflet).
 - `notificar.py` — GitHub Issues.
 - `config.yaml` — tipos, palabras clave, geografia, fuentes, umbrales.
@@ -25,6 +27,8 @@ estatico con mapa.
 ```powershell
 python actualizar.py --lookback 24 --sin-notificar
 python actualizar.py --sin-redes   # sin X/Instagram/Facebook
+python actualizar.py --sin-resolver # sin resolver enlaces de Google News
+python resolver_urls.py            # resolver enlaces del catastro existente
 python servidor.py                 # sitio local con boton Actualizar (127.0.0.1:8770)
 iniciar.cmd                        # lo mismo, doble clic
 python -m pytest -q
@@ -55,3 +59,6 @@ python -m pytest -q
 - Google News deja de respetar `when:Nd` si la consulta lleva comillas; usar palabras sueltas.
 - El operador corrige `estado` en `data/eventos.csv` (`nuevo`/`confirmado`/`descartado`).
 - No editar a mano `data/vistos.json` salvo para forzar reprocesamiento.
+- Las URLs guardadas deben ser del medio, no de Google News (`news.google.com/rss/articles/...`):
+  el pipeline las resuelve en cada corrida y `resolver_urls.py` arregla las antiguas. Los
+  fallos se cachean en `data/urlcache.json` (valor vacio = no reintentar).

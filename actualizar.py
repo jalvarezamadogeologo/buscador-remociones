@@ -25,6 +25,7 @@ from generar_sitio import generar_sitio
 from geocodificar import geocodificar_eventos
 from guardar import cargar_eventos, guardar_eventos
 from notificar import notificar
+from resolver_url import resolver_eventos
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
@@ -37,6 +38,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--sin-geocodificar", action="store_true", help="no consultar Nominatim")
     parser.add_argument("--sin-sitio", action="store_true", help="no regenerar docs/index.html")
     parser.add_argument("--sin-notificar", action="store_true", help="no crear issues")
+    parser.add_argument("--sin-resolver", action="store_true", help="no resolver enlaces de Google News")
     parser.add_argument("--max-geocodificaciones", type=int, default=None, help="limite de geocodificaciones en esta corrida")
     return parser.parse_args(argv)
 
@@ -100,6 +102,21 @@ def main(argv: Sequence[str] | None = None) -> int:
         geocodificados = geocodificar_eventos(eventos, config, args.max_geocodificaciones)
         log(f"geocodificados en esta corrida: {geocodificados}")
 
+    # 3b) Enlaces de Google News -> URL original del medio
+    enlaces = {"resueltos": 0, "cacheados": 0, "fallidos": 0, "omitidos": 0}
+    cfg_enlaces = config.get("resolver_urls") or {}
+    if cfg_enlaces.get("activo", True) and not args.sin_resolver:
+        enlaces = resolver_eventos(
+            eventos,
+            maximo=int(cfg_enlaces.get("maximo", 30)),
+            pausa=float(cfg_enlaces.get("pausa", 0.4)),
+            timeout=int(cfg_enlaces.get("timeout", 15)),
+        )
+        log(
+            f"enlaces resueltos: {enlaces['resueltos']} (cache {enlaces['cacheados']}, "
+            f"fallidos {enlaces['fallidos']}, omitidos {enlaces['omitidos']})"
+        )
+
     # 4) Persistencia (vistos solo si hay claves nuevas)
     guardar_eventos(eventos)
     if claves_nuevas:
@@ -121,7 +138,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     transcurrido = time.time() - inicio
     log(
         f"fin | eventos nuevos {eventos_nuevos} | fuentes {fuentes_nuevas} | "
-        f"geocodificados {geocodificados} | issues {creados} | "
+        f"geocodificados {geocodificados} | enlaces {enlaces['resueltos']} | issues {creados} | "
         f"total eventos {len(eventos)} | {transcurrido:.1f} s"
     )
     return 0
