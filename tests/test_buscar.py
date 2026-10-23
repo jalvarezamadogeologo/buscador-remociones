@@ -1,4 +1,12 @@
-from buscar import construir_query, nombre_medio
+from datetime import date, datetime, timezone
+
+from buscar import (
+    _dentro_de_rango,
+    construir_query,
+    construir_query_rango,
+    nombre_medio,
+    terminos_consulta,
+)
 from comun import cargar_config
 
 CONFIG = cargar_config()
@@ -34,3 +42,34 @@ def test_nombre_medio_conserva_el_nombre():
 def test_nombre_medio_vacio_usa_la_url_del_articulo():
     assert nombre_medio("", "https://www.cnnchile.com/nota") == "cnnchile.com"
     assert nombre_medio("", "") == "Google News"
+
+
+def test_query_rango_usa_after_before_y_no_when():
+    q = construir_query_rango(CONFIG, date(2026, 7, 1), date(2026, 7, 2))
+    assert "after:2026-07-01" in q
+    assert "before:2026-07-02" in q
+    assert "when:" not in q
+    assert '"' not in q
+    assert " OR " in q
+
+
+def test_terminos_consulta_respeta_max_terminos_y_sin_frases():
+    terminos = terminos_consulta(CONFIG)
+    assert terminos
+    assert all(" " not in t for t in terminos)
+    assert len(terminos) <= int(CONFIG["consulta"]["max_terminos"])
+
+
+def test_dentro_de_rango_excluye_el_borde_superior():
+    desde, hasta = date(2026, 7, 1), date(2026, 7, 2)
+
+    def reg(dia):
+        return {"publicado": datetime(2026, 7, dia, 12, tzinfo=timezone.utc)}
+
+    assert _dentro_de_rango(reg(1), desde, hasta) is True
+    assert _dentro_de_rango(reg(2), desde, hasta) is False
+    assert _dentro_de_rango(reg(30), desde, date(2026, 8, 1)) is True
+
+
+def test_dentro_de_rango_conserva_registros_sin_fecha():
+    assert _dentro_de_rango({"publicado": None}, date(2026, 7, 1), date(2026, 7, 2)) is True

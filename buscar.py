@@ -7,7 +7,7 @@ feeds RSS directos declarados en config.yaml.
 from __future__ import annotations
 
 import time
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from urllib.parse import parse_qs, urlencode, urlparse
 
 import feedparser
@@ -84,12 +84,11 @@ def _fuente_google(entry) -> str:
     return limpiar_html(str(src or "")) or "Google News"
 
 
-def construir_query(config: dict, lookback_horas: int, con_ventana: bool) -> str:
-    """Arma la consulta web con los terminos principales de los tipos de evento.
+def terminos_consulta(config: dict) -> list[str]:
+    """Terminos de una palabra para la busqueda web, en orden y sin repetir.
 
-    Google News deja de respetar `when:Nd` si la consulta lleva comillas o
-    demasiados terminos; por eso la busqueda usa solo palabras sueltas
-    (las frases quedan para la clasificacion local).
+    Las frases quedan solo para la clasificacion local: Google News deja de
+    respetar sus operadores cuando la consulta lleva comillas.
     """
     terminos: list[str] = []
     for tipo in (config.get("tipos_evento") or {}).values():
@@ -97,9 +96,22 @@ def construir_query(config: dict, lookback_horas: int, con_ventana: bool) -> str
             if " " not in clave and clave not in terminos:
                 terminos.append(clave)
     max_terminos = int((config.get("consulta") or {}).get("max_terminos", 8))
-    terminos = terminos[:max_terminos]
+    return terminos[:max_terminos]
 
-    query = "(" + " OR ".join(terminos) + ")"
+
+def _expresion(config: dict) -> str:
+    """Expresion OR entre los terminos de busqueda."""
+    return "(" + " OR ".join(terminos_consulta(config)) + ")"
+
+
+def construir_query(config: dict, lookback_horas: int, con_ventana: bool) -> str:
+    """Arma la consulta web con los terminos principales de los tipos de evento.
+
+    Google News deja de respetar `when:Nd` si la consulta lleva comillas o
+    demasiados terminos; por eso la busqueda usa solo palabras sueltas
+    (las frases quedan para la clasificacion local).
+    """
+    query = _expresion(config)
 
     if con_ventana and (config.get("consulta") or {}).get("sufijo_ventana", True):
         if lookback_horas <= 48:
@@ -108,6 +120,19 @@ def construir_query(config: dict, lookback_horas: int, con_ventana: bool) -> str
             dias = max(1, round(lookback_horas / 24))
         query += f" when:{dias}d"
     return query
+
+
+def construir_query_rango(config: dict, desde: date, hasta: date) -> str:
+    """Consulta con ventana explicita de fechas (barridos historicos).
+
+    `when:Nd` no sirve para ventanas largas: Google News RSS devuelve como
+    maximo 100 entradas por consulta y se satura mucho antes del limite pedido
+    (when:90d, when:120d y when:180d entregan el mismo conjunto). Los
+    operadores `after:`/`before:` si respetan el rango, con granularidad de dia.
+
+    `hasta` es exclusivo: el tramo [desde, hasta) no se solapa con el siguiente.
+    """
+    return f"{_expresion(config)} after:{desde.isoformat()} before:{hasta.isoformat()}"
 
 
 def _registros_desde_feed(contenido: bytes, origen: str, fuente_defecto: str) -> list[dict]:
@@ -154,6 +179,34 @@ def _dentro_de_ventana(registro: dict, lookback_horas: int) -> bool:
     limite = datetime.now(timezone.utc) - timedelta(hours=lookback_horas)
     # Margen de 12 h: los agregadores publican con retraso y desfase de zona.
     return publicado >= limite - timedelta(hours=12)
+
+
+def _dentro_de_rango(registro: dict, desde: date, hasta: date) -> bool:
+    """True si la noticia cae en [desde, hasta) (si no trae fecha, se conserva)."""
+    publicado = registro.get("publicado")
+    if not publicado:
+        return True
+    if publicado.tzinfo is None:
+        publicado = publicado.replace(tzinfo=timezone.utc)
+    return desde <= publicado.astimezone(timezone.utc).date() < hasta
+
+
+def _deduplicar(registros: list[dict]) -> list[dict]:
+    """Quita repetidos de la corrida por URL o titulo normalizado."""
+    vistos_url: set[str] = set()
+    vistos_titulo: set[str] = set()
+    unicos: list[dict] = []
+    for reg in registros:
+        url = (reg.get("url") or "").strip()
+        titulo = normalizar(reg.get("titulo"))
+        if (url and url in vistos_url) or (titulo and titulo in vistos_titulo):
+            continue
+        if url:
+            vistos_url.add(url)
+        if titulo:
+            vistos_titulo.add(titulo)
+        unicos.append(reg)
+    return unicos
 
 
 def buscar(config: dict, lookback_horas: int = 24, activas: list[str] | None = None) -> list[dict]:
@@ -214,19 +267,39 @@ def buscar(config: dict, lookback_horas: int = 24, activas: list[str] | None = N
     todos = [r for r in todos if _dentro_de_ventana(r, lookback_horas)]
 
     # Deduplicacion basica dentro de la corrida (url o titulo normalizado).
-    vistos_url: set[str] = set()
-    vistos_titulo: set[str] = set()
-    unicos: list[dict] = []
-    for reg in todos:
-        url = (reg.get("url") or "").strip()
-        titulo = normalizar(reg.get("titulo"))
-        if (url and url in vistos_url) or (titulo and titulo in vistos_titulo):
-            continue
-        if url:
-            vistos_url.add(url)
-        if titulo:
-            vistos_titulo.add(titulo)
-        unicos.append(reg)
-
+    unicos = _deduplicar(todos)
     log(f"Total registros unicos: {len(unicos)}")
+    return unicos
+
+
+def buscar_rango(
+    config: dict, desde: date, hasta: date, activas: list[str] | None = None
+) -> list[dict]:
+    """Busca en Google News un tramo de fechas explicito [desde, hasta).
+
+    Es la via para historia: los agregadores no entregan mas de 100 entradas
+    por consulta y `when:Nd` se satura, mientras que `after:`/`before:` si
+    respetan el rango. Bing y los feeds directos no aceptan rango ni conservan
+    historia, por eso no participan de este barrido.
+    """
+    fuentes = config.get("fuentes") or {}
+    fdef = fuentes.get("google_news") or {}
+    if activas and "google_news" not in activas:
+        return []
+    if not fdef.get("activa", True) or not fdef.get("base"):
+        return []
+
+    params = dict(fdef.get("parametros") or {})
+    query = construir_query_rango(config, desde, hasta)
+    params["q"] = query
+    url = f"{fdef['base']}?{urlencode(params)}"
+    log(f"Google News {desde}..{hasta}: {query}")
+    contenido = _descargar(url)
+    if not contenido:
+        return []
+    registros = _registros_desde_feed(contenido, "google_news", "Google News")
+    log(f"  {len(registros)} entradas crudas")
+    registros = [r for r in registros if _dentro_de_rango(r, desde, hasta)]
+    unicos = _deduplicar(registros)
+    log(f"  {len(unicos)} registros en el rango")
     return unicos
