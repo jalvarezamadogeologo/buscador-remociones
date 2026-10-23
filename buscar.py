@@ -16,8 +16,8 @@ import requests
 from comun import limpiar_html, limpiar_titulo, log, normalizar
 
 UA = (
-    "catastro-remociones/1.0 "
-    "(monitoreo de remociones en masa; +https://github.com/jalvarezamadogeologo/catastro-remociones)"
+    "buscador-remociones/1.0 "
+    "(monitoreo de remociones en masa; +https://github.com/jalvarezamadogeologo/buscador-remociones)"
 )
 TIMEOUT = 30
 REINTENTOS = 2

@@ -86,7 +86,7 @@ def _cuerpo(evento: dict) -> str:
     lineas += [
         "",
         "---",
-        "Generado automaticamente por catastro-remociones.",
+        "Generado automaticamente por buscador-remociones.",
         "Para confirmar o descartar, edita `data/eventos.csv` (columna `estado`).",
     ]
     return "\n".join(lineas)
@@ -138,7 +138,7 @@ def avisar_pipeline(config: dict, asunto: str, detalle: str) -> bool:
 
     payload = {
         "title": asunto,
-        "body": detalle + "\n\n---\nGenerado automaticamente por catastro-remociones.",
+        "body": detalle + "\n\n---\nGenerado automaticamente por buscador-remociones.",
         "labels": [etiqueta],
     }
     try:

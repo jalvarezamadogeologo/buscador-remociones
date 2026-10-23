@@ -1,4 +1,4 @@
-# AGENTS.md - catastro-remociones
+# AGENTS.md - buscador-remociones
 
 Monitoreo automatico de remociones en masa recientes en Chile desde noticias web
 (Google News RSS y Bing News RSS, sin API keys), con catastro versionado y sitio

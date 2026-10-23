@@ -30,7 +30,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: catastro-remociones
+  group: buscador-remociones
   cancel-in-progress: false
 
 jobs:

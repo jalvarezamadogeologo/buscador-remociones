@@ -1,4 +1,4 @@
-# catastro-remociones
+# buscador-remociones
 
 Monitoreo automatico de **remociones en masa recientes en Chile** en noticias y redes.
 Busca en Google News RSS, Bing News y en X/Instagram/Facebook via Google News con
@@ -91,7 +91,7 @@ python resolver_urls.py --reintentar-fallidos
 ### Modo local con boton "Actualizar" funcional
 
 ```powershell
-proyectos\catastro-remociones\iniciar.cmd
+proyectos\buscador-remociones\iniciar.cmd
 ```
 
 o directamente:

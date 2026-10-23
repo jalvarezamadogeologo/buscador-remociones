@@ -8,7 +8,7 @@ pais: CL
 zona_horaria: America/Santiago
 
 # Repositorio publico (para el enlace "Buscar en GitHub" del sitio)
-repo: jalvarezamadogeologo/catastro-remociones
+repo: jalvarezamadogeologo/buscador-remociones
 
 # Servidor local (boton "Actualizar" en modo local)
 puerto_local: 8770

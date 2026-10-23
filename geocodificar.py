@@ -23,7 +23,7 @@ from comun import DATA, contiene, leer_json, log, normalizar
 GEOCACHE = DATA / "geocache.json"
 GEORREF = DATA / "georref.json"
 URL = "https://nominatim.openstreetmap.org/search"
-UA = "catastro-remociones/1.0 (+https://github.com/jalvarezamadogeologo/catastro-remociones)"
+UA = "buscador-remociones/1.0 (+https://github.com/jalvarezamadogeologo/buscador-remociones)"
 PAUSA = 1.1  # politica de uso de Nominatim: max 1 req/s
 
 
