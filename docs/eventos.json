@@ -1,7 +1,28 @@
 {
-  "actualizado": "2026-10-23 11:42",
-  "total": 43,
+  "actualizado": "2026-10-23 18:02",
+  "total": 45,
   "eventos": [
+    {
+      "id": "c15a28633c5d",
+      "fecha_publicacion": "2026-10-23T16:00:41-03:00",
+      "fecha_deteccion": "2026-10-23T18:02:18-03:00",
+      "titulo": "Angol: Senapred advirtió posible colapso del río Rehue y prepara eventuales evacuaciones",
+      "evento": "Desborde / inundación en Angol",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "La Araucania",
+      "comuna": "Angol",
+      "lat": "-37.798787",
+      "lon": "-72.708610",
+      "fuentes": [
+        {
+          "medio": "Cooperativa",
+          "url": "https://www.cooperativa.cl/noticias/pais/desastres-naturales/inundaciones/angol-senapred-advirtio-posible-colapso-del-rio-rehue-y-prepara/2026-10-23/160041.html",
+          "fecha": "2026-10-23T16:00:41-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "0cb6637fdb49",
       "fecha_publicacion": "2026-10-23T11:00:12-03:00",
@@ -40,6 +61,27 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/p/De1lkSuGsA7/",
           "fecha": "2026-10-23T09:44:33-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "9175c3c1a0a4",
+      "fecha_publicacion": "2026-10-23T07:56:33-03:00",
+      "fecha_deteccion": "2026-10-23T18:02:18-03:00",
+      "titulo": "🚨 ÚLTIMO MINUTO | DERRUMBE EN RUTA M-50 CAUQUENES–CHANCO: TRÁNSITO HABILITADO POR UNA SOLA PISTA ⚠️ PRECAUCIÓN: Se reporta un derrumbe en la Ruta M-50, que conecta las comunas de Cauquenes y Chanco, en la Región del",
+      "evento": "Deslizamiento en Cauquenes",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Maule",
+      "comuna": "Cauquenes",
+      "lat": "-35.967129",
+      "lon": "-72.315427",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/radiomaulesur/posts/-%C3%BAltimo-minuto-derrumbe-en-ruta-m-50-cauqueneschanco-tr%C3%A1nsito-habilitado-por-una/1755303046601404/",
+          "fecha": "2026-10-23T07:56:33-03:00"
         }
       ],
       "estado": "nuevo"
