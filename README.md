@@ -41,12 +41,16 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
   - **Descargar CSV (filtrados):** `remociones_filtradas_AAAA-MM-DD.csv` con los eventos
     que cumplen los filtros actuales, en el orden de la tabla y con las columnas de
     `data/eventos.csv` (BOM + CRLF para Excel).
-  - **Descargar Eventos Validados:** `eventos_validados_AAAA-MM-DD.csv` con la cabecera
+  - **Descargar CSV (validados):** `remociones_validadas_AAAA-MM-DD.csv` con la cabecera
     del catastro y **solo las filas marcadas**; si no puede leer `eventos.csv` (por
-    ejemplo con `file://`), arma el CSV desde los datos embebidos en la pagina.
-  - **Descargar KMZ:** `remociones_AAAA-MM-DD.kmz` (ZIP con `doc.kml`, sin librerias) con
-    los eventos filtrados **que tienen coordenadas**, un Placemark por evento y colores
-    por tipo de remocion; se abre en Google Earth.
+    ejemplo con `file://`), arma el CSV desde los datos embebidos en la pagina. El boton
+    muestra el conteo de validados y queda deshabilitado si no hay ninguno.
+  - **Descargar KMZ (filtrados):** `remociones_filtradas_AAAA-MM-DD.kmz` (ZIP con `doc.kml`,
+    sin librerias) con los eventos filtrados **que tienen coordenadas**.
+  - **Descargar KMZ (validados):** `remociones_validadas_AAAA-MM-DD.kmz` con los eventos
+    marcados que tienen coordenadas.
+  - Ambos KMZ llevan un Placemark por evento y colores por tipo de remocion; se abren en
+    Google Earth.
 - **Mapa:** al abrir el popup de un punto se listan los enlaces de sus fuentes, con el
   medio como texto.
 - **Boton "Ver"** en cada fila: centra el mapa en el evento y abre su popup

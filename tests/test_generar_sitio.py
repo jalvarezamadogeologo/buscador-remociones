@@ -51,7 +51,7 @@ def test_genera_html_y_json(tmp_path, monkeypatch):
     assert datos["eventos"][0]["fuentes"][0]["medio"] == "Medio A"
     assert "Solo validados" in html
     assert "Evento validado" in html
-    assert "Descargar Eventos Validados" in html
+    assert "Descargar CSV (validados)" in html
     assert "badge-aviso" in html and "badge-red" in html
     assert "ajustarMapaALista" in html
     assert "__DATOS__" not in html
@@ -71,20 +71,28 @@ def test_filtro_por_rango_de_fechas_y_orden(tmp_path, monkeypatch):
 def test_botones_de_descarga_y_handler(tmp_path, monkeypatch):
     _generar(tmp_path, monkeypatch, [evento()])
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
-    assert "Descargar CSV (filtrados)" in html
-    assert "Descargar KMZ" in html
-    assert 'id="btn-csv"' in html and 'id="btn-kmz"' in html
+    assert html.count("Descargar CSV (filtrados)") >= 1
+    assert html.count("Descargar CSV (validados)") >= 1
+    assert html.count("Descargar KMZ (filtrados)") >= 1
+    assert html.count("Descargar KMZ (validados)") >= 1
+    assert 'id="btn-csv"' in html
+    assert 'id="btn-csv-validados"' in html
+    assert 'id="btn-kmz"' in html
+    assert 'id="btn-kmz-validados"' in html
     # Cada boton debe tener su listener: el CSV de validados no funcionaba por faltar el suyo.
-    assert "btnCsv.addEventListener" in html
-    assert "btnKmz.addEventListener" in html
-    assert "btnDescargar.addEventListener('click', descargarValidados)" in html
-    # KMZ: ZIP minimo con doc.kml armado en el navegador.
+    assert "btnCsv.addEventListener('click', descargarCsvFiltrados)" in html
+    assert "btnCsvValidados.addEventListener('click', descargarCsvValidados)" in html
+    assert "btnKmz.addEventListener('click', descargarKmzFiltrados)" in html
+    assert "btnKmzValidados.addEventListener('click', descargarKmzValidados)" in html
+    # KMZ: ZIP minimo con doc.kml armado en el navegador, reutilizado por ambos botones.
     assert "zipUnArchivo('doc.kml'" in html
     assert "0x04034b50" in html and "0x06054b50" in html
     assert "application/vnd.google-earth.kmz" in html
+    assert "construirKmz" in html
     # El CSV de validados cae a los datos embebidos si no puede leer eventos.csv.
     assert "descargarBlob" in html
     assert "COLUMNAS_CSV" in html
+    assert "remociones_filtradas" in html and "remociones_validadas" in html
 
 
 def test_ordena_por_fecha_descendente(tmp_path, monkeypatch):

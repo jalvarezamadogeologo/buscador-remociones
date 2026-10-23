@@ -53,11 +53,12 @@ python -m pytest -q
   aparecen en la tabla, el mapa, los contadores ni las tarjetas (siguen en el CSV).
 - Ultima columna "Evento validado": checkbox por evento; el estado se guarda en
   `localStorage` (`catastro_validados`, mapa id->true), no en el CSV.
-- Descargas bajo la tabla, todas armadas en el navegador (sirven con `file://`):
-  "Descargar CSV (filtrados)" respeta los filtros y el orden de la tabla;
-  "Descargar Eventos Validados" baja solo las filas marcadas (lee `docs/eventos.csv`
-  para conservar las filas tal cual y, si no puede, las arma desde los datos embebidos);
-  "Descargar KMZ" genera un ZIP con `doc.kml` (Placemarks con coordenadas, color por tipo).
+- Descargas bajo la tabla, todas armadas en el navegador (sirven con `file://`), cuatro botones:
+  "CSV (filtrados)" respeta filtros y orden de la tabla; "CSV (validados)" baja solo las
+  filas marcadas (lee `docs/eventos.csv` para conservarlas tal cual y, si no puede, las arma
+  desde los datos embebidos); "KMZ (filtrados)" y "KMZ (validados)" generan un ZIP con
+  `doc.kml` (Placemarks con coordenadas, color por tipo). Los botones de validados muestran
+  el conteo y quedan deshabilitados si no hay marcas.
 - Boton "Actualizar": en localhost llama a `POST /actualizar` (servidor.py) y ejecuta
   la busqueda real; en GitHub Pages relee `docs/eventos.json` (ultima version publicada).
   No hay enlace a GitHub en la pagina publica. Vive en la barra de filtros, a la derecha

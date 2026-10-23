@@ -17,7 +17,7 @@
   .btn-primario { background:var(--acento); color:#fff; border:1px solid var(--acento); font-weight:600; }
   .btn-primario:hover { background:#123a59; }
   .btn-primario:disabled { opacity:.65; cursor:wait; }
-  #btn-descargar:disabled { cursor:not-allowed; }
+  #btn-csv-validados:disabled, #btn-kmz-validados:disabled { cursor:not-allowed; opacity:.65; }
   .btn-mapa { background:#eef4fa; color:var(--acento); border:1px solid #c8d8e8; padding:4px 10px; font-size:12.5px; }
   .btn-mapa:hover { background:#dcebf8; }
   main { padding:0 22px 40px; max-width:1500px; margin:0 auto; }
@@ -128,9 +128,10 @@
 
   <div class="descarga">
     <button id="btn-csv" class="btn-primario" type="button">Descargar CSV (filtrados)</button>
-    <button id="btn-descargar" class="btn-primario" type="button">Descargar Eventos Validados</button>
-    <button id="btn-kmz" class="btn-primario" type="button">Descargar KMZ</button>
-    <span class="descarga-ayuda">CSV y KMZ incluyen los eventos que cumplen los filtros (el KMZ, solo los que tienen coordenadas). "Eventos Validados" usa solo las filas marcadas.</span>
+    <button id="btn-csv-validados" class="btn-primario" type="button">Descargar CSV (validados)</button>
+    <button id="btn-kmz" class="btn-primario" type="button">Descargar KMZ (filtrados)</button>
+    <button id="btn-kmz-validados" class="btn-primario" type="button">Descargar KMZ (validados)</button>
+    <span class="descarga-ayuda">Filtrados: los eventos del filtro actual. Validados: solo las filas con la casilla marcada. El KMZ incluye únicamente eventos con coordenadas.</span>
   </div>
 
   <div class="pie">
@@ -156,15 +157,18 @@ let VALIDADOS = (()=>{
 function esValidado(id){ return VALIDADOS[String(id)] === true; }
 function guardarValidados(){ try { localStorage.setItem(CLAVE_VALIDADOS, JSON.stringify(VALIDADOS)); } catch (e) {} }
 function contarValidados(){ return Object.keys(VALIDADOS).filter(k=>VALIDADOS[k]).length; }
-function refrescarBotonDescarga(){
+function refrescarBotonesValidados(){
   const n = contarValidados();
-  btnDescargar.textContent = 'Descargar Eventos Validados' + (n ? ' (' + n + ')' : '');
-  btnDescargar.disabled = n === 0;
+  const sufijo = n ? ' (' + n + ')' : '';
+  btnCsvValidados.textContent = 'Descargar CSV (validados)' + sufijo;
+  btnKmzValidados.textContent = 'Descargar KMZ (validados)' + sufijo;
+  btnCsvValidados.disabled = n === 0;
+  btnKmzValidados.disabled = n === 0;
 }
 function marcarValidado(id, valor){
   if (valor) VALIDADOS[String(id)] = true; else delete VALIDADOS[String(id)];
   guardarValidados();
-  refrescarBotonDescarga();
+  refrescarBotonesValidados();
 }
 
 function esc(s){ const d=document.createElement('div'); d.textContent=s==null?'':String(s); return d.innerHTML; }
@@ -228,9 +232,10 @@ const inputDesde = document.getElementById('desde');
 const inputHasta = document.getElementById('hasta');
 const filas = document.getElementById('filas');
 const btnActualizar = document.getElementById('btn-actualizar');
-const btnDescargar = document.getElementById('btn-descargar');
 const btnCsv = document.getElementById('btn-csv');
+const btnCsvValidados = document.getElementById('btn-csv-validados');
 const btnKmz = document.getElementById('btn-kmz');
+const btnKmzValidados = document.getElementById('btn-kmz-validados');
 const btnValidados = document.getElementById('btn-validados');
 const cajaEstado = document.getElementById('estado');
 let soloValidados = false;
@@ -513,12 +518,12 @@ function descargarCsvFiltrados(){
   avisar(`Descargados ${lista.length} evento${lista.length===1?'':'s'} del filtro actual.`, 7000);
 }
 
-async function descargarValidados(){
+async function descargarCsvValidados(){
   const ids = new Set(Object.keys(VALIDADOS).filter(k=>VALIDADOS[k]));
   if (!ids.size){ avisar('Marca al menos un evento como validado para descargar.', 6000); return; }
-  const textoPrevio = btnDescargar.textContent;
-  btnDescargar.disabled = true;
-  btnDescargar.textContent = 'Preparando...';
+  const textoPrevio = btnCsvValidados.textContent;
+  btnCsvValidados.disabled = true;
+  btnCsvValidados.textContent = 'Preparando...';
   try {
     let cabecera = null;
     let elegidos = [];
@@ -539,13 +544,13 @@ async function descargarValidados(){
     }
     if (!elegidos.length) throw new Error('los eventos validados no estan en el CSV publicado');
     const contenido = '\uFEFF' + [cabecera, ...elegidos].join('\r\n') + '\r\n';
-    descargarBlob(nombreConFecha('eventos_validados','csv'), contenido, 'text/csv;charset=utf-8');
+    descargarBlob(nombreConFecha('remociones_validadas','csv'), contenido, 'text/csv;charset=utf-8');
     avisar(`Descargados ${elegidos.length} evento${elegidos.length===1?'':'s'} validado${elegidos.length===1?'':'s'}.`, 7000);
   } catch (err) {
     avisar('Error al descargar: ' + err.message, 8000);
   } finally {
-    btnDescargar.textContent = textoPrevio;
-    refrescarBotonDescarga();
+    btnCsvValidados.textContent = textoPrevio;
+    refrescarBotonesValidados();
   }
 }
 
@@ -626,9 +631,7 @@ function kmlColor(hex){
   return ('ff' + h.slice(4,6) + h.slice(2,4) + h.slice(0,2)).toUpperCase();
 }
 
-function descargarKmz(){
-  const lista = ordenarLista(filtrar()).filter(e=>tieneCoords(e));
-  if (!lista.length){ avisar('No hay eventos con coordenadas para los filtros seleccionados.', 7000); return; }
+function construirKmz(lista, titulo){
   const tipos = [...new Set(lista.map(e=>e.tipo_evento).filter(Boolean))];
   const estilos = tipos.map(t=>`<Style id="t_${escXml(t)}"><IconStyle><color>${kmlColor(colorTipo(t))}</color><scale>1.1</scale></IconStyle></Style>`).join('\n');
   const placemarks = lista.map(e=>{
@@ -651,14 +654,33 @@ function descargarKmz(){
   const kml = `<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-<name>Remociones en masa - Chile</name>
-<description>${lista.length} evento(s) segun los filtros del sitio</description>
+<name>${escXml(titulo)}</name>
+<description>${lista.length} evento(s)</description>
 ${estilos}
 ${placemarks}
 </Document>
 </kml>`;
-  descargarBlob(nombreConFecha('remociones','kmz'), zipUnArchivo('doc.kml', kml), 'application/vnd.google-earth.kmz');
-  avisar(`Descargados ${lista.length} evento${lista.length===1?'':'s'} con coordenadas en KMZ.`, 7000);
+  return zipUnArchivo('doc.kml', kml);
+}
+
+function descargarKmzLista(lista, base, mensajeVacio){
+  const conCoords = (lista || []).filter(e=>tieneCoords(e));
+  if (!conCoords.length){ avisar(mensajeVacio, 7000); return; }
+  const titulo = base === 'remociones_validadas' ? 'Remociones en masa - Chile (validadas)' : 'Remociones en masa - Chile (filtro actual)';
+  descargarBlob(nombreConFecha(base,'kmz'), construirKmz(conCoords, titulo), 'application/vnd.google-earth.kmz');
+  avisar(`Descargados ${conCoords.length} evento${conCoords.length===1?'':'s'} con coordenadas en KMZ.`, 7000);
+}
+
+function descargarKmzFiltrados(){
+  descargarKmzLista(ordenarLista(filtrar()), 'remociones_filtradas', 'No hay eventos con coordenadas para los filtros seleccionados.');
+}
+
+function descargarKmzValidados(){
+  const ids = new Set(Object.keys(VALIDADOS).filter(k=>VALIDADOS[k]));
+  if (!ids.size){ avisar('Marca al menos un evento como validado para descargar.', 6000); return; }
+  const lista = EVENTOS.filter(e=>ids.has(String(e.id)));
+  if (!lista.length){ avisar('Los eventos validados no estan en el catalogo actual.', 7000); return; }
+  descargarKmzLista(lista, 'remociones_validadas', 'Los eventos validados no tienen coordenadas.');
 }
 
 async function actualizar(){
@@ -729,8 +751,9 @@ document.querySelectorAll('th.orden').forEach(th=>{
 });
 document.getElementById('btn-limpiar').addEventListener('click', limpiar);
 btnCsv.addEventListener('click', descargarCsvFiltrados);
-btnKmz.addEventListener('click', descargarKmz);
-btnDescargar.addEventListener('click', descargarValidados);
+btnCsvValidados.addEventListener('click', descargarCsvValidados);
+btnKmz.addEventListener('click', descargarKmzFiltrados);
+btnKmzValidados.addEventListener('click', descargarKmzValidados);
 btnValidados.addEventListener('click', ()=>{
   soloValidados = !soloValidados;
   btnValidados.classList.toggle('activo', soloValidados);
@@ -741,7 +764,7 @@ btnActualizar.addEventListener('click', actualizar);
 
 poblarFiltros();
 render();
-refrescarBotonDescarga();
+refrescarBotonesValidados();
 </script>
 </body>
 </html>
