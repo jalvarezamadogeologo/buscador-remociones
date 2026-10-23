@@ -23,6 +23,12 @@ estatico con mapa.
   por toponimo y correccion de fuentes guardadas como URL.
 - `generar_sitio.py` — `docs/index.html` (tabla + Leaflet).
 - `notificar.py` — GitHub Issues.
+- `servidor.py` — servidor local: sirve `docs/` y expone `POST /actualizar` y `POST /estado`.
+- `launcher.py` — entrada del ejecutable portable: prepara datos, siembra y arranca el servidor.
+- `build_exe.ps1` — construye la carpeta portable en `dist/` con PyInstaller.
+- `crear_certificado.ps1` — crea el certificado autofirmado de code-signing (CurrentUser).
+- `firmar_exe.ps1` — firma el `.exe` con el certificado de code-signing y timestamp.
+- `semilla/` — copia inicial de `data/` para el ejecutable (se copia en el primer arranque).
 - `config.yaml` — tipos, palabras clave, geografia, fuentes, umbrales.
 - `data/` — catastro y estados.
 - `docs/` — sitio publicado en GitHub Pages.
@@ -39,6 +45,7 @@ python resolver_urls.py            # resolver enlaces del catastro existente
 python revisar_catastro.py         # prevencion + toponimos + fuentes con URL
 python servidor.py                 # sitio local: Actualizar y editar Estado (127.0.0.1:8770)
 iniciar.cmd                        # lo mismo, doble clic
+pwsh -File build_exe.ps1           # carpeta portable en dist\buscador-remociones
 python -m pytest -q
 ```
 
@@ -102,3 +109,7 @@ python -m pytest -q
   Cada boton necesita su `addEventListener` (el fallo 2026-10-23 fue justamente un boton sin
   handler). Verificar con Chrome headless interceptando `descargarBlob` que el CSV filtrado,
   el CSV de validados (con y sin `fetch`) y el KMZ se generan; validar el KMZ con `zipfile`.
+- Empaquetado: `build_exe.ps1` genera la carpeta portable (`--onedir --noupx`, incluye
+  `tzdata`). En el ejecutable `comun` escribe junto al `.exe` (respaldo `%LOCALAPPDATA%`) y
+  el servidor llama `actualizar.main()` en proceso: no hay `actualizar.py` que ejecutar como
+  subproceso. Probar el `.exe` dos veces (arranque, GET y POST) antes de compartirlo.

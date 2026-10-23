@@ -36,6 +36,7 @@ PLANTILLA = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Javier Álvarez Amado">
 <title>Buscador de remociones en masa - Chile</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
@@ -117,6 +118,7 @@ PLANTILLA = """<!DOCTYPE html>
   .fuentes-det ul { margin:6px 0 0 16px; padding:0; }
   .fuentes-det li { margin:2px 0; }
   .pie { margin-top:14px; font-size:12px; color:var(--suave); display:flex; gap:18px; flex-wrap:wrap; }
+  .pie .autor { color:var(--acento); font-weight:600; }
   .vacio { padding:28px; text-align:center; color:var(--suave); }
   @media (max-width:760px){ #mapa{height:340px;} header h1{font-size:19px;} #buscar{min-width:170px;} }
 </style>
@@ -185,6 +187,7 @@ PLANTILLA = """<!DOCTYPE html>
     <span id="contador">0 de 0 eventos</span>
     <span>Fuentes: Google News RSS, Bing News RSS</span>
     <span>Las detecciones automaticas requieren verificacion.</span>
+    <span class="autor">Desarrollado por Javier Álvarez Amado</span>
   </div>
 </main>
 

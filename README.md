@@ -172,6 +172,60 @@ Tests:
 python -m pytest -q
 ```
 
+## Distribucion como ejecutable portable (Windows)
+
+Se empaqueta en una carpeta portable que incluye Python y las dependencias: el usuario
+hace doble clic y usa el buscador local, sin instalar nada ni tener cuenta de GitHub.
+
+### Construir
+
+```powershell
+pwsh -File build_exe.ps1
+```
+
+El script crea `.venv`, instala `requirements.txt` + PyInstaller y genera
+`dist\buscador-remociones\` (~23 MB) con el `.exe`, `_internal\` (runtime) y los recursos
+empaquetados (`config.yaml` y `semilla/`).
+
+### Usar y compartir
+
+- Se comparte **la carpeta completa** `dist\buscador-remociones\`, no solo el `.exe`.
+- Doble clic en `buscador-remociones.exe`: crea `data\`, `docs\` y `config.yaml` junto al
+  ejecutable (o en `%LOCALAPPDATA%\buscador-remociones` si la carpeta no es escribible),
+  levanta el servidor en un puerto libre y abre el navegador.
+- El boton **Actualizar** ejecuta la busqueda real en el mismo equipo (`actualizar.py` en
+  el mismo proceso, con `--sin-notificar`); no sube nada a GitHub.
+- La primera ejecucion siembra el catalogo desde `semilla/` (copia de `data/`).
+- Cerrar la ventana de consola detiene el servidor.
+
+### Firma del ejecutable
+
+El build intenta firmar el `.exe` al final con `firmar_exe.ps1` (certificado de code-signing
+del almacen del usuario cuyo sujeto sea "Javier Alvarez Amado"). Para crear el certificado
+autofirmado la primera vez:
+
+```powershell
+pwsh -File crear_certificado.ps1
+```
+
+Notas:
+- El certificado queda en `Cert:\CurrentUser\My` (la clave privada no se versiona).
+- Un certificado **autofirmado** firma el binario y sella la integridad, pero **no es de
+  confianza en otras maquinas**: SmartScreen seguira advirtiendo. Para distribucion real hace
+  falta un certificado emitido por una CA (o un servicio como SignPath para open source).
+- Si no hay certificado, el build avisa y deja el `.exe` sin firmar.
+- Verificar con `Get-AuthenticodeSignature dist\buscador-remociones\buscador-remociones.exe`.
+
+### Limitaciones del ejecutable
+
+- Solo Windows: para Mac/Linux hay que construir en ese sistema.
+- `.exe` sin firmar: SmartScreen puede advertir y algunos antivirus marcan falsos positivos
+  (se compila con `--noupx` para reducirlos). La solucion definitiva es firmar el binario.
+- Nominatim publico: maximo 1 req/s; el pipeline pausa y limita, pero el uso masivo puede
+  bloquear la IP.
+- Endpoints no oficiales (Google News RSS, Bing News, resolver de Google): pueden cambiar.
+- No genera issues ni toca GitHub: el ejecutable trabaja solo con sus datos locales.
+
 ## Publicacion en GitHub
 
 1. Crear el repositorio **publico** (Actions ilimitado y Pages gratis) y subir el proyecto.

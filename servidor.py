@@ -2,13 +2,17 @@
 
 Sirve `docs/` en 127.0.0.1 y expone dos endpoints de escritura:
 
-- `POST /actualizar`: ejecuta la busqueda real (actualizar.py) y devuelve el resultado.
+- `POST /actualizar`: ejecuta la busqueda real en el mismo proceso
+  (`actualizar.main`) y devuelve el resultado. Al correr empaquetado no hay un
+  `actualizar.py` que lanzar como subproceso, por eso se llama en proceso.
 - `POST /estado`: cambia el estado de revision de un evento (`nuevo`, `confirmado` o
-  `descartado`) en `data/eventos.csv` y regenera el sitio. Es la unica forma de que
-  el sitio escriba el estado: GitHub Pages es estatico y no puede modificar el repo.
+  `descartado`) en `data/eventos.csv` y regenera el sitio.
+
+Es la unica forma de que el sitio escriba: GitHub Pages es estatico.
 
 Uso:
     python servidor.py                 # abre el navegador en 127.0.0.1:8770
+    python servidor.py --puerto 0      # puerto libre automatico
     python servidor.py --lookback 48
     python servidor.py --puerto 9000 --no-abrir
 """
@@ -17,25 +21,24 @@ from __future__ import annotations
 
 import argparse
 import json
-import subprocess
-import sys
 import threading
 import webbrowser
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
-from pathlib import Path
+from typing import Sequence
 from urllib.parse import urlparse
 
-from comun import cargar_config
+import actualizar
+from comun import DOCS, cargar_config
 from estado import aplicar_estado
 from generar_sitio import generar_sitio
 from guardar import cargar_eventos, guardar_eventos
 
-RAIZ = Path(__file__).resolve().parent
-DOCS = RAIZ / "docs"
 LOOKBACK = 24
 MAX_CUERPO = 4096
-# Serializa las escrituras: ThreadingHTTPServer atiende peticiones en paralelo.
-CANDADO = threading.Lock()
+# Serializa las escrituras de estado (ThreadingHTTPServer atiende en paralelo).
+CANDADO_ESTADO = threading.Lock()
+# Evita dos busquedas simultaneas por doble clic.
+CANDADO_BUSQUEDA = threading.Lock()
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -75,28 +78,23 @@ class Handler(SimpleHTTPRequestHandler):
         return origen in {f"http://127.0.0.1:{puerto}", f"http://localhost:{puerto}"}
 
     def _actualizar(self) -> None:
+        if not CANDADO_BUSQUEDA.acquire(blocking=False):
+            self._responder(409, {"ok": False, "mensaje": "Ya hay una busqueda en curso"})
+            return
         try:
-            cmd = [
-                sys.executable,
-                str(RAIZ / "actualizar.py"),
-                "--lookback",
-                str(LOOKBACK),
-                "--sin-notificar",
-            ]
-            proc = subprocess.run(cmd, cwd=str(RAIZ), capture_output=True, text=True, timeout=600)
-            ok = proc.returncode == 0
+            codigo = actualizar.main(["--lookback", str(LOOKBACK), "--sin-notificar"])
+            ok = codigo == 0
             self._responder(
                 200 if ok else 500,
                 {
                     "ok": ok,
                     "mensaje": "Actualizacion completada" if ok else "La busqueda fallo",
-                    "salida": ((proc.stdout or "") + (proc.stderr or ""))[-3000:],
                 },
             )
-        except subprocess.TimeoutExpired:
-            self._responder(500, {"ok": False, "mensaje": "La busqueda excedio 10 minutos"})
         except Exception as exc:  # servidor local: informar sin caerse
             self._responder(500, {"ok": False, "mensaje": f"Error: {exc}"})
+        finally:
+            CANDADO_BUSQUEDA.release()
 
     def _cambiar_estado(self) -> None:
         try:
@@ -117,7 +115,7 @@ class Handler(SimpleHTTPRequestHandler):
 
         id_evento = str(datos.get("id") or "")
         estado = str(datos.get("estado") or "")
-        with CANDADO:
+        with CANDADO_ESTADO:
             eventos = cargar_eventos()
             try:
                 evento = aplicar_estado(eventos, id_evento, estado)
@@ -154,13 +152,13 @@ class Handler(SimpleHTTPRequestHandler):
         print(f"[servidor] {format % args}", flush=True)
 
 
-def main() -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     global LOOKBACK
     parser = argparse.ArgumentParser(description="Servidor local del catastro de remociones")
-    parser.add_argument("--puerto", type=int, default=8770)
+    parser.add_argument("--puerto", type=int, default=8770, help="0 = puerto libre automatico")
     parser.add_argument("--lookback", type=int, default=24, help="horas hacia atras al actualizar")
     parser.add_argument("--no-abrir", action="store_true", help="no abrir el navegador")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     LOOKBACK = args.lookback
     if not DOCS.exists():
@@ -168,7 +166,8 @@ def main() -> int:
         return 1
 
     servidor = ThreadingHTTPServer(("127.0.0.1", args.puerto), Handler)
-    url = f"http://127.0.0.1:{args.puerto}/"
+    puerto = servidor.server_address[1]
+    url = f"http://127.0.0.1:{puerto}/"
     print(f"[servidor] {url} (Ctrl+C para detener)", flush=True)
     if not args.no_abrir:
         threading.Timer(1.0, lambda: webbrowser.open(url)).start()

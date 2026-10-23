@@ -54,6 +54,8 @@ def test_genera_html_y_json(tmp_path, monkeypatch):
     assert "Descargar CSV (validados)" in html
     assert "badge-aviso" in html and "badge-red" in html
     assert "ajustarMapaALista" in html
+    assert "Desarrollado por Javier Álvarez Amado" in html
+    assert 'name="author" content="Javier Álvarez Amado"' in html
     assert "__DATOS__" not in html
 
 

@@ -10,6 +10,7 @@ import html
 import json
 import os
 import re
+import shutil
 import sys
 import tempfile
 import unicodedata
@@ -28,16 +29,48 @@ if _reconfigurar is not None:
     except ValueError:
         pass
 
-RAIZ = Path(__file__).resolve().parent
+
+def _raiz_escritura() -> Path:
+    """Carpeta donde viven los datos.
+
+    En desarrollo es la carpeta del proyecto. Empaquetado con PyInstaller
+    (`sys.frozen`), `__file__` apunta a una carpeta temporal de solo lectura que
+    se borra al cerrar: se escribe junto al .exe si se puede (portable) y, si no
+    (por ejemplo en Program Files), en %LOCALAPPDATA%\\buscador-remociones.
+    """
+    if not getattr(sys, "frozen", False):
+        return Path(__file__).resolve().parent
+
+    exe_dir = Path(sys.executable).resolve().parent
+    try:
+        prueba = exe_dir / ".escritura-ok"
+        prueba.write_text("", encoding="utf-8")
+        prueba.unlink()
+        return exe_dir
+    except OSError:
+        base = Path(os.environ.get("LOCALAPPDATA") or tempfile.gettempdir())
+        destino = base / "buscador-remociones"
+        destino.mkdir(parents=True, exist_ok=True)
+        return destino
+
+
+RAIZ = _raiz_escritura()
 DATA = RAIZ / "data"
 DOCS = RAIZ / "docs"
+# Recursos empaquetados de solo lectura (config.yaml, semilla/).
+RECURSOS = Path(getattr(sys, "_MEIPASS", RAIZ))
 
 ZONA = ZoneInfo("America/Santiago")
 
 
 def cargar_config(ruta: str | Path | None = None) -> dict:
-    """Carga config.yaml (por defecto el del proyecto)."""
+    """Carga config.yaml; si falta junto a los datos, copia el empaquetado."""
     ruta = Path(ruta) if ruta else RAIZ / "config.yaml"
+    if not ruta.exists() and RECURSOS != RAIZ:
+        origen = RECURSOS / "config.yaml"
+        if origen.exists():
+            ruta.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(origen, ruta)
     with open(ruta, encoding="utf-8") as fh:
         cfg = yaml.safe_load(fh) or {}
     return cfg

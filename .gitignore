@@ -11,3 +11,8 @@ tmp/
 
 # Cache de geocodificacion local (opcional: comentar para versionarla)
 # data/geocache.json
+
+# Empaquetado con PyInstaller
+build/
+dist/
+*.spec
