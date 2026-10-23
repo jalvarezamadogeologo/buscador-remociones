@@ -14,7 +14,7 @@ from pathlib import Path
 
 from agrupar import etiqueta_evento, fuentes
 from comun import DOCS, ahora
-from guardar import CSV, cargar_eventos
+from guardar import CSV, cargar_eventos, ordenar_eventos
 
 COLORES = {
     "aluvion": "#1f77b4",
@@ -46,9 +46,9 @@ PLANTILLA = """<!DOCTYPE html>
   .head-inner { max-width:1500px; margin:0 auto; display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
   header h1 { margin:0 0 4px; font-size:22px; letter-spacing:.2px; }
   header p { margin:0; font-size:13px; opacity:.9; }
-  .acciones { display:flex; gap:8px; align-items:center; }
   .btn-primario, .btn-mapa { font:inherit; cursor:pointer; border-radius:6px; padding:8px 14px; font-size:14px; }
-  .btn-primario { background:#fff; color:var(--acento); border:1px solid #fff; font-weight:600; }
+  .btn-primario { background:var(--acento); color:#fff; border:1px solid var(--acento); font-weight:600; }
+  .btn-primario:hover { background:#123a59; }
   .btn-primario:disabled { opacity:.65; cursor:wait; }
   .btn-mapa { background:#eef4fa; color:var(--acento); border:1px solid #c8d8e8; padding:4px 10px; font-size:12.5px; }
   .btn-mapa:hover { background:#dcebf8; }
@@ -97,9 +97,6 @@ PLANTILLA = """<!DOCTYPE html>
       <h1>Buscador de remociones en masa - Chile</h1>
       <p>Deteccion automatica en noticias web. Actualizado: <span id="actualizado">__ACTUALIZADO__</span></p>
     </div>
-    <div class="acciones">
-      <button id="btn-actualizar" class="btn-primario" type="button">Actualizar</button>
-    </div>
   </div>
 </header>
 <main>
@@ -115,6 +112,7 @@ PLANTILLA = """<!DOCTYPE html>
     <div class="campo"><label for="periodo">Periodo (dias)</label>
       <input id="periodo" type="number" min="0" step="1" value="90" title="0 = todo el historico"></div>
     <button id="btn-limpiar" class="btn-limpiar" type="button">Limpiar filtros</button>
+    <button id="btn-actualizar" class="btn-primario" type="button">Actualizar</button>
   </div>
 
   <div id="mapa"></div>
@@ -242,6 +240,21 @@ function enfocar(id){
   document.getElementById('mapa').scrollIntoView({behavior:'smooth', block:'center'});
 }
 
+// Zoom a la capa: encuadra el mapa en los eventos que cumplen los filtros actuales.
+// Sin animacion: el encuadre debe quedar aplicado aunque el mapa no este visible.
+function ajustarMapaALista(lista){
+  const puntos = (lista||[])
+    .filter(e=>tieneCoords(e) && e.estado!=='descartado')
+    .map(e=>[parseFloat(e.lat), parseFloat(e.lon)]);
+  if (!puntos.length) return false;
+  if (puntos.length === 1){
+    mapa.setView(puntos[0], 12, {animate:false});
+  } else {
+    mapa.fitBounds(L.latLngBounds(puntos), {padding:[40,40], maxZoom:12, animate:false});
+  }
+  return true;
+}
+
 function detallesFuentes(lista){
   if (!lista || !lista.length) return '<span class="sin-coords">-</span>';
   const items = lista.map(f=>{
@@ -300,6 +313,7 @@ function render(){
     Object.keys(porTipo).sort().map(t=>`<div class="tarjeta"><b>${porTipo[t]}</b><span>${esc(etiquetaTipo(t))}</span></div>`).join('');
 
   document.getElementById('contador').textContent = `${lista.length} de ${EVENTOS.length} eventos`;
+  return lista;
 }
 
 function limpiar(){
@@ -329,8 +343,11 @@ async function actualizar(){
     ACTUALIZADO = (datos && datos.actualizado) || ACTUALIZADO;
     document.getElementById('actualizado').textContent = ACTUALIZADO;
     poblarFiltros();
-    render();
-    cajaEstado.textContent = 'Actualizado: ' + new Date().toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit'});
+    const encontrados = render();
+    const ajustado = ajustarMapaALista(encontrados);
+    cajaEstado.textContent = 'Actualizado: ' + new Date().toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit'}) +
+      ` - ${encontrados.length} evento${encontrados.length===1?'':'s'} en el filtro` +
+      (ajustado ? '' : ' (sin coordenadas para encuadrar)');
     setTimeout(()=>cajaEstado.classList.remove('visible'), 6000);
   } catch (err) {
     if (ES_LOCAL){
@@ -408,6 +425,7 @@ def _datos_para_sitio(eventos: list[dict]) -> list[dict]:
 def generar_sitio(eventos: list[dict] | None = None, config: dict | None = None) -> Path:
     """Genera docs/index.html, docs/eventos.json y docs/eventos.csv."""
     eventos = cargar_eventos() if eventos is None else eventos
+    eventos = ordenar_eventos(eventos)  # mismo orden que data/eventos.csv
     config = config or {}
     DOCS.mkdir(parents=True, exist_ok=True)
 

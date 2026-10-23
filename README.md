@@ -8,9 +8,11 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
 
 ## Interfaz (docs/index.html)
 
-- **Boton "Actualizar"**:
+- **Boton "Actualizar"** (en la barra de filtros, a la derecha de "Limpiar filtros"):
   - en local con `iniciar.cmd`: ejecuta la busqueda real y recarga datos;
   - en GitHub Pages: vuelve a leer `eventos.json` (ultima version publicada por el workflow).
+  - tras actualizar, el mapa encuadra automaticamente los eventos que cumplen los filtros
+    activos (zoom a la capa filtrada; si no hay coordenadas no mueve la vista).
 - **Filtros** aplicados a la vez a la tabla y al mapa: texto libre, tipo (todos los
   tipos de remocion en masa y desbordes/inundaciones), region (las 16 del pais),
   comuna (se habilita al elegir una region y muestra solo sus comunas) y periodo

@@ -28,7 +28,7 @@ def cargar_eventos(ruta: Path = CSV) -> list[dict]:
         return [dict(fila) for fila in lector]
 
 
-def _ordenar(eventos: list[dict]) -> list[dict]:
+def ordenar_eventos(eventos: list[dict]) -> list[dict]:
     """Ordena por fecha de publicacion descendente."""
 
     def clave(e: dict) -> str:
@@ -39,7 +39,7 @@ def _ordenar(eventos: list[dict]) -> list[dict]:
 
 def guardar_eventos(eventos: list[dict], csv_ruta: Path = CSV, json_ruta: Path = JSON) -> None:
     """Escribe CSV de forma atomica y regenera el JSON espejo."""
-    eventos = _ordenar(eventos)
+    eventos = ordenar_eventos(eventos)
     for e in eventos:
         if e.get("estado") not in ESTADOS:
             e["estado"] = "nuevo"

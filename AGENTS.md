@@ -39,7 +39,9 @@ python -m pytest -q
   3 fuentes con el medio como texto. El popup del mapa lista las mismas fuentes.
 - Boton "Actualizar": en localhost llama a `POST /actualizar` (servidor.py) y ejecuta
   la busqueda real; en GitHub Pages relee `docs/eventos.json` (ultima version publicada).
-  No hay enlace a GitHub en la pagina publica.
+  No hay enlace a GitHub en la pagina publica. Vive en la barra de filtros, a la derecha
+  de "Limpiar filtros", y al terminar encuadra el mapa en los eventos filtrados
+  (`ajustarMapaALista`: `fitBounds` con `maxZoom:12`, o `setView` si hay un solo punto).
 
 ## Reglas del proyecto
 
