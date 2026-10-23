@@ -423,7 +423,7 @@
           "fecha": "2026-10-22T09:32:54-03:00"
         }
       ],
-      "estado": "nuevo"
+      "estado": "confirmado"
     },
     {
       "id": "c2a5d74fab45",
@@ -485,7 +485,7 @@
           "fecha": "2026-10-22T09:51:00-03:00"
         }
       ],
-      "estado": "nuevo"
+      "estado": "confirmado"
     },
     {
       "id": "c3a1e0d2abe6",
@@ -791,6 +791,11 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/reel/DeuPnn1DD4o/",
           "fecha": "2026-10-20T13:19:27-03:00"
+        },
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/duoc-uc-reabrira-sus-puertas-en-san-carlos-de-apoquindo-tras-17-dias-cerrado-por-el-ingreso-del-aluvion/",
+          "fecha": "2026-10-23T13:40:05-03:00"
         }
       ],
       "estado": "descartado"

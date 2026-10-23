@@ -412,7 +412,7 @@
       "fuente_3": "",
       "url_3": "",
       "fecha_3": "",
-      "estado": "nuevo",
+      "estado": "confirmado",
       "issue": "11"
     },
     {
@@ -458,7 +458,7 @@
       "fuente_3": "TVN",
       "url_3": "https://www.tvn.cl/programas/buenos-dias-a-todos/actualidad/aluvion-en-concepcion-barro-colapso-viviendas-y-automoviles-video",
       "fecha_3": "2026-10-22T09:51:00-03:00",
-      "estado": "nuevo",
+      "estado": "confirmado",
       "issue": ""
     },
     {
@@ -754,9 +754,9 @@
       "fuente_2": "Instagram",
       "url_2": "https://www.instagram.com/reel/DeuPnn1DD4o/",
       "fecha_2": "2026-10-20T13:19:27-03:00",
-      "fuente_3": "",
-      "url_3": "",
-      "fecha_3": "",
+      "fuente_3": "La Tercera",
+      "url_3": "https://www.latercera.com/nacional/noticia/duoc-uc-reabrira-sus-puertas-en-san-carlos-de-apoquindo-tras-17-dias-cerrado-por-el-ingreso-del-aluvion/",
+      "fecha_3": "2026-10-23T13:40:05-03:00",
       "estado": "descartado",
       "issue": ""
     },
