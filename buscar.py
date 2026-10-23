@@ -59,6 +59,24 @@ def _url_real_bing(link: str) -> str:
     return link
 
 
+def nombre_medio(fuente: str, url_defecto: str = "") -> str:
+    """Devuelve un nombre de medio legible.
+
+    Algunos feeds traen la URL del medio en el campo `source` en vez del nombre
+    (p. ej. "https://auroranoticias.cl/"). En ese caso se usa el dominio.
+    """
+    texto = limpiar_html(str(fuente or "")).strip()
+    if texto and "://" not in texto and not texto.lower().startswith("www."):
+        return texto
+    candidata = texto if "://" in texto else (url_defecto or "")
+    try:
+        host = urlparse(candidata).netloc.lower()
+    except ValueError:
+        host = ""
+    host = host[4:] if host.startswith("www.") else host
+    return host or "Google News"
+
+
 def _fuente_google(entry) -> str:
     src = entry.get("source")
     if isinstance(src, dict):
@@ -105,9 +123,9 @@ def _registros_desde_feed(contenido: bytes, origen: str, fuente_defecto: str) ->
             link = _url_real_bing(link)
         descripcion = limpiar_html(str(entry.get("summary") or entry.get("description") or ""))
         if origen == "google_news":
-            fuente = _fuente_google(entry)
+            fuente = nombre_medio(_fuente_google(entry), link)
         elif origen == "bing_news":
-            fuente = limpiar_html(str(entry.get("news_source") or "")) or fuente_defecto
+            fuente = nombre_medio(limpiar_html(str(entry.get("news_source") or "")) or fuente_defecto, link)
         else:
             fuente = fuente_defecto
         # Google/Bing a veces dejan " - Nombre del medio" al final del titulo.

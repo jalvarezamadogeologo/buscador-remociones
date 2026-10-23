@@ -10,6 +10,7 @@ import html
 import json
 import os
 import re
+import sys
 import tempfile
 import unicodedata
 from datetime import datetime, timezone
@@ -17,6 +18,15 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import yaml
+
+# La consola de Windows puede ser cp1252: un titulo con emoji no debe romper el
+# pipeline solo por el log. Se reemplazan los caracteres no representables.
+_reconfigurar = getattr(sys.stdout, "reconfigure", None)
+if _reconfigurar is not None:
+    try:
+        _reconfigurar(errors="replace")
+    except ValueError:
+        pass
 
 RAIZ = Path(__file__).resolve().parent
 DATA = RAIZ / "data"

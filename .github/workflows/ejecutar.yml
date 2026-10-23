@@ -49,6 +49,9 @@ jobs:
       - name: Dependencias
         run: pip install -r requirements.txt
 
+      - name: Tests
+        run: python -m pytest -q
+
       - name: Ejecutar monitoreo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

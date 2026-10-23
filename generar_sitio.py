@@ -68,6 +68,10 @@ PLANTILLA = """<!DOCTYPE html>
   #periodo { width:110px; }
   select:disabled { background:#f0f2f5; color:#9aa5b1; cursor:not-allowed; }
   .btn-limpiar { background:#fff; color:var(--suave); border:1px solid var(--borde); cursor:pointer; font:inherit; font-size:13.5px; padding:8px 12px; border-radius:6px; }
+  .btn-limpiar.activo { background:var(--acento); color:#fff; border-color:var(--acento); }
+  .badge { display:inline-block; margin-left:6px; padding:1px 6px; border-radius:8px; font-size:10.5px; text-transform:uppercase; letter-spacing:.3px; vertical-align:middle; white-space:nowrap; }
+  .badge-aviso { background:#fff4e0; color:#8a5a00; border:1px solid #f0d9a8; }
+  .badge-red { background:#eef4fa; color:#17456b; border:1px solid #c8d8e8; }
   #mapa { height:480px; margin:16px 0; border:1px solid var(--borde); border-radius:8px; }
   .tabla-wrap { background:#fff; border:1px solid var(--borde); border-radius:8px; overflow:auto; }
   table { border-collapse:collapse; width:100%; font-size:13.5px; }
@@ -120,6 +124,7 @@ PLANTILLA = """<!DOCTYPE html>
     <div class="campo"><label for="periodo">Periodo (dias)</label>
       <input id="periodo" type="number" min="0" step="1" value="90" title="0 = todo el historico"></div>
     <button id="btn-limpiar" class="btn-limpiar" type="button">Limpiar filtros</button>
+    <button id="btn-validados" class="btn-limpiar" type="button" aria-pressed="false">Solo validados</button>
     <button id="btn-actualizar" class="btn-primario" type="button">Actualizar</button>
   </div>
 
@@ -182,6 +187,10 @@ function dentroDeRango(e,dias){ if(!dias) return true; const t=fechaMs(e); retur
 function colorTipo(t){ return COLORES[t] || '#7f7f7f'; }
 function etiquetaTipo(t){ return TIPOS[t] || (t || 'Otro'); }
 function tieneCoords(e){ return e.lat !== '' && e.lon !== '' && e.lat != null && e.lon != null; }
+function esRedSocial(url){
+  const u = (url||'').toLowerCase();
+  return ['instagram.com','facebook.com','x.com','twitter.com'].some(d=>u.includes(d));
+}
 
 // ---- mapa: capas base seleccionables (calles, hillshade, satelite) ----
 const mapa = L.map('mapa', {scrollWheelZoom:true, zoomControl:true, doubleClickZoom:true, touchZoom:true}).setView([-35.5,-71.0],5);
@@ -211,7 +220,9 @@ const inputPeriodo = document.getElementById('periodo');
 const filas = document.getElementById('filas');
 const btnActualizar = document.getElementById('btn-actualizar');
 const btnDescargar = document.getElementById('btn-descargar');
+const btnValidados = document.getElementById('btn-validados');
 const cajaEstado = document.getElementById('estado');
+let soloValidados = false;
 
 function opciones(sel, valores, etiquetaTodos){
   const prev = sel.value;
@@ -249,6 +260,7 @@ function filtrar(){
   const dias = parseInt(inputPeriodo.value, 10);
   const ventana = (isNaN(dias) || dias < 0) ? 0 : dias;
   return EVENTOS.filter(e=>{
+    if (soloValidados && !esValidado(e.id)) return false;
     if (selTipo.value && e.tipo_evento !== selTipo.value) return false;
     if (selRegion.value && e.region !== selRegion.value) return false;
     if (selComuna.value && e.comuna !== selComuna.value) return false;
@@ -309,10 +321,15 @@ function render(){
     const casilla = `<input type="checkbox" class="chk-validar" data-validar-id="${esc(e.id)}"` +
       (esValidado(e.id) ? ' checked' : '') +
       ` aria-label="Validar evento ${esc(e.evento)}">`;
+    const fuentesEvento = e.fuentes || [];
+    const soloRed = fuentesEvento.length > 0 && fuentesEvento.every(f=>esRedSocial(f.url));
+    const avisos =
+      (tieneCoords(e) ? '' : '<span class="badge badge-aviso" title="Sin coordenadas: no aparece en el mapa">sin coords</span>') +
+      (soloRed ? '<span class="badge badge-red" title="Todas sus fuentes son redes sociales; verificar en el medio">solo red</span>' : '');
     return `<tr${clases ? ' class="' + clases + '"' : ''}>
       <td>${esc(fechaCorta(e.fecha_publicacion||e.fecha_deteccion))}</td>
       <td><span class="tipo" style="background:${colorTipo(e.tipo_evento)}">${esc(etiquetaTipo(e.tipo_evento))}</span></td>
-      <td class="evento">${esc(e.evento)}</td>
+      <td class="evento">${esc(e.evento)}${avisos}</td>
       <td>${esc(e.region||'-')}${e.comuna?' / '+esc(e.comuna):''}</td>
       <td>${detallesFuentes(e.fuentes)}</td>
       <td class="estado-${esc(e.estado||'nuevo')}">${esc(e.estado||'nuevo')}</td>
@@ -357,6 +374,9 @@ function limpiar(){
   selTipo.value = '';
   selRegion.value = '';
   inputPeriodo.value = 90;
+  soloValidados = false;
+  btnValidados.classList.remove('activo');
+  btnValidados.setAttribute('aria-pressed', 'false');
   poblarComunas();
   render();
 }
@@ -476,6 +496,7 @@ filas.addEventListener('change', ev=>{
   marcarValidado(casilla.getAttribute('data-validar-id'), casilla.checked);
   const fila = casilla.closest('tr');
   if (fila) fila.classList.toggle('validado', casilla.checked);
+  if (soloValidados) render();  // con el filtro activo, la fila entra o sale al instante
 });
 
 selRegion.addEventListener('change', ()=>{ poblarComunas(); render(); });
@@ -483,6 +504,12 @@ selRegion.addEventListener('change', ()=>{ poblarComunas(); render(); });
 inputPeriodo.addEventListener('input', render);
 buscar.addEventListener('input', render);
 document.getElementById('btn-limpiar').addEventListener('click', limpiar);
+btnValidados.addEventListener('click', ()=>{
+  soloValidados = !soloValidados;
+  btnValidados.classList.toggle('activo', soloValidados);
+  btnValidados.setAttribute('aria-pressed', soloValidados ? 'true' : 'false');
+  render();
+});
 btnActualizar.addEventListener('click', actualizar);
 
 poblarFiltros();

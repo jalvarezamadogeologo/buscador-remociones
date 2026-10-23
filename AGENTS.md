@@ -16,6 +16,8 @@ estatico con mapa.
 - `geocodificar.py` — Nominatim + cache + overrides manuales.
 - `resolver_url.py` — resuelve enlaces de Google News a la URL del medio (RPC `Fbv4je`) + cache.
 - `resolver_urls.py` — CLI para resolver los enlaces del catastro existente y regenerar el sitio.
+- `revisar_catastro.py` — mantenimiento: descarte de prevencion/contexto, re-geocodificacion
+  por toponimo y correccion de fuentes guardadas como URL.
 - `generar_sitio.py` — `docs/index.html` (tabla + Leaflet).
 - `notificar.py` — GitHub Issues.
 - `config.yaml` — tipos, palabras clave, geografia, fuentes, umbrales.
@@ -29,6 +31,7 @@ python actualizar.py --lookback 24 --sin-notificar
 python actualizar.py --sin-redes   # sin X/Instagram/Facebook
 python actualizar.py --sin-resolver # sin resolver enlaces de Google News
 python resolver_urls.py            # resolver enlaces del catastro existente
+python revisar_catastro.py         # prevencion + toponimos + fuentes con URL
 python servidor.py                 # sitio local con boton Actualizar (127.0.0.1:8770)
 iniciar.cmd                        # lo mismo, doble clic
 python -m pytest -q
@@ -62,3 +65,11 @@ python -m pytest -q
 - Las URLs guardadas deben ser del medio, no de Google News (`news.google.com/rss/articles/...`):
   el pipeline las resuelve en cada corrida y `resolver_urls.py` arregla las antiguas. Los
   fallos se cachean en `data/urlcache.json` (valor vacio = no reintentar).
+- Clasificacion: las notas de prevencion/contexto (riesgo, alertas, entrevistas, "podrian",
+  recomendaciones) se descartan salvo que el titulo tenga una senal de hecho ocurrido
+  (`dejo`, `evacuan`, `rescatan`, `sigue`, `creciendo`, `alerta roja`, ...).
+- Geocodificacion: `geografia.toponimos` + `data/georref.json` tienen prioridad sobre la
+  comuna/region. Si agregas un paraje recurrente, sumalo a `toponimos`; si Nominatim lo
+  confunde con un homonimo, fija sus coordenadas en `georref.json`.
+- El workflow corre `pytest` antes de publicar y avisa por issue (etiqueta `alerta-pipeline`)
+  si la resolucion de enlaces se degrada.

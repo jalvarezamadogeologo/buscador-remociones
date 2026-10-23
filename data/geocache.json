@@ -1,90 +1,18 @@
 {
-  "concepcion chile": {
-    "lat": -36.8270698,
-    "lon": -73.0502064
+  "caracoles chile": {
+    "lat": -34.4212812,
+    "lon": -70.9388253
   },
-  "los andes chile": {
-    "lat": -32.8336867,
-    "lon": -70.5981609
+  "juan riquelme biobio chile": {
+    "lat": -36.801491,
+    "lon": -72.9550685
   },
-  "biobio chile": {
-    "lat": -37.3391407,
-    "lon": -72.4106825
+  "juan riquelme concepcion chile": {
+    "lat": -36.801491,
+    "lon": -72.9550685
   },
-  "laguna del inca chile": {
-    "lat": -32.8224585,
-    "lon": -70.1330868
-  },
-  "arauco chile": {
-    "lat": -37.246248,
-    "lon": -73.3176399
-  },
-  "portillo chile": {
-    "lat": -32.8364183,
-    "lon": -70.1290835
-  },
-  "puente alto chile": {
-    "lat": -33.6095279,
-    "lon": -70.5754736
-  },
-  "lota chile": {
-    "lat": -37.0944533,
-    "lon": -73.1564024
-  },
-  "constitucion chile": {
-    "lat": -35.3318306,
-    "lon": -72.4118998
-  },
-  "la reina chile": {
-    "lat": -33.442282,
-    "lon": -70.5432729
-  },
-  "las condes chile": {
-    "lat": -33.4084548,
-    "lon": -70.5671489
-  },
-  "vina del mar chile": {
-    "lat": -33.0244535,
-    "lon": -71.5517636
-  },
-  "nuble chile": {
-    "lat": -36.6331577,
-    "lon": -71.9384821
-  },
-  "santiago chile": {
-    "lat": -33.4376995,
-    "lon": -70.6510671
-  },
-  "san carlos chile": {
-    "lat": -36.3792284,
-    "lon": -72.0179525
-  },
-  "chillan chile": {
-    "lat": -36.6066616,
-    "lon": -72.1033194
-  },
-  "valparaiso chile": {
-    "lat": -32.5976089,
-    "lon": -70.8529753
-  },
-  "santa cruz chile": {
-    "lat": -34.6403243,
-    "lon": -71.3661297
-  },
-  "metropolitana chile": {
-    "lat": -33.5739341,
-    "lon": -70.6205518
-  },
-  "talcahuano chile": {
-    "lat": -36.7144863,
-    "lon": -73.1141087
-  },
-  "coquimbo chile": {
-    "lat": -30.7546652,
-    "lon": -70.9005536
-  },
-  "los rios chile": {
-    "lat": -39.9742747,
-    "lon": -72.6677006
+  "higueras talcahuano chile": {
+    "lat": -36.7396171,
+    "lon": -73.1025529
   }
 }

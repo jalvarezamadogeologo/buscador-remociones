@@ -4,6 +4,85 @@ from __future__ import annotations
 
 from comun import contiene, normalizar
 
+# Titulos que anuncian prevencion, riesgo, entrevistas o notas de contexto: no
+# son el hecho ocurrido. Solo se descartan si el titulo no trae ademas una
+# senal clara de evento consumado.
+SENALES_PREVENCION = (
+    "riesgo de",
+    "alerta por",
+    "alertan",
+    "advierten",
+    "advertir",
+    "podrian",
+    "recomienda",
+    "recomiendan",
+    "entrevista",
+    "piscinas decantadoras",
+    "simulacro",
+    "monitorean",
+    "se preparan",
+    "no se puede descartar",
+    "protocolo",
+)
+
+SENALES_EVENTO = (
+    "dejo",
+    "dejando",
+    "provoco",
+    "afecto",
+    "afectando",
+    "evacua",
+    "evacuan",
+    "evacuaron",
+    "rescatan",
+    "rescataron",
+    "rescato",
+    "fallecidos",
+    "fallecidas",
+    "muertos",
+    "muertas",
+    "heridos",
+    "heridas",
+    "se registro",
+    "ocurrio",
+    "se trago",
+    "colapso",
+    "interrumpio",
+    "bloqueo",
+    "inundo",
+    "anego",
+    "destruyo",
+    "cayo",
+    "se derrumbo",
+    "alerta roja",
+    "piden evacuar",
+    "damnificados",
+    "sigue",
+    "continua",
+    "creciendo",
+    "aumentando",
+    "reportan",
+    "registra",
+    "reactivo",
+    "reactiva",
+    "busqueda",
+    "buscan",
+    "retoma",
+    "retoman",
+)
+
+
+def es_prevencion(titulo_n: str, config: dict) -> bool:
+    """True si el titulo es una nota de prevencion/contexto y no un evento."""
+    if not titulo_n:
+        return False
+    cfg = config.get("clasificacion") or {}
+    senales = cfg.get("senales_prevencion") or SENALES_PREVENCION
+    eventos = cfg.get("senales_evento") or SENALES_EVENTO
+    if not any(contiene(titulo_n, s) for s in senales):
+        return False
+    return not any(contiene(titulo_n, e) for e in eventos)
+
 
 def _detectar_tipo(texto: str, config: dict) -> tuple[str, str, list[str], dict]:
     """Devuelve (tipo, etiqueta, claves_encontradas, puntaje_por_tipo).
@@ -79,6 +158,9 @@ def clasificar(registro: dict, config: dict) -> dict | None:
     titulo_n = normalizar(registro.get("titulo", ""))
     texto = normalizar(f"{registro.get('titulo', '')} {registro.get('descripcion', '')}")
     if not texto:
+        return None
+
+    if es_prevencion(titulo_n, config):
         return None
 
     # Los posts de redes son cortos: se acepta una sola coincidencia en el texto

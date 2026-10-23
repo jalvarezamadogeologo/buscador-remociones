@@ -24,7 +24,7 @@ from deduplicar import clave_registro, cargar_vistos, guardar_vistos
 from generar_sitio import generar_sitio
 from geocodificar import geocodificar_eventos
 from guardar import cargar_eventos, guardar_eventos
-from notificar import notificar
+from notificar import avisar_pipeline, notificar
 from resolver_url import resolver_eventos
 
 
@@ -116,6 +116,18 @@ def main(argv: Sequence[str] | None = None) -> int:
             f"enlaces resueltos: {enlaces['resueltos']} (cache {enlaces['cacheados']}, "
             f"fallidos {enlaces['fallidos']}, omitidos {enlaces['omitidos']})"
         )
+        if enlaces["intentados"] >= 3 and enlaces["resueltos"] == 0:
+            aviso = (
+                f"Se intentaron resolver {enlaces['intentados']} enlaces de Google News y "
+                f"ninguno se pudo resolver ({enlaces['fallidos']} fallidos). "
+                "Es probable que el RPC interno de Google haya cambiado."
+            )
+            log(f"AVISO: {aviso}")
+            avisar_pipeline(
+                config,
+                "[Alerta] Resolucion de enlaces de Google News degradada",
+                aviso,
+            )
 
     # 4) Persistencia (vistos solo si hay claves nuevas)
     guardar_eventos(eventos)

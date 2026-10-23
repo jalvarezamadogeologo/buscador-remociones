@@ -1,3 +1,6 @@
 feedparser>=6.0
 PyYAML>=6.0
 requests>=2.31
+
+# Pruebas (el workflow las corre antes de publicar)
+pytest>=8.0

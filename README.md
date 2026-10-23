@@ -17,6 +17,13 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
   tipos de remocion en masa y desbordes/inundaciones), region (las 16 del pais),
   comuna (se habilita al elegir una region y muestra solo sus comunas) y periodo
   en dias como numero entero (0 = todo el historico).
+- **Boton "Solo validados"** (barra de filtros): muestra en la tabla y en el mapa solo
+  los eventos con la casilla "Evento validado" marcada. Se desactiva con "Limpiar filtros"
+  y no borra las marcas.
+- **Indicadores de confianza** en la columna "Evento":
+  - `sin coords`: el evento no tiene coordenadas, no aparece en el mapa;
+  - `solo red`: todas sus fuentes son redes sociales (X/Instagram/Facebook), conviene
+    verificarlo en el medio.
 - **Mapa**: zoom con la rueda del mouse, doble clic y botones +/-; selector de capa
   base entre **Calles** (OpenStreetMap), **Hillshade** (Esri) y **Satelite** (Esri).
 - **Tabla:** cada fila es un **evento**, no una noticia. La columna "Evento" muestra
@@ -59,6 +66,9 @@ python actualizar.py --fuentes google_news
 python actualizar.py --sin-geocodificar --max-geocodificaciones 0
 python actualizar.py --sin-redes           # no consultar X/Instagram/Facebook
 python actualizar.py --sin-resolver        # no resolver enlaces de Google News
+python revisar_catastro.py                 # revisar el catalogo existente (prevencion,
+                                           # toponimos y fuentes con URL) y regenerar el sitio
+python revisar_catastro.py --sin-geocodificar --sin-sitio
 ```
 
 ### Enlaces de las fuentes
@@ -163,9 +173,13 @@ Notas:
 - `tipos_evento`: tipos (aluvion, deslizamiento, caida de rocas, alud, socavon, volcamiento,
   flujo de tierra, avalancha de rocas, desborde/inundacion, lahar, erosion, subsidencia) y
   palabras clave. Las claves se escriben sin tildes; el codigo normaliza el texto.
-- `geografia`: 16 regiones con sus comunas y paises a excluir (evita homonimos). La comuna
-  detectada asigna automaticamente su region.
-- `fuentes`: Google News, Bing News y feeds RSS directos opcionales.
+- `geografia`: 16 regiones con sus comunas, `toponimos` (parajes/sectores para geocodificar
+  con precision) y paises a excluir (evita homonimos). La comuna detectada asigna
+  automaticamente su region.
+- `fuentes`: Google News, Bing News y feeds RSS directos (hoy: La Tercera, Cooperativa,
+  The Clinic, La Discusion, El Rancaguino y La Prensa Austral).
+- `clasificacion`: opcional; `senales_prevencion` y `senales_evento` para descartar notas
+  de prevencion/contexto (por defecto usa las listas del codigo).
 - `redes`: busqueda en X, Instagram y Facebook via Google News con `site:` (sin API keys),
   redes activas y maximo de publicaciones por red.
 - `consulta.max_terminos`: cuantas palabras sueltas se envian en la busqueda
@@ -206,11 +220,14 @@ marcadores en el mapa.
   API keys. La cobertura depende de lo que Google indexe de cada red y no es tiempo real;
   la API oficial de X es pay-per-use y las de Meta requieren apps/tokens que expiran.
   Algunos enlaces de Facebook/Instagram pueden pedir inicio de sesion.
-- **Falsos positivos:** notas de prevencion o de contexto pueden entrar; el operador los
-  marca como `descartado` en el CSV.
+- **Falsos positivos:** las notas de prevencion/contexto (riesgo, alertas, entrevistas,
+  declaraciones) se descartan automaticamente al clasificar; si alguna entra igual, el
+  operador la marca como `descartado` en el CSV.
 - **Agrupacion:** las noticias del mismo hecho se agrupan por tipo + lugar + fecha; si dos
   hechos distintos ocurren en la misma comuna el mismo dia, pueden quedar en un solo evento.
   Se conservan solo 3 fuentes por evento.
-- **Geocodificacion:** es aproximada (comuna o region). Para precision, agregar el paraje
-  en `data/georref.json`.
+- **Geocodificacion:** usa `geografia.toponimos` (Portillo, Laguna del Inca, Caracoles,
+  Juan Riquelme, Higueras...) y `data/georref.json` (coordenadas manuales) antes que la
+  comuna/region. Si el toponimo no aparece en el titulo, el punto queda en el centro de la
+  comuna. Los eventos sin coordenadas se marcan `sin coords` y no aparecen en el mapa.
 - **Texto completo:** se trabaja con titulo y resumen del feed; no se descarga la nota.

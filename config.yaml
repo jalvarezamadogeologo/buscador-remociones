@@ -183,6 +183,18 @@ geografia:
       comunas: ["Coyhaique", "Puerto Aysen", "Puerto Cisnes", "Chile Chico", "Cochrane"]
     - nombre: "Magallanes"
       comunas: ["Punta Arenas", "Puerto Natales", "Porvenir", "Puerto Williams"]
+
+  # Toponimos especificos (parajes, rutas y sectores) que, si aparecen en el
+  # titulo, se usan para geocodificar antes que la comuna/region. Evita mandar
+  # el punto al centro de la comuna cuando la noticia nombra un lugar puntual.
+  toponimos:
+    - Paso Cristo Redentor
+    - Laguna del Inca
+    - Portillo
+    - Caracoles
+    - Juan Riquelme
+    - Higueras
+
   paises_excluir:
     - peru
     - argentina
@@ -232,10 +244,21 @@ fuentes:
     parametros:
       format: "rss"
       mkt: "es-CL"
-  feeds_rss: []
-  # feeds_rss:
-  #   - nombre: "Medio"
-  #     url: "https://ejemplo.cl/rss.xml"
+  feeds_rss:
+    # Feeds directos (verificados 2026-10-23). Complementan a los agregadores y
+    # traen noticias regionales que Google/Bing a veces no indexan.
+    - nombre: "La Tercera"
+      url: "https://www.latercera.com/arc/outboundfeeds/rss/?outputType=xml"
+    - nombre: "Cooperativa"
+      url: "https://www.cooperativa.cl/noticias/site/tax/port/all/rss____1.xml"
+    - nombre: "The Clinic"
+      url: "https://www.theclinic.cl/feed/"
+    - nombre: "La Discusión"
+      url: "https://www.ladiscusion.cl/feed/"
+    - nombre: "El Rancagüino"
+      url: "https://www.elrancaguino.cl/feed/"
+    - nombre: "La Prensa Austral"
+      url: "https://www.laprensaaustral.cl/feed/"
 
 # Terminos principales para armar la consulta web (sin tildes)
 consulta:

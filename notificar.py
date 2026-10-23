@@ -107,6 +107,53 @@ def crear_issue(repo: str, token: str, etiqueta: str, evento: dict) -> int | Non
     return None
 
 
+def avisar_pipeline(config: dict, asunto: str, detalle: str) -> bool:
+    """Abre un issue de alerta si el pipeline se degrada (una sola vez por asunto).
+
+    Sirve para avisar que, p. ej., la resolucion de enlaces de Google News dejo
+    de funcionar. Sin token (modo local) solo registra el aviso en el log.
+    """
+    repo = _repo(config)
+    token = _token()
+    if not repo or not token:
+        log(f"AVISO (sin token, no se crea issue): {asunto}")
+        return False
+
+    etiqueta = "alerta-pipeline"
+    asegurar_etiqueta(repo, token, etiqueta)
+    try:
+        resp = requests.get(
+            f"{API}/repos/{repo}/issues",
+            params={"labels": etiqueta, "state": "open", "per_page": 50},
+            headers=_headers(token),
+            timeout=20,
+        )
+        if resp.ok:
+            for issue in resp.json():
+                if issue.get("title") == asunto:
+                    log(f"aviso ya registrado en el issue #{issue.get('number')}")
+                    return False
+    except requests.RequestException as exc:
+        log(f"aviso: no se pudieron listar alertas abiertas: {exc}")
+
+    payload = {
+        "title": asunto,
+        "body": detalle + "\n\n---\nGenerado automaticamente por catastro-remociones.",
+        "labels": [etiqueta],
+    }
+    try:
+        resp = requests.post(
+            f"{API}/repos/{repo}/issues", json=payload, headers=_headers(token), timeout=25
+        )
+        if resp.status_code == 201:
+            log(f"aviso creado: issue #{resp.json().get('number')}")
+            return True
+        log(f"aviso: no se pudo crear el issue ({resp.status_code}): {resp.text[:160]}")
+    except (requests.RequestException, ValueError) as exc:
+        log(f"aviso: fallo al crear el issue: {exc}")
+    return False
+
+
 def notificar(eventos: list[dict], config: dict, solo_ids: set[str] | None = None) -> int:
     """Crea issues para eventos nuevos pendientes. Devuelve cuantos se crearon.
 

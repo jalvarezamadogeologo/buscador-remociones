@@ -1,7 +1,28 @@
 {
-  "actualizado": "2026-10-23 08:04",
-  "total": 39,
+  "actualizado": "2026-10-23 11:40",
+  "total": 41,
   "eventos": [
+    {
+      "id": "0cb6637fdb49",
+      "fecha_publicacion": "2026-10-23T11:00:12-03:00",
+      "fecha_deteccion": "2026-10-23T11:40:11-03:00",
+      "titulo": "📌 | Las otras dos víctimas fatales por la avalancha habían sido identificadas como Magdalena Acuña Jiménez (56) y Rodrigo Peña Troncoso (36). Todos de nacionalidad chilena",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/LosAndesDiario/posts/-las-otras-dos-v%C3%ADctimas-fatales-por-la-avalancha-hab%C3%ADan-sido-identificadas-como-/1533218058838060/",
+          "fecha": "2026-10-23T11:00:12-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "ddfd47c73f74",
       "fecha_publicacion": "2026-10-22T23:16:43-03:00",
@@ -25,7 +46,7 @@
     },
     {
       "id": "c75590330c96",
-      "fecha_publicacion": "2026-10-22T20:37:55-03:00",
+      "fecha_publicacion": "2026-10-22T19:30:57-03:00",
       "fecha_deteccion": "2026-10-23T00:32:10-03:00",
       "titulo": "Otra avalancha en el lado chileno dificulta el tránsito en alta montaña (mobile)",
       "evento": "Alud / avalancha en Chile",
@@ -36,6 +57,11 @@
       "lat": "",
       "lon": "",
       "fuentes": [
+        {
+          "medio": "Diario El Sol Mendoza",
+          "url": "https://www.elsol.com.ar/mendoza/otra-avalancha-en-el-lado-chileno-complica-el-transito-en-alta-montana/",
+          "fecha": "2026-10-22T19:30:57-03:00"
+        },
         {
           "medio": "Mendoza 24",
           "url": "https://mendoza24.com.ar/noticias_locales/36899-Otra-avalancha-en-el-lado-chileno-dificulta-el-transito-en-alta-montania",
@@ -75,8 +101,8 @@
       "tipo_etiqueta": "Caída de rocas",
       "region": "",
       "comuna": "",
-      "lat": "",
-      "lon": "",
+      "lat": "-32.826445",
+      "lon": "-70.095163",
       "fuentes": [
         {
           "medio": "Facebook",
@@ -96,8 +122,8 @@
       "tipo_etiqueta": "Alud / avalancha",
       "region": "Valparaiso",
       "comuna": "Los Andes",
-      "lat": "-32.833687",
-      "lon": "-70.598161",
+      "lat": "-32.836418",
+      "lon": "-70.129083",
       "fuentes": [
         {
           "medio": "Los Andes",
@@ -134,6 +160,11 @@
           "medio": "Canal 9 Bío Bío Televisión",
           "url": "https://www.canal9.cl/episodios/noticias/2026/10/23/talcahuano-socavon-en-subida-al-cerro-la-gloria-obliga-a-restringir-el-transito-tras-las-lluvias",
           "fecha": "2026-10-23T06:08:12-03:00"
+        },
+        {
+          "medio": "Diario Concepción",
+          "url": "https://www.diarioconcepcion.cl/ciudad/2026/10/23/subida-la-gloria-transporte-publico-talcahuano.html",
+          "fecha": "2026-10-23T10:28:33-03:00"
         }
       ],
       "estado": "nuevo"
@@ -181,6 +212,27 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/coraltv6/videos/caluma-alerta-vial-en-la-esmeralda-caluma-socav%C3%B3n-en-puente-que-une-bol%C3%ADvar-y-lo/1161504329870207/",
           "fecha": "2026-10-22T16:28:54-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "1c2157ca2fd7",
+      "fecha_publicacion": "2026-10-22T16:10:38-03:00",
+      "fecha_deteccion": "2026-10-23T11:40:11-03:00",
+      "titulo": "Concepción: Alud cubre de barro calle del sector rural Juan Riquelme - www.soy-chile.cl",
+      "evento": "Alud / avalancha en Concepcion",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Biobio",
+      "comuna": "Concepcion",
+      "lat": "-36.801491",
+      "lon": "-72.955068",
+      "fuentes": [
+        {
+          "medio": "news.google.com",
+          "url": "https://www.soy-chile.cl/santiago/sociedad/2026/10/22/969715/concepcion-alud-barro.html",
+          "fecha": "2026-10-22T16:10:38-03:00"
         }
       ],
       "estado": "nuevo"
@@ -272,7 +324,7 @@
           "fecha": "2026-10-22T12:33:19-03:00"
         },
         {
-          "medio": "https://auroranoticias.cl/",
+          "medio": "auroranoticias.cl",
           "url": "https://auroranoticias.cl/actualidad/rescatan-tercer-y-ultimo-cuerpo-en-laguna-del-inca-tras-avalancha/",
           "fecha": "2026-10-22T16:49:17-03:00"
         }
@@ -298,14 +350,14 @@
           "fecha": "2026-10-22T09:38:09-03:00"
         },
         {
+          "medio": "X",
+          "url": "https://x.com/24HorasTVN/status/2113283718907617427",
+          "fecha": "2026-10-22T11:57:56-03:00"
+        },
+        {
           "medio": "La Tercera",
           "url": "https://www.latercera.com/nacional/noticia/fiscalia-confirma-rescate-de-cuerpo-de-tercera-victima-de-avalancha-en-portillo-y-apunta-a-que-se-trato-de-un-accidente/",
           "fecha": "2026-10-22T17:58:18-03:00"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://www.lanacion.cl/hallan-cuerpo-de-la-tercera-victima-de-la-avalancha-en-portillo/",
-          "fecha": "2026-10-22T18:56:37-03:00"
         }
       ],
       "estado": "nuevo"
@@ -320,8 +372,8 @@
       "tipo_etiqueta": "Aluvión / flujo de detritos",
       "region": "Biobio",
       "comuna": "",
-      "lat": "-37.339141",
-      "lon": "-72.410682",
+      "lat": "-36.801491",
+      "lon": "-72.955068",
       "fuentes": [
         {
           "medio": "Radio Maray",
@@ -341,8 +393,8 @@
       "tipo_etiqueta": "Deslizamiento",
       "region": "Biobio",
       "comuna": "Concepcion",
-      "lat": "-36.827070",
-      "lon": "-73.050206",
+      "lat": "-36.801491",
+      "lon": "-72.955068",
       "fuentes": [
         {
           "medio": "Diario Concepción",
@@ -372,8 +424,8 @@
       "tipo_etiqueta": "Aluvión / flujo de detritos",
       "region": "Biobio",
       "comuna": "Concepcion",
-      "lat": "-36.827070",
-      "lon": "-73.050206",
+      "lat": "-36.801491",
+      "lon": "-72.955068",
       "fuentes": [
         {
           "medio": "Cooperativa",
@@ -403,8 +455,8 @@
       "tipo_etiqueta": "Caída de rocas",
       "region": "Biobio",
       "comuna": "Talcahuano",
-      "lat": "-36.714486",
-      "lon": "-73.114109",
+      "lat": "-36.739617",
+      "lon": "-73.102553",
       "fuentes": [
         {
           "medio": "Instagram",
@@ -424,8 +476,8 @@
       "tipo_etiqueta": "Deslizamiento",
       "region": "Biobio",
       "comuna": "Talcahuano",
-      "lat": "-36.714486",
-      "lon": "-73.114109",
+      "lat": "-36.739617",
+      "lon": "-73.102553",
       "fuentes": [
         {
           "medio": "Instagram",
@@ -516,7 +568,7 @@
           "fecha": "2026-10-22T17:33:26-03:00"
         }
       ],
-      "estado": "nuevo"
+      "estado": "descartado"
     },
     {
       "id": "d4c1cdc36879",
@@ -558,7 +610,7 @@
           "fecha": "2026-10-21T11:57:15-03:00"
         }
       ],
-      "estado": "nuevo"
+      "estado": "descartado"
     },
     {
       "id": "962a67649cc6",
@@ -673,7 +725,7 @@
           "fecha": "2026-10-20T09:04:00-03:00"
         }
       ],
-      "estado": "nuevo"
+      "estado": "descartado"
     },
     {
       "id": "c19240d0d813",
@@ -699,7 +751,7 @@
           "fecha": "2026-10-20T13:19:27-03:00"
         }
       ],
-      "estado": "nuevo"
+      "estado": "descartado"
     },
     {
       "id": "e08ea0df863d",
@@ -763,8 +815,8 @@
       "tipo_etiqueta": "Alud / avalancha",
       "region": "Metropolitana",
       "comuna": "Santiago",
-      "lat": "-33.437700",
-      "lon": "-70.651067",
+      "lat": "-32.822459",
+      "lon": "-70.133087",
       "fuentes": [
         {
           "medio": "X",
@@ -805,8 +857,8 @@
       "tipo_etiqueta": "Alud / avalancha",
       "region": "Valparaiso",
       "comuna": "Los Andes",
-      "lat": "-32.833687",
-      "lon": "-70.598161",
+      "lat": "-32.836418",
+      "lon": "-70.129083",
       "fuentes": [
         {
           "medio": "CNN Chile",
