@@ -86,6 +86,12 @@
     <div class="campo"><label for="buscar">Buscar</label>
       <input id="buscar" type="search" placeholder="Titulo, lugar, keyword..."></div>
     <div class="campo"><label for="tipo">Tipo</label><select id="tipo"></select></div>
+    <div class="campo"><label for="origen">Origen</label>
+      <select id="origen">
+        <option value="">Todas</option>
+        <option value="prensa">Prensa</option>
+        <option value="redes">Redes sociales</option>
+      </select></div>
     <div class="campo"><label for="region">Region</label><select id="region"></select></div>
     <div class="campo"><label for="comuna">Comuna</label><select id="comuna" disabled></select></div>
     <div class="campo"><label for="periodo">Periodo (dias)</label>
@@ -158,6 +164,16 @@ function esRedSocial(url){
   const u = (url||'').toLowerCase();
   return ['instagram.com','facebook.com','x.com','twitter.com'].some(d=>u.includes(d));
 }
+function esFuenteRed(f){
+  const medio = norm(f && f.medio);
+  return esRedSocial(f && f.url) || ['facebook','instagram','x','twitter'].includes(medio);
+}
+// 'redes' si TODAS las fuentes son redes sociales; 'prensa' si al menos una es un medio.
+function origenEvento(e){
+  const lista = e.fuentes || [];
+  if (!lista.length) return '';
+  return lista.every(esFuenteRed) ? 'redes' : 'prensa';
+}
 
 // ---- mapa: capas base seleccionables (calles, hillshade, satelite) ----
 const mapa = L.map('mapa', {scrollWheelZoom:true, zoomControl:true, doubleClickZoom:true, touchZoom:true}).setView([-35.5,-71.0],5);
@@ -183,6 +199,7 @@ const buscar = document.getElementById('buscar');
 const selTipo = document.getElementById('tipo');
 const selRegion = document.getElementById('region');
 const selComuna = document.getElementById('comuna');
+const selOrigen = document.getElementById('origen');
 const inputPeriodo = document.getElementById('periodo');
 const filas = document.getElementById('filas');
 const btnActualizar = document.getElementById('btn-actualizar');
@@ -232,6 +249,7 @@ function filtrar(){
     if (selTipo.value && e.tipo_evento !== selTipo.value) return false;
     if (selRegion.value && e.region !== selRegion.value) return false;
     if (selComuna.value && e.comuna !== selComuna.value) return false;
+    if (selOrigen.value && origenEvento(e) !== selOrigen.value) return false;
     if (!dentroDeRango(e, ventana)) return false;
     if (q){
       const medios = (e.fuentes || []).map(f=>f.medio).join(' ');
@@ -290,7 +308,7 @@ function render(){
       (esValidado(e.id) ? ' checked' : '') +
       ` aria-label="Validar evento ${esc(e.evento)}">`;
     const fuentesEvento = e.fuentes || [];
-    const soloRed = fuentesEvento.length > 0 && fuentesEvento.every(f=>esRedSocial(f.url));
+    const soloRed = origenEvento(e) === 'redes';
     const avisos =
       (tieneCoords(e) ? '' : '<span class="badge badge-aviso" title="Sin coordenadas: no aparece en el mapa">sin coords</span>') +
       (soloRed ? '<span class="badge badge-red" title="Todas sus fuentes son redes sociales; verificar en el medio">solo red</span>' : '');
@@ -341,6 +359,7 @@ function limpiar(){
   buscar.value = '';
   selTipo.value = '';
   selRegion.value = '';
+  selOrigen.value = '';
   inputPeriodo.value = 90;
   soloValidados = false;
   btnValidados.classList.remove('activo');
@@ -468,7 +487,7 @@ filas.addEventListener('change', ev=>{
 });
 
 selRegion.addEventListener('change', ()=>{ poblarComunas(); render(); });
-[selTipo, selComuna].forEach(s=>s.addEventListener('change', render));
+[selTipo, selComuna, selOrigen].forEach(s=>s.addEventListener('change', render));
 inputPeriodo.addEventListener('input', render);
 buscar.addEventListener('input', render);
 document.getElementById('btn-limpiar').addEventListener('click', limpiar);

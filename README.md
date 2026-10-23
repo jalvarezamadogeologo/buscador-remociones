@@ -14,9 +14,11 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
   - tras actualizar, el mapa encuadra automaticamente los eventos que cumplen los filtros
     activos (zoom a la capa filtrada; si no hay coordenadas no mueve la vista).
 - **Filtros** aplicados a la vez a la tabla y al mapa: texto libre, tipo (todos los
-  tipos de remocion en masa y desbordes/inundaciones), region (las 16 del pais),
-  comuna (se habilita al elegir una region y muestra solo sus comunas) y periodo
-  en dias como numero entero (0 = todo el historico).
+  tipos de remocion en masa y desbordes/inundaciones), **origen** (Prensa o Redes
+  sociales), region (las 16 del pais), comuna (se habilita al elegir una region y
+  muestra solo sus comunas) y periodo en dias como numero entero (0 = todo el historico).
+  Un evento cuenta como "Redes sociales" cuando **todas** sus fuentes son X/Instagram/
+  Facebook; si tiene al menos un medio de prensa, cuenta como "Prensa".
 - **Boton "Solo validados"** (barra de filtros): muestra en la tabla y en el mapa solo
   los eventos con la casilla "Evento validado" marcada. Se desactiva con "Limpiar filtros"
   y no borra las marcas.

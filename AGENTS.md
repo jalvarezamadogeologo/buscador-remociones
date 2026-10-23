@@ -39,7 +39,7 @@ python -m pytest -q
 
 ## Interfaz
 
-- `docs/index.html`: buscador con filtros (texto, tipo, region, comuna dependiente de
+- `docs/index.html`: buscador con filtros (texto, tipo, origen prensa/redes, region, comuna dependiente de
   la region y periodo en dias) aplicados a tabla y mapa; capas base Calles/Hillshade/
   Satelite; zoom con rueda/doble clic/botones; boton "Ver" por fila que centra el mapa.
 - La tabla muestra un evento por fila ("tipo + lugar") y una lista desplegable de hasta
