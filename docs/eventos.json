@@ -66,6 +66,27 @@
       "estado": "nuevo"
     },
     {
+      "id": "82c9364309b1",
+      "fecha_publicacion": "2026-10-22T18:53:59-03:00",
+      "fecha_deteccion": "2026-10-23T08:04:52-03:00",
+      "titulo": "🚨 El desprendimiento se produjo este jueves en la Ruta 60, en el sector conocido como El Japonés, cerca de Caracoles, en Chile. Es el segundo episodio en el mismo lugar en dos días. Los equipos trabajan para despejar la calzada. https://www.elnueve.co",
+      "evento": "Caída de rocas en Chile",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPT3lianBNdXoybFBwNUMycFNFZWZyVnc1bG5TaE8wRFlQR05UcVV5SFZpSmFhMHZNSk5PQlNwNGhCREZobHFBaURtaDBWaHdSRUlLd0FPLWJoc3dlNDFtMVNmT2pCdy1Fbmw4Vi1uQUF4ZFZwcUdIYW1fUkpCeXQyUnc2d2FtRlliaG1hMW9xMXlEUkxUOV9scTIzU3FxNF9MaTBxNW5oejIwU1o5eEkxTFREektZNm15bVBRbUZObDUwbWVIcTE4VGJITU1uUlZYaDUtRXJZczBjdE1T?oc=5",
+          "fecha": "2026-10-22T18:53:59-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
       "id": "03acaaa9854d",
       "fecha_publicacion": "2026-10-22T18:36:00-03:00",
       "fecha_deteccion": "2026-10-23T00:32:10-03:00",
@@ -144,63 +165,22 @@
       "estado": "nuevo"
     },
     {
-      "id": "9b84c73824a8",
-      "fecha_publicacion": "2026-10-22T09:38:09-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Fiscalía confirma rescate de cuerpo de tercera víctima de avalancha en Portillo y apunta a que se trató de un accidente",
-      "evento": "Alud / avalancha en Portillo",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "Valparaiso",
-      "comuna": "Portillo",
-      "lat": "-32.836418",
-      "lon": "-70.129083",
+      "id": "7de8cfeefa5a",
+      "fecha_publicacion": "2026-10-22T16:28:54-03:00",
+      "fecha_deteccion": "2026-10-23T08:04:52-03:00",
+      "titulo": "CALUMA// ALERTA VIAL EN LA ESMERALDA CALUMA/ SOCAVÓN EN PUENTE QUE UNE BOLÍVAR Y LOS RÍOS.",
+      "evento": "Socavón en Los Rios",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Los Rios",
+      "comuna": "",
+      "lat": "-39.974275",
+      "lon": "-72.667701",
       "fuentes": [
         {
-          "medio": "Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9BeElmNUNkcmM2Q0pUeDFNSEVWSWlLTlBJNTBacmNvWlRSRUVpWGJ0ZWxYNlVzUGp4NVVMNkZuRHV3T2NFTnhEV1d5X3NjVjFRSUE?oc=5",
-          "fecha": "2026-10-22T09:38:09-03:00"
-        },
-        {
-          "medio": "La Tercera",
-          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOT1A2RGIwNFdBTGktelFPMzktbXJwUWdPdDdMQWY1S1ZtV0stZ1QzMUlhUk81OGlyN0VWWGN0SHR4RmpCbmlvcGhaTGpaU2UyZ3FVQkI3Ym1pcDNtU2tBODRtMzd1NUZ3dkVIYVBPczFDMlp6X0lFWjdZLVlicTlPWDN0emlsY08wUHB4aFhIME9EZXphakV5RVdKTm1IeE9aVVVZcXJyQzVHTjNaWmlpTkRRa1dNNDFjaktPNXVTak92dGQ2c2czbklwX1BmMlo2QThDOE1QX3ZwT2c1YmFtMFFGWjVaZnc5YmJhV01JcVBCWWRESmfSAZcCQVVfeXFMT19uSjA1TXlvR0NRZnRVeWlWeFB0MmxvRHE1VWdhSWpwNC1vTWd5UWNJc0Z6bnFhRFRFSW0xM0t1RG1aNF9ncFN4RkkxWEJveVhIT2ZXUW15ZGtMUGxhWlZiMy1HMGZNZ0MtQ090SzJjNUFpRmoxczRhNEc0eE5STHluVWlLZWMtZjlBZGoxWUxoRGp6U2NzMEFjYnIyM1dTSldTa1pScjVvclBSV0U5cjZ1RERvMllMV2xIbnBGamU1enpnZ296ZndDXzlkRFZuajVpTGJZWlN4aVR6R3V0RlRwNVo1cl9rUnpvMzlMalo3blI3MGFFS3FOaWJyai12eW5TUFRVV2lNZ3lOVkxvNnc5eG9POERr?oc=5",
-          "fecha": "2026-10-22T17:58:18-03:00"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPY29GSFN0YTJJcWJ3OFFLSTBIQndIazZ3cFJ2RWE1R2hYMjVpNkJoVzBMRXluaG9QU2FhQVZsdTdMQ21lSHJpX2FLZEVEeXl4OHdSRjBGcTVPeFkwQUpmdDlhWmtUSkxEc0NhV3VCVmxuLUlDYVhCSEdtSk0tMkFna0YzMDJ0MFVUQV9UOU5nZHRYUQ?oc=5",
-          "fecha": "2026-10-22T18:56:37-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "a017cd853905",
-      "fecha_publicacion": "2026-10-22T11:22:56-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Hallan cuerpo de tercera víctima de avalancha en Laguna del Inca",
-      "evento": "Alud / avalancha en Laguna del Inca",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "Valparaiso",
-      "comuna": "Laguna del Inca",
-      "lat": "-32.822459",
-      "lon": "-70.133087",
-      "fuentes": [
-        {
-          "medio": "Instagram",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE13SEp6cldJYlJkZi03bjNPeGpJZnFIQk1SOHQ2S1BIb0prY1I3QnMzamU2Y1dJUHU5UUtUNkdyXzFidE1YbVRmX1QxVHBKZ1ZEcFE?oc=5",
-          "fecha": "2026-10-22T11:22:56-03:00"
-        },
-        {
-          "medio": "MendoVoz",
-          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPSzZRT3FYTFhDdDFGdkFuTjc0emUzYkhicDlON0REYXd4Y25NWGFpcEVrUWZfTWdDZldBWGtfVlNYQVRYX2ItSDkxeFhyd0p5YnRSVVhsLWMzVTJ5UFVHX19wcEJQWi1xTUFPdjNNUUcyektqTUJBX3d6SVhFUWZTTWs2Mnd4blBMbzFIdElsVVRadEdLaHFmYlVtNUR0aFgzaDdlMFAyUkJHZ0VWNmZhb0Nlc1NBa2ltYTY0VzdPSTdYMmFxRExIc2h4aWo2MURhZDBfZGw5YVROemJFV1g0UGZ6bkprTUxpd0E?oc=5",
-          "fecha": "2026-10-22T12:33:19-03:00"
-        },
-        {
-          "medio": "https://auroranoticias.cl/",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQW9tUTNPS2hwaDZxWmI3X0ZQdldycnc5V1RnLWpJcW5CZzNGX1FFY0wzbEdLZGRUOXFBSDRQYnNmZUZ4Rmt0QVBHR0xoYzFHNWhURjhnTFBlcmJwVGk5WXl6d2NQWS1iSk1TWGd0eTZjb0QyN2RLQjlHS0JuNlNTMlB3dDdFRV9PZHhCSXlZQjdwM1dQeXNiU3dqazBYRElJYklNMmFR?oc=5",
-          "fecha": "2026-10-22T16:49:17-03:00"
+          "medio": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNUVVXSjQ0R2tta2Q5cUVvMVV4MmZUMUpaZ0UwVHBpMlpwaDNvSXNMSmMyVVJaZ2w1VU1iTHN2TlRpbG1LNm9NQjdMd3JBazhuUEdHZ050eF9SYUhIRGNaTWlUd2JCd3NfeVhWOWU5Mk5QRjdhZ0g3cnNCa0tkNi13ZlpvdzFZcXI3dHRnY1VaSzg0LWl2N1FJekpKSi1fQm9sVFhucnpfUDRqS1FBT0laZUxMZi01dC1MSmJmWFo5YmRsc3VOeWR2X3pQcmNFSlVjVmVGc0V2SVZuaFBZZ2lnaDFrUQ?oc=5",
+          "fecha": "2026-10-22T16:28:54-03:00"
         }
       ],
       "estado": "nuevo"
@@ -264,6 +244,68 @@
           "medio": "Facebook",
           "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPR24wck5NZjRVZlpkT3FtOUF0TUdWM0Mxa1hOdGVTVkd2bHJqbmp0Y2FrQUtrTDVTX0RSQi1iV3ZGbldQMm1JWlk5Q0xjUlhWNDJJZFhyeU5CSDFZOG9QdWRkVlBXcFRZUHh1a2oyS21DMGhrYzgydFVwaTJFeDNzYkhXSFR1MkxQOWhTblVxeHVQLTNNcVFEeElpYjF3bHFiQllPMHFkYW95NGpmM3QxbVVVRGNucW9kM2FJTlRQRENJUXBRdDJDYWx2Y3VGZWdlOUhKWE9wdzlkTE16Y0c2MnZLbGo0MDl4MlRNdXV3X2Y1OUpqTkpjMGZNUDAyT0RJdXBXSg?oc=5",
           "fecha": "2026-10-22T13:31:50-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "a017cd853905",
+      "fecha_publicacion": "2026-10-22T11:22:56-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Hallan cuerpo de tercera víctima de avalancha en Laguna del Inca",
+      "evento": "Alud / avalancha en Laguna del Inca",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Valparaiso",
+      "comuna": "Laguna del Inca",
+      "lat": "-32.822459",
+      "lon": "-70.133087",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE13SEp6cldJYlJkZi03bjNPeGpJZnFIQk1SOHQ2S1BIb0prY1I3QnMzamU2Y1dJUHU5UUtUNkdyXzFidE1YbVRmX1QxVHBKZ1ZEcFE?oc=5",
+          "fecha": "2026-10-22T11:22:56-03:00"
+        },
+        {
+          "medio": "MendoVoz",
+          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPSzZRT3FYTFhDdDFGdkFuTjc0emUzYkhicDlON0REYXd4Y25NWGFpcEVrUWZfTWdDZldBWGtfVlNYQVRYX2ItSDkxeFhyd0p5YnRSVVhsLWMzVTJ5UFVHX19wcEJQWi1xTUFPdjNNUUcyektqTUJBX3d6SVhFUWZTTWs2Mnd4blBMbzFIdElsVVRadEdLaHFmYlVtNUR0aFgzaDdlMFAyUkJHZ0VWNmZhb0Nlc1NBa2ltYTY0VzdPSTdYMmFxRExIc2h4aWo2MURhZDBfZGw5YVROemJFV1g0UGZ6bkprTUxpd0E?oc=5",
+          "fecha": "2026-10-22T12:33:19-03:00"
+        },
+        {
+          "medio": "https://auroranoticias.cl/",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQW9tUTNPS2hwaDZxWmI3X0ZQdldycnc5V1RnLWpJcW5CZzNGX1FFY0wzbEdLZGRUOXFBSDRQYnNmZUZ4Rmt0QVBHR0xoYzFHNWhURjhnTFBlcmJwVGk5WXl6d2NQWS1iSk1TWGd0eTZjb0QyN2RLQjlHS0JuNlNTMlB3dDdFRV9PZHhCSXlZQjdwM1dQeXNiU3dqazBYRElJYklNMmFR?oc=5",
+          "fecha": "2026-10-22T16:49:17-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "9b84c73824a8",
+      "fecha_publicacion": "2026-10-22T09:38:09-03:00",
+      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
+      "titulo": "Fiscalía confirma rescate de cuerpo de tercera víctima de avalancha en Portillo y apunta a que se trató de un accidente",
+      "evento": "Alud / avalancha en Portillo",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Valparaiso",
+      "comuna": "Portillo",
+      "lat": "-32.836418",
+      "lon": "-70.129083",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9BeElmNUNkcmM2Q0pUeDFNSEVWSWlLTlBJNTBacmNvWlRSRUVpWGJ0ZWxYNlVzUGp4NVVMNkZuRHV3T2NFTnhEV1d5X3NjVjFRSUE?oc=5",
+          "fecha": "2026-10-22T09:38:09-03:00"
+        },
+        {
+          "medio": "La Tercera",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOT1A2RGIwNFdBTGktelFPMzktbXJwUWdPdDdMQWY1S1ZtV0stZ1QzMUlhUk81OGlyN0VWWGN0SHR4RmpCbmlvcGhaTGpaU2UyZ3FVQkI3Ym1pcDNtU2tBODRtMzd1NUZ3dkVIYVBPczFDMlp6X0lFWjdZLVlicTlPWDN0emlsY08wUHB4aFhIME9EZXphakV5RVdKTm1IeE9aVVVZcXJyQzVHTjNaWmlpTkRRa1dNNDFjaktPNXVTak92dGQ2c2czbklwX1BmMlo2QThDOE1QX3ZwT2c1YmFtMFFGWjVaZnc5YmJhV01JcVBCWWRESmfSAZcCQVVfeXFMT19uSjA1TXlvR0NRZnRVeWlWeFB0MmxvRHE1VWdhSWpwNC1vTWd5UWNJc0Z6bnFhRFRFSW0xM0t1RG1aNF9ncFN4RkkxWEJveVhIT2ZXUW15ZGtMUGxhWlZiMy1HMGZNZ0MtQ090SzJjNUFpRmoxczRhNEc0eE5STHluVWlLZWMtZjlBZGoxWUxoRGp6U2NzMEFjYnIyM1dTSldTa1pScjVvclBSV0U5cjZ1RERvMllMV2xIbnBGamU1enpnZ296ZndDXzlkRFZuajVpTGJZWlN4aVR6R3V0RlRwNVo1cl9rUnpvMzlMalo3blI3MGFFS3FOaWJyai12eW5TUFRVV2lNZ3lOVkxvNnc5eG9POERr?oc=5",
+          "fecha": "2026-10-22T17:58:18-03:00"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPY29GSFN0YTJJcWJ3OFFLSTBIQndIazZ3cFJ2RWE1R2hYMjVpNkJoVzBMRXluaG9QU2FhQVZsdTdMQ21lSHJpX2FLZEVEeXl4OHdSRjBGcTVPeFkwQUpmdDlhWmtUSkxEc0NhV3VCVmxuLUlDYVhCSEdtSk0tMkFna0YzMDJ0MFVUQV9UOU5nZHRYUQ?oc=5",
+          "fecha": "2026-10-22T18:56:37-03:00"
         }
       ],
       "estado": "nuevo"
@@ -915,48 +957,6 @@
           "medio": "24horas",
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRXIyekluQkpTYXVnNXlUVXVhRW1MaENhdDU0SmRySWFZR3NWTG5UT3J5QVJSaEUzbnF0QVNRWFJsakdpRWdGNndHLU43RXIzanpKTkNYb3FTQm5hektLRVl3Mk1MTnd6Wi12RTRQN0MwX2Mzc1FYbjVfa1Y5R1Y0SDVMTzZ5MGVrWjIzWTh4YVpXeVcxVWNlODJTUF9sQWh3ek9HZ0F4ZFdXWGRMcW5WWGkwZ9IBuAFBVV95cUxOUTJwQzVSYXlPb0VnOWY0MHROMDVCOGQtOGRVZDdjM1RRdHhaamM5RUdtMHEyVHcwbTVCTE1ld3MxOGdNVGRkSFlFbVNaZEFydC1nYlhmNlNsSDlGR3JFbWVoYWNnR3FaZUxKMWRFU2hkZDZuYUlvWXh6NUtOaldSclB0akloQTdOTVFsbXltbkpwNEt3ZFJBdHdjUE9MT1lHcVB5YUlKcWZuRVFfWXdweVAzVFpaQ25O?oc=5",
           "fecha": "2026-10-15T22:36:00-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "82c9364309b1",
-      "fecha_publicacion": "2026-10-22T18:53:59-03:00",
-      "fecha_deteccion": "2026-10-23T08:04:52-03:00",
-      "titulo": "🚨 El desprendimiento se produjo este jueves en la Ruta 60, en el sector conocido como El Japonés, cerca de Caracoles, en Chile. Es el segundo episodio en el mismo lugar en dos días. Los equipos trabajan para despejar la calzada. https://www.elnueve.co",
-      "evento": "Caída de rocas en Chile",
-      "tipo_evento": "caida_rocas",
-      "tipo_etiqueta": "Caída de rocas",
-      "region": "",
-      "comuna": "",
-      "lat": "",
-      "lon": "",
-      "fuentes": [
-        {
-          "medio": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPT3lianBNdXoybFBwNUMycFNFZWZyVnc1bG5TaE8wRFlQR05UcVV5SFZpSmFhMHZNSk5PQlNwNGhCREZobHFBaURtaDBWaHdSRUlLd0FPLWJoc3dlNDFtMVNmT2pCdy1Fbmw4Vi1uQUF4ZFZwcUdIYW1fUkpCeXQyUnc2d2FtRlliaG1hMW9xMXlEUkxUOV9scTIzU3FxNF9MaTBxNW5oejIwU1o5eEkxTFREektZNm15bVBRbUZObDUwbWVIcTE4VGJITU1uUlZYaDUtRXJZczBjdE1T?oc=5",
-          "fecha": "2026-10-22T18:53:59-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "7de8cfeefa5a",
-      "fecha_publicacion": "2026-10-22T16:28:54-03:00",
-      "fecha_deteccion": "2026-10-23T08:04:52-03:00",
-      "titulo": "CALUMA// ALERTA VIAL EN LA ESMERALDA CALUMA/ SOCAVÓN EN PUENTE QUE UNE BOLÍVAR Y LOS RÍOS.",
-      "evento": "Socavón en Los Rios",
-      "tipo_evento": "socavon",
-      "tipo_etiqueta": "Socavón",
-      "region": "Los Rios",
-      "comuna": "",
-      "lat": "-39.974275",
-      "lon": "-72.667701",
-      "fuentes": [
-        {
-          "medio": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNUVVXSjQ0R2tta2Q5cUVvMVV4MmZUMUpaZ0UwVHBpMlpwaDNvSXNMSmMyVVJaZ2w1VU1iTHN2TlRpbG1LNm9NQjdMd3JBazhuUEdHZ050eF9SYUhIRGNaTWlUd2JCd3NfeVhWOWU5Mk5QRjdhZ0g3cnNCa0tkNi13ZlpvdzFZcXI3dHRnY1VaSzg0LWl2N1FJekpKSi1fQm9sVFhucnpfUDRqS1FBT0laZUxMZi01dC1MSmJmWFo5YmRsc3VOeWR2X3pQcmNFSlVjVmVGc0V2SVZuaFBZZ2lnaDFrUQ?oc=5",
-          "fecha": "2026-10-22T16:28:54-03:00"
         }
       ],
       "estado": "nuevo"
