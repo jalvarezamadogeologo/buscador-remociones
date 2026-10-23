@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-10-23T11:42:08-03:00",
-  "total": 241,
+  "actualizado": "2026-10-23T13:31:56-03:00",
+  "total": 248,
   "claves": {
     "d7b69219688b": {
       "titulo": "Avalancha en Los Andes chilenos causa al menos tres fallecidos en centro de esquí El Portillo",
@@ -1206,6 +1206,41 @@
       "titulo": "🚨 OVALLE: SOCAVÓN DEJA AISLADOS A VECINOS EN EL CAMINO VIEJO A FRAY JORGE Vecinos del sector El Progreso, en Ovalle, solicitan ayuda urgente para reparar un socavón que mantiene interrumpido el tránsito en el camino viejo a Fray Jorge, a",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA4ZGtPdkcwQ3Fxd1VOOGZEMG96R2dPZ2pheTM1d2hKemRvTFNFdHRBSU9lLVdva1FYdnJvejRUTTRkVElucVM4aEI5aGJoU3Ryd1E?oc=5",
       "fecha": "2026-10-23T11:42:08-03:00"
+    },
+    "28b0b6a7088a": {
+      "titulo": "Delegado de Arauco aborda crisis en Villa El Mirador por socavón: “Hay posibles negligencias que se pudiesen dar ahí”",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPaVpDbENIVU1LUUZDRUtvSkhySjBaenVYWm1fTXRxR3l3UmpRMnprREJkSG5FOEFkNlF0UHhoT0NqQjJtQVFxdGZCVlhLUG9Uem5SMnBsOU5rb2JPRmtOZEhsdXZNamtlZVVfQTJFUTVEQ1ROX19pbzZwSHhDaGNfYWQtZV9kdnRsWGxDWUpRS2R3NW9wU1R5SXczc0JmYmQyYUJPc2FuaHBWZDY3Rjd4SUREM2lOeFdhOGtDbUpZQW1CTktVQmdPcnpVbXhHTW1RODhqSVBWelE4Q2RFc3RPcmxwTkxlcjJrM1NkX0dqQdIBkAJBVV95cUxQamVHQjNVSS1hQi15THFFb1lxR2ZpOEJGS3pQQUItb3BrUG5kc0ctdjBOd1QzTmdxTVVCc19tT0ZTZm5LaTJXMXNVQUFuSnFJTE1fQWhESUR1MXl0TnRyUHgxRDc4eFdBVUZBLVRFa1RKcUcwdXhpc1NyNElNLTE0cFBCTFZwQlV3UzhkbW1XczlaaEFPZjQ2eTJHTl9BLTVwM1FMNlRySDFySnZ0SXJwVFJJTFBlTXZ3S1VMUmtNSm9RbVNhMDZkVFpRdXRxa3NaaU5FUXpLdGtJTEo3YTlCWnd0ZXB3U3Yyd1JJSVM3U01PS1d6NExscUs4bmdSeUNON3UzUG0tRWFBTzlkdnNyQQ?oc=5",
+      "fecha": "2026-10-23T13:31:56-03:00"
+    },
+    "b2fae726daf6": {
+      "titulo": "Concepción: trabajos de despeje avanzan tras deslizamiento de tierra en Juan Riquelme",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNZ3ZaZ3FwR0Rlb3NiS181OU15SS04TFBMMlR3M3I1WWpQcFNSNGt0Z29CeUlFb09JV0UzUmZhMk56NFotQTIybVFVQU8xQl9vWTRlR0NoSVpqVzZoSlRWZUV3ejhSWjgtWVFZWVRWWExtdmxTbF9jSU01V0J2ZUQ3TVJEZnBIVVB6bjltaWp6aXQ4clZQZHVWUHpDbExpcXJaTENqaHhrTjVYQ1BGX19CeFFadk5OQS1IbU5xNk9ZRlB3Z21LU2RyOXJxaExOU3liSEZsMkdJX2gweTJjUDNMVnc5NGkxQQ?oc=5",
+      "fecha": "2026-10-23T13:31:56-03:00"
+    },
+    "70528ab47541": {
+      "titulo": "Senapred evalúa descargas de aguas servidas como factor en derrumbe de Lota",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUDU5TldrVC1ycC1rMDBLb25kbUgwRmEyRVUzN1FGWHVRZXQ0SzZySEg1aG5tZlQ4UktLWFBPb01KMHpUTGZKSWszeWxwMnJRZjF0YkJJVzVsRG5WeVE3SXdRc3o5Q0ZCQURBdWFGb25GOUlGOHZ5eG90VWczQ3kxcF9CWXM5UzFmSmFWVGFBR0g1YVBIakJETlh6VzBqYVk?oc=5",
+      "fecha": "2026-10-23T13:31:56-03:00"
+    },
+    "45da7e6bb97e": {
+      "titulo": "Socavón en subida La Gloria de Talcahuano obliga a suspender tránsito de subida y activar desvíos",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOQmhqdFNjMVlZaElrTHVlSXUxZDBhbkljZkYtYzh1VFNFRzluQnNUY0V3cHNhdkRwOVFsWFFnT3IxT3c2NnFXTUs1enBxOWJpWUs5bk5Qd2NjNEdUNUVtaktCazFfbzNZc0NWRGJqV3NsdmZmQktWcnB1eTlNbGZ6QVRLRDFhRW1KdDF0WXpNX2QtLWlZcHRTcUM0ckVwVEt0X1g1QlI5SkxqOFFSWEtlLVdOS1Qzc3RjY3hvUW5jbm00SEZnYVQzcw?oc=5",
+      "fecha": "2026-10-23T13:31:56-03:00"
+    },
+    "eef955cd36f0": {
+      "titulo": "Avalancha en Portillo: Hallan el cuerpo de la tercera víctima - https://estapasando.cl/",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQ1BEVEgtbWlWYVNEOVk3Ni1DT3JJSzdpa2VjV0NfMmpTZ20xUkRSQzhFVW9nX0pObWlMQ2lhMk9zc2xxRjBMZGYySkwza0ZERi1QMGdXU3hyWXg2MDgzWnZhckxjcl9fRU1MOU1QVUZtVEVaYWphWUVXWDhnb0dwMUtMSXhUMkFUMnBMaElpakY5cTM4VmZOOA?oc=5",
+      "fecha": "2026-10-23T13:31:56-03:00"
+    },
+    "96a639ac06c0": {
+      "titulo": "Avalancha en Laguna del Inca: Encuentran cuerpo de la última persona que permanecía desaparecida https://t.co/Mdn5aZgqgk",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9FRVoyZE44SFhGbXp5aG5meEpNLUVlX3ZNYXpia1EwRXZtTXVsYmI4SU4zeDhzc2JscTVSTGRGVmw2dXptUUhZNTNUcE8tRnZnT3VlQzhTTGtZYy1QMkZLV20yS1VuZw?oc=5",
+      "fecha": "2026-10-23T13:31:56-03:00"
+    },
+    "2ac049e7794c": {
+      "titulo": "🔴 La Delegación presidencial de Valparaíso confirmó que logró ser rescatado el tercer y último cuerpo de las víctimas de la avalancha ocurrida cerca de un centro de esquí en Portillo, en la comuna de Los Andes (Región de Valparaíso). Los hechos, ocurrido",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBtUjJSZ2J5eUVMSmN6YWNXcHE2YWhxV0NoRGZPc2VjdzZ4dHVfNGRuNTZZS1FxejV1MkNiSDZOeHIzYU55aE1ZYlZybjBNREYxU1E?oc=5",
+      "fecha": "2026-10-23T13:31:56-03:00"
     }
   }
 }
