@@ -47,6 +47,9 @@ python -m pytest -q
   Satelite; zoom con rueda/doble clic/botones; boton "Ver" por fila que centra el mapa.
 - Encabezados ordenables (Fecha, Tipo, Evento, Region/comuna, Fuentes, Estado): un clic ordena,
   el segundo invierte; el orden inicial es fecha descendente.
+- Filtros de columna tipo Excel en **Tipo** y **Evento validado** (embudo en el encabezado):
+  panel de casillas (`abrirPanelFiltro`), aplicacion en vivo, "Todos" y boton azul cuando hay
+  filtro. Entran en `filtrar()`, asi que afectan tabla, mapa, contadores y descargas.
 - La tabla muestra un evento por fila ("tipo + lugar") y una lista desplegable de hasta
   3 fuentes con el medio como texto. El popup del mapa lista las mismas fuentes.
 - Los eventos con `estado=descartado` no se publican: `filtrar()` los excluye, asi que no

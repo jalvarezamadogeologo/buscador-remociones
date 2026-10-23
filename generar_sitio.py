@@ -82,6 +82,16 @@ PLANTILLA = """<!DOCTYPE html>
   .flecha { display:inline-block; width:11px; margin-left:3px; color:#aab4be; font-size:10px; }
   th.orden.activa { color:var(--acento); }
   th.orden.activa .flecha { color:var(--acento); }
+  .btn-filtro { border:0; background:transparent; color:#aab4be; cursor:pointer; padding:0 2px; margin-left:3px; vertical-align:middle; line-height:0; }
+  .btn-filtro:hover, .btn-filtro:focus-visible { color:var(--acento); outline:none; }
+  .btn-filtro.activo { color:var(--acento); }
+  .filtro-panel { position:fixed; z-index:3000; min-width:210px; max-height:320px; overflow:auto; background:#fff; border:1px solid var(--borde); border-radius:8px; box-shadow:0 8px 24px rgba(15,30,50,.18); padding:10px 12px; font-size:13px; text-transform:none; letter-spacing:0; color:var(--texto); }
+  .filtro-cab { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:8px; }
+  .filtro-cab b { font-size:12px; text-transform:uppercase; letter-spacing:.4px; color:var(--suave); }
+  .filtro-todos { background:none; border:0; color:#12507f; cursor:pointer; font:inherit; font-size:12px; padding:0; }
+  .filtro-todos:hover { text-decoration:underline; }
+  .filtro-panel label { display:flex; gap:7px; align-items:center; padding:3px 0; cursor:pointer; white-space:nowrap; }
+  .filtro-panel input { margin:0; width:15px; height:15px; }
   tr:last-child td { border-bottom:none; }
   tr:hover td { background:#f8fafc; }
   tr.validado td { background:#f1f8f3; }
@@ -147,12 +157,12 @@ PLANTILLA = """<!DOCTYPE html>
     <table>
       <thead><tr>
         <th class="orden" data-orden="fecha" scope="col" tabindex="0" aria-sort="descending">Fecha<span class="flecha"></span></th>
-        <th class="orden" data-orden="tipo" scope="col" tabindex="0">Tipo<span class="flecha"></span></th>
+        <th class="orden" data-orden="tipo" scope="col" tabindex="0">Tipo<button class="btn-filtro" type="button" data-filtro="tipo" aria-label="Filtrar por tipo" aria-expanded="false" title="Filtrar por tipo"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M1 1.5h10L7.2 6.2v4L4.8 8.8V6.2z" fill="currentColor"/></svg></button><span class="flecha"></span></th>
         <th class="orden" data-orden="evento" scope="col" tabindex="0">Evento<span class="flecha"></span></th>
         <th class="orden" data-orden="lugar" scope="col" tabindex="0">Region / comuna<span class="flecha"></span></th>
         <th class="orden" data-orden="fuentes" scope="col" tabindex="0">Fuentes<span class="flecha"></span></th>
         <th class="orden" data-orden="estado" scope="col" tabindex="0">Estado<span class="flecha"></span></th>
-        <th class="col-mapa">Mapa</th><th class="col-validar">Evento validado</th>
+        <th class="col-mapa">Mapa</th><th class="col-validar">Evento validado<button class="btn-filtro" type="button" data-filtro="validado" aria-label="Filtrar por evento validado" aria-expanded="false" title="Filtrar por evento validado"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M1 1.5h10L7.2 6.2v4L4.8 8.8V6.2z" fill="currentColor"/></svg></button></th>
       </tr></thead>
       <tbody id="filas"></tbody>
     </table>
@@ -315,6 +325,108 @@ function ordenarPor(col){
   render();
 }
 
+// ---- filtros de columna tipo Excel (Tipo y Evento validado) ----
+// null = sin filtro (todas las opciones); un Set = solo esos valores.
+let filtroTipo = null;
+let filtroValidado = null;
+let panelFiltro = null;
+let columnaPanel = null;
+
+function tiposEnTabla(){
+  return [...new Set(
+    EVENTOS.filter(e=>e.estado!=='descartado' && e.tipo_evento).map(e=>e.tipo_evento)
+  )].sort((a,b)=>etiquetaTipo(a).localeCompare(etiquetaTipo(b),'es'));
+}
+
+function opcionesFiltro(columna){
+  if (columna === 'tipo') return tiposEnTabla().map(t=>({valor:t, texto:etiquetaTipo(t)}));
+  return [{valor:'si', texto:'Sí, validado'}, {valor:'no', texto:'No validado'}];
+}
+
+function seleccionFiltro(columna){
+  return columna === 'tipo' ? filtroTipo : filtroValidado;
+}
+
+function botonFiltro(columna){
+  return document.querySelector('.btn-filtro[data-filtro="' + columna + '"]');
+}
+
+function marcarBotonFiltro(columna, activo){
+  const b = botonFiltro(columna);
+  if (b) b.classList.toggle('activo', activo);
+}
+
+function aplicarFiltroColumna(columna, elegidas, total){
+  const set = elegidas.length === total ? null : new Set(elegidas);
+  if (columna === 'tipo') filtroTipo = set;
+  else filtroValidado = set;
+  marcarBotonFiltro(columna, set !== null);
+  render();
+}
+
+function cerrarPanelFiltro(){
+  if (panelFiltro){ panelFiltro.remove(); panelFiltro = null; }
+  if (columnaPanel){
+    const b = botonFiltro(columnaPanel);
+    if (b) b.setAttribute('aria-expanded', 'false');
+    columnaPanel = null;
+  }
+}
+
+function abrirPanelFiltro(boton){
+  const columna = boton.getAttribute('data-filtro');
+  const yaAbierto = panelFiltro && columnaPanel === columna;
+  cerrarPanelFiltro();
+  if (yaAbierto) return;
+
+  const opcionesCol = opcionesFiltro(columna);
+  const seleccion = seleccionFiltro(columna);
+  const marcadas = seleccion ? new Set([...seleccion]) : new Set(opcionesCol.map(o=>o.valor));
+
+  const panel = document.createElement('div');
+  panel.className = 'filtro-panel';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-label', 'Filtrar por ' + (columna === 'tipo' ? 'tipo' : 'evento validado'));
+  panel.innerHTML =
+    '<div class="filtro-cab"><b>' + (columna === 'tipo' ? 'Tipo' : 'Evento validado') + '</b>' +
+    '<button type="button" class="filtro-todos">Todos</button></div>' +
+    opcionesCol.map(o=>
+      `<label><input type="checkbox" value="${esc(o.valor)}"${marcadas.has(o.valor) ? ' checked' : ''}> ${esc(o.texto)}</label>`
+    ).join('');
+  document.body.appendChild(panel);
+
+  const r = boton.getBoundingClientRect();
+  const ancho = panel.offsetWidth;
+  const alto = panel.offsetHeight;
+  const izq = Math.max(8, Math.min(r.left, window.innerWidth - ancho - 8));
+  let top = r.bottom + 4;
+  if (top + alto > window.innerHeight - 8) top = Math.max(8, r.top - alto - 4);
+  panel.style.left = izq + 'px';
+  panel.style.top = top + 'px';
+
+  panel.addEventListener('change', ev=>{
+    if (!ev.target.closest('input[type="checkbox"]')) return;
+    const elegidas = [...panel.querySelectorAll('input:checked')].map(i=>i.value);
+    aplicarFiltroColumna(columna, elegidas, opcionesCol.length);
+  });
+  panel.querySelector('.filtro-todos').addEventListener('click', ()=>{
+    panel.querySelectorAll('input').forEach(i=>{ i.checked = true; });
+    aplicarFiltroColumna(columna, opcionesCol.map(o=>o.valor), opcionesCol.length);
+  });
+  panel.addEventListener('click', ev=>ev.stopPropagation());
+
+  boton.setAttribute('aria-expanded', 'true');
+  panelFiltro = panel;
+  columnaPanel = columna;
+}
+
+function limpiarFiltrosColumna(){
+  filtroTipo = null;
+  filtroValidado = null;
+  document.querySelectorAll('.btn-filtro').forEach(b=>b.classList.remove('activo'));
+  cerrarPanelFiltro();
+}
+
 function opciones(sel, valores, etiquetaTodos){
   const prev = sel.value;
   sel.innerHTML = '<option value="">'+etiquetaTodos+'</option>' +
@@ -353,6 +465,8 @@ function filtrar(){
   return EVENTOS.filter(e=>{
     if (e.estado === 'descartado') return false;  // no se publican en el sitio
     if (soloValidados && !esValidado(e.id)) return false;
+    if (filtroTipo && !filtroTipo.has(e.tipo_evento || '')) return false;
+    if (filtroValidado && !filtroValidado.has(esValidado(e.id) ? 'si' : 'no')) return false;
     if (selTipo.value && e.tipo_evento !== selTipo.value) return false;
     if (selRegion.value && e.region !== selRegion.value) return false;
     if (selComuna.value && e.comuna !== selComuna.value) return false;
@@ -473,6 +587,7 @@ function limpiar(){
   soloValidados = false;
   btnValidados.classList.remove('activo');
   btnValidados.setAttribute('aria-pressed', 'false');
+  limpiarFiltrosColumna();
   poblarComunas();
   render();
 }
@@ -733,6 +848,7 @@ async function actualizar(){
     EVENTOS = Array.isArray(datos) ? datos : (datos.eventos || []);
     ACTUALIZADO = (datos && datos.actualizado) || ACTUALIZADO;
     document.getElementById('actualizado').textContent = ACTUALIZADO;
+    cerrarPanelFiltro();
     poblarFiltros();
     const encontrados = render();
     const ajustado = ajustarMapaALista(encontrados);
@@ -782,6 +898,19 @@ document.querySelectorAll('th.orden').forEach(th=>{
     }
   });
 });
+document.querySelectorAll('.btn-filtro').forEach(b=>{
+  b.addEventListener('click', ev=>{ ev.stopPropagation(); abrirPanelFiltro(b); });
+  b.addEventListener('keydown', ev=>ev.stopPropagation());
+});
+document.addEventListener('click', ev=>{
+  if (panelFiltro && !ev.target.closest('.filtro-panel') && !ev.target.closest('.btn-filtro')) cerrarPanelFiltro();
+});
+document.addEventListener('keydown', ev=>{ if (ev.key === 'Escape') cerrarPanelFiltro(); });
+window.addEventListener('resize', cerrarPanelFiltro);
+window.addEventListener('scroll', ev=>{
+  // El scroll dentro del propio panel no debe cerrarlo.
+  if (panelFiltro && !panelFiltro.contains(ev.target)) cerrarPanelFiltro();
+}, true);
 document.getElementById('btn-limpiar').addEventListener('click', limpiar);
 btnCsv.addEventListener('click', descargarCsvFiltrados);
 btnCsvValidados.addEventListener('click', descargarCsvValidados);

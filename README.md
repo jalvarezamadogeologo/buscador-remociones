@@ -20,6 +20,11 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
   publicacion (vacio = sin limite; ambos inclusive).
   Un evento cuenta como "Redes sociales" cuando **todas** sus fuentes son X/Instagram/
   Facebook; si tiene al menos un medio de prensa, cuenta como "Prensa".
+- **Filtros de columna tipo Excel** en los encabezados **Tipo** y **Evento validado**: el
+  embudo abre una lista de casillas (los tipos presentes en la tabla; Sí/No para validado)
+  y se aplica en vivo a la tabla y al mapa. "Todos" quita el filtro; el embudo queda azul
+  cuando hay un filtro activo y "Limpiar filtros" los apaga. Se combinan con los filtros
+  de la barra (intersección).
 - **Boton "Solo validados"** (barra de filtros): muestra en la tabla y en el mapa solo
   los eventos con la casilla "Evento validado" marcada. Se desactiva con "Limpiar filtros"
   y no borra las marcas.

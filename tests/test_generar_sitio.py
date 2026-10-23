@@ -68,6 +68,21 @@ def test_filtro_por_rango_de_fechas_y_orden(tmp_path, monkeypatch):
     assert "ordenarPor" in html and "actualizarFlechas" in html
 
 
+def test_filtros_de_columna_tipo_y_validado(tmp_path, monkeypatch):
+    _generar(tmp_path, monkeypatch, [evento()])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+    assert html.count('class="btn-filtro"') == 2
+    assert 'data-filtro="tipo"' in html
+    assert 'data-filtro="validado"' in html
+    assert "abrirPanelFiltro" in html and "cerrarPanelFiltro" in html
+    assert "aplicarFiltroColumna" in html
+    assert "filtroTipo" in html and "filtroValidado" in html
+    assert "filtro-panel" in html
+    # Ambos filtros se aplican dentro de filtrar(), que alimenta tabla y mapa.
+    assert "filtroTipo && !filtroTipo.has" in html
+    assert "filtroValidado && !filtroValidado.has" in html
+
+
 def test_botones_de_descarga_y_handler(tmp_path, monkeypatch):
     _generar(tmp_path, monkeypatch, [evento()])
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
