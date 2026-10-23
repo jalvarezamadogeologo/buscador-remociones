@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-10-23 11:40",
-  "total": 41,
+  "actualizado": "2026-10-23 11:42",
+  "total": 43,
   "eventos": [
     {
       "id": "0cb6637fdb49",
@@ -19,6 +19,27 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/LosAndesDiario/posts/-las-otras-dos-v%C3%ADctimas-fatales-por-la-avalancha-hab%C3%ADan-sido-identificadas-como-/1533218058838060/",
           "fecha": "2026-10-23T11:00:12-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "e025862f2b8f",
+      "fecha_publicacion": "2026-10-23T09:44:33-03:00",
+      "fecha_deteccion": "2026-10-23T11:42:08-03:00",
+      "titulo": "🚨 OVALLE: SOCAVÓN DEJA AISLADOS A VECINOS EN EL CAMINO VIEJO A FRAY JORGE Vecinos del sector El Progreso, en Ovalle, solicitan ayuda urgente para reparar un socavón que mantiene interrumpido el tránsito en el camino viejo a Fray Jorge, a",
+      "evento": "Socavón en Ovalle",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Coquimbo",
+      "comuna": "Ovalle",
+      "lat": "-30.603082",
+      "lon": "-71.202989",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/De1lkSuGsA7/",
+          "fecha": "2026-10-23T09:44:33-03:00"
         }
       ],
       "estado": "nuevo"
@@ -87,6 +108,27 @@
           "medio": "Serena y Coquimbo",
           "url": "https://serenaycoquimbo.cl/region-coquimbo-precaucion-deslizamiento-de-parte-de-ladera-contigua-a-ruta-5/",
           "fecha": "2026-10-22T19:17:35-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "68ed6500c08e",
+      "fecha_publicacion": "2026-10-22T19:15:00-03:00",
+      "fecha_deteccion": "2026-10-23T11:42:08-03:00",
+      "titulo": "Nueva avalancha de nieve complicó el tránsito hacia Chile",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Mendoza Post",
+          "url": "https://www.mendozapost.com/sociedad/nueva-avalancha-de-nieve-complico-el-transito-para-pasar-a-chile-los-caracoles-ruta-60/",
+          "fecha": "2026-10-22T19:15:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -319,14 +361,14 @@
           "fecha": "2026-10-22T11:22:56-03:00"
         },
         {
+          "medio": "X",
+          "url": "https://x.com/g5_noticias/status/2113291207333797912/video/4",
+          "fecha": "2026-10-22T12:27:41-03:00"
+        },
+        {
           "medio": "MendoVoz",
           "url": "https://www.mendovoz.com/actualidad/policiales/2026/10/22/hallan-el-cuerpo-de-la-tercera-victima-fatal-tras-la-avalancha-en-la-laguna-del-inca-169832.html",
           "fecha": "2026-10-22T12:33:19-03:00"
-        },
-        {
-          "medio": "auroranoticias.cl",
-          "url": "https://auroranoticias.cl/actualidad/rescatan-tercer-y-ultimo-cuerpo-en-laguna-del-inca-tras-avalancha/",
-          "fecha": "2026-10-22T16:49:17-03:00"
         }
       ],
       "estado": "nuevo"
