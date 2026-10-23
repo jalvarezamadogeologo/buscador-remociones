@@ -50,6 +50,7 @@ PLANTILLA = """<!DOCTYPE html>
   .btn-primario { background:var(--acento); color:#fff; border:1px solid var(--acento); font-weight:600; }
   .btn-primario:hover { background:#123a59; }
   .btn-primario:disabled { opacity:.65; cursor:wait; }
+  #btn-descargar:disabled { cursor:not-allowed; }
   .btn-mapa { background:#eef4fa; color:var(--acento); border:1px solid #c8d8e8; padding:4px 10px; font-size:12.5px; }
   .btn-mapa:hover { background:#dcebf8; }
   main { padding:0 22px 40px; max-width:1500px; margin:0 auto; }
@@ -74,6 +75,8 @@ PLANTILLA = """<!DOCTYPE html>
   th { background:#eef2f6; font-size:11.5px; text-transform:uppercase; letter-spacing:.4px; color:var(--suave); position:sticky; top:0; }
   tr:last-child td { border-bottom:none; }
   tr:hover td { background:#f8fafc; }
+  tr.validado td { background:#f1f8f3; }
+  tr.validado:hover td { background:#e9f4ec; }
   .tipo { display:inline-block; padding:2px 8px; border-radius:10px; color:#fff; font-size:11.5px; white-space:nowrap; }
   .estado-nuevo { color:#8a5a00; font-weight:600; }
   .estado-confirmado { color:#1b6b3a; font-weight:600; }
@@ -81,6 +84,11 @@ PLANTILLA = """<!DOCTYPE html>
   tr.descartado td { opacity:.55; }
   td.titulo a { color:#12507f; }
   .col-mapa { text-align:center; white-space:nowrap; }
+  .col-validar { text-align:center; white-space:nowrap; }
+  .chk-validar { width:17px; height:17px; cursor:pointer; accent-color:#17456b; vertical-align:middle; }
+  td.col-validar { text-align:center; }
+  .descarga { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:14px 0 0; }
+  .descarga-ayuda { font-size:12.5px; color:var(--suave); }
   .sin-coords { color:#a6b0ba; }
   .fuentes-det summary { cursor:pointer; color:#12507f; font-size:12.5px; }
   .fuentes-det ul { margin:6px 0 0 16px; padding:0; }
@@ -120,16 +128,20 @@ PLANTILLA = """<!DOCTYPE html>
   <div class="tabla-wrap">
     <table>
       <thead><tr>
-        <th>Fecha</th><th>Tipo</th><th>Evento</th><th>Region / comuna</th><th>Fuentes</th><th>Estado</th><th class="col-mapa">Mapa</th>
+        <th>Fecha</th><th>Tipo</th><th>Evento</th><th>Region / comuna</th><th>Fuentes</th><th>Estado</th><th class="col-mapa">Mapa</th><th class="col-validar">Evento validado</th>
       </tr></thead>
       <tbody id="filas"></tbody>
     </table>
     <div id="vacio" class="vacio" style="display:none">Sin eventos para los filtros seleccionados.</div>
   </div>
 
+  <div class="descarga">
+    <button id="btn-descargar" class="btn-primario" type="button">Descargar Eventos Validados</button>
+    <span class="descarga-ayuda">Incluye solo los eventos con la casilla "Evento validado" marcada.</span>
+  </div>
+
   <div class="pie">
     <span id="contador">0 de 0 eventos</span>
-    <span>Datos: <a href="eventos.csv">eventos.csv</a></span>
     <span>Fuentes: Google News RSS, Bing News RSS</span>
     <span>Las detecciones automaticas requieren verificacion.</span>
   </div>
@@ -143,6 +155,24 @@ const TIPOS = __TIPOS__;
 const REGIONES = __REGIONES__;
 const COLORES = __COLORES__;
 const ES_LOCAL = ["127.0.0.1", "localhost"].includes(location.hostname);
+const CLAVE_VALIDADOS = 'catastro_validados';
+let VALIDADOS = (()=>{
+  try { const d = JSON.parse(localStorage.getItem(CLAVE_VALIDADOS) || '{}'); return (d && typeof d==='object') ? d : {}; }
+  catch (e) { return {}; }
+})();
+function esValidado(id){ return VALIDADOS[String(id)] === true; }
+function guardarValidados(){ try { localStorage.setItem(CLAVE_VALIDADOS, JSON.stringify(VALIDADOS)); } catch (e) {} }
+function contarValidados(){ return Object.keys(VALIDADOS).filter(k=>VALIDADOS[k]).length; }
+function refrescarBotonDescarga(){
+  const n = contarValidados();
+  btnDescargar.textContent = 'Descargar Eventos Validados' + (n ? ' (' + n + ')' : '');
+  btnDescargar.disabled = n === 0;
+}
+function marcarValidado(id, valor){
+  if (valor) VALIDADOS[String(id)] = true; else delete VALIDADOS[String(id)];
+  guardarValidados();
+  refrescarBotonDescarga();
+}
 
 function esc(s){ const d=document.createElement('div'); d.textContent=s==null?'':String(s); return d.innerHTML; }
 function norm(s){ return (s||'').toString().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase(); }
@@ -180,6 +210,7 @@ const selComuna = document.getElementById('comuna');
 const inputPeriodo = document.getElementById('periodo');
 const filas = document.getElementById('filas');
 const btnActualizar = document.getElementById('btn-actualizar');
+const btnDescargar = document.getElementById('btn-descargar');
 const cajaEstado = document.getElementById('estado');
 
 function opciones(sel, valores, etiquetaTodos){
@@ -270,11 +301,15 @@ function render(){
   const lista = filtrar();
 
   filas.innerHTML = lista.map(e=>{
-    const cls = e.estado==='descartado' ? ' class="descartado"' : '';
+    const clases = [e.estado==='descartado' ? 'descartado' : '', esValidado(e.id) ? 'validado' : '']
+      .filter(Boolean).join(' ');
     const boton = tieneCoords(e)
       ? `<button class="btn-mapa" type="button" data-id="${esc(e.id)}">Ver</button>`
       : '<span class="sin-coords" title="Sin coordenadas">-</span>';
-    return `<tr${cls}>
+    const casilla = `<input type="checkbox" class="chk-validar" data-validar-id="${esc(e.id)}"` +
+      (esValidado(e.id) ? ' checked' : '') +
+      ` aria-label="Validar evento ${esc(e.evento)}">`;
+    return `<tr${clases ? ' class="' + clases + '"' : ''}>
       <td>${esc(fechaCorta(e.fecha_publicacion||e.fecha_deteccion))}</td>
       <td><span class="tipo" style="background:${colorTipo(e.tipo_evento)}">${esc(etiquetaTipo(e.tipo_evento))}</span></td>
       <td class="evento">${esc(e.evento)}</td>
@@ -282,6 +317,7 @@ function render(){
       <td>${detallesFuentes(e.fuentes)}</td>
       <td class="estado-${esc(e.estado||'nuevo')}">${esc(e.estado||'nuevo')}</td>
       <td class="col-mapa">${boton}</td>
+      <td class="col-validar">${casilla}</td>
     </tr>`;
   }).join('');
   document.getElementById('vacio').style.display = lista.length ? 'none' : 'block';
@@ -325,6 +361,71 @@ function limpiar(){
   render();
 }
 
+// ---- descarga de eventos validados (CSV generado en el navegador) ----
+function avisar(msg, ms){
+  cajaEstado.textContent = msg;
+  cajaEstado.classList.add('visible');
+  if (ms) setTimeout(()=>cajaEstado.classList.remove('visible'), ms);
+}
+
+// Separa el CSV en registros respetando comillas y saltos de linea dentro de campos.
+function registrosCsv(texto){
+  const salida = []; let actual = ''; let entreComillas = false;
+  for (let i=0;i<texto.length;i++){
+    const c = texto[i];
+    if (entreComillas){
+      actual += c;
+      if (c === '"'){
+        if (texto[i+1] === '"'){ actual += texto[++i]; } else { entreComillas = false; }
+      }
+    } else if (c === '"'){ entreComillas = true; actual += c; }
+    else if (c === '\\n'){ salida.push(actual); actual = ''; }
+    else if (c !== '\\r'){ actual += c; }
+  }
+  if (actual) salida.push(actual);
+  return salida.filter(l=>l.trim().length);
+}
+
+function primeraCelda(registro){
+  const i = registro.indexOf(',');
+  return i < 0 ? registro : registro.slice(0, i);
+}
+
+async function descargarValidados(){
+  const ids = new Set(Object.keys(VALIDADOS).filter(k=>VALIDADOS[k]));
+  if (!ids.size){ avisar('Marca al menos un evento como validado para descargar.', 6000); return; }
+  const textoPrevio = btnDescargar.textContent;
+  btnDescargar.disabled = true;
+  btnDescargar.textContent = 'Preparando...';
+  try {
+    const resp = await fetch('eventos.csv?t=' + Date.now(), {cache:'no-store'});
+    if (!resp.ok) throw new Error('no se pudo leer eventos.csv');
+    const texto = await resp.text();
+    const registros = registrosCsv(texto);
+    if (!registros.length) throw new Error('eventos.csv esta vacio');
+    const cabecera = registros.shift();
+    const elegidos = registros.filter(r=>ids.has(primeraCelda(r)));
+    if (!elegidos.length) throw new Error('los eventos validados no estan en el CSV publicado');
+    const bom = texto.charCodeAt(0) === 0xFEFF ? '' : '\\uFEFF';
+    const contenido = bom + [cabecera, ...elegidos].join('\\r\\n') + '\\r\\n';
+    const hoy = new Date().toISOString().slice(0,10);
+    const url = URL.createObjectURL(new Blob([contenido], {type:'text/csv;charset=utf-8'}));
+    const enlace = document.createElement('a');
+    enlace.href = url;
+    enlace.download = `eventos_validados_${hoy}.csv`;
+    document.body.appendChild(enlace);
+    enlace.click();
+    enlace.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+    avisar(`Descargados ${elegidos.length} evento${elegidos.length===1?'':'s'} validado${elegidos.length===1?'':'s'}.`, 7000);
+  } catch (err) {
+    avisar('Error al descargar: ' + err.message, 8000);
+  } finally {
+    btnDescargar.textContent = textoPrevio;
+    refrescarBotonDescarga();
+  }
+}
+
 async function actualizar(){
   btnActualizar.disabled = true;
   btnActualizar.textContent = 'Actualizando...';
@@ -364,8 +465,17 @@ async function actualizar(){
 }
 
 filas.addEventListener('click', ev=>{
+  if (ev.target.closest('input')) return;  // la casilla no debe centrar el mapa
   const id = ev.target.getAttribute('data-id');
   if (id) enfocar(id);
+});
+
+filas.addEventListener('change', ev=>{
+  const casilla = ev.target.closest('.chk-validar');
+  if (!casilla) return;
+  marcarValidado(casilla.getAttribute('data-validar-id'), casilla.checked);
+  const fila = casilla.closest('tr');
+  if (fila) fila.classList.toggle('validado', casilla.checked);
 });
 
 selRegion.addEventListener('change', ()=>{ poblarComunas(); render(); });
@@ -377,6 +487,7 @@ btnActualizar.addEventListener('click', actualizar);
 
 poblarFiltros();
 render();
+refrescarBotonDescarga();
 </script>
 </body>
 </html>

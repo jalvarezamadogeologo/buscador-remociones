@@ -22,6 +22,12 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
 - **Tabla:** cada fila es un **evento**, no una noticia. La columna "Evento" muestra
   "tipo de remocion + lugar (comuna)"; la columna "Fuentes" despliega hasta 3 enlaces
   con el **nombre del medio** como texto (las primeras que reportaron el hecho).
+  La ultima columna, **"Evento validado"**, es una casilla para marcar los eventos que el
+  operador da por buenos (se guarda en el navegador, `localStorage`).
+- **Boton "Descargar Eventos Validados"** (bajo la tabla): genera en el navegador un CSV
+  (`eventos_validados_AAAA-MM-DD.csv`) con la cabecera del catastro y **solo las filas
+  marcadas** en la columna "Evento validado". El enlace anterior a `eventos.csv` ya no
+  descarga el catastro completo.
 - **Mapa:** al abrir el popup de un punto se listan los enlaces de sus fuentes, con el
   medio como texto.
 - **Boton "Ver"** en cada fila: centra el mapa en el evento y abre su popup
@@ -36,7 +42,8 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
 - `data/georref.json` — coordenadas manuales por lugar (ganan sobre Nominatim).
 - `docs/index.html` — buscador autocontenido (tabla + mapa Leaflet + filtros).
 - `docs/eventos.json` — datos que lee el boton "Actualizar".
-- `docs/eventos.csv` — copia descargable del catastro.
+- `docs/eventos.csv` — copia descargable del catastro completo (el boton "Descargar
+  Eventos Validados" filtra este archivo en el navegador y entrega solo lo marcado).
 - GitHub Issues — un issue por evento nuevo (etiqueta `remocion-en-masa`).
 
 ## Uso local

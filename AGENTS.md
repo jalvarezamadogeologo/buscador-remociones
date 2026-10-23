@@ -37,6 +37,11 @@ python -m pytest -q
   Satelite; zoom con rueda/doble clic/botones; boton "Ver" por fila que centra el mapa.
 - La tabla muestra un evento por fila ("tipo + lugar") y una lista desplegable de hasta
   3 fuentes con el medio como texto. El popup del mapa lista las mismas fuentes.
+- Ultima columna "Evento validado": checkbox por evento; el estado se guarda en
+  `localStorage` (`catastro_validados`, mapa id->true), no en el CSV. El boton
+  "Descargar Eventos Validados" (bajo la tabla) baja un CSV generado en el navegador
+  con la cabecera del catastro y solo las filas marcadas (`eventos_validados_AAAA-MM-DD.csv`,
+  con BOM, CRLF y las filas tal cual vienen de `docs/eventos.csv`).
 - Boton "Actualizar": en localhost llama a `POST /actualizar` (servidor.py) y ejecuta
   la busqueda real; en GitHub Pages relee `docs/eventos.json` (ultima version publicada).
   No hay enlace a GitHub en la pagina publica. Vive en la barra de filtros, a la derecha
