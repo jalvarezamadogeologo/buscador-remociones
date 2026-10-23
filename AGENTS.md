@@ -14,6 +14,8 @@ estatico con mapa.
 - `deduplicar.py` — claves persistentes de noticias procesadas.
 - `agrupar.py` — agrupa noticias en eventos (tipo + lugar + fecha) y conserva las 3 primeras fuentes.
 - `guardar.py` — `data/eventos.csv` (eventos agrupados) y `eventos.json`.
+- `estado.py` — cambia el estado de revision (`nuevo`/`confirmado`/`descartado`) validando
+  id y valor.
 - `geocodificar.py` — Nominatim + cache + overrides manuales.
 - `resolver_url.py` — resuelve enlaces de Google News a la URL del medio (RPC `Fbv4je`) + cache.
 - `resolver_urls.py` — CLI para resolver los enlaces del catastro existente y regenerar el sitio.
@@ -35,7 +37,7 @@ python historico.py --dias 120      # barrido historico (after/before, dia por d
 python historico.py --dias 120 --dry-run
 python resolver_urls.py            # resolver enlaces del catastro existente
 python revisar_catastro.py         # prevencion + toponimos + fuentes con URL
-python servidor.py                 # sitio local con boton Actualizar (127.0.0.1:8770)
+python servidor.py                 # sitio local: Actualizar y editar Estado (127.0.0.1:8770)
 iniciar.cmd                        # lo mismo, doble clic
 python -m pytest -q
 ```
@@ -56,6 +58,11 @@ python -m pytest -q
   aparecen en la tabla, el mapa, los contadores ni las tarjetas (siguen en el CSV).
 - Ultima columna "Evento validado": checkbox por evento; el estado se guarda en
   `localStorage` (`catastro_validados`, mapa id->true), no en el CSV.
+- Columna "Estado": es interna y solo se muestra en modo local (`servidor.py`), donde es un
+  selector por fila que escribe `data/eventos.csv` via `POST /estado`
+  (`estado.aplicar_estado`) y regenera el sitio. En GitHub Pages no se publica: el JS quita
+  el encabezado `th.col-estado` y `celdaEstado()` no emite celdas. Al elegir `descartado`
+  pide confirmacion; el evento sale de la tabla y del mapa.
 - Descargas bajo la tabla, todas armadas en el navegador (sirven con `file://`), cuatro botones:
   "CSV (filtrados)" respeta filtros y orden de la tabla; "CSV (validados)" baja solo las
   filas marcadas (lee `docs/eventos.csv` para conservarlas tal cual y, si no puede, las arma
@@ -77,7 +84,8 @@ python -m pytest -q
   `when:180d` entregan el mismo conjunto. Para historia usar `after:AAAA-MM-DD before:AAAA-MM-DD`
   (granularidad de dia, `after` y `before` inclusivos en Google; el filtro local deja
   `[desde, hasta)` para no solapar tramos). Bing y los feeds directos no conservan historia.
-- El operador corrige `estado` en `data/eventos.csv` (`nuevo`/`confirmado`/`descartado`).
+- El operador corrige `estado` en `data/eventos.csv` (`nuevo`/`confirmado`/`descartado`), a
+  mano o desde el selector de la columna Estado en modo local. GitHub Pages no escribe.
 - No editar a mano `data/vistos.json` salvo para forzar reprocesamiento.
 - Las URLs guardadas deben ser del medio, no de Google News (`news.google.com/rss/articles/...`):
   el pipeline las resuelve en cada corrida y `resolver_urls.py` arregla las antiguas. Los

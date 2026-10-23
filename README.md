@@ -39,7 +39,8 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
   con el **nombre del medio** como texto (las primeras que reportaron el hecho).
   Los encabezados **Fecha, Tipo, Evento, Region/comuna, Fuentes y Estado** son
   ordenables con un clic (flecha arriba/abajo; segundo clic invierte). El orden inicial
-  es fecha descendente.
+  es fecha descendente. La columna **Estado** es interna y **solo se muestra en modo
+  local**; en la version publicada se quita (no se publica el estado de revision).
   La ultima columna, **"Evento validado"**, es una casilla para marcar los eventos que el
   operador da por buenos (se guarda en el navegador, `localStorage`).
 - **Descargas** (bajo la tabla), armadas en el navegador (funcionan tambien con `file://`):
@@ -131,7 +132,7 @@ python resolver_urls.py --maximo 25 --pausa 0.3
 python resolver_urls.py --reintentar-fallidos
 ```
 
-### Modo local con boton "Actualizar" funcional
+### Modo local: Actualizar y editar Estado
 
 ```powershell
 proyectos\buscador-remociones\iniciar.cmd
@@ -144,8 +145,17 @@ python servidor.py              # http://127.0.0.1:8770
 python servidor.py --lookback 48 --puerto 9000
 ```
 
-El servidor sirve `docs/` y expone `POST /actualizar`: al pulsar el boton, ejecuta
-`actualizar.py` y el sitio recarga los datos.
+El servidor sirve `docs/` y expone dos endpoints:
+
+- `POST /actualizar`: al pulsar el boton, ejecuta `actualizar.py` y el sitio recarga los datos.
+- `POST /estado`: cambia el estado de revision de un evento (`nuevo`, `confirmado` o
+  `descartado`). En modo local la columna **Estado** es un selector por fila; al cambiarlo,
+  el servidor actualiza `data/eventos.csv`, regenera el sitio y la tabla/mapa se refrescan.
+  Al pasar a `descartado` pide confirmacion y el evento deja de mostrarse.
+
+Solo funciona en modo local: **GitHub Pages es estatico y no puede escribir el repositorio**,
+asi que en la version publicada la columna Estado no se publica (se quita de la tabla). Los
+cambios hechos en local hay que commitearlos y subirlos para que la version publicada los tome.
 
 ### Solo ver el sitio (sin servidor)
 
@@ -245,7 +255,7 @@ Cada fila es un **evento agrupado** (tipo + lugar + fecha), con hasta 3 fuentes.
 | `tipo_evento`, `tipo_etiqueta` | clasificacion |
 | `region`, `comuna`, `lat`, `lon` | geografia y coordenadas |
 | `fuente_1..3`, `url_1..3`, `fecha_1..3` | hasta 3 fuentes, ordenadas por fecha ascendente |
-| `estado` | `nuevo` / `confirmado` / `descartado` (lo edita el operador) |
+| `estado` | `nuevo` / `confirmado` / `descartado` (lo edita el operador; la columna Estado solo existe en modo local) |
 | `issue` | numero de GitHub Issue asociado |
 
 La agrupacion compara tipo, region/comuna y fecha (ventana de 2 dias). Si no hay
@@ -257,6 +267,10 @@ sitio**: quedan fuera de la tabla, del mapa, de los contadores y de las tarjetas
 
 ## Limitaciones conocidas
 
+- **Escritura del Estado:** solo funciona en modo local (`servidor.py`), porque GitHub Pages
+  es estatico y no puede modificar el repositorio. Por eso la columna Estado no se publica:
+  se quita del sitio en Pages. Para editar en remoto haria falta un backend o un token de
+  GitHub en el navegador (no recomendado en una pagina publica).
 - **Ventanas largas (`when:Nd`):** Google News RSS entrega como maximo 100 entradas por
   consulta y `when:90d`/`when:120d`/`when:180d` devuelven el mismo conjunto (se satura
   alrededor de los 83 dias y con los resultados mejor rankeados, no los mas recientes).

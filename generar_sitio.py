@@ -100,6 +100,10 @@ PLANTILLA = """<!DOCTYPE html>
   .estado-nuevo { color:#8a5a00; font-weight:600; }
   .estado-confirmado { color:#1b6b3a; font-weight:600; }
   .estado-descartado { color:#8a94a0; text-decoration:line-through; }
+  .sel-estado { font-size:12.5px; padding:3px 6px; border-radius:6px; }
+  .sel-estado.estado-nuevo { color:#8a5a00; border-color:#f0d9a8; background:#fff8ec; }
+  .sel-estado.estado-confirmado { color:#1b6b3a; border-color:#b9dfc7; background:#eef8f1; }
+  .sel-estado.estado-descartado { color:#6b7682; text-decoration:none; }
   tr.descartado td { opacity:.55; }
   td.titulo a { color:#12507f; }
   .col-mapa { text-align:center; white-space:nowrap; }
@@ -161,7 +165,7 @@ PLANTILLA = """<!DOCTYPE html>
         <th class="orden" data-orden="evento" scope="col" tabindex="0">Evento<span class="flecha"></span></th>
         <th class="orden" data-orden="lugar" scope="col" tabindex="0">Region / comuna<span class="flecha"></span></th>
         <th class="orden" data-orden="fuentes" scope="col" tabindex="0">Fuentes<span class="flecha"></span></th>
-        <th class="orden" data-orden="estado" scope="col" tabindex="0">Estado<span class="flecha"></span></th>
+        <th class="orden col-estado" data-orden="estado" scope="col" tabindex="0">Estado<span class="flecha"></span></th>
         <th class="col-mapa">Mapa</th><th class="col-validar">Evento validado<button class="btn-filtro" type="button" data-filtro="validado" aria-label="Filtrar por evento validado" aria-expanded="false" title="Filtrar por evento validado"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M1 1.5h10L7.2 6.2v4L4.8 8.8V6.2z" fill="currentColor"/></svg></button></th>
       </tr></thead>
       <tbody id="filas"></tbody>
@@ -192,6 +196,10 @@ const TIPOS = __TIPOS__;
 const REGIONES = __REGIONES__;
 const COLORES = __COLORES__;
 const ES_LOCAL = ["127.0.0.1", "localhost"].includes(location.hostname);
+// La columna Estado es interna: se publica solo en la version local.
+if (!ES_LOCAL){
+  document.querySelectorAll('th.col-estado').forEach(th=>th.remove());
+}
 const CLAVE_VALIDADOS = 'catastro_validados';
 let VALIDADOS = (()=>{
   try { const d = JSON.parse(localStorage.getItem(CLAVE_VALIDADOS) || '{}'); return (d && typeof d==='object') ? d : {}; }
@@ -505,6 +513,46 @@ function ajustarMapaALista(lista){
   return true;
 }
 
+// Estado de revision: columna solo local. En GitHub Pages no se publica
+// (el sitio es estatico y no puede escribir), asi que se quita del todo.
+function celdaEstado(e){
+  if (!ES_LOCAL) return '';
+  const actual = e.estado || 'nuevo';
+  const listaOpciones = ['nuevo','confirmado','descartado']
+    .map(v=>`<option value="${v}"${v===actual ? ' selected' : ''}>${v}</option>`).join('');
+  return `<td class="col-estado"><select class="sel-estado estado-${esc(actual)}" data-estado-id="${esc(e.id)}" aria-label="Estado de ${esc(e.evento)}">${listaOpciones}</select></td>`;
+}
+
+async function cambiarEstado(sel){
+  const id = sel.getAttribute('data-estado-id');
+  const nuevo = sel.value;
+  const evento = EVENTOS.find(x=>String(x.id) === String(id));
+  if (!evento) return;
+  const anterior = evento.estado || 'nuevo';
+  if (nuevo === anterior) return;
+  if (nuevo === 'descartado' && !confirm('¿Descartar este evento? Dejara de mostrarse en el sitio; puedes revertirlo desde data/eventos.csv.')){
+    sel.value = anterior;
+    return;
+  }
+  sel.disabled = true;
+  try {
+    const resp = await fetch('estado', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({id, estado:nuevo})
+    });
+    const res = await resp.json().catch(()=>({ok:false, mensaje:'respuesta invalida'}));
+    if (!resp.ok || !res.ok) throw new Error(res.mensaje || 'no se pudo guardar');
+    evento.estado = nuevo;
+    avisar(`Estado de "${evento.evento}" cambiado a ${nuevo}.`, 5000);
+    render();
+  } catch (err) {
+    sel.value = anterior;
+    sel.disabled = false;
+    avisar('No se pudo guardar el estado: ' + err.message, 8000);
+  }
+}
+
 function detallesFuentes(lista){
   if (!lista || !lista.length) return '<span class="sin-coords">-</span>';
   const items = lista.map(f=>{
@@ -540,7 +588,7 @@ function render(){
       <td class="evento">${esc(e.evento)}${avisos}</td>
       <td>${esc(e.region||'-')}${e.comuna?' / '+esc(e.comuna):''}</td>
       <td>${detallesFuentes(e.fuentes)}</td>
-      <td class="estado-${esc(e.estado||'nuevo')}">${esc(e.estado||'nuevo')}</td>
+      ${celdaEstado(e)}
       <td class="col-mapa">${boton}</td>
       <td class="col-validar">${casilla}</td>
     </tr>`;
@@ -789,7 +837,6 @@ function construirKmz(lista, titulo){
       `Fecha: ${escXml(fechaCorta(e.fecha_publicacion || e.fecha_deteccion))}`,
       `Lugar: ${escXml([e.region, e.comuna].filter(Boolean).join(' / ') || '-')}`,
       `Tipo: ${escXml(etiquetaTipo(e.tipo_evento))}`,
-      `Estado: ${escXml(e.estado || 'nuevo')}`,
       enlaces ? `Fuentes: ${enlaces}` : ''
     ].filter(Boolean).join('<br>').split(']]>').join(']] >');
     return `<Placemark>
@@ -871,18 +918,22 @@ async function actualizar(){
 }
 
 filas.addEventListener('click', ev=>{
-  if (ev.target.closest('input')) return;  // la casilla no debe centrar el mapa
+  if (ev.target.closest('input,select')) return;  // casillas y selectores no centran el mapa
   const id = ev.target.getAttribute('data-id');
   if (id) enfocar(id);
 });
 
 filas.addEventListener('change', ev=>{
   const casilla = ev.target.closest('.chk-validar');
-  if (!casilla) return;
-  marcarValidado(casilla.getAttribute('data-validar-id'), casilla.checked);
-  const fila = casilla.closest('tr');
-  if (fila) fila.classList.toggle('validado', casilla.checked);
-  if (soloValidados) render();  // con el filtro activo, la fila entra o sale al instante
+  if (casilla){
+    marcarValidado(casilla.getAttribute('data-validar-id'), casilla.checked);
+    const fila = casilla.closest('tr');
+    if (fila) fila.classList.toggle('validado', casilla.checked);
+    if (soloValidados) render();  // con el filtro activo, la fila entra o sale al instante
+    return;
+  }
+  const selEstado = ev.target.closest('.sel-estado');
+  if (selEstado) cambiarEstado(selEstado);
 });
 
 selRegion.addEventListener('change', ()=>{ poblarComunas(); render(); });

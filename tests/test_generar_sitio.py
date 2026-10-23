@@ -64,7 +64,7 @@ def test_filtro_por_rango_de_fechas_y_orden(tmp_path, monkeypatch):
     assert 'id="periodo"' not in html
     assert "Periodo (dias)" not in html
     assert "dentroDeFechas" in html
-    assert html.count('class="orden"') == 6
+    assert html.count('class="orden') == 6
     assert "ordenarPor" in html and "actualizarFlechas" in html
 
 
@@ -108,6 +108,20 @@ def test_botones_de_descarga_y_handler(tmp_path, monkeypatch):
     assert "descargarBlob" in html
     assert "COLUMNAS_CSV" in html
     assert "remociones_filtradas" in html and "remociones_validadas" in html
+
+
+def test_estado_editable_solo_en_modo_local(tmp_path, monkeypatch):
+    _generar(tmp_path, monkeypatch, [evento()])
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+    assert "function celdaEstado" in html
+    assert "sel-estado" in html
+    assert "data-estado-id" in html
+    assert "async function cambiarEstado" in html
+    assert "fetch('estado'" in html
+    # La columna Estado es interna: se quita del sitio publicado.
+    assert 'th class="orden col-estado"' in html
+    assert "if (!ES_LOCAL) return '';" in html
+    assert "document.querySelectorAll('th.col-estado').forEach(th=>th.remove())" in html
 
 
 def test_ordena_por_fecha_descendente(tmp_path, monkeypatch):
