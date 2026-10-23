@@ -74,5 +74,17 @@
   "metropolitana chile": {
     "lat": -33.5739341,
     "lon": -70.6205518
+  },
+  "talcahuano chile": {
+    "lat": -36.7144863,
+    "lon": -73.1141087
+  },
+  "coquimbo chile": {
+    "lat": -30.7546652,
+    "lon": -70.9005536
+  },
+  "los rios chile": {
+    "lat": -39.9742747,
+    "lon": -72.6677006
   }
 }
