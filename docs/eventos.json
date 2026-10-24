@@ -1,7 +1,49 @@
 {
-  "actualizado": "2026-10-23 18:02",
-  "total": 45,
+  "actualizado": "2026-10-24 00:26",
+  "total": 47,
   "eventos": [
+    {
+      "id": "a13c84aa5e3a",
+      "fecha_publicacion": "2026-10-23T20:45:00-03:00",
+      "fecha_deteccion": "2026-10-24T00:26:31-03:00",
+      "titulo": "Muere trabajador tras derrumbe de tierra en Monterrey",
+      "evento": "Deslizamiento en Porvenir",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Magallanes",
+      "comuna": "Porvenir",
+      "lat": "-53.295674",
+      "lon": "-70.368740",
+      "fuentes": [
+        {
+          "medio": "El Porvenir - Portada",
+          "url": "https://elporvenir.mx/amp/justicia/muere-trabajador-tras-derrumbe-de-tierra-en-monterrey/1037568",
+          "fecha": "2026-10-23T20:45:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "b73ca7519ebe",
+      "fecha_publicacion": "2026-10-23T18:09:42-03:00",
+      "fecha_deteccion": "2026-10-24T00:26:31-03:00",
+      "titulo": "Una familia integrada por dos adultos mayores y dos menores de edad debieron ser evacuadas luego de nuevos derrumbes ocurridos en el cerro a un costado de la avenida Fernando Maira de Lota, a menos de 200 metros del sitio donde un gran alud dañó",
+      "evento": "Alud / avalancha en Lota",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Biobio",
+      "comuna": "Lota",
+      "lat": "-37.094453",
+      "lon": "-73.156402",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/De2fPq5s5CI/",
+          "fecha": "2026-10-23T18:09:42-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "c15a28633c5d",
       "fecha_publicacion": "2026-10-23T16:00:41-03:00",
