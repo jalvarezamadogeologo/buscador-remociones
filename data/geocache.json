@@ -34,5 +34,13 @@
   "lota chile": {
     "lat": -37.0944533,
     "lon": -73.1564024
+  },
+  "coquimbo chile": {
+    "lat": -30.7546652,
+    "lon": -70.9005536
+  },
+  "metropolitana chile": {
+    "lat": -33.5739341,
+    "lon": -70.6205518
   }
 }

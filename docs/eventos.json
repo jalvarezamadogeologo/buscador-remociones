@@ -1,7 +1,28 @@
 {
-  "actualizado": "2026-10-24 00:26",
-  "total": 47,
+  "actualizado": "2026-10-24 07:21",
+  "total": 49,
   "eventos": [
+    {
+      "id": "46c45da4b5e3",
+      "fecha_publicacion": "2026-10-24T00:42:39-03:00",
+      "fecha_deteccion": "2026-10-24T07:21:16-03:00",
+      "titulo": "🔴 Desprendimiento de techo en Mallplaza Oeste cae sobre guardia: cerraron preventivamente el Patio de Comidas… Un incidente registrado la tarde de este viernes en el Mallplaza Oeste, ubicado en la comuna de Cerrillos, Región Metropolitana, obligó al ci",
+      "evento": "Caída de rocas en Metropolitana",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Metropolitana",
+      "comuna": "",
+      "lat": "-33.573934",
+      "lon": "-70.620552",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/De3MITfJH9K/",
+          "fecha": "2026-10-24T00:42:39-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "a13c84aa5e3a",
       "fecha_publicacion": "2026-10-23T20:45:00-03:00",
@@ -19,6 +40,27 @@
           "medio": "El Porvenir - Portada",
           "url": "https://elporvenir.mx/amp/justicia/muere-trabajador-tras-derrumbe-de-tierra-en-monterrey/1037568",
           "fecha": "2026-10-23T20:45:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "df2796dc9b85",
+      "fecha_publicacion": "2026-10-23T19:39:34-03:00",
+      "fecha_deteccion": "2026-10-24T07:21:16-03:00",
+      "titulo": "#Coquimbo: 🚨 ENORME #SOCAVÓN EN AVENIDA BALMACEDA PREOCUPA A CONDUCTORES EN #TIERRASBLANCAS ⚠️ Un #peligroso socavón en plena avenida Balmaceda, poco antes de llegar a la intersección con avenida Talca, en el sector de T",
+      "evento": "Socavón en Coquimbo",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Coquimbo",
+      "comuna": "Coquimbo",
+      "lat": "-30.754665",
+      "lon": "-70.900554",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/De2pkIghmS8/",
+          "fecha": "2026-10-23T19:39:34-03:00"
         }
       ],
       "estado": "nuevo"
