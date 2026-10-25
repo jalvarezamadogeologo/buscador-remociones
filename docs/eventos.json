@@ -1,7 +1,28 @@
 {
-  "actualizado": "2026-10-25 00:22",
-  "total": 50,
+  "actualizado": "2026-10-25 07:48",
+  "total": 51,
   "eventos": [
+    {
+      "id": "432b5504e318",
+      "fecha_publicacion": "2026-10-25T06:00:00-03:00",
+      "fecha_deteccion": "2026-10-25T07:48:30-03:00",
+      "titulo": "El derrumbe del sueño venezolano en Chile",
+      "evento": "Deslizamiento en Chile",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/el-derrumbe-del-sueno-venezolano-en-chile/",
+          "fecha": "2026-10-25T06:00:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "52637967e1e8",
       "fecha_publicacion": "2026-10-24T21:45:21-03:00",
