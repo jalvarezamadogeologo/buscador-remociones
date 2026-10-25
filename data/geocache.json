@@ -46,5 +46,9 @@
   "arauco chile": {
     "lat": -37.246248,
     "lon": -73.3176399
+  },
+  "san antonio chile": {
+    "lat": -33.5808615,
+    "lon": -71.6132377
   }
 }

@@ -1,7 +1,28 @@
 {
-  "actualizado": "2026-10-25 07:48",
-  "total": 51,
+  "actualizado": "2026-10-25 12:36",
+  "total": 52,
   "eventos": [
+    {
+      "id": "4879a7b0cbf5",
+      "fecha_publicacion": "2026-10-25T11:46:30-03:00",
+      "fecha_deteccion": "2026-10-25T12:36:56-03:00",
+      "titulo": "Un deslizamiento de tierra bloqueó por completo el paso vehicular, de motocicletas y peatonal en la vía Suruhuigra – Arquillo – San Antonio – Río Quitahuiaco, dejando incomunicada a la parroquia Molleturo y a sus comunidades aledañas este domingo 25",
+      "evento": "Deslizamiento en San Antonio",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Valparaiso",
+      "comuna": "San Antonio",
+      "lat": "-33.580861",
+      "lon": "-71.613238",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/WRadioEc/status/2114368005035401615",
+          "fecha": "2026-10-25T11:46:30-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "432b5504e318",
       "fecha_publicacion": "2026-10-25T06:00:00-03:00",
@@ -349,6 +370,11 @@
           "medio": "SoyChile.cl",
           "url": "https://www.soychile.cl/quillota/sociedad/2026/10/22/969129/avalancha-portillo-losandes-victimas-senapred.html",
           "fecha": "2026-10-22T21:45:00-03:00"
+        },
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/elpaisamerica/posts/lasemanaenelpa%C3%ADs-una-de-las-v%C3%ADctimas-de-la-avalancha-en-los-andes-era-hija-de-la/1821300470001441/",
+          "fecha": "2026-10-24T23:00:19-03:00"
         }
       ],
       "estado": "nuevo"
@@ -838,6 +864,11 @@
           "medio": "Teletrece",
           "url": "https://www.t13.cl/noticia/nacional/el-impactante-video-compartio-municipalidad-reina-danar-aluvion-24-10-2026",
           "fecha": "2026-10-24T13:05:00-03:00"
+        },
+        {
+          "medio": "X",
+          "url": "https://x.com/T13/status/2114295908271841469",
+          "fecha": "2026-10-25T07:00:00-03:00"
         }
       ],
       "estado": "descartado"
