@@ -1,7 +1,28 @@
 {
-  "actualizado": "2026-10-24 07:21",
-  "total": 49,
+  "actualizado": "2026-10-25 00:22",
+  "total": 50,
   "eventos": [
+    {
+      "id": "52637967e1e8",
+      "fecha_publicacion": "2026-10-24T21:45:21-03:00",
+      "fecha_deteccion": "2026-10-25T00:22:01-03:00",
+      "titulo": "Socavón de Arauco: Gobierno reconoce advertencias previas sobre terrenos inestables y mantiene evacuación de 152 familias",
+      "evento": "Socavón en Arauco",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Arauco",
+      "lat": "-37.246248",
+      "lon": "-73.317640",
+      "fuentes": [
+        {
+          "medio": "Publimicro",
+          "url": "https://publimicro.cl/socavon-de-arauco-gobierno-reconoce-advertencias-previas-sobre-terrenos-inestables-y-mantiene-evacuacion-de-152-familias/",
+          "fecha": "2026-10-24T21:45:21-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "46c45da4b5e3",
       "fecha_publicacion": "2026-10-24T00:42:39-03:00",
@@ -385,6 +406,11 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/coraltv6/videos/caluma-alerta-vial-en-la-esmeralda-caluma-socav%C3%B3n-en-puente-que-une-bol%C3%ADvar-y-lo/1161504329870207/",
           "fecha": "2026-10-22T16:28:54-03:00"
+        },
+        {
+          "medio": "El Nacional",
+          "url": "https://www.elnacional.com/2026/10/denuncian-riesgo-de-colapso-de-la-autopista-por-fracturas-y-socavamiento-en-los-muros-de-canalizacion-de-los-rios-guaire-y-macarao/",
+          "fecha": "2026-10-24T17:59:12-03:00"
         }
       ],
       "estado": "nuevo"
@@ -552,6 +578,11 @@
           "medio": "Radio Maray",
           "url": "https://www.maray.cl/pais/22/10/2026/aluvion-en-el-biobio-provoca-derrumbe-de-cerro-y-afecta-viviendas-en-sector-juan-riquelme/",
           "fecha": "2026-10-22T09:32:54-03:00"
+        },
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/24horas.cl/posts/7215ee9c/1595018629326651/?locale\\=bs_BA",
+          "fecha": "2026-10-24T00:53:03-03:00"
         }
       ],
       "estado": "confirmado"

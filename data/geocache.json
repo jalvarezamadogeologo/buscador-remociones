@@ -42,5 +42,9 @@
   "metropolitana chile": {
     "lat": -33.5739341,
     "lon": -70.6205518
+  },
+  "arauco chile": {
+    "lat": -37.246248,
+    "lon": -73.3176399
   }
 }
