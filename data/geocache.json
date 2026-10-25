@@ -50,5 +50,13 @@
   "san antonio chile": {
     "lat": -33.5808615,
     "lon": -71.6132377
+  },
+  "valdivia chile": {
+    "lat": -39.8141262,
+    "lon": -73.2459859
+  },
+  "santiago chile": {
+    "lat": -33.4376995,
+    "lon": -70.6510671
   }
 }
