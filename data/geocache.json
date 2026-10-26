@@ -62,5 +62,13 @@
   "san carlos chile": {
     "lat": -36.3792284,
     "lon": -72.0179525
+  },
+  "tocopilla chile": {
+    "lat": -22.0887189,
+    "lon": -70.1960657
+  },
+  "constitucion chile": {
+    "lat": -35.3318306,
+    "lon": -72.4118998
   }
 }
