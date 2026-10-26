@@ -1,7 +1,54 @@
 {
-  "actualizado": "2026-10-25 17:25",
-  "total": 55,
+  "actualizado": "2026-10-26 00:23",
+  "total": 58,
   "eventos": [
+    {
+      "id": "8d407aafceeb",
+      "fecha_publicacion": "2026-10-25T18:13:58-03:00",
+      "fecha_deteccion": "2026-10-26T00:23:57-03:00",
+      "titulo": "⚠️ ¡Enorme socavón pone en riesgo a conductores en Juárez! Las lluvias provocaron un hundimiento en el cruce de las calles Santiago y León Guzmán, en la colonia Fronteriza Baja. Hace unas horas, un vehículo tuvo que ser rescatado del lugar. Autoridad",
+      "evento": "Socavón en Santiago",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/AztecaJrz/status/2114465513917366504",
+          "fecha": "2026-10-25T18:13:58-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "be5e135d35ce",
+      "fecha_publicacion": "2026-10-25T18:01:23-03:00",
+      "fecha_deteccion": "2026-10-26T00:23:57-03:00",
+      "titulo": "El Sinaproc inspeccion área afectada por deslizamiento en San Carlos - www.metrolibre.com",
+      "evento": "Deslizamiento en San Carlos",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Nuble",
+      "comuna": "San Carlos",
+      "lat": "-36.379228",
+      "lon": "-72.017953",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/MetroLibrePTY/status/2114462349008781450",
+          "fecha": "2026-10-25T18:01:23-03:00"
+        },
+        {
+          "medio": "news.google.com",
+          "url": "https://www.metrolibre.com/nacionales/el-sinaproc-inspeccion-area-afectada-por-deslizamiento-en-san-carlos-AK26797052",
+          "fecha": "2026-10-25T18:08:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "788dc005429e",
       "fecha_publicacion": "2026-10-25T15:25:35-03:00",
@@ -19,6 +66,27 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/reel/De7WBw1hlc0/",
           "fecha": "2026-10-25T15:25:35-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "53e38602dc94",
+      "fecha_publicacion": "2026-10-25T13:00:00-03:00",
+      "fecha_deteccion": "2026-10-26T00:23:57-03:00",
+      "titulo": "Aluvión en San Carlos de Apoquindo: El documento del @mop_chile que advirtió al municipio de Las Condes en abril pasado. @Muni_LasCondes @louisdegrange @catasanmartinlc",
+      "evento": "Aluvión / flujo de detritos en San Carlos",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Nuble",
+      "comuna": "San Carlos",
+      "lat": "-36.379228",
+      "lon": "-72.017953",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/PapinoMatus/status/2114386504500101470/photo/1",
+          "fecha": "2026-10-25T13:00:00-03:00"
         }
       ],
       "estado": "nuevo"

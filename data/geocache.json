@@ -58,5 +58,9 @@
   "santiago chile": {
     "lat": -33.4376995,
     "lon": -70.6510671
+  },
+  "san carlos chile": {
+    "lat": -36.3792284,
+    "lon": -72.0179525
   }
 }
