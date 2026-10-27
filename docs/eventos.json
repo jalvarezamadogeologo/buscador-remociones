@@ -1,7 +1,75 @@
 {
-  "actualizado": "2026-10-27 00:51",
-  "total": 77,
+  "actualizado": "2026-10-27 08:39",
+  "total": 81,
   "eventos": [
+    {
+      "id": "32d9d9173989",
+      "fecha_publicacion": "2026-10-27T08:31:21-03:00",
+      "fecha_deteccion": "2026-10-27T08:39:33-03:00",
+      "titulo": "🏔️❄️ Impactante desprendimiento en el glaciar Piedras Blancas 😱 Un impresionante desprendimiento de hielo del glaciar Piedras Blancas sorprendió a quienes se encontraban recorriendo el sendero hacia el Fitz Roy, en El Chaltén, Santa Cruz. 🌎 La natur",
+      "evento": "Caída de rocas en Santa Cruz",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "O'Higgins",
+      "comuna": "Santa Cruz",
+      "lat": "-34.640324",
+      "lon": "-71.366130",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/De_wEvgv2b1/",
+          "fecha": "2026-10-27T08:31:21-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "7874055e86df",
+      "fecha_publicacion": "2026-10-27T04:03:50-03:00",
+      "fecha_deteccion": "2026-10-27T08:39:33-03:00",
+      "titulo": "Captan Momento de Aluvión en Chile",
+      "evento": "Aluvión / flujo de detritos en Chile",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "N+",
+          "url": "https://www.nmas.com.mx/internacional/captan-momento-aluvion-chile-2026/",
+          "fecha": "2026-10-27T04:03:50-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "f7e48d87dc37",
+      "fecha_publicacion": "2026-10-27T01:04:37-03:00",
+      "fecha_deteccion": "2026-10-27T08:39:33-03:00",
+      "titulo": "“Superó totalmente lo que se esperaba”: Quebrada Honda en Las Condes vuelve a desbordarse a menos de tres semanas del aluvión",
+      "evento": "Aluvión / flujo de detritos en Las Condes",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "Las Condes",
+      "lat": "-33.408455",
+      "lon": "-70.567149",
+      "fuentes": [
+        {
+          "medio": "The Clinic",
+          "url": "https://www.theclinic.cl/2026/10/27/supero-totalmente-lo-que-se-esperaba-quebrada-honda-en-las-condes-vuelve-a-desbordarse-a-menos-de-tres-semanas-del-aluvion/",
+          "fecha": "2026-10-27T01:04:37-03:00"
+        },
+        {
+          "medio": "El Mostrador on MSN",
+          "url": "https://www.msn.com/es-cl/noticias/otras/seguro-de-vivienda-tras-un-aluvi%C3%B3n-o-inundaci%C3%B3n-qu%C3%A9-cubre-y-c%C3%B3mo-denunciar-los-da%C3%B1os/ar-AA2gaqF0",
+          "fecha": "2026-10-27T01:19:02-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "e9fbacaf2e6d",
       "fecha_publicacion": "2026-10-27T00:15:08-03:00",
@@ -87,6 +155,27 @@
       "estado": "nuevo"
     },
     {
+      "id": "7c90d93b542f",
+      "fecha_publicacion": "2026-10-26T22:35:30-03:00",
+      "fecha_deteccion": "2026-10-27T08:39:33-03:00",
+      "titulo": "Chile bajo alerta: un tornado causó destrozos y decretaron la emergencia por un posible alud",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Diario Panorama",
+          "url": "https://www.diariopanorama.com/noticia/570912/chile-bajo-alerta-tornado-causo-destrozos-decretaron-emergencia-posible-alud",
+          "fecha": "2026-10-26T22:35:30-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
       "id": "1c4adb1d5ac0",
       "fecha_publicacion": "2026-10-26T22:01:56-03:00",
       "fecha_deteccion": "2026-10-27T00:51:39-03:00",
@@ -124,6 +213,11 @@
           "medio": "TN",
           "url": "https://tn.com.ar/internacional/2026/10/26/un-tornado-en-chile-destruyo-un-colegio-y-provoco-danos-en-una-zona-residencial-decretaron-la-emergencia-por-un-nuevo-alud/",
           "fecha": "2026-10-26T21:48:00-03:00"
+        },
+        {
+          "medio": "La Gaceta",
+          "url": "https://www.lagaceta.com.ar/nota/1159787/mundo/tornado-chile-destruyo-colegio-provoco-danos-zona-residencial-decretaron-emergencia-nuevo-alud.html",
+          "fecha": "2026-10-26T22:49:19-03:00"
         }
       ],
       "estado": "nuevo"
@@ -245,7 +339,7 @@
     },
     {
       "id": "f243b7a0bf60",
-      "fecha_publicacion": "2026-10-26T19:26:00-03:00",
+      "fecha_publicacion": "2026-10-26T19:22:15-03:00",
       "fecha_deteccion": "2026-10-27T00:51:39-03:00",
       "titulo": "Nuevas inundaciones en San Carlos de Apoquindo: fuertes lluvias provocan anegamiento en calles de Las Condes",
       "evento": "Desborde / inundación en San Carlos",
@@ -257,9 +351,19 @@
       "lon": "-72.017953",
       "fuentes": [
         {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/adncl/posts/ahora-fuertes-precipitaciones-generan-inundaciones-en-san-carlos-de-apoquindo/1633496258814911/",
+          "fecha": "2026-10-26T19:22:15-03:00"
+        },
+        {
           "medio": "Teletrece",
           "url": "https://www.t13.cl/noticia/nacional/nuevas-inundaciones-san-carlos-apoquindo-fuertes-lluvias-provocan-anegamiento-c-26-10-2026",
           "fecha": "2026-10-26T19:26:00-03:00"
+        },
+        {
+          "medio": "Radio Agricultura",
+          "url": "https://www.radioagricultura.cl/noticias/nacional/transito-restringido-en-san-carlos-de-apoquindo-por-desborde-de-quebrada-honda_20261027/",
+          "fecha": "2026-10-27T00:43:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -492,9 +596,9 @@
           "fecha": "2026-10-26T13:20:00-03:00"
         },
         {
-          "medio": "CNN Chile",
-          "url": "https://www.cnnchile.com/pais/se-registra-desborde-de-quebrada-honda-en-las-condes-biministro-de-grange-acudira-al-sector/",
-          "fecha": "2026-10-26T14:00:00-03:00"
+          "medio": "Meganoticias",
+          "url": "https://www.meganoticias.cl/nacional/534881-desborde-quebrada-honda-videos-avance-agua-las-condes-26-10-2026.html",
+          "fecha": "2026-10-26T13:20:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -547,6 +651,11 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/p/De99YoHibEO/",
           "fecha": "2026-10-26T15:46:39-03:00"
+        },
+        {
+          "medio": "X",
+          "url": "https://x.com/hombredeltiempo/status/2114895918000648496",
+          "fecha": "2026-10-26T22:44:14-03:00"
         }
       ],
       "estado": "nuevo"
@@ -620,6 +729,11 @@
           "medio": "Publimicro",
           "url": "https://publimicro.cl/socavon-de-arauco-gobierno-reconoce-advertencias-previas-sobre-terrenos-inestables-y-mantiene-evacuacion-de-152-familias/",
           "fecha": "2026-10-24T21:45:21-03:00"
+        },
+        {
+          "medio": "Canal 9 Bío Bío Televisión",
+          "url": "https://www.canal9.cl/episodios/2026/10/27/operativo-de-salud-mental-llego-a-villa-el-mirador-por-avance-del-socavon-en-arauco",
+          "fecha": "2026-10-27T06:05:15-03:00"
         }
       ],
       "estado": "nuevo"

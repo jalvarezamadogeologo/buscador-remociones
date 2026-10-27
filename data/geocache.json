@@ -90,5 +90,9 @@
   "chanaral chile": {
     "lat": -26.347934,
     "lon": -70.6223617
+  },
+  "santa cruz chile": {
+    "lat": -34.6403243,
+    "lon": -71.3661297
   }
 }
