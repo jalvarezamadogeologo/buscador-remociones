@@ -94,5 +94,9 @@
   "santa cruz chile": {
     "lat": -34.6403243,
     "lon": -71.3661297
+  },
+  "la serena chile": {
+    "lat": -29.902705,
+    "lon": -71.2519575
   }
 }
