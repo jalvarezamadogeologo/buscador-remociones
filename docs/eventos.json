@@ -1,7 +1,269 @@
 {
-  "actualizado": "2026-10-26 19:20",
-  "total": 62,
+  "actualizado": "2026-10-27 00:51",
+  "total": 77,
   "eventos": [
+    {
+      "id": "e9fbacaf2e6d",
+      "fecha_publicacion": "2026-10-27T00:15:08-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Reportan cerca de 150 personas aisladas en el Camino a Farellones tras aluvión",
+      "evento": "Aluvión / flujo de detritos en Chile",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "CNN Chile",
+          "url": "https://www.cnnchile.com/pais/reportan-cerca-de-150-personas-aisladas-en-el-camino-a-farellones-tras-aluvion/",
+          "fecha": "2026-10-27T00:15:08-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "76376bb898f7",
+      "fecha_publicacion": "2026-10-27T00:11:15-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Temporal extremo golpea Chile: aluviones, inundaciones y un tornado dejan graves destrozos hoy 26 de octubre",
+      "evento": "Desborde / inundación en Chile",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "DSN Noticias",
+          "url": "https://dsn.pe/temporal-extremo-golpea-chile-aluviones-inundaciones-y-un-tornado-dejan-graves-destrozos-hoy-26-de-octubre/",
+          "fecha": "2026-10-27T00:11:15-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "fba6d0a8eb73",
+      "fecha_publicacion": "2026-10-26T23:04:03-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Alerta en el sector oriente de Santiago: Activación de quebradas genera desbordes y Las Condes y La Reina informan inundaciones de viviendas",
+      "evento": "Desborde / inundación en Santiago",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "The Clinic",
+          "url": "https://www.theclinic.cl/2026/10/26/alerta-en-el-sector-oriente-de-santiago-activacion-de-quebradas-genera-desbordes-e-inundaciones-de-viviendas/",
+          "fecha": "2026-10-26T23:04:03-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "c4b1a38e3946",
+      "fecha_publicacion": "2026-10-26T22:59:20-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Bomberos trabaja en evacuación de al menos 16 personas desde hogar de adultos mayores por inundación en sector de El Arrayán",
+      "evento": "Desborde / inundación en Lo Barnechea",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Metropolitana",
+      "comuna": "Lo Barnechea",
+      "lat": "-33.361601",
+      "lon": "-70.505196",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/bomberos-trabaja-en-evacuacion-de-al-menos-16-personas-desde-hogar-de-adultos-mayores-por-inundacion-en-sector-de-el-arrayan/",
+          "fecha": "2026-10-26T22:59:20-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "1c4adb1d5ac0",
+      "fecha_publicacion": "2026-10-26T22:01:56-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Chile enfrenta nuevos eventos climáticos: un tornado destruyó un colegio y un alud agravó la situación",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "DameNoticias",
+          "url": "https://www.damenoticias.com/nota/658034-chile-enfrenta-nuevos-eventos-climaticos-un-tornado-destruyo-un-colegio-y-un-alud-agravo-la-situacion",
+          "fecha": "2026-10-26T22:01:56-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "343e964ef0d0",
+      "fecha_publicacion": "2026-10-26T21:48:00-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Un tornado en Chile destruyó un colegio y provocó daños en una zona residencial: decretaron la emergencia por un nuevo alud en Santiago",
+      "evento": "Alud / avalancha en Santiago",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "TN",
+          "url": "https://tn.com.ar/internacional/2026/10/26/un-tornado-en-chile-destruyo-un-colegio-y-provoco-danos-en-una-zona-residencial-decretaron-la-emergencia-por-un-nuevo-alud/",
+          "fecha": "2026-10-26T21:48:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "90c313206dd1",
+      "fecha_publicacion": "2026-10-26T21:09:17-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Orrego despliega maquinaria en tres comunas de la RM por lluvias y confirma rodados en rutas a Farellones y San José de Maipo",
+      "evento": "Caída de rocas en Lo Barnechea",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Metropolitana",
+      "comuna": "Lo Barnechea",
+      "lat": "-33.361601",
+      "lon": "-70.505196",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/orrego-despliega-maquinaria-en-tres-comunas-de-la-rm-por-lluvias-y-confirma-rodados-en-rutas-a-farellones-y-san-jose-de-maipo/",
+          "fecha": "2026-10-26T21:09:17-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "29d184baa0dc",
+      "fecha_publicacion": "2026-10-26T20:48:28-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "🔴 Senapred declara Alerta Roja por remoción en masa en diez comunas de la RM La medida fue informada este lunes 26 de octubre ante las lluvias que afectan a la zona central y el riesgo en sectores precordilleranos. 📍 Comunas incluidas: San José de M",
+      "evento": "Deslizamiento en Chile",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/De-f7pEkXGj/",
+          "fecha": "2026-10-26T20:48:28-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "423cb6c69ea4",
+      "fecha_publicacion": "2026-10-26T20:27:31-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Senapred declara Alerta Roja en Colina y Lo Barnechea por riesgo de remoción en masa",
+      "evento": "Deslizamiento en Colina",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Metropolitana",
+      "comuna": "Colina",
+      "lat": "-33.202472",
+      "lon": "-70.674915",
+      "fuentes": [
+        {
+          "medio": "Chicureo Hoy",
+          "url": "https://www.chicureohoy.cl/actualidad/senapred-declara-alerta-roja-en-colina-y-lo-barnechea-por-riesgo-de-remocion-en-masa/",
+          "fecha": "2026-10-26T20:27:31-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "e6414a15c0f9",
+      "fecha_publicacion": "2026-10-26T20:13:34-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "🔴 Chile bajo emergencia: tornado EF2 golpea Requínoa y aluvión activa quebradas en la zona central",
+      "evento": "Aluvión / flujo de detritos en Chile",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/diario.expreso/posts/-chile-bajo-emergencia-tornado-ef2-golpea-requ%C3%ADnoa-y-aluvi%C3%B3n-activa-quebradas-en/1564138089077130/",
+          "fecha": "2026-10-26T20:13:34-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "41643065b236",
+      "fecha_publicacion": "2026-10-26T19:27:43-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Reportan aluvión en Lo Barnechea y calles anegadas en San Carlos de Apoquindo",
+      "evento": "Aluvión / flujo de detritos en Lo Barnechea",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "Lo Barnechea",
+      "lat": "-33.361601",
+      "lon": "-70.505196",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/fdo2000/status/2114846463582773542",
+          "fecha": "2026-10-26T19:27:43-03:00"
+        },
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/reportan-aluvion-en-lo-barnechea-y-calles-anegadas-en-san-carlos-de-apoquindo/",
+          "fecha": "2026-10-26T19:40:55-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/De-Y__AJcQJ/",
+          "fecha": "2026-10-26T19:48:46-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "f243b7a0bf60",
+      "fecha_publicacion": "2026-10-26T19:26:00-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Nuevas inundaciones en San Carlos de Apoquindo: fuertes lluvias provocan anegamiento en calles de Las Condes",
+      "evento": "Desborde / inundación en San Carlos",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Nuble",
+      "comuna": "San Carlos",
+      "lat": "-36.379228",
+      "lon": "-72.017953",
+      "fuentes": [
+        {
+          "medio": "Teletrece",
+          "url": "https://www.t13.cl/noticia/nacional/nuevas-inundaciones-san-carlos-apoquindo-fuertes-lluvias-provocan-anegamiento-c-26-10-2026",
+          "fecha": "2026-10-26T19:26:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "769b6e3f74b8",
       "fecha_publicacion": "2026-10-26T18:20:05-03:00",
@@ -61,6 +323,32 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/reel/De9z7PVsYTx/",
           "fecha": "2026-10-26T14:26:04-03:00"
+        },
+        {
+          "medio": "24horas",
+          "url": "https://www.24horas.cl/regiones/zona-centro/biobio/derrumbe-dejo-expuestos-7-ataudes-en-cementerio-de-lota-familiares",
+          "fecha": "2026-10-26T21:03:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "9cfcc3b3590b",
+      "fecha_publicacion": "2026-10-26T14:00:00-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Fenómeno El Niño: desborde del río Kimbiri en Cusco arrasa viviendas y deja a dos personas atrapadas en el caudal",
+      "evento": "Desborde / inundación en Los Rios",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Los Rios",
+      "comuna": "",
+      "lat": "-39.974275",
+      "lon": "-72.667701",
+      "fuentes": [
+        {
+          "medio": "Infobae",
+          "url": "https://www.infobae.com/peru/2026/10/27/fenomeno-el-nino-desborde-del-rio-kimbiri-en-cusco-arrasa-viviendas-y-deja-a-dos-personas-atrapadas-en-el-caudal/",
+          "fecha": "2026-10-26T14:00:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -87,6 +375,27 @@
       "estado": "nuevo"
     },
     {
+      "id": "68a84fe65009",
+      "fecha_publicacion": "2026-10-26T10:05:47-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Chañaral: Calle Domeyko cumple casi once meses cerrada tras el derrumbe de un muro",
+      "evento": "Deslizamiento en Chanaral",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Atacama",
+      "comuna": "Chanaral",
+      "lat": "-26.347934",
+      "lon": "-70.622362",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/radionostalgica/posts/cha%C3%B1aral-calle-domeyko-cumple-casi-once-meses-cerrada-tras-el-derrumbe-de-un-mur/1727828712678408/",
+          "fecha": "2026-10-26T10:05:47-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
       "id": "8d407aafceeb",
       "fecha_publicacion": "2026-10-25T18:13:58-03:00",
       "fecha_deteccion": "2026-10-26T00:23:57-03:00",
@@ -103,6 +412,11 @@
           "medio": "X",
           "url": "https://x.com/AztecaJrz/status/2114465513917366504",
           "fecha": "2026-10-25T18:13:58-03:00"
+        },
+        {
+          "medio": "El Diario",
+          "url": "https://diario.mx/juarez/2026/oct/26/provoca-socavon-de-3-metros-caos-vial-en-la-santiago-blancas-1145500.html",
+          "fecha": "2026-10-26T23:13:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -155,6 +469,37 @@
       "estado": "nuevo"
     },
     {
+      "id": "608d3014dddc",
+      "fecha_publicacion": "2026-10-25T14:00:00-03:00",
+      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
+      "titulo": "Tras desborde de Quebrada Honda: Alcaldesa de Las Condes informa de casas inundadas y llama a resguardarse",
+      "evento": "Desborde / inundación en Las Condes",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Metropolitana",
+      "comuna": "Las Condes",
+      "lat": "-33.408455",
+      "lon": "-70.567149",
+      "fuentes": [
+        {
+          "medio": "El Reporte Diario",
+          "url": "https://reportediario.cl/2026/10/26/senapred-activa-alerta-sae-por-desborde-de-quebrada-honda-en-las-condes/",
+          "fecha": "2026-10-25T14:00:00-03:00"
+        },
+        {
+          "medio": "EMOL",
+          "url": "https://www.emol.com/noticias/Nacional/2026/10/26/1215265/las-condes-casas-inundadas.html",
+          "fecha": "2026-10-26T13:20:00-03:00"
+        },
+        {
+          "medio": "CNN Chile",
+          "url": "https://www.cnnchile.com/pais/se-registra-desborde-de-quebrada-honda-en-las-condes-biministro-de-grange-acudira-al-sector/",
+          "fecha": "2026-10-26T14:00:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
       "id": "53e38602dc94",
       "fecha_publicacion": "2026-10-25T13:00:00-03:00",
       "fecha_deteccion": "2026-10-26T00:23:57-03:00",
@@ -171,6 +516,11 @@
           "medio": "X",
           "url": "https://x.com/PapinoMatus/status/2114386504500101470/photo/1",
           "fecha": "2026-10-25T13:00:00-03:00"
+        },
+        {
+          "medio": "Cooperativa",
+          "url": "https://www.cooperativa.cl/noticias/pais/tiempo/volvio-a-desbordarse-la-quebrada-honda-de-san-carlos-de-apoquindo/2026-10-26/220643.html",
+          "fecha": "2026-10-26T22:06:43-03:00"
         }
       ],
       "estado": "nuevo"
@@ -223,6 +573,11 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/ManteteInformado/posts/mantenteinformado-urgente-derrumbe-deja-incomunicadas-a-varias-comunidades-de-mo/1771496344984115/",
           "fecha": "2026-10-25T12:03:22-03:00"
+        },
+        {
+          "medio": "MEGANOTICIAS",
+          "url": "https://www.meganoticias.mx/toluca/noticia/cierran-carretera-en-tenancingo-tras-deslizamiento-de-tierra/782567",
+          "fecha": "2026-10-26T10:11:00-03:00"
         }
       ],
       "estado": "nuevo"

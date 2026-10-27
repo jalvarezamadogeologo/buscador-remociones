@@ -70,5 +70,25 @@
   "constitucion chile": {
     "lat": -35.3318306,
     "lon": -72.4118998
+  },
+  "lo barnechea chile": {
+    "lat": -33.3616012,
+    "lon": -70.5051957
+  },
+  "colina chile": {
+    "lat": -33.202472,
+    "lon": -70.6749147
+  },
+  "las condes chile": {
+    "lat": -33.4084548,
+    "lon": -70.5671489
+  },
+  "los rios chile": {
+    "lat": -39.9742747,
+    "lon": -72.6677006
+  },
+  "chanaral chile": {
+    "lat": -26.347934,
+    "lon": -70.6223617
   }
 }
