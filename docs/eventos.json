@@ -1,7 +1,54 @@
 {
-  "actualizado": "2026-10-27 18:51",
-  "total": 87,
+  "actualizado": "2026-10-28 01:11",
+  "total": 89,
   "eventos": [
+    {
+      "id": "0ecb73e26b5b",
+      "fecha_publicacion": "2026-10-27T19:30:11-03:00",
+      "fecha_deteccion": "2026-10-28T01:11:25-03:00",
+      "titulo": "Varias comunas de la capital de Chile amanecieron el martes bajo alerta roja debido a las fuertes lluvias que azotaron al país en la madrugada, que provocaron inundaciones, deslizamientos de tierra y hasta un tornado en la región central. El Servicio Nacion",
+      "evento": "Desborde / inundación en Chile",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfA7wViF44H/",
+          "fecha": "2026-10-27T19:30:11-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "4efef1388403",
+      "fecha_publicacion": "2026-10-27T13:51:32-03:00",
+      "fecha_deteccion": "2026-10-28T01:11:25-03:00",
+      "titulo": "Un desprendimiento en la fachada de la Purísima sorprende a un vecino de Salamanca y obliga a acordonar la zona",
+      "evento": "Caída de rocas en Salamanca",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Coquimbo",
+      "comuna": "Salamanca",
+      "lat": "-31.780467",
+      "lon": "-70.964990",
+      "fuentes": [
+        {
+          "medio": "Salamancahoy",
+          "url": "https://www.salamancahoy.es/salamanca/ciudad/desprendimiento-fachada-purisima-sorprende-vecino-salamanca-obliga-20261027175132-nt.html",
+          "fecha": "2026-10-27T13:51:32-03:00"
+        },
+        {
+          "medio": "X",
+          "url": "https://x.com/Salamanca__hoy/status/2115125390754668640",
+          "fecha": "2026-10-27T13:56:04-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "4c8c6ddaa022",
       "fecha_publicacion": "2026-10-27T10:43:54-03:00",
@@ -87,37 +134,6 @@
           "medio": "N+",
           "url": "https://www.nmas.com.mx/internacional/captan-momento-aluvion-chile-2026/",
           "fecha": "2026-10-27T04:03:50-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "f7e48d87dc37",
-      "fecha_publicacion": "2026-10-27T01:04:37-03:00",
-      "fecha_deteccion": "2026-10-27T08:39:33-03:00",
-      "titulo": "“Superó totalmente lo que se esperaba”: Quebrada Honda en Las Condes vuelve a desbordarse a menos de tres semanas del aluvión",
-      "evento": "Aluvión / flujo de detritos en Las Condes",
-      "tipo_evento": "aluvion",
-      "tipo_etiqueta": "Aluvión / flujo de detritos",
-      "region": "Metropolitana",
-      "comuna": "Las Condes",
-      "lat": "-33.408455",
-      "lon": "-70.567149",
-      "fuentes": [
-        {
-          "medio": "The Clinic",
-          "url": "https://www.theclinic.cl/2026/10/27/supero-totalmente-lo-que-se-esperaba-quebrada-honda-en-las-condes-vuelve-a-desbordarse-a-menos-de-tres-semanas-del-aluvion/",
-          "fecha": "2026-10-27T01:04:37-03:00"
-        },
-        {
-          "medio": "El Mostrador on MSN",
-          "url": "https://www.msn.com/es-cl/noticias/otras/seguro-de-vivienda-tras-un-aluvi%C3%B3n-o-inundaci%C3%B3n-qu%C3%A9-cubre-y-c%C3%B3mo-denunciar-los-da%C3%B1os/ar-AA2gaqF0",
-          "fecha": "2026-10-27T01:19:02-03:00"
-        },
-        {
-          "medio": "Facebook",
-          "url": "https://www.facebook.com/meganoticiascl/posts/-el-biministro-louis-de-grange-explic%C3%B3-que-la-reactivaci%C3%B3n-de-quebrada-honda-en-/1730381278449322/",
-          "fecha": "2026-10-27T01:41:23-03:00"
         }
       ],
       "estado": "nuevo"
@@ -614,6 +630,37 @@
           "medio": "Infobae",
           "url": "https://www.infobae.com/peru/2026/10/27/fenomeno-el-nino-desborde-del-rio-kimbiri-en-cusco-arrasa-viviendas-y-deja-a-dos-personas-atrapadas-en-el-caudal/",
           "fecha": "2026-10-26T14:00:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
+      "id": "f7e48d87dc37",
+      "fecha_publicacion": "2026-10-26T13:40:24-03:00",
+      "fecha_deteccion": "2026-10-27T08:39:33-03:00",
+      "titulo": "“Superó totalmente lo que se esperaba”: Quebrada Honda en Las Condes vuelve a desbordarse a menos de tres semanas del aluvión",
+      "evento": "Aluvión / flujo de detritos en Las Condes",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "Las Condes",
+      "lat": "-33.408455",
+      "lon": "-70.567149",
+      "fuentes": [
+        {
+          "medio": "La Tercera on MSN",
+          "url": "https://www.msn.com/es-cl/noticias/otras/las-condes-y-el-mop-comienzan-los-trabajos-de-las-mallas-din%C3%A1micas-en-san-carlos-de-apoquindo-despu%C3%A9s-del-aluvi%C3%B3n/ar-AA2g7Xkg",
+          "fecha": "2026-10-26T13:40:24-03:00"
+        },
+        {
+          "medio": "The Clinic",
+          "url": "https://www.theclinic.cl/2026/10/27/supero-totalmente-lo-que-se-esperaba-quebrada-honda-en-las-condes-vuelve-a-desbordarse-a-menos-de-tres-semanas-del-aluvion/",
+          "fecha": "2026-10-27T01:04:37-03:00"
+        },
+        {
+          "medio": "El Mostrador on MSN",
+          "url": "https://www.msn.com/es-cl/noticias/otras/seguro-de-vivienda-tras-un-aluvi%C3%B3n-o-inundaci%C3%B3n-qu%C3%A9-cubre-y-c%C3%B3mo-denunciar-los-da%C3%B1os/ar-AA2gaqF0",
+          "fecha": "2026-10-27T01:19:02-03:00"
         }
       ],
       "estado": "nuevo"
