@@ -1,5 +1,5 @@
 {
-  "total": 89,
+  "total": 91,
   "eventos": [
     {
       "id": "0ecb73e26b5b",
@@ -117,6 +117,29 @@
       "issue": "58"
     },
     {
+      "id": "f6b3eaa9101d",
+      "fecha_publicacion": "2026-10-27T04:31:00-03:00",
+      "fecha_deteccion": "2026-10-28T09:12:02-03:00",
+      "titulo": "“Hubiésemos quedado atrapadas”: el desesperado llamado de ayuda de vecinas de El Arrayán tras alud de barro",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Metropolitana",
+      "comuna": "Lo Barnechea",
+      "lat": "-33.361601",
+      "lon": "-70.505196",
+      "fuente_1": "Chilevisión",
+      "url_1": "https://www.chilevision.cl/programas/contigo-en-la-manana/hubiesemos-quedado-atrapadas-el-desesperado-llamado-de-ayuda-de-vecinas-de-el-arrayan-tras-alud-de-barro/",
+      "fecha_1": "2026-10-27T04:31:00-03:00",
+      "fuente_2": "",
+      "url_2": "",
+      "fecha_2": "",
+      "fuente_3": "",
+      "url_3": "",
+      "fecha_3": "",
+      "estado": "nuevo",
+      "issue": "64"
+    },
+    {
       "id": "7874055e86df",
       "fecha_publicacion": "2026-10-27T04:03:50-03:00",
       "fecha_deteccion": "2026-10-27T08:39:33-03:00",
@@ -138,6 +161,29 @@
       "fecha_3": "",
       "estado": "nuevo",
       "issue": "52"
+    },
+    {
+      "id": "bd9f16829fc0",
+      "fecha_publicacion": "2026-10-27T00:57:00-03:00",
+      "fecha_deteccion": "2026-10-28T09:12:02-03:00",
+      "titulo": "“Jefa, está la embarrada”: mujer registró dramático momento tras deslizamiento de tierra en El Arrayán",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Metropolitana",
+      "comuna": "Lo Barnechea",
+      "lat": "-33.361601",
+      "lon": "-70.505196",
+      "fuente_1": "Chilevisión",
+      "url_1": "https://www.chilevision.cl/noticias/nacional/jefa-esta-la-embarrada-mujer-registro-dramatico-momento-tras-deslizamiento-de-tierra-en-el-arrayan/",
+      "fecha_1": "2026-10-27T00:57:00-03:00",
+      "fuente_2": "",
+      "url_2": "",
+      "fecha_2": "",
+      "fuente_3": "",
+      "url_3": "",
+      "fecha_3": "",
+      "estado": "nuevo",
+      "issue": "63"
     },
     {
       "id": "319a4a49d6c0",
