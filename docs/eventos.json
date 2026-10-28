@@ -1,7 +1,38 @@
 {
-  "actualizado": "2026-10-28 09:12",
-  "total": 91,
+  "actualizado": "2026-10-28 19:14",
+  "total": 92,
   "eventos": [
+    {
+      "id": "83e6acdc9b5a",
+      "fecha_publicacion": "2026-10-28T09:52:13-03:00",
+      "fecha_deteccion": "2026-10-28T19:14:08-03:00",
+      "titulo": "Desprendimiento de cielorraso en el Liceo Óscar Castro Zúñiga reabre el debate sobre estado de su infraestructura",
+      "evento": "Caída de rocas en Castro",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Los Lagos",
+      "comuna": "Castro",
+      "lat": "-42.482375",
+      "lon": "-73.764292",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/eltipografo/posts/-preocupaci%C3%B3n-tras-desprendimiento-de-cielorraso-en-liceo-%C3%B3scar-castronota-en-co/1631319932340388/",
+          "fecha": "2026-10-28T09:52:13-03:00"
+        },
+        {
+          "medio": "El Tipógrafo",
+          "url": "https://eltipografo.cl/2026/10/preocupacion-tras-desprendimiento-de-cielorraso-en-liceo-oscar-castro",
+          "fecha": "2026-10-28T09:55:16-03:00"
+        },
+        {
+          "medio": "El Rancagüino",
+          "url": "https://www.elrancaguino.cl/2026/10/28/desprendimiento-de-cielorraso-en-el-liceo-oscar-castro-zuniga-reabre-el-debate-sobre-estado-de-su-infraestructura/",
+          "fecha": "2026-10-28T14:47:00-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "0ecb73e26b5b",
       "fecha_publicacion": "2026-10-27T19:30:11-03:00",
@@ -443,6 +474,11 @@
           "medio": "Chicureo Hoy",
           "url": "https://www.chicureohoy.cl/actualidad/senapred-declara-alerta-roja-en-colina-y-lo-barnechea-por-riesgo-de-remocion-en-masa/",
           "fecha": "2026-10-26T20:27:31-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfCTnxpGxW-/",
+          "fecha": "2026-10-28T08:17:51-03:00"
         }
       ],
       "estado": "nuevo"
