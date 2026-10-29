@@ -18,5 +18,97 @@
   "ovalle chile": {
     "lat": -30.6030819,
     "lon": -71.2029894
+  },
+  "angol chile": {
+    "lat": -37.798787,
+    "lon": -72.7086097
+  },
+  "cauquenes chile": {
+    "lat": -35.9671286,
+    "lon": -72.315427
+  },
+  "porvenir chile": {
+    "lat": -53.2956738,
+    "lon": -70.3687401
+  },
+  "lota chile": {
+    "lat": -37.0944533,
+    "lon": -73.1564024
+  },
+  "coquimbo chile": {
+    "lat": -30.7546652,
+    "lon": -70.9005536
+  },
+  "metropolitana chile": {
+    "lat": -33.5739341,
+    "lon": -70.6205518
+  },
+  "arauco chile": {
+    "lat": -37.246248,
+    "lon": -73.3176399
+  },
+  "san antonio chile": {
+    "lat": -33.5808615,
+    "lon": -71.6132377
+  },
+  "valdivia chile": {
+    "lat": -39.8141262,
+    "lon": -73.2459859
+  },
+  "santiago chile": {
+    "lat": -33.4376995,
+    "lon": -70.6510671
+  },
+  "san carlos chile": {
+    "lat": -36.3792284,
+    "lon": -72.0179525
+  },
+  "tocopilla chile": {
+    "lat": -22.0887189,
+    "lon": -70.1960657
+  },
+  "constitucion chile": {
+    "lat": -35.3318306,
+    "lon": -72.4118998
+  },
+  "lo barnechea chile": {
+    "lat": -33.3616012,
+    "lon": -70.5051957
+  },
+  "colina chile": {
+    "lat": -33.202472,
+    "lon": -70.6749147
+  },
+  "las condes chile": {
+    "lat": -33.4084548,
+    "lon": -70.5671489
+  },
+  "los rios chile": {
+    "lat": -39.9742747,
+    "lon": -72.6677006
+  },
+  "chanaral chile": {
+    "lat": -26.347934,
+    "lon": -70.6223617
+  },
+  "santa cruz chile": {
+    "lat": -34.6403243,
+    "lon": -71.3661297
+  },
+  "la serena chile": {
+    "lat": -29.902705,
+    "lon": -71.2519575
+  },
+  "bulnes chile": {
+    "lat": -36.7422507,
+    "lon": -72.2987216
+  },
+  "salamanca chile": {
+    "lat": -31.7804674,
+    "lon": -70.9649896
+  },
+  "castro chile": {
+    "lat": -42.482375,
+    "lon": -73.7642918
   }
 }

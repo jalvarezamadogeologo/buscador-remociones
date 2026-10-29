@@ -1,6 +1,6 @@
 {
   "actualizado": "2026-10-29 09:21",
-  "total": 93,
+  "total": 87,
   "eventos": [
     {
       "id": "3f73dd8a5cba",
@@ -77,7 +77,7 @@
     },
     {
       "id": "4efef1388403",
-      "fecha_publicacion": "2026-10-27T13:51:32-03:00",
+      "fecha_publicacion": "2026-10-27T13:56:04-03:00",
       "fecha_deteccion": "2026-10-28T01:11:25-03:00",
       "titulo": "Un desprendimiento en la fachada de la Purísima sorprende a un vecino de Salamanca y obliga a acordonar la zona",
       "evento": "Caída de rocas en Salamanca",
@@ -88,11 +88,6 @@
       "lat": "-31.780467",
       "lon": "-70.964990",
       "fuentes": [
-        {
-          "medio": "Salamancahoy",
-          "url": "https://www.salamancahoy.es/salamanca/ciudad/desprendimiento-fachada-purisima-sorprende-vecino-salamanca-obliga-20261027175132-nt.html",
-          "fecha": "2026-10-27T13:51:32-03:00"
-        },
         {
           "medio": "X",
           "url": "https://x.com/Salamanca__hoy/status/2115125390754668640",
@@ -149,27 +144,6 @@
       "estado": "nuevo"
     },
     {
-      "id": "028afd4fc828",
-      "fecha_publicacion": "2026-10-27T08:15:00-03:00",
-      "fecha_deteccion": "2026-10-27T18:51:18-03:00",
-      "titulo": "Desborde del río San Julián afecta a siete municipios de Santa Cruz",
-      "evento": "Desborde / inundación en Santa Cruz",
-      "tipo_evento": "desborde_inundacion",
-      "tipo_etiqueta": "Desborde / inundación",
-      "region": "O'Higgins",
-      "comuna": "Santa Cruz",
-      "lat": "-34.640324",
-      "lon": "-71.366130",
-      "fuentes": [
-        {
-          "medio": "Periódico La Patria",
-          "url": "https://lapatria.bo/enfoque-nacional/denuncia/desborde-rio-san-julian-afecta-siete-municipios/",
-          "fecha": "2026-10-27T08:15:00-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
       "id": "f6b3eaa9101d",
       "fecha_publicacion": "2026-10-27T04:31:00-03:00",
       "fecha_deteccion": "2026-10-28T09:12:02-03:00",
@@ -186,27 +160,6 @@
           "medio": "Chilevisión",
           "url": "https://www.chilevision.cl/programas/contigo-en-la-manana/hubiesemos-quedado-atrapadas-el-desesperado-llamado-de-ayuda-de-vecinas-de-el-arrayan-tras-alud-de-barro/",
           "fecha": "2026-10-27T04:31:00-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "7874055e86df",
-      "fecha_publicacion": "2026-10-27T04:03:50-03:00",
-      "fecha_deteccion": "2026-10-27T08:39:33-03:00",
-      "titulo": "Captan Momento de Aluvión en Chile",
-      "evento": "Aluvión / flujo de detritos en Chile",
-      "tipo_evento": "aluvion",
-      "tipo_etiqueta": "Aluvión / flujo de detritos",
-      "region": "",
-      "comuna": "",
-      "lat": "",
-      "lon": "",
-      "fuentes": [
-        {
-          "medio": "N+",
-          "url": "https://www.nmas.com.mx/internacional/captan-momento-aluvion-chile-2026/",
-          "fecha": "2026-10-27T04:03:50-03:00"
         }
       ],
       "estado": "nuevo"
@@ -270,27 +223,6 @@
           "medio": "CNN Chile",
           "url": "https://www.cnnchile.com/pais/reportan-cerca-de-150-personas-aisladas-en-el-camino-a-farellones-tras-aluvion/",
           "fecha": "2026-10-27T00:15:08-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "76376bb898f7",
-      "fecha_publicacion": "2026-10-27T00:11:15-03:00",
-      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
-      "titulo": "Temporal extremo golpea Chile: aluviones, inundaciones y un tornado dejan graves destrozos hoy 26 de octubre",
-      "evento": "Desborde / inundación en Chile",
-      "tipo_evento": "desborde_inundacion",
-      "tipo_etiqueta": "Desborde / inundación",
-      "region": "",
-      "comuna": "",
-      "lat": "",
-      "lon": "",
-      "fuentes": [
-        {
-          "medio": "DSN Noticias",
-          "url": "https://dsn.pe/temporal-extremo-golpea-chile-aluviones-inundaciones-y-un-tornado-dejan-graves-destrozos-hoy-26-de-octubre/",
-          "fecha": "2026-10-27T00:11:15-03:00"
         }
       ],
       "estado": "nuevo"
@@ -390,27 +322,22 @@
       "estado": "nuevo"
     },
     {
-      "id": "343e964ef0d0",
-      "fecha_publicacion": "2026-10-26T21:48:00-03:00",
-      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
-      "titulo": "Un tornado en Chile destruyó un colegio y provocó daños en una zona residencial: decretaron la emergencia por un nuevo alud en Santiago",
-      "evento": "Alud / avalancha en Santiago",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "Metropolitana",
-      "comuna": "Santiago",
-      "lat": "-33.437700",
-      "lon": "-70.651067",
+      "id": "082c82ec5023",
+      "fecha_publicacion": "2026-10-26T21:12:42-03:00",
+      "fecha_deteccion": "2026-10-26T19:20:27-03:00",
+      "titulo": "Esquina recibió una excavadora para reparar el socavamiento en Constitución y Sarmiento",
+      "evento": "Socavón en Constitucion",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Maule",
+      "comuna": "Constitucion",
+      "lat": "-35.331831",
+      "lon": "-72.411900",
       "fuentes": [
         {
-          "medio": "TN",
-          "url": "https://tn.com.ar/internacional/2026/10/26/un-tornado-en-chile-destruyo-un-colegio-y-provoco-danos-en-una-zona-residencial-decretaron-la-emergencia-por-un-nuevo-alud/",
-          "fecha": "2026-10-26T21:48:00-03:00"
-        },
-        {
-          "medio": "La Gaceta",
-          "url": "https://www.lagaceta.com.ar/nota/1159787/mundo/tornado-chile-destruyo-colegio-provoco-danos-zona-residencial-decretaron-emergencia-nuevo-alud.html",
-          "fecha": "2026-10-26T22:49:19-03:00"
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/De-in9Sg8-_/",
+          "fecha": "2026-10-26T21:12:42-03:00"
         }
       ],
       "estado": "nuevo"
@@ -656,32 +583,6 @@
       "estado": "nuevo"
     },
     {
-      "id": "082c82ec5023",
-      "fecha_publicacion": "2026-10-26T16:28:19-03:00",
-      "fecha_deteccion": "2026-10-26T19:20:27-03:00",
-      "titulo": "Esquina recibió una excavadora para reparar el socavamiento en Constitución y Sarmiento",
-      "evento": "Socavón en Constitucion",
-      "tipo_evento": "socavon",
-      "tipo_etiqueta": "Socavón",
-      "region": "Maule",
-      "comuna": "Constitucion",
-      "lat": "-35.331831",
-      "lon": "-72.411900",
-      "fuentes": [
-        {
-          "medio": "Actualidad Esquina",
-          "url": "https://actualidadesquina.com.ar/esquina-recibio-una-excavadora-para-reparar-el-socavamiento-en-constitucion-y-sarmiento/",
-          "fecha": "2026-10-26T16:28:19-03:00"
-        },
-        {
-          "medio": "Instagram",
-          "url": "https://www.instagram.com/reel/De-in9Sg8-_/",
-          "fecha": "2026-10-26T21:12:42-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
       "id": "688d4137a28e",
       "fecha_publicacion": "2026-10-26T14:26:04-03:00",
       "fecha_deteccion": "2026-10-26T19:20:27-03:00",
@@ -708,27 +609,6 @@
           "medio": "X",
           "url": "https://x.com/tvnredbiobio/status/2114891899769413740",
           "fecha": "2026-10-26T22:28:16-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "9cfcc3b3590b",
-      "fecha_publicacion": "2026-10-26T14:00:00-03:00",
-      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
-      "titulo": "Fenómeno El Niño: desborde del río Kimbiri en Cusco arrasa viviendas y deja a dos personas atrapadas en el caudal",
-      "evento": "Desborde / inundación en Los Rios",
-      "tipo_evento": "desborde_inundacion",
-      "tipo_etiqueta": "Desborde / inundación",
-      "region": "Los Rios",
-      "comuna": "",
-      "lat": "-39.974275",
-      "lon": "-72.667701",
-      "fuentes": [
-        {
-          "medio": "Infobae",
-          "url": "https://www.infobae.com/peru/2026/10/27/fenomeno-el-nino-desborde-del-rio-kimbiri-en-cusco-arrasa-viviendas-y-deja-a-dos-personas-atrapadas-en-el-caudal/",
-          "fecha": "2026-10-26T14:00:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -823,11 +703,6 @@
           "medio": "X",
           "url": "https://x.com/AztecaJrz/status/2114465513917366504",
           "fecha": "2026-10-25T18:13:58-03:00"
-        },
-        {
-          "medio": "El Diario",
-          "url": "https://diario.mx/juarez/2026/oct/26/provoca-socavon-de-3-metros-caos-vial-en-la-santiago-blancas-1145500.html",
-          "fecha": "2026-10-26T23:13:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -849,11 +724,6 @@
           "medio": "X",
           "url": "https://x.com/MetroLibrePTY/status/2114462349008781450",
           "fecha": "2026-10-25T18:01:23-03:00"
-        },
-        {
-          "medio": "news.google.com",
-          "url": "https://www.metrolibre.com/nacionales/el-sinaproc-inspeccion-area-afectada-por-deslizamiento-en-san-carlos-AK26797052",
-          "fecha": "2026-10-25T18:08:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -989,11 +859,6 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/ManteteInformado/posts/mantenteinformado-urgente-derrumbe-deja-incomunicadas-a-varias-comunidades-de-mo/1771496344984115/",
           "fecha": "2026-10-25T12:03:22-03:00"
-        },
-        {
-          "medio": "MEGANOTICIAS",
-          "url": "https://www.meganoticias.mx/toluca/noticia/cierran-carretera-en-tenancingo-tras-deslizamiento-de-tierra/782567",
-          "fecha": "2026-10-26T10:11:00-03:00"
         }
       ],
       "estado": "nuevo"
@@ -1067,6 +932,32 @@
       "estado": "nuevo"
     },
     {
+      "id": "a13c84aa5e3a",
+      "fecha_publicacion": "2026-10-24T08:35:27-03:00",
+      "fecha_deteccion": "2026-10-24T00:26:31-03:00",
+      "titulo": "Muere trabajador tras derrumbe de tierra en Monterrey",
+      "evento": "Deslizamiento en Porvenir",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Magallanes",
+      "comuna": "Porvenir",
+      "lat": "-53.295674",
+      "lon": "-70.368740",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/PrefecturaPichincha/posts/atenci%C3%B3n-debido-a-las-fuertes-lluvias-se-reporta-un-deslizamiento-en-la-v%C3%ADa-el-p/1587172443451238/",
+          "fecha": "2026-10-24T08:35:27-03:00"
+        },
+        {
+          "medio": "X",
+          "url": "https://x.com/PichinchaGob/status/2114347121042235629/photo/1",
+          "fecha": "2026-10-25T10:23:30-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
+    {
       "id": "46c45da4b5e3",
       "fecha_publicacion": "2026-10-24T00:42:39-03:00",
       "fecha_deteccion": "2026-10-24T07:21:16-03:00",
@@ -1083,37 +974,6 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/reel/De3MITfJH9K/",
           "fecha": "2026-10-24T00:42:39-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "a13c84aa5e3a",
-      "fecha_publicacion": "2026-10-23T20:45:00-03:00",
-      "fecha_deteccion": "2026-10-24T00:26:31-03:00",
-      "titulo": "Muere trabajador tras derrumbe de tierra en Monterrey",
-      "evento": "Deslizamiento en Porvenir",
-      "tipo_evento": "deslizamiento",
-      "tipo_etiqueta": "Deslizamiento",
-      "region": "Magallanes",
-      "comuna": "Porvenir",
-      "lat": "-53.295674",
-      "lon": "-70.368740",
-      "fuentes": [
-        {
-          "medio": "El Porvenir - Portada",
-          "url": "https://elporvenir.mx/amp/justicia/muere-trabajador-tras-derrumbe-de-tierra-en-monterrey/1037568",
-          "fecha": "2026-10-23T20:45:00-03:00"
-        },
-        {
-          "medio": "Facebook",
-          "url": "https://www.facebook.com/PrefecturaPichincha/posts/atenci%C3%B3n-debido-a-las-fuertes-lluvias-se-reporta-un-deslizamiento-en-la-v%C3%ADa-el-p/1587172443451238/",
-          "fecha": "2026-10-24T08:35:27-03:00"
-        },
-        {
-          "medio": "X",
-          "url": "https://x.com/PichinchaGob/status/2114347121042235629/photo/1",
-          "fecha": "2026-10-25T10:23:30-03:00"
         }
       ],
       "estado": "nuevo"
@@ -1266,27 +1126,27 @@
       "estado": "nuevo"
     },
     {
-      "id": "c75590330c96",
-      "fecha_publicacion": "2026-10-22T19:30:57-03:00",
+      "id": "03acaaa9854d",
+      "fecha_publicacion": "2026-10-22T21:45:00-03:00",
       "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Otra avalancha en el lado chileno dificulta el tránsito en alta montaña (mobile)",
-      "evento": "Alud / avalancha en Chile",
+      "titulo": "Los Andes: rescatan el cuerpo del tercer excursionista fallecido en la avalancha de Portillo",
+      "evento": "Alud / avalancha en Los Andes",
       "tipo_evento": "alud",
       "tipo_etiqueta": "Alud / avalancha",
-      "region": "",
-      "comuna": "",
-      "lat": "",
-      "lon": "",
+      "region": "Valparaiso",
+      "comuna": "Los Andes",
+      "lat": "-32.836418",
+      "lon": "-70.129083",
       "fuentes": [
         {
-          "medio": "Diario El Sol Mendoza",
-          "url": "https://www.elsol.com.ar/mendoza/otra-avalancha-en-el-lado-chileno-complica-el-transito-en-alta-montana/",
-          "fecha": "2026-10-22T19:30:57-03:00"
+          "medio": "SoyChile.cl",
+          "url": "https://www.soychile.cl/quillota/sociedad/2026/10/22/969129/avalancha-portillo-losandes-victimas-senapred.html",
+          "fecha": "2026-10-22T21:45:00-03:00"
         },
         {
-          "medio": "Mendoza 24",
-          "url": "https://mendoza24.com.ar/noticias_locales/36899-Otra-avalancha-en-el-lado-chileno-dificulta-el-transito-en-alta-montania",
-          "fecha": "2026-10-22T20:37:55-03:00"
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/elpaisamerica/posts/lasemanaenelpa%C3%ADs-una-de-las-v%C3%ADctimas-de-la-avalancha-en-los-andes-era-hija-de-la/1821300470001441/",
+          "fecha": "2026-10-24T23:00:19-03:00"
         }
       ],
       "estado": "nuevo"
@@ -1350,37 +1210,6 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/canal9televida/posts/-el-desprendimiento-se-produjo-este-jueves-en-la-ruta-60-en-el-sector-conocido-c/1598636825642391/",
           "fecha": "2026-10-22T18:53:59-03:00"
-        }
-      ],
-      "estado": "nuevo"
-    },
-    {
-      "id": "03acaaa9854d",
-      "fecha_publicacion": "2026-10-22T18:36:00-03:00",
-      "fecha_deteccion": "2026-10-23T00:32:10-03:00",
-      "titulo": "Los Andes: rescatan el cuerpo del tercer excursionista fallecido en la avalancha de Portillo",
-      "evento": "Alud / avalancha en Los Andes",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "Valparaiso",
-      "comuna": "Los Andes",
-      "lat": "-32.836418",
-      "lon": "-70.129083",
-      "fuentes": [
-        {
-          "medio": "Los Andes",
-          "url": "https://www.losandes.com.ar/sociedad/paso-cristo-redentor-una-nueva-avalancha-el-sector-chileno-interrumpe-el-transito-n6011377",
-          "fecha": "2026-10-22T18:36:00-03:00"
-        },
-        {
-          "medio": "SoyChile.cl",
-          "url": "https://www.soychile.cl/quillota/sociedad/2026/10/22/969129/avalancha-portillo-losandes-victimas-senapred.html",
-          "fecha": "2026-10-22T21:45:00-03:00"
-        },
-        {
-          "medio": "Facebook",
-          "url": "https://www.facebook.com/elpaisamerica/posts/lasemanaenelpa%C3%ADs-una-de-las-v%C3%ADctimas-de-la-avalancha-en-los-andes-era-hija-de-la/1821300470001441/",
-          "fecha": "2026-10-24T23:00:19-03:00"
         }
       ],
       "estado": "nuevo"
@@ -1459,11 +1288,6 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/coraltv6/videos/caluma-alerta-vial-en-la-esmeralda-caluma-socav%C3%B3n-en-puente-que-une-bol%C3%ADvar-y-lo/1161504329870207/",
           "fecha": "2026-10-22T16:28:54-03:00"
-        },
-        {
-          "medio": "El Nacional",
-          "url": "https://www.elnacional.com/2026/10/denuncian-riesgo-de-colapso-de-la-autopista-por-fracturas-y-socavamiento-en-los-muros-de-canalizacion-de-los-rios-guaire-y-macarao/",
-          "fecha": "2026-10-24T17:59:12-03:00"
         }
       ],
       "estado": "nuevo"
