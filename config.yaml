@@ -226,6 +226,25 @@ geografia:
     - australia
 
 # ---------------------------------------------------------------------------
+# Dominios de las fuentes. Solo se conservan paginas de medios .cl y .com: las
+# noticias extranjeras comparten toponimos chilenos (Constitucion, Colina,
+# Santa Cruz) o mencionan Chile y el clasificador las dejaba pasar.
+# `excluidos` veta ademas medios extranjeros que usan .com (se puede editar):
+#   metrolibre.com  -> Panama (SINAPROC), deslizamiento en San Carlos
+#   infobae.com     -> Peru, desborde del rio Kimbiri en Cusco
+#   elnacional.com  -> Venezuela, evento en Ecuador (Caluma, Los Rios)
+# No se vetan msn.com (agrega medios chilenos) ni los medios de Mendoza
+# (mdzol.com, mendozapost.com, mendovoz.com): cubren eventos reales de Chile.
+# ---------------------------------------------------------------------------
+dominios:
+  activo: true
+  permitidos: [".cl", ".com"]
+  excluidos:
+    - "metrolibre.com"
+    - "infobae.com"
+    - "elnacional.com"
+
+# ---------------------------------------------------------------------------
 # Fuentes. Google News y Bing News funcionan sin API key.
 # Los feeds RSS directos son opcionales: agregar aqui los que se quieran.
 # ---------------------------------------------------------------------------

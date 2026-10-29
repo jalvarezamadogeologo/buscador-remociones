@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 import feedparser
 import requests
 
+import dominios
 from comun import limpiar_html, limpiar_titulo, log, normalizar
 
 URL = "https://news.google.com/rss/search"
@@ -127,6 +128,11 @@ def buscar_redes(
             if not titulo or (url and url in urls_vistas) or (clave_titulo and clave_titulo in titulos_vistos):
                 continue
 
+            href = entry.get("source")
+            dominio_fuente = dominios.dominio(
+                (href.get("href") if isinstance(href, dict) else "") or url
+            )
+
             urls_vistas.add(url)
             titulos_vistos.add(clave_titulo)
             registros.append(
@@ -136,6 +142,7 @@ def buscar_redes(
                     "url": url,
                     "fuente": REDES[red]["nombre"],
                     "origen": red,
+                    "dominio": dominio_fuente,
                     "publicado": _fecha(entry),
                 }
             )
@@ -143,6 +150,12 @@ def buscar_redes(
             if nuevos >= maximo:
                 break
         log(f"  {nuevos} publicaciones")
+
+    # Misma regla de dominios que la busqueda web (.cl/.com).
+    antes = len(registros)
+    registros = dominios.filtrar(registros, config)
+    if antes != len(registros):
+        log(f"  descartados por dominio: {antes - len(registros)}")
 
     log(f"Total registros de redes: {len(registros)}")
     return registros

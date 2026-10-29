@@ -1,7 +1,9 @@
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from buscar import (
     _dentro_de_rango,
+    _registros_desde_feed,
+    buscar,
     construir_query,
     construir_query_rango,
     nombre_medio,
@@ -73,3 +75,55 @@ def test_dentro_de_rango_excluye_el_borde_superior():
 
 def test_dentro_de_rango_conserva_registros_sin_fecha():
     assert _dentro_de_rango({"publicado": None}, date(2026, 7, 1), date(2026, 7, 2)) is True
+
+
+def _pubdate(horas: int = 2) -> str:
+    fecha = datetime.now(timezone.utc) - timedelta(hours=horas)
+    return fecha.strftime("%a, %d %b %Y %H:%M:%S GMT")
+
+
+def _xml(*items: tuple[str, str, str]) -> bytes:
+    """Feed con pares (titulo, link, source_url)."""
+    cuerpo = "".join(
+        f"""<item><title>{titulo}</title><link>{link}</link>
+        <pubDate>{_pubdate()}</pubDate><source url="{href}">Medio</source></item>"""
+        for titulo, link, href in items
+    )
+    return f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>t</title>{cuerpo}</channel></rss>'.encode()
+
+
+GOOGLE = "https://news.google.com/rss/articles/"
+
+
+def test_registros_traen_el_dominio_del_medio():
+    contenido = _xml(
+        ("Nota chilena", GOOGLE + "a", "https://www.latercera.com"),
+        ("Nota argentina", GOOGLE + "b", "https://www.losandes.com.ar"),
+    )
+    registros = _registros_desde_feed(contenido, "google_news", "Google News")
+    assert [r["dominio"] for r in registros] == ["latercera.com", "losandes.com.ar"]
+
+
+def test_buscar_descarta_dominios_no_permitidos(monkeypatch):
+    config = {
+        "tipos_evento": {"aluvion": {"claves": ["aluvion"]}},
+        "fuentes": {
+            "google_news": {
+                "activa": True,
+                "base": "https://news.google.com/rss/search",
+                "parametros": {},
+            },
+            "bing_news": {"activa": False},
+            "feeds_rss": [],
+        },
+        "consulta": {"max_terminos": 5, "sufijo_ventana": True},
+        "dominios": {"activo": True, "permitidos": [".cl", ".com"], "excluidos": []},
+    }
+    contenido = _xml(
+        ("Chilena", GOOGLE + "a", "https://www.latercera.com"),
+        ("Argentina", GOOGLE + "b", "https://www.losandes.com.ar"),
+        ("Com", GOOGLE + "c", "https://www.mdzol.com"),
+    )
+    monkeypatch.setattr("buscar._descargar", lambda url: contenido)
+    registros = buscar(config, lookback_horas=24)
+    assert [r["titulo"] for r in registros] == ["Chilena", "Com"]

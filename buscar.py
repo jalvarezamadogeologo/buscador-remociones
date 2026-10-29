@@ -13,6 +13,7 @@ from urllib.parse import parse_qs, urlencode, urlparse
 import feedparser
 import requests
 
+import dominios
 from comun import limpiar_html, limpiar_titulo, log, normalizar
 
 UA = (
@@ -153,6 +154,15 @@ def _registros_desde_feed(contenido: bytes, origen: str, fuente_defecto: str) ->
             fuente = nombre_medio(limpiar_html(str(entry.get("news_source") or "")) or fuente_defecto, link)
         else:
             fuente = fuente_defecto
+        # Dominio del medio: Google News lo trae en `source.href`, sin necesidad
+        # de resolver el enlace; Bing y los feeds directos, en la URL de la nota.
+        dominio_fuente = ""
+        if origen == "google_news":
+            origen_entry = entry.get("source")
+            if isinstance(origen_entry, dict):
+                dominio_fuente = dominios.dominio(origen_entry.get("href") or "")
+        if not dominio_fuente:
+            dominio_fuente = dominios.dominio(link)
         # Google/Bing a veces dejan " - Nombre del medio" al final del titulo.
         for sufijo in (f" - {fuente}", f" | {fuente}"):
             if fuente and titulo.endswith(sufijo):
@@ -165,6 +175,7 @@ def _registros_desde_feed(contenido: bytes, origen: str, fuente_defecto: str) ->
                 "url": link,
                 "fuente": fuente,
                 "origen": origen,
+                "dominio": dominio_fuente,
                 "publicado": _fecha_de_entry(entry),
             }
         )
@@ -262,6 +273,13 @@ def buscar(config: dict, lookback_horas: int = 24, activas: list[str] | None = N
             log(f"  {len(nuevos)} entradas")
             todos.extend(nuevos)
 
+    # Solo medios .cl y .com (ver dominios.py): corta las noticias extranjeras
+    # que mencionan Chile o comparten toponimos chilenos.
+    antes_dominios = len(todos)
+    todos = dominios.filtrar(todos, config)
+    if antes_dominios != len(todos):
+        log(f"descartados por dominio (solo .cl/.com): {antes_dominios - len(todos)}")
+
     # Filtro temporal para todas las fuentes (los agregadores devuelven
     # resultados fuera de la ventana solicitada).
     todos = [r for r in todos if _dentro_de_ventana(r, lookback_horas)]
@@ -299,6 +317,7 @@ def buscar_rango(
         return []
     registros = _registros_desde_feed(contenido, "google_news", "Google News")
     log(f"  {len(registros)} entradas crudas")
+    registros = dominios.filtrar(registros, config)
     registros = [r for r in registros if _dentro_de_rango(r, desde, hasta)]
     unicos = _deduplicar(registros)
     log(f"  {len(unicos)} registros en el rango")
