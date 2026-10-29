@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-10-29 09:21",
-  "total": 85,
+  "actualizado": "2026-10-29 15:22",
+  "total": 86,
   "eventos": [
+    {
+      "id": "b846e42ed562",
+      "fecha_publicacion": "2026-10-29T14:01:16-03:00",
+      "fecha_deteccion": "2026-10-29T15:22:23-03:00",
+      "titulo": "🚨 DERRUMBE DE VIVIENDA EN RUNGUE Tras el derrumbe de parte de una vivienda ubicada en la intersección de calle Estación y Caldera, que bloqueó completamente la vereda y puso en riesgo a los transeúntes, activamos las gestiones para intervenir",
+      "evento": "Deslizamiento en Caldera",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Atacama",
+      "comuna": "Caldera",
+      "lat": "-27.067554",
+      "lon": "-70.822205",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfFft5zoxeX/",
+          "fecha": "2026-10-29T14:01:16-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "baja",
+      "motivo": "derrumbe de una estructura sin evidencia de terreno ('derrumbe de vivienda')"
+    },
     {
       "id": "3f73dd8a5cba",
       "fecha_publicacion": "2026-10-28T18:57:01-03:00",
