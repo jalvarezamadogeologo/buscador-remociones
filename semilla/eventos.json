@@ -1,5 +1,5 @@
 {
-  "total": 87,
+  "total": 85,
   "eventos": [
     {
       "id": "3f73dd8a5cba",
@@ -22,6 +22,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "66"
     },
     {
@@ -44,7 +46,9 @@
       "fuente_3": "El Rancagüino",
       "url_3": "https://www.elrancaguino.cl/2026/10/28/desprendimiento-de-cielorraso-en-el-liceo-oscar-castro-zuniga-reabre-el-debate-sobre-estado-de-su-infraestructura/",
       "fecha_3": "2026-10-28T14:47:00-03:00",
-      "estado": "nuevo",
+      "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "65"
     },
     {
@@ -68,6 +72,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "baja",
+      "motivo": "agente no geologico ('tornado')",
       "issue": "62"
     },
     {
@@ -90,7 +96,9 @@
       "fuente_3": "",
       "url_3": "",
       "fecha_3": "",
-      "estado": "nuevo",
+      "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "61"
     },
     {
@@ -114,6 +122,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "55"
     },
     {
@@ -137,6 +147,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "54"
     },
     {
@@ -160,6 +172,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "64"
     },
     {
@@ -183,6 +197,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "63"
     },
     {
@@ -206,6 +222,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "57"
     },
     {
@@ -229,6 +247,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "37"
     },
     {
@@ -252,6 +272,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "59"
     },
     {
@@ -275,53 +297,9 @@
       "url_3": "https://www.cooperativa.cl/noticias/pais/desastres-naturales/inundaciones/lo-barnechea-desborde-de-quebradas-causo-estragos-en-colegio-capilla-y/2026-10-27/140748.html",
       "fecha_3": "2026-10-27T14:07:48-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "46"
-    },
-    {
-      "id": "7c90d93b542f",
-      "fecha_publicacion": "2026-10-26T22:35:30-03:00",
-      "fecha_deteccion": "2026-10-27T08:39:33-03:00",
-      "titulo": "Chile bajo alerta: un tornado causó destrozos y decretaron la emergencia por un posible alud",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "",
-      "comuna": "",
-      "lat": "",
-      "lon": "",
-      "fuente_1": "Diario Panorama",
-      "url_1": "https://www.diariopanorama.com/noticia/570912/chile-bajo-alerta-tornado-causo-destrozos-decretaron-emergencia-posible-alud",
-      "fecha_1": "2026-10-26T22:35:30-03:00",
-      "fuente_2": "",
-      "url_2": "",
-      "fecha_2": "",
-      "fuente_3": "",
-      "url_3": "",
-      "fecha_3": "",
-      "estado": "nuevo",
-      "issue": "53"
-    },
-    {
-      "id": "1c4adb1d5ac0",
-      "fecha_publicacion": "2026-10-26T22:01:56-03:00",
-      "fecha_deteccion": "2026-10-27T00:51:39-03:00",
-      "titulo": "Chile enfrenta nuevos eventos climáticos: un tornado destruyó un colegio y un alud agravó la situación",
-      "tipo_evento": "alud",
-      "tipo_etiqueta": "Alud / avalancha",
-      "region": "",
-      "comuna": "",
-      "lat": "",
-      "lon": "",
-      "fuente_1": "DameNoticias",
-      "url_1": "https://www.damenoticias.com/nota/658034-chile-enfrenta-nuevos-eventos-climaticos-un-tornado-destruyo-un-colegio-y-un-alud-agravo-la-situacion",
-      "fecha_1": "2026-10-26T22:01:56-03:00",
-      "fuente_2": "",
-      "url_2": "",
-      "fecha_2": "",
-      "fuente_3": "",
-      "url_3": "",
-      "fecha_3": "",
-      "estado": "nuevo",
-      "issue": "42"
     },
     {
       "id": "082c82ec5023",
@@ -344,6 +322,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "34"
     },
     {
@@ -367,6 +347,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "47"
     },
     {
@@ -390,6 +372,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "49"
     },
     {
@@ -413,6 +397,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "60"
     },
     {
@@ -436,6 +422,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "39"
     },
     {
@@ -459,6 +447,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "baja",
+      "motivo": "agente no geologico ('tornado')",
       "issue": "38"
     },
     {
@@ -482,6 +472,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "48"
     },
     {
@@ -505,6 +497,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "56"
     },
     {
@@ -528,6 +522,8 @@
       "url_3": "https://www.facebook.com/adncl/videos/-este-lunes-se-report%C3%B3-un-aluvi%C3%B3n-en-el-kil%C3%B3metro-8-de-la-ruta-g-21-en-camino-a-/2182518952332271/",
       "fecha_3": "2026-10-26T19:43:03-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "36"
     },
     {
@@ -551,6 +547,8 @@
       "url_3": "https://www.radioagricultura.cl/noticias/nacional/transito-restringido-en-san-carlos-de-apoquindo-por-desborde-de-quebrada-honda_20261027/",
       "fecha_3": "2026-10-27T00:43:00-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "40"
     },
     {
@@ -574,6 +572,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "32"
     },
     {
@@ -597,6 +597,8 @@
       "url_3": "https://x.com/tvnredbiobio/status/2114891899769413740",
       "fecha_3": "2026-10-26T22:28:16-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "35"
     },
     {
@@ -620,6 +622,8 @@
       "url_3": "https://www.msn.com/es-cl/noticias/otras/seguro-de-vivienda-tras-un-aluvi%C3%B3n-o-inundaci%C3%B3n-qu%C3%A9-cubre-y-c%C3%B3mo-denunciar-los-da%C3%B1os/ar-AA2gaqF0",
       "fecha_3": "2026-10-27T01:19:02-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "51"
     },
     {
@@ -643,6 +647,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "33"
     },
     {
@@ -665,7 +671,9 @@
       "fuente_3": "",
       "url_3": "",
       "fecha_3": "",
-      "estado": "nuevo",
+      "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "50"
     },
     {
@@ -689,6 +697,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "31"
     },
     {
@@ -712,6 +722,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "29"
     },
     {
@@ -735,6 +747,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "26"
     },
     {
@@ -758,6 +772,8 @@
       "url_3": "https://www.meganoticias.cl/nacional/534881-desborde-quebrada-honda-videos-avance-agua-las-condes-26-10-2026.html",
       "fecha_3": "2026-10-26T13:20:00-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "44"
     },
     {
@@ -781,6 +797,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "30"
     },
     {
@@ -804,6 +822,8 @@
       "url_3": "https://x.com/hombredeltiempo/status/2114895918000648496",
       "fecha_3": "2026-10-26T22:44:14-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "28"
     },
     {
@@ -827,6 +847,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "25"
     },
     {
@@ -849,7 +871,9 @@
       "fuente_3": "",
       "url_3": "",
       "fecha_3": "",
-      "estado": "nuevo",
+      "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "24"
     },
     {
@@ -873,6 +897,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "23"
     },
     {
@@ -895,7 +921,9 @@
       "fuente_3": "",
       "url_3": "",
       "fecha_3": "",
-      "estado": "nuevo",
+      "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "27"
     },
     {
@@ -919,6 +947,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "19"
     },
     {
@@ -941,7 +971,9 @@
       "fuente_3": "",
       "url_3": "",
       "fecha_3": "",
-      "estado": "nuevo",
+      "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "22"
     },
     {
@@ -965,6 +997,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "21"
     },
     {
@@ -988,6 +1022,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "20"
     },
     {
@@ -1011,6 +1047,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "17"
     },
     {
@@ -1034,6 +1072,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1057,6 +1097,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1080,6 +1122,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "18"
     },
     {
@@ -1103,6 +1147,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "9"
     },
     {
@@ -1126,6 +1172,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "6"
     },
     {
@@ -1149,6 +1197,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "8"
     },
     {
@@ -1172,6 +1222,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1195,6 +1247,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "15"
     },
     {
@@ -1218,6 +1272,8 @@
       "url_3": "https://www.diarioconcepcion.cl/ciudad/2026/10/23/subida-la-gloria-transporte-publico-talcahuano.html",
       "fecha_3": "2026-10-23T10:28:33-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "1"
     },
     {
@@ -1241,6 +1297,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1264,6 +1322,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "16"
     },
     {
@@ -1287,6 +1347,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1310,6 +1372,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "7"
     },
     {
@@ -1333,6 +1397,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "5"
     },
     {
@@ -1355,7 +1421,9 @@
       "fuente_3": "",
       "url_3": "",
       "fecha_3": "",
-      "estado": "nuevo",
+      "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "14"
     },
     {
@@ -1379,6 +1447,8 @@
       "url_3": "https://www.mendovoz.com/actualidad/policiales/2026/10/22/hallan-el-cuerpo-de-la-tercera-victima-fatal-tras-la-avalancha-en-la-laguna-del-inca-169832.html",
       "fecha_3": "2026-10-22T12:33:19-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "4"
     },
     {
@@ -1402,6 +1472,8 @@
       "url_3": "https://estapasando.cl/nacional/avalancha-en-portillo-hallan-el-cuerpo-de-la-tercera-victima/",
       "fecha_3": "2026-10-22T13:44:06-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "2"
     },
     {
@@ -1425,6 +1497,8 @@
       "url_3": "https://x.com/fdo2000/status/2114860100116504939",
       "fecha_3": "2026-10-26T20:21:54-03:00",
       "estado": "confirmado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "11"
     },
     {
@@ -1448,6 +1522,8 @@
       "url_3": "https://www.facebook.com/meganoticiascl/videos/-producto-del-intenso-sistema-frontal-que-afecta-a-la-regi%C3%B3n-del-biob%C3%ADo-un-nuevo/1649911536874086/",
       "fecha_3": "2026-10-22T11:11:55-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1471,6 +1547,8 @@
       "url_3": "https://www.tvn.cl/programas/buenos-dias-a-todos/actualidad/aluvion-en-concepcion-barro-colapso-viviendas-y-automoviles-video",
       "fecha_3": "2026-10-22T09:51:00-03:00",
       "estado": "confirmado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1494,6 +1572,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "13"
     },
     {
@@ -1517,6 +1597,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "12"
     },
     {
@@ -1540,6 +1622,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1563,6 +1647,8 @@
       "url_3": "https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/10/22/a-semanas-del-aluvion-en-las-condes-clinica-uc-christus-permanece-cerrada-sin-fecha-de-reapertura.shtml",
       "fecha_3": "2026-10-22T17:17:22-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": "3"
     },
     {
@@ -1586,6 +1672,8 @@
       "url_3": "https://www.instagram.com/reel/DezsPAKCRHR/",
       "fecha_3": "2026-10-22T17:33:26-03:00",
       "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1609,6 +1697,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1632,6 +1722,8 @@
       "url_3": "https://x.com/T13/status/2114295908271841469",
       "fecha_3": "2026-10-25T07:00:00-03:00",
       "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1655,6 +1747,8 @@
       "url_3": "https://x.com/biobio/status/2113005908599120194",
       "fecha_3": "2026-10-21T17:34:01-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1678,6 +1772,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "baja",
+      "motivo": "derrumbe de una estructura sin evidencia de terreno ('derrumbe de su casa')",
       "issue": ""
     },
     {
@@ -1701,6 +1797,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1724,6 +1822,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1747,6 +1847,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1770,6 +1872,8 @@
       "url_3": "https://www.latercera.com/nacional/noticia/duoc-uc-reabrira-sus-puertas-en-san-carlos-de-apoquindo-tras-17-dias-cerrado-por-el-ingreso-del-aluvion/",
       "fecha_3": "2026-10-23T13:40:05-03:00",
       "estado": "descartado",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1793,6 +1897,8 @@
       "url_3": "https://www.chilevision.cl/programas/contigo-en-la-manana/alerta-roja-en-arauco-socavon-de-medio-kilometro-amenaza-a-familias-y-habitantes-se-rehusan-a-abandonar-hogares/",
       "fecha_3": "2026-10-21T09:08:47-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1816,6 +1922,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1839,6 +1947,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1862,6 +1972,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1885,6 +1997,8 @@
       "url_3": "https://www.t13.cl/noticia/nacional/senapred-eleva-numero-fallecidos-tras-avalancha-andes",
       "fecha_3": "2026-10-17T17:33:00-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1908,6 +2022,8 @@
       "url_3": "https://www.instagram.com/reel/Dem0kNFS8Ie/",
       "fecha_3": "2026-10-17T16:07:28-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1931,6 +2047,8 @@
       "url_3": "https://www.facebook.com/conconenalertamedios/videos/est%C3%A1-sucediendo-en-laguna-del-inca-portilloavalancha-en-laguna-del-inca-los-ande/2497735240638990/",
       "fecha_3": "2026-10-17T16:08:45-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1954,6 +2072,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -1977,6 +2097,8 @@
       "url_3": "https://x.com/meganoticiascl/status/2111893114965176656",
       "fecha_3": "2026-10-18T15:52:10-03:00",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     },
     {
@@ -2000,6 +2122,8 @@
       "url_3": "",
       "fecha_3": "",
       "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
       "issue": ""
     }
   ]
