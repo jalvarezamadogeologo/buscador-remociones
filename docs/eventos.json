@@ -1,7 +1,28 @@
 {
-  "actualizado": "2026-10-28 19:14",
-  "total": 92,
+  "actualizado": "2026-10-29 09:21",
+  "total": 93,
   "eventos": [
+    {
+      "id": "3f73dd8a5cba",
+      "fecha_publicacion": "2026-10-28T18:57:01-03:00",
+      "fecha_deteccion": "2026-10-29T09:21:52-03:00",
+      "titulo": "Según informa Senapred, \"el Servicio Nacional de Geología y Minería (Sernageomin), mediante su minuta técnica por peligro de remoción en masa, indica que la posibilidad de ocurrencia de aluviones (flujos de detritos) y derrumbes (deslizamientos, caídas",
+      "evento": "Deslizamiento en Chile",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfDcxMVGLNt/",
+          "fecha": "2026-10-28T18:57:01-03:00"
+        }
+      ],
+      "estado": "nuevo"
+    },
     {
       "id": "83e6acdc9b5a",
       "fecha_publicacion": "2026-10-28T09:52:13-03:00",
