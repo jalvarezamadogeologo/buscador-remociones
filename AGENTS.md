@@ -11,6 +11,8 @@ estatico con mapa.
 - `actualizar.py` — orquestador (buscar, clasificar, deduplicar, geocodificar, guardar, sitio, issues).
 - `historico.py` — barrido historico dia por dia con `after:`/`before:` (`--dias N`, `--dry-run`).
 - `buscar.py` — fuentes RSS y normalizacion de registros.
+- `dominios.py` — filtro de dominios de las fuentes (solo `.cl` y `.com`, con lista de
+  exclusion explicita en `config.yaml`) y purga del catalogo existente.
 - `buscar_redes.py` — X/Instagram/Facebook via Google News con `site:` (sin API keys).
 - `clasificar.py` — tipo de evento y filtro geografico Chile.
 - `deduplicar.py` — claves persistentes de noticias procesadas.
@@ -21,7 +23,8 @@ estatico con mapa.
 - `geocodificar.py` — Nominatim + cache + overrides manuales.
 - `resolver_url.py` — resuelve enlaces de Google News a la URL del medio (RPC `Fbv4je`) + cache.
 - `resolver_urls.py` — CLI para resolver los enlaces del catastro existente y regenerar el sitio.
-- `revisar_catastro.py` — mantenimiento: descarte de prevencion/contexto, re-geocodificacion
+- `revisar_catastro.py` — mantenimiento: descarte de prevencion/contexto, purga de fuentes
+  de dominios ajenos, re-geocodificacion
   por toponimo y correccion de fuentes guardadas como URL.
 - `generar_sitio.py` — `docs/index.html` (tabla + Leaflet).
 - `notificar.py` — GitHub Issues.
@@ -47,7 +50,7 @@ python actualizar.py --sin-resolver # sin resolver enlaces de Google News
 python historico.py --dias 120      # barrido historico (after/before, dia por dia)
 python historico.py --dias 120 --dry-run
 python resolver_urls.py            # resolver enlaces del catastro existente
-python revisar_catastro.py         # prevencion + toponimos + fuentes con URL
+python revisar_catastro.py         # prevencion + dominios + toponimos + fuentes con URL
 python servidor.py                 # sitio local: Actualizar y editar Estado (127.0.0.1:8770)
 iniciar.cmd                        # lo mismo, doble clic
 pwsh -File scripts\build_exe.ps1    # carpeta portable en dist\buscador-remociones
@@ -90,6 +93,11 @@ python -m pytest -q
 ## Reglas del proyecto
 
 - No introducir API keys ni servicios de pago.
+- Solo se aceptan fuentes de dominios `.cl` y `.com` (`dominios.py`, seccion `dominios` de
+  `config.yaml`): corta las noticias extranjeras que comparten toponimos chilenos. El
+  dominio se toma de `source.href` en Google News (no gasta el resolver de enlaces). Un
+  medio extranjero en `.com` se veta agregandolo a `dominios.excluidos`; si el catalogo ya
+  lo tenia, `revisar_catastro.py` lo quita.
 - Las palabras clave y busquedas se escriben sin tildes (el codigo normaliza).
 - Google News deja de respetar `when:Nd` si la consulta lleva comillas; usar palabras sueltas.
 - Google News RSS devuelve como maximo 100 entradas por consulta: `when:90d`, `when:120d` y

@@ -89,7 +89,8 @@ python actualizar.py --sin-geocodificar --max-geocodificaciones 0
 python actualizar.py --sin-redes           # no consultar X/Instagram/Facebook
 python actualizar.py --sin-resolver        # no resolver enlaces de Google News
 python revisar_catastro.py                 # revisar el catalogo existente (prevencion,
-                                           # toponimos y fuentes con URL) y regenerar el sitio
+                                           # dominios ajenos, toponimos y fuentes con URL)
+                                           # y regenerar el sitio
 python revisar_catastro.py --sin-geocodificar --sin-sitio
 python historico.py --dias 120             # barrido historico dia por dia (after/before)
 python historico.py --dias 120 --dry-run   # solo informa, no escribe nada
@@ -285,6 +286,10 @@ Notas:
 - `geografia`: 16 regiones con sus comunas, `toponimos` (parajes/sectores para geocodificar
   con precision) y paises a excluir (evita homonimos). La comuna detectada asigna
   automaticamente su region.
+- `dominios`: filtro de medios por dominio. Solo se conservan fuentes de `.cl` y `.com`;
+  `excluidos` veta ademas medios extranjeros que usan `.com` (metrolibre.com, infobae.com,
+  elnacional.com) y se edita a mano. El filtro se aplica antes de clasificar (ver
+  "Dominios de las fuentes").
 - `fuentes`: Google News, Bing News y feeds RSS directos (hoy: La Tercera, Cooperativa,
   The Clinic, La Discusion, El Rancaguino y La Prensa Austral).
 - `clasificacion`: opcional; `senales_prevencion` y `senales_evento` para descartar notas
@@ -342,6 +347,9 @@ sitio**: quedan fuera de la tabla, del mapa, de los contadores y de las tarjetas
 - **Falsos positivos:** las notas de prevencion/contexto (riesgo, alertas, entrevistas,
   declaraciones) se descartan automaticamente al clasificar; si alguna entra igual, el
   operador la marca como `descartado` en el CSV.
+- **Dominios de las fuentes:** solo se aceptan medios `.cl` y `.com`; ver "Dominios de las
+  fuentes" mas abajo. `.com` deja pasar prensa extranjera alojada en `.com` (se veta a mano
+  con `dominios.excluidos`).
 - **Agrupacion:** las noticias del mismo hecho se agrupan por tipo + lugar + fecha; si dos
   hechos distintos ocurren en la misma comuna el mismo dia, pueden quedar en un solo evento.
   Se conservan solo 3 fuentes por evento.
@@ -351,11 +359,35 @@ sitio**: quedan fuera de la tabla, del mapa, de los contadores y de las tarjetas
   comuna. Los eventos sin coordenadas se marcan `sin coords` y no aparecen en el mapa.
 - **Texto completo:** se trabaja con titulo y resumen del feed; no se descarga la nota.
 
+## Dominios de las fuentes (`.cl` y `.com`)
+
+Las noticias extranjeras comparten toponimos chilenos (Constitucion, Colina, Santa Cruz) o
+mencionan Chile en el resumen. Para cortarlas antes de clasificar, el pipeline conserva
+**solo fuentes de dominios `.cl` y `.com`** (`dominios.py`): `.com.ar`, `.com.mx`, `.pe`,
+`.bo`, `.es`, `.org`, `.tv`, etc. se descartan.
+
+- El dominio se conoce **sin resolver el enlace**: Google News lo trae en `source.href`
+  (verificado en el 100% de las entradas) y Bing y los feeds directos lo traen en la URL.
+- Se aplica a Google News, Bing News, los feeds RSS directos y las redes sociales, tanto en
+  `actualizar.py` como en `historico.py` (barrido con `after:`/`before:`).
+- Un registro sin dominio se conserva (no hay forma de saberlo).
+- `.com` es un dominio generico, asi que deja pasar prensa extranjera alojada en `.com`.
+  `dominios.excluidos` en `config.yaml` veta casos concretos: hoy estan `metrolibre.com`
+  (Panama, SINAPROC), `infobae.com` (evento en Cusco) y `elnacional.com` (evento en
+  Ecuador). No se vetan `msn.com` (agrega medios chilenos) ni los medios de Mendoza
+  (`mdzol.com`, `mendozapost.com`, `mendovoz.com`), que cubren eventos reales de Chile.
+- `revisar_catastro.py` aplica el mismo filtro al catalogo existente: quita las fuentes de
+  dominios ajenos y elimina los eventos que se quedan sin ninguna fuente. El 2026-10-29
+  quito 16 fuentes y 6 eventos (Santa Cruz por el rio San Julian de Venezuela, el desborde
+  de Cusco, las avalanchas reportadas solo por prensa mendocina).
+- El filtro **no** corrige errores de clasificacion: una noticia chilena mal clasificada
+  (por ejemplo un cielorraso como "caida de rocas") sigue entrando.
+
 ## Comandos
 
 - buscador-remociones - actualizar el catastro desde noticias y redes (Google News RSS + Bing News + X/Instagram/Facebook via Google News `site:`): `python proyectos\buscador-remociones\actualizar.py --lookback 24 --sin-notificar` (opciones: `--dias`, `--fuentes`, `--sin-redes`, `--sin-geocodificar`, `--sin-sitio`, `--max-geocodificaciones`, `--sin-resolver`; sin `--sin-notificar` usa `GITHUB_TOKEN`/`GITHUB_REPOSITORY` para crear issues)
 - buscador-remociones - resolver los enlaces de Google News del catastro a la URL del medio (cache en `data/urlcache.json`): `python proyectos\buscador-remociones\resolver_urls.py` (`--maximo N`, `--pausa S`, `--reintentar-fallidos`, `--sin-sitio`)
-- buscador-remociones - revisar el catastro existente (descarta notas de prevencion/contexto, re-geocodifica por toponimo y corrige fuentes guardadas como URL) y regenerar el sitio: `python proyectos\buscador-remociones\revisar_catastro.py` (`--sin-geocodificar`, `--sin-sitio`)
+- buscador-remociones - revisar el catastro existente (descarta notas de prevencion/contexto, quita fuentes de dominios que no son .cl/.com eliminando los eventos que quedan sin fuente, re-geocodifica por toponimo y corrige fuentes guardadas como URL) y regenerar el sitio: `python proyectos\buscador-remociones\revisar_catastro.py` (`--sin-geocodificar`, `--sin-sitio`)
 - buscador-remociones - barrido historico dia por dia con `after:`/`before:` (Google News RSS topa en 100 entradas y `when:Nd` se satura: 90 y 120 dias dan lo mismo): `python proyectos\buscador-remociones\historico.py --dias 120` (`--desde`, `--hasta`, `--dry-run`, `--sin-geocodificar`, `--sin-sitio`, `--sin-resolver`, `--notificar`; no corre en el workflow)
 - buscador-remociones - abrir el buscador local con boton Actualizar y edicion de Estado (servidor + navegador): `proyectos\buscador-remociones\iniciar.cmd` (http://127.0.0.1:8770; `python proyectos\buscador-remociones\servidor.py --lookback 48 --puerto 9000`; `POST /estado` escribe `data/eventos.csv` y regenera el sitio; en GitHub Pages la columna Estado no se publica)
 - buscador-remociones - construir la carpeta portable para compartir (Windows, PyInstaller onedir, sin instalar Python en el destino): `pwsh -File proyectos\buscador-remociones\scripts\build_exe.ps1` (genera `dist\buscador-remociones\`; incluye `tzdata`, `config.yaml` y `semilla/`; firma con `scripts\firmar_exe.ps1`; compartir la carpeta completa; el primer arranque crea `data/` y `docs/` junto al .exe)
