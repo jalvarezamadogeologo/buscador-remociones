@@ -1,7 +1,7 @@
 # Firma el ejecutable con un certificado de code-signing del almacen del usuario.
-# Uso:  pwsh -File firmar_exe.ps1 [ruta_al_exe]
+# Uso:  pwsh -File scripts\firmar_exe.ps1 [ruta_al_exe]
 param(
-    [string]$Exe = (Join-Path $PSScriptRoot "dist\buscador-remociones\buscador-remociones.exe"),
+    [string]$Exe = (Join-Path (Split-Path $PSScriptRoot -Parent) "dist\buscador-remociones\buscador-remociones.exe"),
     [string]$Sujeto = "Javier Alvarez Amado"
 )
 $ErrorActionPreference = "Stop"

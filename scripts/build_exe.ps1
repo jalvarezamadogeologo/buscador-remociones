@@ -1,7 +1,8 @@
 # Construye el ejecutable portable en dist\buscador-remociones\ (carpeta onedir).
-# Uso:  pwsh -File build_exe.ps1
+# Uso:  pwsh -File scripts\build_exe.ps1
 $ErrorActionPreference = "Stop"
-Set-Location $PSScriptRoot
+$Raiz = Split-Path $PSScriptRoot -Parent
+Set-Location $Raiz
 
 if (-not (Test-Path ".venv\Scripts\python.exe")) {
     python -m venv .venv
@@ -27,6 +28,10 @@ if (Test-Path $firmar) {
         Write-Warning "No se pudo firmar: $($_.Exception.Message)"
     }
 }
+
+# El arbol intermedio (spec, TOC, binarios temporales) no se conserva.
+Remove-Item build -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item "buscador-remociones.spec" -Force -ErrorAction SilentlyContinue
 
 Write-Host ""
 Write-Host "Listo: dist\buscador-remociones\buscador-remociones.exe"

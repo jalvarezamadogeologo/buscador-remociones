@@ -180,7 +180,7 @@ hace doble clic y usa el buscador local, sin instalar nada ni tener cuenta de Gi
 ### Construir
 
 ```powershell
-pwsh -File build_exe.ps1
+pwsh -File scripts\build_exe.ps1
 ```
 
 El script crea `.venv`, instala `requirements.txt` + PyInstaller y genera
@@ -200,12 +200,12 @@ empaquetados (`config.yaml` y `semilla/`).
 
 ### Firma del ejecutable
 
-El build intenta firmar el `.exe` al final con `firmar_exe.ps1` (certificado de code-signing
+El build intenta firmar el `.exe` al final con `scripts\firmar_exe.ps1` (certificado de code-signing
 del almacen del usuario cuyo sujeto sea "Javier Alvarez Amado"). Para crear el certificado
 autofirmado la primera vez:
 
 ```powershell
-pwsh -File crear_certificado.ps1
+pwsh -File scripts\crear_certificado.ps1
 ```
 
 Notas:
@@ -350,3 +350,15 @@ sitio**: quedan fuera de la tabla, del mapa, de los contadores y de las tarjetas
   comuna/region. Si el toponimo no aparece en el titulo, el punto queda en el centro de la
   comuna. Los eventos sin coordenadas se marcan `sin coords` y no aparecen en el mapa.
 - **Texto completo:** se trabaja con titulo y resumen del feed; no se descarga la nota.
+
+## Comandos
+
+- buscador-remociones - actualizar el catastro desde noticias y redes (Google News RSS + Bing News + X/Instagram/Facebook via Google News `site:`): `python proyectos\buscador-remociones\actualizar.py --lookback 24 --sin-notificar` (opciones: `--dias`, `--fuentes`, `--sin-redes`, `--sin-geocodificar`, `--sin-sitio`, `--max-geocodificaciones`, `--sin-resolver`; sin `--sin-notificar` usa `GITHUB_TOKEN`/`GITHUB_REPOSITORY` para crear issues)
+- buscador-remociones - resolver los enlaces de Google News del catastro a la URL del medio (cache en `data/urlcache.json`): `python proyectos\buscador-remociones\resolver_urls.py` (`--maximo N`, `--pausa S`, `--reintentar-fallidos`, `--sin-sitio`)
+- buscador-remociones - revisar el catastro existente (descarta notas de prevencion/contexto, re-geocodifica por toponimo y corrige fuentes guardadas como URL) y regenerar el sitio: `python proyectos\buscador-remociones\revisar_catastro.py` (`--sin-geocodificar`, `--sin-sitio`)
+- buscador-remociones - barrido historico dia por dia con `after:`/`before:` (Google News RSS topa en 100 entradas y `when:Nd` se satura: 90 y 120 dias dan lo mismo): `python proyectos\buscador-remociones\historico.py --dias 120` (`--desde`, `--hasta`, `--dry-run`, `--sin-geocodificar`, `--sin-sitio`, `--sin-resolver`, `--notificar`; no corre en el workflow)
+- buscador-remociones - abrir el buscador local con boton Actualizar y edicion de Estado (servidor + navegador): `proyectos\buscador-remociones\iniciar.cmd` (http://127.0.0.1:8770; `python proyectos\buscador-remociones\servidor.py --lookback 48 --puerto 9000`; `POST /estado` escribe `data/eventos.csv` y regenera el sitio; en GitHub Pages la columna Estado no se publica)
+- buscador-remociones - construir la carpeta portable para compartir (Windows, PyInstaller onedir, sin instalar Python en el destino): `pwsh -File proyectos\buscador-remociones\scripts\build_exe.ps1` (genera `dist\buscador-remociones\`; incluye `tzdata`, `config.yaml` y `semilla/`; firma con `scripts\firmar_exe.ps1`; compartir la carpeta completa; el primer arranque crea `data/` y `docs/` junto al .exe)
+- buscador-remociones - tests: `python -m pytest -q` (desde `proyectos\buscador-remociones\`)
+- buscador-remociones - ver el sitio local: abrir `proyectos\buscador-remociones\docs\index.html` o `python -m http.server 8000 --directory proyectos\buscador-remociones\docs`
+
