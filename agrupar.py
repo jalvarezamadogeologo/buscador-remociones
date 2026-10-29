@@ -1,4 +1,4 @@
-﻿"""Agrupacion de noticias en eventos y seleccion de las primeras fuentes.
+"""Agrupacion de noticias en eventos y seleccion de las primeras fuentes.
 
 Un evento es un hecho (tipo + lugar + fecha). De todas las noticias que lo
 reportan se conservan como maximo 3 fuentes, ordenadas por fecha de publicacion
