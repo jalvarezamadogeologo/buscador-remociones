@@ -23,8 +23,11 @@ estatico con mapa.
 - `geocodificar.py` — Nominatim + cache + overrides manuales.
 - `resolver_url.py` — resuelve enlaces de Google News a la URL del medio (RPC `Fbv4je`) + cache.
 - `resolver_urls.py` — CLI para resolver los enlaces del catastro existente y regenerar el sitio.
-- `revisar_catastro.py` — mantenimiento: descarte de prevencion/contexto, purga de fuentes
-  de dominios ajenos, re-geocodificacion
+- `revisar_catastro.py` — mantenimiento: descarte de prevencion/contexto y de hechos que no
+  son remociones (techo, muro, metafora, menciones hipoteticas), marca de confianza baja,
+  purga de fuentes de dominios ajenos, re-geocodificacion
+- `auditar_clasificacion.py` — lista los eventos que la regla descartaria y los marcados con
+  `confianza = baja`, con el motivo (revision periodica del catalogo).
   por toponimo y correccion de fuentes guardadas como URL.
 - `generar_sitio.py` — `docs/index.html` (tabla + Leaflet).
 - `notificar.py` — GitHub Issues.
@@ -37,7 +40,7 @@ estatico con mapa.
 - `config.yaml` — tipos, palabras clave, geografia, fuentes, umbrales.
 - `data/` — catastro y estados.
 - `docs/` — sitio publicado en GitHub Pages.
-- `tests/` — pruebas de pytest (79 casos); el workflow las corre antes de publicar.
+- `tests/` - pruebas de pytest (100 casos); el workflow las corre antes de publicar.
 - `requirements.txt` — dependencias de ejecucion y pruebas.
 - `.github/workflows/ejecutar.yml` — monitoreo programado cada 6 h y publicacion.
 
@@ -50,7 +53,8 @@ python actualizar.py --sin-resolver # sin resolver enlaces de Google News
 python historico.py --dias 120      # barrido historico (after/before, dia por dia)
 python historico.py --dias 120 --dry-run
 python resolver_urls.py            # resolver enlaces del catastro existente
-python revisar_catastro.py         # prevencion + dominios + toponimos + fuentes con URL
+python revisar_catastro.py         # prevencion + objeto del hecho + dominios + toponimos
+python auditar_clasificacion.py    # que descartaria la regla y que quedo con confianza baja
 python servidor.py                 # sitio local: Actualizar y editar Estado (127.0.0.1:8770)
 iniciar.cmd                        # lo mismo, doble clic
 pwsh -File scripts\build_exe.ps1    # carpeta portable en dist\buscador-remociones
@@ -73,6 +77,8 @@ python -m pytest -q
   aparecen en la tabla, el mapa, los contadores ni las tarjetas (siguen en el CSV).
 - Ultima columna "Evento validado": checkbox por evento; el estado se guarda en
   `localStorage` (`catastro_validados`, mapa id->true), no en el CSV.
+- Badge `revisar` en la columna Evento cuando `confianza = baja` (el globo trae el motivo)
+  y boton "Solo por revisar" en la barra, que filtra a esos eventos.
 - Columna "Estado": es interna y solo se muestra en modo local (`servidor.py`), donde es un
   selector por fila que escribe `data/eventos.csv` via `POST /estado`
   (`estado.aplicar_estado`) y regenera el sitio. En GitHub Pages no se publica: el JS quita
@@ -113,6 +119,12 @@ python -m pytest -q
 - Clasificacion: las notas de prevencion/contexto (riesgo, alertas, entrevistas, "podrian",
   recomendaciones) se descartan salvo que el titulo tenga una senal de hecho ocurrido
   (`dejo`, `evacuan`, `rescatan`, `sigue`, `creciendo`, `alerta roja`, ...).
+- Clasificacion: un techo, un muro o un arbol que se cae no es una remocion en masa. La
+  regla del objeto (`clasificar.evaluar_objeto`) descarta el "verbo + objeto" estructural
+  sin evidencia de terreno, las metaforas y las menciones hipoteticas ("un posible alud").
+  Si el objeto es una vivienda (puede ser la consecuencia de una remocion) o hay un agente
+  no geologico (tornado, sismo), el evento entra con `confianza = baja` y badge `revisar`;
+  el operador lo confirma con la columna Estado. Ver `auditar_clasificacion.py`.
 - Geocodificacion: `geografia.toponimos` + `data/georref.json` tienen prioridad sobre la
   comuna/region. Si agregas un paraje recurrente, sumalo a `toponimos`; si Nominatim lo
   confunde con un homonimo, fija sus coordenadas en `georref.json`.

@@ -28,7 +28,13 @@ mismo hecho y conserva hasta 3 fuentes, geocodifica y publica un catastro versio
 - **Boton "Solo validados"** (barra de filtros): muestra en la tabla y en el mapa solo
   los eventos con la casilla "Evento validado" marcada. Se desactiva con "Limpiar filtros"
   y no borra las marcas.
+- **Boton "Solo por revisar"** (barra de filtros): muestra solo los eventos con la marca
+  `revisar` (clasificacion dudosa, ver "Clasificacion: el objeto del hecho"). Se apaga con
+  "Limpiar filtros".
 - **Indicadores de confianza** en la columna "Evento":
+  - `revisar`: el evento se clasifico, pero el hecho es dudoso (derrumbe de una vivienda
+    sin evidencia de terreno, agente no geologico como un tornado); el texto del globo
+    indica el motivo. Conviene verificar la fuente antes de darlo por bueno;
   - `sin coords`: el evento no tiene coordenadas, no aparece en el mapa;
   - `solo red`: todas sus fuentes son redes sociales (X/Instagram/Facebook), conviene
     verificarlo en el medio.
@@ -315,6 +321,8 @@ Cada fila es un **evento agrupado** (tipo + lugar + fecha), con hasta 3 fuentes.
 | `region`, `comuna`, `lat`, `lon` | geografia y coordenadas |
 | `fuente_1..3`, `url_1..3`, `fecha_1..3` | hasta 3 fuentes, ordenadas por fecha ascendente |
 | `estado` | `nuevo` / `confirmado` / `descartado` (lo edita el operador; la columna Estado solo existe en modo local) |
+| `confianza` | `alta` / `baja`. `baja` = clasificacion dudosa: se publica con la marca `revisar` |
+| `motivo` | por que quedo con confianza baja (o vacio) |
 | `issue` | numero de GitHub Issue asociado |
 
 La agrupacion compara tipo, region/comuna y fecha (ventana de 2 dias). Si no hay
@@ -345,8 +353,9 @@ sitio**: quedan fuera de la tabla, del mapa, de los contadores y de las tarjetas
   la API oficial de X es pay-per-use y las de Meta requieren apps/tokens que expiran.
   Algunos enlaces de Facebook/Instagram pueden pedir inicio de sesion.
 - **Falsos positivos:** las notas de prevencion/contexto (riesgo, alertas, entrevistas,
-  declaraciones) se descartan automaticamente al clasificar; si alguna entra igual, el
-  operador la marca como `descartado` en el CSV.
+  declaraciones) se descartan automaticamente al clasificar, igual que el colapso de una
+  estructura (un techo, un muro) y las metaforas (ver "Clasificacion: el objeto del
+  hecho"). Si alguna entra igual, el operador la marca como `descartado` en el CSV.
 - **Dominios de las fuentes:** solo se aceptan medios `.cl` y `.com`; ver "Dominios de las
   fuentes" mas abajo. `.com` deja pasar prensa extranjera alojada en `.com` (se veta a mano
   con `dominios.excluidos`).
@@ -380,14 +389,59 @@ mencionan Chile en el resumen. Para cortarlas antes de clasificar, el pipeline c
   dominios ajenos y elimina los eventos que se quedan sin ninguna fuente. El 2026-10-29
   quito 16 fuentes y 6 eventos (Santa Cruz por el rio San Julian de Venezuela, el desborde
   de Cusco, las avalanchas reportadas solo por prensa mendocina).
-- El filtro **no** corrige errores de clasificacion: una noticia chilena mal clasificada
-  (por ejemplo un cielorraso como "caida de rocas") sigue entrando.
+- El filtro de dominios **no** corrige errores de clasificacion: una noticia chilena mal
+  clasificada (por ejemplo un cielorraso como "caida de rocas") sigue entrando; de eso se
+  ocupa la seccion siguiente.
+
+## Clasificacion: el objeto del hecho
+
+Los falsos positivos no eran "noticias que no hablan de remociones", sino **el objeto del
+hecho**: un techo, un muro o un arbol que se cae no es una remocion en masa, aunque el
+titulo diga "desprendimiento" o "derrumbe". La regla se evalua sobre el **titulo** (no el
+resumen) y exige el objeto como complemento del verbo ("derrumbe **de** un muro"), no en
+cualquier parte: en "socavon se trago un auto" el auto es la victima y el evento si es
+geologico.
+
+Tres resultados posibles:
+
+- **Descartar** (no entra al catalogo):
+  - objeto estructural o de trafico sin evidencia de terreno: `cielorraso`, `techo`,
+    `fachada`, `muro`, `pandereta`, `cornisa`, `balcon`, `andamio`, `arbol`, `poste`,
+    `cable`, `torre`, `grua`, `humo`, `camion`, `auto`, `moto`, `ascensor`...;
+  - metafora u opinion ("el derrumbe del sueno/proyecto/modelo");
+  - mencion hipotetica del proceso ("un **posible** alud", "un **eventual** deslizamiento").
+  Se conserva si el titulo trae evidencia de terreno (`tierra`, `cerro`, `ladera`,
+  `quebrada`, `talud`, `roca`, `lodo`, `pendiente`, `terreno`, ...) o un proceso explicito
+  (`aluvion`, `socavon`, `avalancha`, `lahar`, `flujo de detritos`, `caida de rocas`, ...).
+- **Marcar para revision** (`confianza = baja`, badge `revisar`): el objeto es una
+  estructura que puede ser la **consecuencia** de una remocion real (`casa`, `vivienda`,
+  `edificio`, `colegio`, `puente`...), o el hecho tiene un agente no geologico que provoca
+  destrozos (`tornado`, `granizo`, `vendaval`, `sismo`, `terremoto`, `erupcion`). No se
+  descarta: el operador decide y lo confirma con la columna Estado (un evento `confirmado`
+  pasa a confianza alta).
+- **Aceptar** (`confianza = alta`): el resto.
+
+`auditar_clasificacion.py` lista lo que queda pendiente (candidatos a descartar y eventos
+marcados para revision, con el motivo). `revisar_catastro.py` aplica la regla al catalogo
+existente: lo que da "descartar" pasa a `estado = descartado` (queda auditable y se puede
+revertir) y lo dudoso queda con `confianza = baja`.
+
+Resultado del primer pase (2026-10-29): 8 eventos descartados (cielorraso de un liceo,
+techo de un mall, fachada, muro de Chanaral, humo, arboles, metafora y un "posible alud") y
+3 marcados para revision (una vivienda en Vina del Mar y dos notas de tornado).
+
+Limites conocidos: la regla es por palabras y titulo. Un "derrumbe de casa" que en
+realidad fue un deslizamiento queda en revision (se ve el badge), y una noticia chilena mal
+clasificada sin objeto reconocible (por ejemplo un evento de otro tipo) sigue entrando. Para
+eso queda el filtro `revisar` y la revision manual; mas adelante se puede sumar un
+clasificador supervisado local entrenado con esas marcas.
 
 ## Comandos
 
 - buscador-remociones - actualizar el catastro desde noticias y redes (Google News RSS + Bing News + X/Instagram/Facebook via Google News `site:`): `python proyectos\buscador-remociones\actualizar.py --lookback 24 --sin-notificar` (opciones: `--dias`, `--fuentes`, `--sin-redes`, `--sin-geocodificar`, `--sin-sitio`, `--max-geocodificaciones`, `--sin-resolver`; sin `--sin-notificar` usa `GITHUB_TOKEN`/`GITHUB_REPOSITORY` para crear issues)
 - buscador-remociones - resolver los enlaces de Google News del catastro a la URL del medio (cache en `data/urlcache.json`): `python proyectos\buscador-remociones\resolver_urls.py` (`--maximo N`, `--pausa S`, `--reintentar-fallidos`, `--sin-sitio`)
-- buscador-remociones - revisar el catastro existente (descarta notas de prevencion/contexto, quita fuentes de dominios que no son .cl/.com eliminando los eventos que quedan sin fuente, re-geocodifica por toponimo y corrige fuentes guardadas como URL) y regenerar el sitio: `python proyectos\buscador-remociones\revisar_catastro.py` (`--sin-geocodificar`, `--sin-sitio`)
+- buscador-remociones - revisar el catastro existente (descarta notas de prevencion/contexto y eventos cuyo hecho no es una remocion —techo, muro, metafora, mencion hipotetica—, marca para revision los dudosos, quita fuentes de dominios que no son .cl/.com eliminando los eventos que quedan sin fuente, re-geocodifica por toponimo y corrige fuentes guardadas como URL) y regenerar el sitio: `python proyectos\buscador-remociones\revisar_catastro.py` (`--sin-geocodificar`, `--sin-sitio`)
+- buscador-remociones - auditar la clasificacion: lista los eventos que la regla descartaria y los marcados con confianza baja (con el motivo): `python proyectos\buscador-remociones\auditar_clasificacion.py` (`--solo-revisar`)
 - buscador-remociones - barrido historico dia por dia con `after:`/`before:` (Google News RSS topa en 100 entradas y `when:Nd` se satura: 90 y 120 dias dan lo mismo): `python proyectos\buscador-remociones\historico.py --dias 120` (`--desde`, `--hasta`, `--dry-run`, `--sin-geocodificar`, `--sin-sitio`, `--sin-resolver`, `--notificar`; no corre en el workflow)
 - buscador-remociones - abrir el buscador local con boton Actualizar y edicion de Estado (servidor + navegador): `proyectos\buscador-remociones\iniciar.cmd` (http://127.0.0.1:8770; `python proyectos\buscador-remociones\servidor.py --lookback 48 --puerto 9000`; `POST /estado` escribe `data/eventos.csv` y regenera el sitio; en GitHub Pages la columna Estado no se publica)
 - buscador-remociones - construir la carpeta portable para compartir (Windows, PyInstaller onedir, sin instalar Python en el destino): `pwsh -File proyectos\buscador-remociones\scripts\build_exe.ps1` (genera `dist\buscador-remociones\`; incluye `tzdata`, `config.yaml` y `semilla/`; firma con `scripts\firmar_exe.ps1`; compartir la carpeta completa; el primer arranque crea `data/` y `docs/` junto al .exe)
