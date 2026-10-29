@@ -233,6 +233,8 @@ geografia:
 #   metrolibre.com  -> Panama (SINAPROC), deslizamiento en San Carlos
 #   infobae.com     -> Peru, desborde del rio Kimbiri en Cusco
 #   elnacional.com  -> Venezuela, evento en Ecuador (Caluma, Los Rios)
+#   diariopanorama.com / damenoticias.com -> Venezuela/agregadores, tornados
+#     presentados como "posible alud"
 # No se vetan msn.com (agrega medios chilenos) ni los medios de Mendoza
 # (mdzol.com, mendozapost.com, mendovoz.com): cubren eventos reales de Chile.
 # ---------------------------------------------------------------------------
@@ -243,6 +245,8 @@ dominios:
     - "metrolibre.com"
     - "infobae.com"
     - "elnacional.com"
+    - "diariopanorama.com"
+    - "damenoticias.com"
 
 # ---------------------------------------------------------------------------
 # Fuentes. Google News y Bing News funcionan sin API key.

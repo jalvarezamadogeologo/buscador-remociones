@@ -73,6 +73,7 @@ PLANTILLA = """<!DOCTYPE html>
   .badge { display:inline-block; margin-left:6px; padding:1px 6px; border-radius:8px; font-size:10.5px; text-transform:uppercase; letter-spacing:.3px; vertical-align:middle; white-space:nowrap; }
   .badge-aviso { background:#fff4e0; color:#8a5a00; border:1px solid #f0d9a8; }
   .badge-red { background:#eef4fa; color:#17456b; border:1px solid #c8d8e8; }
+  .badge-revisar { background:#fdecec; color:#8a1c1c; border:1px solid #f0b8b8; }
   #mapa { height:480px; margin:16px 0; border:1px solid var(--borde); border-radius:8px; }
   .tabla-wrap { background:#fff; border:1px solid var(--borde); border-radius:8px; overflow:auto; }
   table { border-collapse:collapse; width:100%; font-size:13.5px; }
@@ -154,6 +155,7 @@ PLANTILLA = """<!DOCTYPE html>
       <input id="hasta" type="date" title="Fecha de publicacion maxima"></div>
     <button id="btn-limpiar" class="btn-limpiar" type="button">Limpiar filtros</button>
     <button id="btn-validados" class="btn-limpiar" type="button" aria-pressed="false">Solo validados</button>
+    <button id="btn-revisar" class="btn-limpiar" type="button" aria-pressed="false" title="Eventos de clasificacion dudosa: conviene verificarlos antes de darlos por buenos">Solo por revisar</button>
     <button id="btn-actualizar" class="btn-primario" type="button">Actualizar</button>
   </div>
 
@@ -242,6 +244,8 @@ function dentroDeFechas(e, desde, hasta){
 function colorTipo(t){ return COLORES[t] || '#7f7f7f'; }
 function etiquetaTipo(t){ return TIPOS[t] || (t || 'Otro'); }
 function tieneCoords(e){ return e.lat !== '' && e.lon !== '' && e.lat != null && e.lon != null; }
+// Clasificacion dudosa: no se descarta, se marca para que el operador la revise.
+function requiereRevision(e){ return (e.confianza || 'alta') === 'baja'; }
 function esRedSocial(url){
   const u = (url||'').toLowerCase();
   return ['instagram.com','facebook.com','x.com','twitter.com'].some(d=>u.includes(d));
@@ -291,8 +295,10 @@ const btnCsvValidados = document.getElementById('btn-csv-validados');
 const btnKmz = document.getElementById('btn-kmz');
 const btnKmzValidados = document.getElementById('btn-kmz-validados');
 const btnValidados = document.getElementById('btn-validados');
+const btnRevisar = document.getElementById('btn-revisar');
 const cajaEstado = document.getElementById('estado');
 let soloValidados = false;
+let soloRevisar = false;
 
 // ---- orden de la tabla ----
 let ordenCol = 'fecha';
@@ -476,6 +482,7 @@ function filtrar(){
   return EVENTOS.filter(e=>{
     if (e.estado === 'descartado') return false;  // no se publican en el sitio
     if (soloValidados && !esValidado(e.id)) return false;
+    if (soloRevisar && !requiereRevision(e)) return false;
     if (filtroTipo && !filtroTipo.has(e.tipo_evento || '')) return false;
     if (filtroValidado && !filtroValidado.has(esValidado(e.id) ? 'si' : 'no')) return false;
     if (selTipo.value && e.tipo_evento !== selTipo.value) return false;
@@ -583,6 +590,7 @@ function render(){
     const fuentesEvento = e.fuentes || [];
     const soloRed = origenEvento(e) === 'redes';
     const avisos =
+      (requiereRevision(e) ? `<span class="badge badge-revisar" title="${esc(e.motivo || 'Clasificacion dudosa: verificar el hecho en la fuente')}">revisar</span>` : '') +
       (tieneCoords(e) ? '' : '<span class="badge badge-aviso" title="Sin coordenadas: no aparece en el mapa">sin coords</span>') +
       (soloRed ? '<span class="badge badge-red" title="Todas sus fuentes son redes sociales; verificar en el medio">solo red</span>' : '');
     return `<tr${clases ? ' class="' + clases + '"' : ''}>
@@ -638,6 +646,9 @@ function limpiar(){
   soloValidados = false;
   btnValidados.classList.remove('activo');
   btnValidados.setAttribute('aria-pressed', 'false');
+  soloRevisar = false;
+  btnRevisar.classList.remove('activo');
+  btnRevisar.setAttribute('aria-pressed', 'false');
   limpiarFiltrosColumna();
   poblarComunas();
   render();
@@ -976,6 +987,12 @@ btnValidados.addEventListener('click', ()=>{
   btnValidados.setAttribute('aria-pressed', soloValidados ? 'true' : 'false');
   render();
 });
+btnRevisar.addEventListener('click', ()=>{
+  soloRevisar = !soloRevisar;
+  btnRevisar.classList.toggle('activo', soloRevisar);
+  btnRevisar.setAttribute('aria-pressed', soloRevisar ? 'true' : 'false');
+  render();
+});
 btnActualizar.addEventListener('click', actualizar);
 
 poblarFiltros();
@@ -1021,6 +1038,8 @@ def _datos_para_sitio(eventos: list[dict]) -> list[dict]:
                 "lon": e.get("lon", ""),
                 "fuentes": fuentes(e),
                 "estado": e.get("estado", "nuevo"),
+                "confianza": e.get("confianza") or "alta",
+                "motivo": e.get("motivo", ""),
             }
         )
     return salida

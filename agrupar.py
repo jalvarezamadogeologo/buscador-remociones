@@ -37,6 +37,8 @@ COLUMNAS = [
     "url_3",
     "fecha_3",
     "estado",
+    "confianza",
+    "motivo",
     "issue",
 ]
 
@@ -136,6 +138,10 @@ def agregar_fuente(evento: dict, noticia: dict) -> bool:
     fechas = [f["fecha"] for f in actuales if f["fecha"]]
     if fechas:
         evento["fecha_publicacion"] = min(fechas)
+    # Si una fuente clara se suma al evento, la duda inicial se resuelve.
+    if noticia.get("confianza") == "alta" and evento.get("confianza") == "baja":
+        evento["confianza"] = "alta"
+        evento["motivo"] = ""
     return True
 
 
@@ -153,6 +159,8 @@ def crear_evento(noticia: dict, deteccion: str, clave: str) -> dict:
             "region": noticia.get("region", ""),
             "comuna": noticia.get("comuna", ""),
             "estado": "nuevo",
+            "confianza": noticia.get("confianza") or "alta",
+            "motivo": noticia.get("motivo", ""),
         }
     )
     agregar_fuente(evento, noticia)

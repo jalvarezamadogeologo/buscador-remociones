@@ -21,7 +21,7 @@ from typing import Sequence
 
 import dominios
 from buscar import nombre_medio
-from clasificar import es_prevencion
+from clasificar import agente_no_geologico, es_hipotetico, es_prevencion, evaluar_objeto
 from comun import cargar_config, log, normalizar
 from generar_sitio import generar_sitio
 from geocodificar import geocodificar_eventos
@@ -62,6 +62,36 @@ def main(argv: Sequence[str] | None = None) -> int:
                 evento[f"fuente_{indice}"] = nuevo
                 corregidas += 1
     log(f"fuentes con URL corregidas: {corregidas}")
+
+    descartados_objeto = 0
+    marcados = 0
+    for evento in eventos:
+        if evento.get("estado") == "descartado":
+            continue
+        titulo_n = normalizar(evento.get("titulo", ""))
+        if evento.get("estado") == "confirmado":
+            # El operador ya lo reviso: se deja en confianza alta.
+            evento["confianza"], evento["motivo"] = "alta", ""
+            continue
+        veredicto, motivo = evaluar_objeto(titulo_n)
+        agente = agente_no_geologico(titulo_n)
+        if es_hipotetico(titulo_n) or veredicto == "descartar":
+            evento["estado"] = "descartado"
+            descartados_objeto += 1
+            razon = motivo or "mencion hipotetica del proceso"
+            log(f"  descartado ({razon}): {evento.get('titulo', '')[:80]}")
+            continue
+        if veredicto == "revisar":
+            evento["confianza"], evento["motivo"] = "baja", motivo
+            marcados += 1
+        elif agente:
+            evento["confianza"] = "baja"
+            evento["motivo"] = f"agente no geologico ('{agente}')"
+            marcados += 1
+        else:
+            evento["confianza"], evento["motivo"] = "alta", ""
+    log(f"descartados por objeto/metafora/hipotesis: {descartados_objeto}")
+    log(f"marcados para revision (confianza baja): {marcados}")
 
     ids_antes = [evento.get("id") for evento in eventos]
     purga = dominios.purgar_eventos(eventos, config)

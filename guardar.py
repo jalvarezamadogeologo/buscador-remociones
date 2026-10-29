@@ -17,6 +17,7 @@ CSV = DATA / "eventos.csv"
 JSON = DATA / "eventos.json"
 
 ESTADOS = {"nuevo", "confirmado", "descartado"}
+CONFIANZAS = {"alta", "baja"}
 
 
 def cargar_eventos(ruta: Path = CSV) -> list[dict]:
@@ -25,7 +26,13 @@ def cargar_eventos(ruta: Path = CSV) -> list[dict]:
         return []
     with open(ruta, encoding="utf-8-sig", newline="") as fh:
         lector = csv.DictReader(fh)
-        return [dict(fila) for fila in lector]
+        filas = [dict(fila) for fila in lector]
+    for fila in filas:
+        # Columnas agregadas el 2026-10-29: los catastros antiguos no las traen.
+        if fila.get("confianza") not in CONFIANZAS:
+            fila["confianza"] = "alta"
+        fila.setdefault("motivo", "")
+    return filas
 
 
 def ordenar_eventos(eventos: list[dict]) -> list[dict]:
@@ -43,6 +50,8 @@ def guardar_eventos(eventos: list[dict], csv_ruta: Path = CSV, json_ruta: Path =
     for e in eventos:
         if e.get("estado") not in ESTADOS:
             e["estado"] = "nuevo"
+        if e.get("confianza") not in CONFIANZAS:
+            e["confianza"] = "alta"
         for col in COLUMNAS:
             e.setdefault(col, "")
         for col in ("lat", "lon"):
