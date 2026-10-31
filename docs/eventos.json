@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-10-30 18:57",
-  "total": 90,
+  "actualizado": "2026-10-31 01:15",
+  "total": 92,
   "eventos": [
+    {
+      "id": "1711844869df",
+      "fecha_publicacion": "2026-10-30T19:57:03-03:00",
+      "fecha_deteccion": "2026-10-31T01:15:03-03:00",
+      "titulo": "🏔️❄️ ¡Impresionante avalancha en Valle Nevado, Chile! 🇨🇱 Estas espectaculares imágenes muestran una avalancha registrada este viernes 30 de octubre en Valle Nevado, una estación que, gracias a las grandes nevadas de este invierno austral, todavía",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/DfItIjbNOvK/",
+          "fecha": "2026-10-30T19:57:03-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "23bd92b61475",
       "fecha_publicacion": "2026-10-30T17:50:00-03:00",
@@ -19,6 +42,29 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/RadioAconquija/posts/%F0%9D%97%A8%F0%9D%97%A1-%F0%9D%97%9B%F0%9D%97%A2%F0%9D%97%A0%F0%9D%97%95%F0%9D%97%A5%F0%9D%97%98-%F0%9D%97%A4%F0%9D%97%A8%F0%9D%97%98%F0%9D%97%97%F0%9D%97%A2-%F0%9D%97%A6%F0%9D%97%A2%F0%9D%97%95%F0%9D%97%A5%F0%9D%97%98-%F0%9D%97%A6%F0%9D%97%A8-%F0%9D%97%96%F0%9D%97%94%F0%9D%97%A0%F0%9D%97%9C%F0%9D%97%A2%F0%9D%97%A1-%F0%9D%97%AC-%F0%9D%97%94%F0%9D%97%9F%F0%9D%97%96%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%AD%F0%9D%97%A2-%F0%9D%97%94-%F0%9D%97%A7%F0%9D%97%A5%F0%9D%97%98%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%A6%F0%9D%97%98-%F0%9D%97%97%F0%9D%97%98-%F0%9D%97%A0%F0%9D%97%9C%F0%9D%97%9F%F0%9D%97%94%F0%9D%97%9A%F0%9D%97%A5%F0%9D%97%A2-%F0%9D%97%94-%F0%9D%97%A8%F0%9D%97%A1-%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%95%F0%9D%97%A2%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%94-/1201666345532380/",
           "fecha": "2026-10-30T17:50:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "85cdd2c3e35f",
+      "fecha_publicacion": "2026-10-30T13:11:51-03:00",
+      "fecha_deteccion": "2026-10-31T01:15:03-03:00",
+      "titulo": "Tragedia en Portillo: Tres personas mueren tras avalancha en la Laguna del Inca y otras cuatro quedaron heridas",
+      "evento": "Alud / avalancha en Portillo",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Valparaiso",
+      "comuna": "Portillo",
+      "lat": "-32.822459",
+      "lon": "-70.133087",
+      "fuentes": [
+        {
+          "medio": "El Periscopio",
+          "url": "https://www.elperiscopio.cl/destacado-1/tragedia-en-portillo-tres-muertos-y-cuatro-heridos-tras-avalancha/",
+          "fecha": "2026-10-30T13:11:51-03:00"
         }
       ],
       "estado": "nuevo",
