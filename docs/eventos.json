@@ -1,7 +1,99 @@
 {
-  "actualizado": "2026-10-31 13:52",
-  "total": 98,
+  "actualizado": "2026-10-31 18:01",
+  "total": 102,
   "eventos": [
+    {
+      "id": "a29920df5b07",
+      "fecha_publicacion": "2026-10-31T17:21:17-03:00",
+      "fecha_deteccion": "2026-10-31T18:01:43-03:00",
+      "titulo": "Asignan casi $53 millones para construir muro de contención en el Cementerio de Lota tras deslizamiento por lluvias",
+      "evento": "Deslizamiento en Lota",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Biobio",
+      "comuna": "Lota",
+      "lat": "-37.094453",
+      "lon": "-73.156402",
+      "fuentes": [
+        {
+          "medio": "Sabes.cl",
+          "url": "https://sabes.cl/2026/10/31/asignan-casi-53-millones-para-construir-muro-de-contencion-en-el-cementerio-de-lota-tras-deslizamiento-por-lluvias/",
+          "fecha": "2026-10-31T17:21:17-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "acb80429ded5",
+      "fecha_publicacion": "2026-10-31T17:00:00-03:00",
+      "fecha_deteccion": "2026-10-31T18:01:43-03:00",
+      "titulo": "#Ciudad I Una cuadrilla de la Alcaldía Álvaro Obregón acudió a reparar un socavón que se ha formado al menos en tres ocasiones, en la Colonia Guadalupe Inn, en Calle Ricardo Castro, esquina Guty Cárdenas. https://t.co/tqGi2Edb19",
+      "evento": "Socavón en Castro",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Los Lagos",
+      "comuna": "Castro",
+      "lat": "-42.482375",
+      "lon": "-73.764292",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/Reforma/status/2116621229176017156",
+          "fecha": "2026-10-31T17:00:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "bf807d50d541",
+      "fecha_publicacion": "2026-10-31T16:30:05-03:00",
+      "fecha_deteccion": "2026-10-31T18:01:43-03:00",
+      "titulo": "La alcaldesa de Las Condes desplegó los equipos municipales en los sectores más afectados tras el aluvión del pasado 8 de octubre",
+      "evento": "Aluvión / flujo de detritos en Las Condes",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "Las Condes",
+      "lat": "-33.408455",
+      "lon": "-70.567149",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/laterceracom/posts/la-alcaldesa-de-las-condes-despleg%C3%B3-los-equipos-municipales-en-los-sectores-m%C3%A1s-/1657140256067554/",
+          "fecha": "2026-10-31T16:30:05-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "5a6fd8093b4d",
+      "fecha_publicacion": "2026-10-31T12:48:50-03:00",
+      "fecha_deteccion": "2026-10-31T18:01:43-03:00",
+      "titulo": "👥#Sociedad | La carretera Pujilí-La Maná permanece cerrada por un deslizamiento, mientras que otras vías presentan socavones, hundimientos y pérdida de calzada. Loja y Morona Santiago concentran la mayor cantidad de afectaciones. #LaRadioDeLasN",
+      "evento": "Deslizamiento en Santiago",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/radio_pichincha/status/2116558019647439003",
+          "fecha": "2026-10-31T12:48:50-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "a460fc00e69c",
       "fecha_publicacion": "2026-10-31T12:23:59-03:00",
@@ -157,6 +249,11 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/RadioAconquija/posts/%F0%9D%97%A8%F0%9D%97%A1-%F0%9D%97%9B%F0%9D%97%A2%F0%9D%97%A0%F0%9D%97%95%F0%9D%97%A5%F0%9D%97%98-%F0%9D%97%A4%F0%9D%97%A8%F0%9D%97%98%F0%9D%97%97%F0%9D%97%A2-%F0%9D%97%A6%F0%9D%97%A2%F0%9D%97%95%F0%9D%97%A5%F0%9D%97%98-%F0%9D%97%A6%F0%9D%97%A8-%F0%9D%97%96%F0%9D%97%94%F0%9D%97%A0%F0%9D%97%9C%F0%9D%97%A2%F0%9D%97%A1-%F0%9D%97%AC-%F0%9D%97%94%F0%9D%97%9F%F0%9D%97%96%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%AD%F0%9D%97%A2-%F0%9D%97%94-%F0%9D%97%A7%F0%9D%97%A5%F0%9D%97%98%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%A6%F0%9D%97%98-%F0%9D%97%97%F0%9D%97%98-%F0%9D%97%A0%F0%9D%97%9C%F0%9D%97%9F%F0%9D%97%94%F0%9D%97%9A%F0%9D%97%A5%F0%9D%97%A2-%F0%9D%97%94-%F0%9D%97%A8%F0%9D%97%A1-%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%95%F0%9D%97%A2%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%94-/1201666345532380/",
           "fecha": "2026-10-30T17:50:00-03:00"
+        },
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/san-martin-exige-soluciones-al-mop-por-reja-de-contencion-destruida-en-apoquindo-tras-aluvion-no-podemos-seguir-esperando/",
+          "fecha": "2026-10-31T15:05:44-03:00"
         }
       ],
       "estado": "nuevo",
