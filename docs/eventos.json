@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-10-31 08:44",
-  "total": 95,
+  "actualizado": "2026-10-31 13:52",
+  "total": 98,
   "eventos": [
+    {
+      "id": "a460fc00e69c",
+      "fecha_publicacion": "2026-10-31T12:23:59-03:00",
+      "fecha_deteccion": "2026-10-31T13:52:19-03:00",
+      "titulo": "Candados en la puerta y telegramas de despido: el derrumbe de dos empresas modelo de Villa Constitución",
+      "evento": "Deslizamiento en Constitucion",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Maule",
+      "comuna": "Constitucion",
+      "lat": "-35.331831",
+      "lon": "-72.411900",
+      "fuentes": [
+        {
+          "medio": "Radiofonica 100.7",
+          "url": "https://radiofonica.com/candados-en-la-puerta-y-telegramas-de-despido-el-derrumbe-de-dos-empresas-modelo-de-villa-constitucion/",
+          "fecha": "2026-10-31T12:23:59-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "e6ff5d5484fd",
+      "fecha_publicacion": "2026-10-31T11:00:07-03:00",
+      "fecha_deteccion": "2026-10-31T13:52:19-03:00",
+      "titulo": "¿DERRUMBE MASIVO de ÁRBOLES? 🚨🌳 Árbol cae en La Florida en #SanLuisPotosí 😧👇",
+      "evento": "Deslizamiento en La Florida",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Metropolitana",
+      "comuna": "La Florida",
+      "lat": "-33.520418",
+      "lon": "-70.600618",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/aztecaslp/posts/derrumbe-masivo-de-%C3%A1rboles-%C3%A1rbol-cae-en-la-florida-en-sanluispotos%C3%AD-/1432477465726413/",
+          "fecha": "2026-10-31T11:00:07-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "810730128392",
       "fecha_publicacion": "2026-10-31T07:58:54-03:00",
@@ -60,6 +106,29 @@
       "comuna": "",
       "lat": "",
       "lon": "",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/DfItIjbNOvK/",
+          "fecha": "2026-10-30T19:57:03-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "f5e9adb6843b",
+      "fecha_publicacion": "2026-10-30T19:57:03-03:00",
+      "fecha_deteccion": "2026-10-31T13:52:19-03:00",
+      "titulo": "❄️ ¡Impresionante avalancha en los Andes chilenos! 🇨🇱 Estas espectaculares imágenes muestran una avalancha registrada este viernes 30 de octubre en el sector de Santa Teresa, en Farellones, y filmada desde la estación de Valle Nevado. 😮 Por suerte,",
+      "evento": "Alud / avalancha en Los Andes",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Valparaiso",
+      "comuna": "Los Andes",
+      "lat": "-32.833687",
+      "lon": "-70.598161",
       "fuentes": [
         {
           "medio": "Instagram",
