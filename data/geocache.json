@@ -114,5 +114,17 @@
   "caldera chile": {
     "lat": -27.0675545,
     "lon": -70.8222047
+  },
+  "la reina chile": {
+    "lat": -33.442282,
+    "lon": -70.5432729
+  },
+  "puente alto chile": {
+    "lat": -33.6095279,
+    "lon": -70.5754736
+  },
+  "maule chile": {
+    "lat": -35.5972284,
+    "lon": -71.48868
   }
 }
