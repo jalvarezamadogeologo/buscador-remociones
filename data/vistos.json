@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-10-31T18:01:43-03:00",
-  "total": 483,
+  "actualizado": "2026-11-01T01:35:49-03:00",
+  "total": 491,
   "claves": {
     "d7b69219688b": {
       "titulo": "Avalancha en Los Andes chilenos causa al menos tres fallecidos en centro de esquí El Portillo",
@@ -2416,6 +2416,46 @@
       "titulo": "La alcaldesa de Las Condes desplegó los equipos municipales en los sectores más afectados tras el aluvión del pasado 8 de octubre",
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQRnhGV2tzUUlvN1RfemNmVmZTNW1DcVkwc0FkRkI1MW9uZno3YkVzQk85emh4U2VVS29DVEhqdDVDUW9XaWxYb2hUQjBLNHF5VGtBOHJyNFhacFFfRHVRUGRRcFVuRmhja2xUMU9fU25JeGlaUnpWREVpUlY2ZXpRcEliM0RCZHk5eU5ya1oyUWtwZXFxZTRQdTRZOW1MeFZ2TmNlQ0s3dUctMkFQRjZwWF9YN0tMblNQUWNvZEE3UkJUMnZYcmg0X0g1T1FWNThJZUk4TmN0RXl6Z0JLTWZKTGVKTmJxSms?oc=5",
       "fecha": "2026-10-31T18:01:43-03:00"
+    },
+    "11901ad1611f": {
+      "titulo": "Alcaldesa de Las Condes solicita al MOP reparar reja de contención tras aluvión de octubre",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVmkyZXNCYlZWeFhVdDlzWFlZWWxNMDBJQWkxTWpYX3Z1RXBoajdmalVOQVNDb1V5c082cGZ2bFAwOHVTYWhtaWR2QkE2eHdDUlBxdG9yNXpmMmN1WjRPbS1OOGJFRlBwb01RNHBrZmlqT3NiUjZzTVAyWTNmVElkRnhpUHAwcXB5SDJHdjZDdDYxRFc2RzU2bG80TE5KVk10dlV3Qndpendjajc0eXFxLVJQYw?oc=5",
+      "fecha": "2026-11-01T01:35:49-03:00"
+    },
+    "ef39c5b383ac": {
+      "titulo": "Removimos un derrumbe en la ruta hacia San Antonio Silva, en San Miguel.",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Ya24wOW5pWUF6ODYwUUJtLXllOWt0Uk9XV3EtcWVzdEZOb0VEdFlMeU5uVjdJUWtYX0dHYTYwNmdjdmxJQWYyTklORTMxdy1jVkhOYnJ3WkQ0RWJQbFBhSjNqWTF1VHVzczBNOGZlNDF1Zw?oc=5",
+      "fecha": "2026-11-01T01:35:49-03:00"
+    },
+    "a85ed4bde837": {
+      "titulo": "¡Un impactante desprendimiento se produjo en el Glaciar Perito Moreno! PN Los Glaciares. Santa Cruz. Patagonia 🇦🇷",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE16UHNQeUY0c0tCbFdvLW5uZHBhRHBQU0tHNEdXaUtVRU03OF9zZm9TdE5vRVMtYnNpWGFvNTlnT1RkSS1EYW9fZl9mZTdZYzM0SXdCNGhqbVNJUQ?oc=5",
+      "fecha": "2026-11-01T01:35:49-03:00"
+    },
+    "8b9d6d629ffd": {
+      "titulo": "San Martín exige soluciones al MOP por reja de contención destruída en San Carlos de Apoquindo tras aluvión https://t.co/JHFqqnlpKf",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8tMzJieGRXZnc1SHZXZ05DdC15WG9lOEowWl9Rei1oVzBmTTJ4UlZ4czFibTg3aXFTR3otc0VkNkRMa05IOVoyd0drY09hcFRiU1ZHalMzLTNPTllLTDY0?oc=5",
+      "fecha": "2026-11-01T01:35:49-03:00"
+    },
+    "996655bc16a1": {
+      "titulo": "Tras el aluvión de la Quebrada Honda en Las Condes y las sucesivas lluvias de octubre en el país, la Dirección Meteorológica de Chile puso sobre la mesa una tecnología que permite perseguir las tormentas: radares montados en camiones, que son capac",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE43eVRNNUNwekJhZ0pweGQxd1ZMSVJqV3h4d3hFS0pnbS0xQ3NLWHRVSjBhYkE2X1ozb2lSdTAyYjJPWUUtT2hGTzROY0N3X09aTnc?oc=5",
+      "fecha": "2026-11-01T01:35:49-03:00"
+    },
+    "750c43f4135f": {
+      "titulo": "Tras el aluvión de la Quebrada Honda en Las Condes y las sucesivas lluvias de octubre en el país, la Dirección Meteorológica de Chile puso sobre la mesa una tecnología que permite perseguir las tormentas: radares montados en camiones, que son capace",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPcm9FMUhDYk5NMEpmeHFTeHNvNk1EVU1TaGViN3lfWVBBd3NWdkpkMi1lYjN5YzgwSHdLUTJnY3lSRVRqdWZ0SGJSNkZGMVpWbW96X0FjZHFnOXR5OU01dnBfMUN1NDYwN084T09rTllmb0tLUzd2ZGNCbWJQZkYtcktkYWRhOTdOS2x2N1ZUVDdobDBWWEpGZkd5YXpIRjctc3czZDIzZEVaVzFYRFJOMERNZk1aQjR2QWppVXVBbHlVcXRRVENsODN4cTduT2hSRHpieGlONlhRWTA?oc=5",
+      "fecha": "2026-11-01T01:35:49-03:00"
+    },
+    "7acc55cfec3e": {
+      "titulo": "Inundación y cascada con desprendimiento de rocas en Puerto Ayora En Puerto Ayora, la cascada con desprendimiento de rocas, más los efectos de la inundación en el barrio Cascada en Santa Cruz, con fallecidos, postes caídos, daños de la vía Baltra en l",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNVkJTd0lkcFJnN3JJUXBzOGlLR21RanFXLUhtU2lqbHNueS0zZWZwQUNEcW9XQmsxcGFyV0daX2E3N3hReWNNLUcxX0U4dDduaGlUSi11MHhqdDZkRWF5QXV5dG9NbGRiby1qck1KSGJYNkVHdXczM0pwX3FHNHd3ZkV5bWRGcVNjVnlTUVY1bno2bXJqU2VxNURQdE02ZG1NdllpSTRIa25vVk5QbU9fZUx1RE8zRnB6dlJhWE9KelVNSTBxWk5TaEpHS2V4VDkxZ2V6OWVpYXRyUFd6bXFSclhORzlTYzlYbE42MHhfQnJXZw?oc=5",
+      "fecha": "2026-11-01T01:35:49-03:00"
+    },
+    "149ab21fdacd": {
+      "titulo": "Atendimos de manera puntual y oportuna. Este sábado, se detectó un socavón en la calle Miguel Hidalgo, en la colonia El Tecolote, el cual se atendió a la brevedad. A través de las delegaciones San Antonio de los Buenos y Sánchez Taboada, llevamos a ca",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNODhlWUFCTUdXcGxBMEpza3lPNEQta1pGdFRYSFBNN1lvNm1FSldPUkpGam12eUxHM01UYVF5UmJHOFhaSnlFUzFRbm9SSzJVZjhwMW5PRDI1NHhwZnhTSWxEejZxMDAzTVNJSlRTOGxYUVBiQ2h4U050WTlUazVCSUhrNk90em9hMmVsQVA1Y0Y2UDNrNG85OEVwMEFtU0J4UVI0MkhaNGFIcWJvck01YTdSd1ZlSm5VTmJfYTlfcjFTcnBlY0RSWW52RDhIN0lQVVd3TElhVEdYOWxHNDd2djdTSmYwR1FhNXZXNjROYXQ?oc=5",
+      "fecha": "2026-11-01T01:35:49-03:00"
     }
   }
 }

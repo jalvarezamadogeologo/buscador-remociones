@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-10-31 18:01",
-  "total": 102,
+  "actualizado": "2026-11-01 01:35",
+  "total": 104,
   "eventos": [
+    {
+      "id": "149ab21fdacd",
+      "fecha_publicacion": "2026-10-31T20:54:35-03:00",
+      "fecha_deteccion": "2026-11-01T01:35:49-03:00",
+      "titulo": "Atendimos de manera puntual y oportuna. Este sábado, se detectó un socavón en la calle Miguel Hidalgo, en la colonia El Tecolote, el cual se atendió a la brevedad. A través de las delegaciones San Antonio de los Buenos y Sánchez Taboada, llevamos a ca",
+      "evento": "Socavón en San Antonio",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Valparaiso",
+      "comuna": "San Antonio",
+      "lat": "-33.580861",
+      "lon": "-71.613238",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/BurguenoIsmael/posts/atendimos-de-manera-puntual-y-oportuna-este-s%C3%A1bado-se-detect%C3%B3-un-socav%C3%B3n-en-la-c/1665409578370522/",
+          "fecha": "2026-10-31T20:54:35-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "ef39c5b383ac",
+      "fecha_publicacion": "2026-10-31T18:31:17-03:00",
+      "fecha_deteccion": "2026-11-01T01:35:49-03:00",
+      "titulo": "Removimos un derrumbe en la ruta hacia San Antonio Silva, en San Miguel.",
+      "evento": "Deslizamiento en San Antonio",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Valparaiso",
+      "comuna": "San Antonio",
+      "lat": "-33.580861",
+      "lon": "-71.613238",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/ObrasPublicasSV/status/2116644199508676880/photo/2",
+          "fecha": "2026-10-31T18:31:17-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "a29920df5b07",
       "fecha_publicacion": "2026-10-31T17:21:17-03:00",
@@ -65,6 +111,16 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/laterceracom/posts/la-alcaldesa-de-las-condes-despleg%C3%B3-los-equipos-municipales-en-los-sectores-m%C3%A1s-/1657140256067554/",
           "fecha": "2026-10-31T16:30:05-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfLISKqmS-Q/",
+          "fecha": "2026-10-31T18:31:57-03:00"
+        },
+        {
+          "medio": "laconexion.cl",
+          "url": "https://laconexion.cl/alcaldesa-de-las-condes-solicita-al-mop-reparar-reja-de-contencion-tras-aluvion-de-octubre/",
+          "fecha": "2026-10-31T19:23:41-03:00"
         }
       ],
       "estado": "nuevo",
@@ -254,6 +310,11 @@
           "medio": "La Tercera",
           "url": "https://www.latercera.com/nacional/noticia/san-martin-exige-soluciones-al-mop-por-reja-de-contencion-destruida-en-apoquindo-tras-aluvion-no-podemos-seguir-esperando/",
           "fecha": "2026-10-31T15:05:44-03:00"
+        },
+        {
+          "medio": "X",
+          "url": "https://x.com/latercera/status/2116613678095294859",
+          "fecha": "2026-10-31T16:30:00-03:00"
         }
       ],
       "estado": "nuevo",
@@ -550,6 +611,16 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/reel/De_wEvgv2b1/",
           "fecha": "2026-10-27T08:31:21-03:00"
+        },
+        {
+          "medio": "X",
+          "url": "https://x.com/lfsur/status/2116633581959131364",
+          "fecha": "2026-10-31T17:49:05-03:00"
+        },
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/periodicolaprensajipijapa/posts/inundaci%C3%B3n-y-cascada-con-desprendimiento-de-rocas-en-puerto-ayora-en-puerto-ayor/1588170346665613/",
+          "fecha": "2026-10-31T22:13:40-03:00"
         }
       ],
       "estado": "nuevo",
