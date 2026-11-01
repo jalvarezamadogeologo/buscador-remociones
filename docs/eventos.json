@@ -96,7 +96,7 @@
     },
     {
       "id": "bf807d50d541",
-      "fecha_publicacion": "2026-10-31T16:30:05-03:00",
+      "fecha_publicacion": "2026-10-31T16:03:00-03:00",
       "fecha_deteccion": "2026-10-31T18:01:43-03:00",
       "titulo": "La alcaldesa de Las Condes desplegó los equipos municipales en los sectores más afectados tras el aluvión del pasado 8 de octubre",
       "evento": "Aluvión / flujo de detritos en Las Condes",
@@ -108,14 +108,14 @@
       "lon": "-70.567149",
       "fuentes": [
         {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfK3PJ5nbEq/",
+          "fecha": "2026-10-31T16:03:00-03:00"
+        },
+        {
           "medio": "Facebook",
           "url": "https://www.facebook.com/laterceracom/posts/la-alcaldesa-de-las-condes-despleg%C3%B3-los-equipos-municipales-en-los-sectores-m%C3%A1s-/1657140256067554/",
           "fecha": "2026-10-31T16:30:05-03:00"
-        },
-        {
-          "medio": "Instagram",
-          "url": "https://www.instagram.com/p/DfLISKqmS-Q/",
-          "fecha": "2026-10-31T18:31:57-03:00"
         },
         {
           "medio": "laconexion.cl",
@@ -213,6 +213,11 @@
           "medio": "La Tercera",
           "url": "https://www.latercera.com/nacional/noticia/insetabilidad-atmosferica-pronostican-precipitaciones-normales-a-moderadas-en-un-corto-periodo-para-tres-regiones/",
           "fecha": "2026-10-31T07:58:54-03:00"
+        },
+        {
+          "medio": "Cooperativa",
+          "url": "https://www.cooperativa.cl/noticias/pais/tiempo/senapred-cancelo-la-alerta-roja-vigente-por-remocion-en-masa-en-10/2026-11-01/091254.html",
+          "fecha": "2026-11-01T09:12:54-03:00"
         }
       ],
       "estado": "nuevo",
