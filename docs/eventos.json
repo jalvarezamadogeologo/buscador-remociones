@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-01 18:43",
-  "total": 106,
+  "actualizado": "2026-11-02 11:52",
+  "total": 107,
   "eventos": [
+    {
+      "id": "b8ab3e5706c0",
+      "fecha_publicacion": "2026-11-01T18:22:36-03:00",
+      "fecha_deteccion": "2026-11-02T11:52:02-03:00",
+      "titulo": "🚌🛤️ Santa Cruz: ABC moviliza maquinaria para despejar deslizamiento en la ruta La Angostura – Bermejo 🔎 Lee la nota aquí ⤵️ https://abi.bo/santa-cruz-abc-moviliza-maquinaria-para-despejar-deslizamiento-en-la-ruta-la-angostura-bermejo/ .",
+      "evento": "Deslizamiento en Santa Cruz",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "O'Higgins",
+      "comuna": "Santa Cruz",
+      "lat": "-34.640324",
+      "lon": "-71.366130",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/ABI.Bolivia/posts/%EF%B8%8F-santa-cruz-abc-moviliza-maquinaria-para-despejar-deslizamiento-en-la-ruta-la-a/1743691941092780/",
+          "fecha": "2026-11-01T18:22:36-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "f285608567d2",
       "fecha_publicacion": "2026-11-01T10:44:24-03:00",
