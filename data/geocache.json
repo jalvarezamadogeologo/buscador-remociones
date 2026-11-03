@@ -138,5 +138,9 @@
   "san felipe chile": {
     "lat": -32.750687,
     "lon": -70.7252688
+  },
+  "los angeles chile": {
+    "lat": -37.4707455,
+    "lon": -72.351686
   }
 }

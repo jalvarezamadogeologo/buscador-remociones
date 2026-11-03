@@ -1,7 +1,81 @@
 {
-  "actualizado": "2026-11-03 10:42",
-  "total": 112,
+  "actualizado": "2026-11-03 19:56",
+  "total": 115,
   "eventos": [
+    {
+      "id": "5c61ff1fc29c",
+      "fecha_publicacion": "2026-11-03T18:41:24-03:00",
+      "fecha_deteccion": "2026-11-03T19:56:15-03:00",
+      "titulo": "🗣️🚨 Nicolas Cage dice que está \"en la calle\" tras el socavón que dañó su mansión en Los Ángeles https://t.co/pnwnSkk6Q1",
+      "evento": "Socavón en Los Angeles",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Los Angeles",
+      "lat": "-37.470745",
+      "lon": "-72.351686",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/RPPNoticias/status/2117733909546893483",
+          "fecha": "2026-11-03T18:41:24-03:00"
+        },
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/rppnoticias/posts/%EF%B8%8F-nicolas-cage-dice-que-est%C3%A1-en-la-calle-tras-el-socav%C3%B3n-que-da%C3%B1%C3%B3-su-mansi%C3%B3n-en-/1221017463587645/",
+          "fecha": "2026-11-03T18:41:24-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "e668ff68cf4b",
+      "fecha_publicacion": "2026-11-03T18:07:30-03:00",
+      "fecha_deteccion": "2026-11-03T19:56:15-03:00",
+      "titulo": "¡BUSCAN LEVANTARSE ENTRE LOS ESCOMBROS! 🚨 Las inundaciones y la avalancha registradas el pasado 31 de octubre en la parte alta de la Isla Santa Cruz —que afectaron a barrios como La Cascada, donde el agua alcanzó hasta tres metros, La Uni",
+      "evento": "Desborde / inundación en Santa Cruz",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "O'Higgins",
+      "comuna": "Santa Cruz",
+      "lat": "-34.640324",
+      "lon": "-71.366130",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/DfSzzDqvwkw/",
+          "fecha": "2026-11-03T18:07:30-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "978fce11f50f",
+      "fecha_publicacion": "2026-11-03T15:44:26-03:00",
+      "fecha_deteccion": "2026-11-03T19:56:15-03:00",
+      "titulo": "Derrumbe de los fondos D y E de las AFP afectará proceso de jubilación de unas 360.000 personas en edad de pensionarse",
+      "evento": "Deslizamiento en Chile",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "- CIPER Chile",
+          "url": "https://www.ciperchile.cl/2026/11/03/derrumbe-de-los-fondos-d-y-e-de-las-afp-afectara-proceso-de-jubilacion-de-unas-360-000-personas-en-edad-de-pensionarse/",
+          "fecha": "2026-11-03T15:44:26-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "4a78cb6731e6",
       "fecha_publicacion": "2026-11-02T20:10:00-03:00",
@@ -226,6 +300,11 @@
           "medio": "X",
           "url": "https://x.com/ObrasPublicasSV/status/2116644199508676880/photo/2",
           "fecha": "2026-10-31T18:31:17-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfSNPegDrPG/",
+          "fecha": "2026-11-03T12:29:57-03:00"
         }
       ],
       "estado": "nuevo",
@@ -249,6 +328,11 @@
           "medio": "Sabes.cl",
           "url": "https://sabes.cl/2026/10/31/asignan-casi-53-millones-para-construir-muro-de-contencion-en-el-cementerio-de-lota-tras-deslizamiento-por-lluvias/",
           "fecha": "2026-10-31T17:21:17-03:00"
+        },
+        {
+          "medio": "Mega.cl",
+          "url": "https://www.mega.cl/amp/programas/mucho-gusto/mejores-momentos/222078-derrumbe-cementerio-sepulturas-expuestas.html",
+          "fecha": "2026-11-03T11:15:59-03:00"
         }
       ],
       "estado": "nuevo",
@@ -565,6 +649,11 @@
           "medio": "El Periscopio",
           "url": "https://www.elperiscopio.cl/destacado-1/tragedia-en-portillo-tres-muertos-y-cuatro-heridos-tras-avalancha/",
           "fecha": "2026-10-30T13:11:51-03:00"
+        },
+        {
+          "medio": "The Clinic",
+          "url": "https://www.theclinic.cl/2026/11/03/luz-jimenez-volvera-a-los-escenarios-tras-la-muerte-de-su-hija-en-una-avalancha-en-portillo/",
+          "fecha": "2026-11-03T14:11:55-03:00"
         }
       ],
       "estado": "nuevo",
