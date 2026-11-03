@@ -134,5 +134,9 @@
   "la florida chile": {
     "lat": -33.5204181,
     "lon": -70.6006178
+  },
+  "san felipe chile": {
+    "lat": -32.750687,
+    "lon": -70.7252688
   }
 }
