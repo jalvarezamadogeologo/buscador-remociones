@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-02 21:34",
-  "total": 110,
+  "actualizado": "2026-11-03 10:42",
+  "total": 112,
   "eventos": [
+    {
+      "id": "4a78cb6731e6",
+      "fecha_publicacion": "2026-11-02T20:10:00-03:00",
+      "fecha_deteccion": "2026-11-03T10:42:14-03:00",
+      "titulo": "Línea C, desprendimiento de catenaria (alimentación) entre San Juan y Constitución. La falta de inversión y mantenimiento mas la desidia de @Emova_arg con la complicidad de @jorgemacri ponen en riesgo la vida de trabajadores y usuarios. Aumenta la ta",
+      "evento": "Caída de rocas en Constitucion",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Maule",
+      "comuna": "Constitucion",
+      "lat": "-35.331831",
+      "lon": "-72.411900",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/Claubonara/status/2117393819175907441",
+          "fecha": "2026-11-02T20:10:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "f961a740a1fa",
       "fecha_publicacion": "2026-11-02T16:45:08-03:00",
@@ -42,6 +65,29 @@
           "medio": "La Tercera",
           "url": "https://www.latercera.com/nacional/noticia/funcionarios-de-lo-barnechea-en-picada-contra-concejal-que-critico-labores-de-limpieza-por-el-aluvion/",
           "fecha": "2026-11-02T16:00:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "20b8e941ab6d",
+      "fecha_publicacion": "2026-11-02T15:32:17-03:00",
+      "fecha_deteccion": "2026-11-03T10:42:14-03:00",
+      "titulo": "Corte total en una carretera de Santa Cruz de Tenerife por la caída de rocas sobre la calzada",
+      "evento": "Caída de rocas en Santa Cruz",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "O'Higgins",
+      "comuna": "Santa Cruz",
+      "lat": "-34.640324",
+      "lon": "-71.366130",
+      "fuentes": [
+        {
+          "medio": "El Cronista",
+          "url": "https://www.cronista.com/espana/actualidad-es/corte-total-en-una-carretera-de-santa-cruz-de-tenerife-por-la-caida-de-rocas-sobre-la-calzada/?outputType\\=amp-type",
+          "fecha": "2026-11-02T15:32:17-03:00"
         }
       ],
       "estado": "nuevo",
