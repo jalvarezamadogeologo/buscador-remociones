@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-03 19:56",
-  "total": 115,
+  "actualizado": "2026-11-04 01:58",
+  "total": 117,
   "eventos": [
+    {
+      "id": "d2e6acb7960f",
+      "fecha_publicacion": "2026-11-03T22:10:06-03:00",
+      "fecha_deteccion": "2026-11-04T01:58:05-03:00",
+      "titulo": "¡Caminaba tranquilamente cuando una llanta lo alcanzó! 🚗💥 El desprendimiento de una rueda provocó un aparatoso 4cc1d3nt3 en Chile, donde un estudiante terminó con l3s10n3s en la frente y el tórax😱. Conoce los detalles y observa las imágenes👇 #Acci",
+      "evento": "Caída de rocas en Chile",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/DfTPr7uBEfY/",
+          "fecha": "2026-11-03T22:10:06-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "5c61ff1fc29c",
       "fecha_publicacion": "2026-11-03T18:41:24-03:00",
@@ -70,6 +93,29 @@
           "medio": "- CIPER Chile",
           "url": "https://www.ciperchile.cl/2026/11/03/derrumbe-de-los-fondos-d-y-e-de-las-afp-afectara-proceso-de-jubilacion-de-unas-360-000-personas-en-edad-de-pensionarse/",
           "fecha": "2026-11-03T15:44:26-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "0cf16425ac50",
+      "fecha_publicacion": "2026-11-03T09:01:09-03:00",
+      "fecha_deteccion": "2026-11-04T01:58:05-03:00",
+      "titulo": "🚧🚌 #EstaciónCentral Por socavón en Gral. Amengual, modifican sus recorridos: 🔹 210 y 210v: ➡️ Ida (hacia Pte. Alto): Cjón. Ind. Ugarte – P. V. Irarrázaval – 5 de Abril – Arica – N. Retamales – Alameda, retomando RH. 💜 Planifica tu viaje y desplázate con pr",
+      "evento": "Socavón en Arica",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Arica y Parinacota",
+      "comuna": "Arica",
+      "lat": "-18.478529",
+      "lon": "-70.321139",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/conectamobility/status/2117587884450455984",
+          "fecha": "2026-11-03T09:01:09-03:00"
         }
       ],
       "estado": "nuevo",
