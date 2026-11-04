@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-11-04 01:58",
-  "total": 117,
+  "actualizado": "2026-11-04 10:49",
+  "total": 120,
   "eventos": [
+    {
+      "id": "73f8af7f6c1d",
+      "fecha_publicacion": "2026-11-04T10:27:00-03:00",
+      "fecha_deteccion": "2026-11-04T10:49:57-03:00",
+      "titulo": "Formalizan a propietario por intervención de terreno que provocó deslizamiento en río Bueno",
+      "evento": "Deslizamiento en Rio Bueno",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Los Rios",
+      "comuna": "Rio Bueno",
+      "lat": "-40.333668",
+      "lon": "-72.956762",
+      "fuentes": [
+        {
+          "medio": "RioenLinea",
+          "url": "https://www.rioenlinea.cl/formalizan-a-propietario-por-intervencion-de-terreno-que-provoco-deslizamiento-en-rio-bueno/",
+          "fecha": "2026-11-04T10:27:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "0e776e91dcee",
+      "fecha_publicacion": "2026-11-04T09:47:08-03:00",
+      "fecha_deteccion": "2026-11-04T10:49:57-03:00",
+      "titulo": "Talcahuano: vecinos protestan por socavón en acceso a los cerros de la comuna puerto",
+      "evento": "Socavón en Talcahuano",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Talcahuano",
+      "lat": "-36.714486",
+      "lon": "-73.114109",
+      "fuentes": [
+        {
+          "medio": "Canal 9 Bío Bío Televisión",
+          "url": "https://www.canal9.cl/episodios/2026/11/04/talcahuano-vecinos-protestan-por-socavon-en-el-acceso-a-los-cerros-de-la-comuna",
+          "fecha": "2026-11-04T09:47:08-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "d2e6acb7960f",
       "fecha_publicacion": "2026-11-03T22:10:06-03:00",
@@ -19,6 +65,29 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/reel/DfTPr7uBEfY/",
           "fecha": "2026-11-03T22:10:06-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "d9d6c8981303",
+      "fecha_publicacion": "2026-11-03T22:04:01-03:00",
+      "fecha_deteccion": "2026-11-04T10:49:57-03:00",
+      "titulo": "Vecinos de Villa Juan Riquelme en Concepción, denunciaron una grave remoción en masa, en un cerro que está en un sitio propiedad de Forestal Arauco. En el sector temen que ocurra un nuevo aluvión. Por ahora, se descartó una intervención debido a la",
+      "evento": "Deslizamiento en Concepcion",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Biobio",
+      "comuna": "Concepcion",
+      "lat": "-36.801491",
+      "lon": "-72.955068",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/DfTR_YahRQp/",
+          "fecha": "2026-11-03T22:04:01-03:00"
         }
       ],
       "estado": "nuevo",
