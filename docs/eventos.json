@@ -1,7 +1,99 @@
 {
-  "actualizado": "2026-11-04 10:49",
-  "total": 120,
+  "actualizado": "2026-11-04 20:15",
+  "total": 125,
   "eventos": [
+    {
+      "id": "fe0eca7fbcf9",
+      "fecha_publicacion": "2026-11-04T16:18:45-03:00",
+      "fecha_deteccion": "2026-11-04T20:15:26-03:00",
+      "titulo": "Serviu confirma que esta semana iniciará obras de mitigación por socavón en subida La Gloria",
+      "evento": "Socavón en Concepcion",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Concepcion",
+      "lat": "-36.827070",
+      "lon": "-73.050206",
+      "fuentes": [
+        {
+          "medio": "Diario Concepción",
+          "url": "https://www.diarioconcepcion.cl/ciudad/2026/11/04/protesta-subida-la-gloria-vecinos-cerros-reparacion-serviu.html",
+          "fecha": "2026-11-04T16:18:45-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "bc09d3d37b6d",
+      "fecha_publicacion": "2026-11-04T12:56:57-03:00",
+      "fecha_deteccion": "2026-11-04T20:15:26-03:00",
+      "titulo": "Nicolas Cage revela la dramática situación que enfrenta luego del derrumbe que comprometió su casa",
+      "evento": "Deslizamiento en Chile",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Futuro Chile",
+          "url": "https://www.futuro.cl/2026/11/nicolas-cage-revela-la-dramatica-situacion-que-enfrenta-luego-del-derrumbe-que-comprometio-su-casa/",
+          "fecha": "2026-11-04T12:56:57-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "f952f5eeaddc",
+      "fecha_publicacion": "2026-11-04T11:09:00-03:00",
+      "fecha_deteccion": "2026-11-04T20:15:26-03:00",
+      "titulo": "Deslizamiento de tierra interrumpe una pista del camino entre Corral y Chaihuín",
+      "evento": "Deslizamiento en Valdivia",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Los Rios",
+      "comuna": "Valdivia",
+      "lat": "-39.814126",
+      "lon": "-73.245986",
+      "fuentes": [
+        {
+          "medio": "Diario de Valdivia",
+          "url": "https://www.diariodevaldivia.cl/noticia/actualidad/2026/11/deslizamiento-de-tierra-interrumpe-una-pista-del-camino-entre-corral-y-chaihuin",
+          "fecha": "2026-11-04T11:09:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "6976b6368f21",
+      "fecha_publicacion": "2026-11-04T10:35:24-03:00",
+      "fecha_deteccion": "2026-11-04T20:15:26-03:00",
+      "titulo": "#RepórteseyAporte Denuncia enviada por nuestros reporteros en #Simacota \"Continúa el deslizamiento en la vereda San Pascual municipio de Simacota sin que los entes de control se pronuncien. Una problemática desde junio, ahí hay un nacimiento de ag",
+      "evento": "Deslizamiento en Nacimiento",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Biobio",
+      "comuna": "Nacimiento",
+      "lat": "-37.501829",
+      "lon": "-72.673110",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/Elregional.com.co/posts/rep%C3%B3rteseyaporte-denuncia-enviada-por-nuestros-reporteros-en-simacotacontin%C3%BAa-el/1575240057982077/",
+          "fecha": "2026-11-04T10:35:24-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "73f8af7f6c1d",
       "fecha_publicacion": "2026-11-04T10:27:00-03:00",
@@ -19,6 +111,39 @@
           "medio": "RioenLinea",
           "url": "https://www.rioenlinea.cl/formalizan-a-propietario-por-intervencion-de-terreno-que-provoco-deslizamiento-en-rio-bueno/",
           "fecha": "2026-11-04T10:27:00-03:00"
+        },
+        {
+          "medio": "Diario de Valdivia",
+          "url": "https://www.diariodevaldivia.cl/noticia/actualidad/2026/11/derrumbe-que-alcanzo-a-una-balsa-de-rafting-en-el-rio-bueno-llego-a-tribunales",
+          "fecha": "2026-11-04T15:44:09-03:00"
+        },
+        {
+          "medio": "BioBioChile",
+          "url": "https://www.biobiochile.cl/noticias/nacional/region-de-los-rios/2026/11/04/formalizan-a-dueno-de-predio-cuya-intervencion-causo-derrumbe-que-afecto-a-balsa-y-kayaks-en-rio-bueno.shtml",
+          "fecha": "2026-11-04T19:33:05-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "b26257dbed2a",
+      "fecha_publicacion": "2026-11-04T10:12:04-03:00",
+      "fecha_deteccion": "2026-11-04T20:15:26-03:00",
+      "titulo": "🔴Un estremecedor relato entregó Rodrigo Sepúlveda sobre cómo vivió el aluvión que afectó la semana pasada a la Región Metropolitana, donde vivió minutos de terror junto a una de sus hijas",
+      "evento": "Aluvión / flujo de detritos en Metropolitana",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "",
+      "lat": "-33.573934",
+      "lon": "-70.620552",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/punto7valparaiso/posts/un-estremecedor-relato-entreg%C3%B3-rodrigo-sep%C3%BAlveda-sobre-c%C3%B3mo-vivi%C3%B3-el-aluvi%C3%B3n-que/1766990401979416/",
+          "fecha": "2026-11-04T10:12:04-03:00"
         }
       ],
       "estado": "nuevo",
@@ -73,7 +198,7 @@
     },
     {
       "id": "d9d6c8981303",
-      "fecha_publicacion": "2026-11-03T22:04:01-03:00",
+      "fecha_publicacion": "2026-11-03T22:03:43-03:00",
       "fecha_deteccion": "2026-11-04T10:49:57-03:00",
       "titulo": "Vecinos de Villa Juan Riquelme en Concepción, denunciaron una grave remoción en masa, en un cerro que está en un sitio propiedad de Forestal Arauco. En el sector temen que ocurra un nuevo aluvión. Por ahora, se descartó una intervención debido a la",
       "evento": "Deslizamiento en Concepcion",
@@ -84,6 +209,11 @@
       "lat": "-36.801491",
       "lon": "-72.955068",
       "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/tvnredbiobio/videos/vecinos-de-villa-juan-riquelme-en-concepci%C3%B3n-denunciaron-una-grave-remoci%C3%B3n-en-m/2899993033711094/",
+          "fecha": "2026-11-03T22:03:43-03:00"
+        },
         {
           "medio": "Instagram",
           "url": "https://www.instagram.com/reel/DfTR_YahRQp/",
@@ -116,6 +246,11 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/rppnoticias/posts/%EF%B8%8F-nicolas-cage-dice-que-est%C3%A1-en-la-calle-tras-el-socav%C3%B3n-que-da%C3%B1%C3%B3-su-mansi%C3%B3n-en-/1221017463587645/",
           "fecha": "2026-11-03T18:41:24-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfU_yCmFIRU/",
+          "fecha": "2026-11-04T14:30:04-03:00"
         }
       ],
       "estado": "nuevo",
@@ -346,6 +481,11 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/vozdelupano/posts/-estadovial-%F0%9D%90%84%F0%9D%90%9C%F0%9D%90%AE%F0%9D%9F%97%F0%9D%9F%8F%F0%9D%9F%8F-%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A6%F0%9D%90%9A-%F0%9D%90%9E%F0%9D%90%A5-%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9D%F0%9D%90%A8-%F0%9D%90%9D%F0%9D%90%9E-%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%AC-%F0%9D%90%AF%F0%9D%90%A2%CC%81%F0%9D%90%9A%F0%9D%90%AC-%F0%9D%90%9E%F0%9D%90%A7-%F0%9D%90%8C%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%9A-%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%A2%F0%9D%90%9A%F0%9D%90%A0%F0%9D%90%A8-fecha-01-de/1796411679156905/",
           "fecha": "2026-11-01T10:44:24-03:00"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://www.lanacion.cl/rodrigo-sepulveda-relato-dramatico-rescate-de-su-hija-durante-aluvion-en-santiago-estamos-vivos/",
+          "fecha": "2026-11-04T14:32:23-03:00"
         }
       ],
       "estado": "nuevo",

@@ -154,5 +154,13 @@
   "rio bueno chile": {
     "lat": -40.3336678,
     "lon": -72.9567617
+  },
+  "concepcion chile": {
+    "lat": -36.8270698,
+    "lon": -73.0502064
+  },
+  "nacimiento chile": {
+    "lat": -37.5018293,
+    "lon": -72.67311
   }
 }
