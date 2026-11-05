@@ -1,7 +1,99 @@
 {
-  "actualizado": "2026-11-05 02:19",
-  "total": 127,
+  "actualizado": "2026-11-05 20:17",
+  "total": 131,
   "eventos": [
+    {
+      "id": "e181a69418eb",
+      "fecha_publicacion": "2026-11-05T14:43:13-03:00",
+      "fecha_deteccion": "2026-11-05T20:17:31-03:00",
+      "titulo": "El aluvión que se presentó en la isla Santa Cruz fue devastador. En gobiernos anteriores hubo un presupuesto de siete millones de dólares para el alcantarillado de Bellavista y de 30 millones para Puerto Ayora, pero ese dinero se esfumó. @MiltonAguasOK",
+      "evento": "Aluvión / flujo de detritos en Santa Cruz",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "O'Higgins",
+      "comuna": "Santa Cruz",
+      "lat": "-34.640324",
+      "lon": "-71.366130",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/democraciaec/status/2118398745473622497/photo/1",
+          "fecha": "2026-11-05T14:43:13-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "aeab7a0d2b15",
+      "fecha_publicacion": "2026-11-05T13:48:59-03:00",
+      "fecha_deteccion": "2026-11-05T20:17:31-03:00",
+      "titulo": "Por qué renunció Santiago Peña: el derrumbe del Ueno Bank que dejó al presidente sin respaldo propio https://t.co/CKurg2NVzs",
+      "evento": "Deslizamiento en Santiago",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/MendozaToday/status/2118385095438688618",
+          "fecha": "2026-11-05T13:48:59-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "0671885a5300",
+      "fecha_publicacion": "2026-11-05T12:23:47-03:00",
+      "fecha_deteccion": "2026-11-05T20:17:31-03:00",
+      "titulo": "Después del aluvión de San Carlos de Apoquindo: planificar la ciudad con la cordillera",
+      "evento": "Aluvión / flujo de detritos en San Carlos",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Nuble",
+      "comuna": "San Carlos",
+      "lat": "-36.379228",
+      "lon": "-72.017953",
+      "fuentes": [
+        {
+          "medio": "- CIPER Chile",
+          "url": "https://www.ciperchile.cl/2026/11/05/despues-del-aluvion-de-san-carlos-de-apoquindo-planificar-la-ciudad-con-la-cordillera/",
+          "fecha": "2026-11-05T12:23:47-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "df5e804b9a67",
+      "fecha_publicacion": "2026-11-05T11:54:50-03:00",
+      "fecha_deteccion": "2026-11-05T20:17:31-03:00",
+      "titulo": "Municipio de Concepción emplaza a empresa forestal tras aluvión en sector Chanco Sur",
+      "evento": "Aluvión / flujo de detritos en Concepcion",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Biobio",
+      "comuna": "Concepcion",
+      "lat": "-36.827070",
+      "lon": "-73.050206",
+      "fuentes": [
+        {
+          "medio": "Canal 9 Bío Bío Televisión",
+          "url": "https://www.canal9.cl/episodios/2026/11/05/municipio-de-concepcion-emplaza-a-empresa-forestal-tras-grave-remocion-en-masa-y-aluvion-en-sector-chanco-sur",
+          "fecha": "2026-11-05T11:54:50-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "cbc2970d86ab",
       "fecha_publicacion": "2026-11-04T18:47:37-03:00",
