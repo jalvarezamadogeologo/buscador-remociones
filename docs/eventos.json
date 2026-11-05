@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-04 20:15",
-  "total": 125,
+  "actualizado": "2026-11-05 02:19",
+  "total": 127,
   "eventos": [
+    {
+      "id": "cbc2970d86ab",
+      "fecha_publicacion": "2026-11-04T18:47:37-03:00",
+      "fecha_deteccion": "2026-11-05T02:19:04-03:00",
+      "titulo": "El Sereno talca. . Rodrigo Sepúlveda relata el momento de terror que vivió con su hija en aluvión: \"Sentía que la perdía\" El periodista Rodrigo Sepúlveda contó el momento de terror que vivió junto a su hija Renata en el aluvión que afectó hace algunos días a",
+      "evento": "Aluvión / flujo de detritos en Talca",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Maule",
+      "comuna": "Talca",
+      "lat": "-35.426534",
+      "lon": "-71.666032",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/elserenonoticias/videos/rodrigo-sep%C3%BAlveda-relata-el-momento-de-terror-que-vivi%C3%B3-con-su-hija-en-aluvi%C3%B3n-s/29013304311670021/",
+          "fecha": "2026-11-04T18:47:37-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "fe0eca7fbcf9",
       "fecha_publicacion": "2026-11-04T16:18:45-03:00",
@@ -144,6 +167,29 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/punto7valparaiso/posts/un-estremecedor-relato-entreg%C3%B3-rodrigo-sep%C3%BAlveda-sobre-c%C3%B3mo-vivi%C3%B3-el-aluvi%C3%B3n-que/1766990401979416/",
           "fecha": "2026-11-04T10:12:04-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "b81a30bb6dfa",
+      "fecha_publicacion": "2026-11-04T10:11:39-03:00",
+      "fecha_deteccion": "2026-11-05T02:19:04-03:00",
+      "titulo": "🚧Desvío🚧🚌 Por socavón en Gral. Amengual, Estación Central, servicio 210v presenta desvío en dirección a Puente Alto. 📍 Desvío: RH – Cjón. Ind. Ugarte – P. V. Irarrázaval – 5 de Abril – Arica – N. Retamales – Av. Libertador B. O’Higgins – RH. Planifica tu vi",
+      "evento": "Socavón en Puente Alto",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Metropolitana",
+      "comuna": "Puente Alto",
+      "lat": "-33.609528",
+      "lon": "-70.575474",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/conectamobility/status/2117968016080273742",
+          "fecha": "2026-11-04T10:11:39-03:00"
         }
       ],
       "estado": "nuevo",
