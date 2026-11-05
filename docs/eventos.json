@@ -151,29 +151,6 @@
       "motivo": ""
     },
     {
-      "id": "b26257dbed2a",
-      "fecha_publicacion": "2026-11-04T10:12:04-03:00",
-      "fecha_deteccion": "2026-11-04T20:15:26-03:00",
-      "titulo": "🔴Un estremecedor relato entregó Rodrigo Sepúlveda sobre cómo vivió el aluvión que afectó la semana pasada a la Región Metropolitana, donde vivió minutos de terror junto a una de sus hijas",
-      "evento": "Aluvión / flujo de detritos en Metropolitana",
-      "tipo_evento": "aluvion",
-      "tipo_etiqueta": "Aluvión / flujo de detritos",
-      "region": "Metropolitana",
-      "comuna": "",
-      "lat": "-33.573934",
-      "lon": "-70.620552",
-      "fuentes": [
-        {
-          "medio": "Facebook",
-          "url": "https://www.facebook.com/punto7valparaiso/posts/un-estremecedor-relato-entreg%C3%B3-rodrigo-sep%C3%BAlveda-sobre-c%C3%B3mo-vivi%C3%B3-el-aluvi%C3%B3n-que/1766990401979416/",
-          "fecha": "2026-11-04T10:12:04-03:00"
-        }
-      ],
-      "estado": "nuevo",
-      "confianza": "alta",
-      "motivo": ""
-    },
-    {
       "id": "b81a30bb6dfa",
       "fecha_publicacion": "2026-11-04T10:11:39-03:00",
       "fecha_deteccion": "2026-11-05T02:19:04-03:00",
@@ -213,6 +190,44 @@
           "medio": "Canal 9 Bío Bío Televisión",
           "url": "https://www.canal9.cl/episodios/2026/11/04/talcahuano-vecinos-protestan-por-socavon-en-el-acceso-a-los-cerros-de-la-comuna",
           "fecha": "2026-11-04T09:47:08-03:00"
+        },
+        {
+          "medio": "BioBioChile",
+          "url": "https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2026/11/05/vecinos-protestan-en-subida-la-gloria-de-talcahuano-acusando-demoras-en-reparacion-de-socavon.shtml",
+          "fecha": "2026-11-05T07:58:49-03:00"
+        },
+        {
+          "medio": "El Reporte Diario",
+          "url": "https://reportediario.cl/2026/11/05/vecinos-de-talcahuano-protestan-por-demoras-en-reparacion-de-socavon/",
+          "fecha": "2026-11-05T08:01:27-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "b26257dbed2a",
+      "fecha_publicacion": "2026-11-04T02:59:26-03:00",
+      "fecha_deteccion": "2026-11-04T20:15:26-03:00",
+      "titulo": "🔴Un estremecedor relato entregó Rodrigo Sepúlveda sobre cómo vivió el aluvión que afectó la semana pasada a la Región Metropolitana, donde vivió minutos de terror junto a una de sus hijas",
+      "evento": "Aluvión / flujo de detritos en Metropolitana",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "",
+      "lat": "-33.573934",
+      "lon": "-70.620552",
+      "fuentes": [
+        {
+          "medio": "BioBioChile on MSN",
+          "url": "https://www.msn.com/es-cl/noticias/otras/rodrigo-sep%C3%BAlveda-relata-el-momento-de-terror-que-vivi%C3%B3-con-su-hija-en-aluvi%C3%B3n-sent%C3%ADa-que-la-perd%C3%ADa/ar-AA2gKQds",
+          "fecha": "2026-11-04T02:59:26-03:00"
+        },
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/punto7valparaiso/posts/un-estremecedor-relato-entreg%C3%B3-rodrigo-sep%C3%BAlveda-sobre-c%C3%B3mo-vivi%C3%B3-el-aluvi%C3%B3n-que/1766990401979416/",
+          "fecha": "2026-11-04T10:12:04-03:00"
         }
       ],
       "estado": "nuevo",
