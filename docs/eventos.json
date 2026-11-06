@@ -1,7 +1,58 @@
 {
-  "actualizado": "2026-11-05 20:17",
-  "total": 131,
+  "actualizado": "2026-11-06 10:47",
+  "total": 133,
   "eventos": [
+    {
+      "id": "3cfd75cb8385",
+      "fecha_publicacion": "2026-11-06T09:41:03-03:00",
+      "fecha_deteccion": "2026-11-06T10:47:56-03:00",
+      "titulo": "#DenunciAN | 🚧 Mes de obras y sigue el socavón Vecinos de Santiago Atzacoalco denuncian que una excavación por fuga de agua lleva un mes sin concluir en avenida 5 de Mayo. El socavón y la tierra complican la circulación y exigen que las obras sean t",
+      "evento": "Socavón en Santiago",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/AztecaNoticias/posts/denuncian-mes-de-obras-y-sigue-el-socav%C3%B3nvecinos-de-santiago-atzacoalco-denuncia/1525860083076098/",
+          "fecha": "2026-11-06T09:41:03-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "f5d2957fb39f",
+      "fecha_publicacion": "2026-11-05T16:48:49-03:00",
+      "fecha_deteccion": "2026-11-06T10:47:56-03:00",
+      "titulo": "Alcaldesa de Las Condes por labores tras aluvión: \"No puedo esperar al Estado\"",
+      "evento": "Aluvión / flujo de detritos en Las Condes",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "Las Condes",
+      "lat": "-33.408455",
+      "lon": "-70.567149",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfX0dQLj5sk/",
+          "fecha": "2026-11-05T16:48:49-03:00"
+        },
+        {
+          "medio": "Tele13 Radio",
+          "url": "https://tele13radio.cl/article/alcaldesa-de-las-condes-por-labores-tras-aluvion-no-puedo-esperar-al-estado",
+          "fecha": "2026-11-06T09:21:29-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "e181a69418eb",
       "fecha_publicacion": "2026-11-05T14:43:13-03:00",
@@ -42,6 +93,11 @@
           "medio": "X",
           "url": "https://x.com/MendozaToday/status/2118385095438688618",
           "fecha": "2026-11-05T13:48:59-03:00"
+        },
+        {
+          "medio": "NEA HOY",
+          "url": "https://neahoy.com/2026/11/06/la-caida-de-un-banco-el-derrumbe-de-un-gobierno-cronica-del-escandalo-que-acorralo-a-santiago-pena/",
+          "fecha": "2026-11-06T10:16:21-03:00"
         }
       ],
       "estado": "nuevo",
