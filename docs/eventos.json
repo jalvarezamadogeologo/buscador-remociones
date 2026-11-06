@@ -1,7 +1,109 @@
 {
-  "actualizado": "2026-11-06 10:47",
-  "total": 133,
+  "actualizado": "2026-11-06 19:44",
+  "total": 137,
   "eventos": [
+    {
+      "id": "6b1da28b6bdd",
+      "fecha_publicacion": "2026-11-06T16:24:45-03:00",
+      "fecha_deteccion": "2026-11-06T19:44:35-03:00",
+      "titulo": "🗣️ #Aniversario38DF | Octubre de 2026 quedó marcado como el más lluvioso del que se tenga registro en Santiago. El hito meteorológico trajo consigo un aluvión que arrasó con viviendas y vehículos en San Carlos de Apoquindo, intensas granizadas que",
+      "evento": "Aluvión / flujo de detritos en Santiago",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfaWc-ZiNnd/",
+          "fecha": "2026-11-06T16:24:45-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "174658256053",
+      "fecha_publicacion": "2026-11-06T15:18:42-03:00",
+      "fecha_deteccion": "2026-11-06T19:44:35-03:00",
+      "titulo": "Lluvias activan derrumbe en la Panamericana a la altura de PC Miranda y cierran el paso hacia San Antonio",
+      "evento": "Deslizamiento en San Antonio",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Valparaiso",
+      "comuna": "San Antonio",
+      "lat": "-33.580861",
+      "lon": "-71.613238",
+      "fuentes": [
+        {
+          "medio": "El Tequeño",
+          "url": "https://xn--eltequeo-j3a.com/lluvias-activan-derrumbe-en-la-panamericana-a-la-altura-de-pc-miranda-y-cierran-el-paso-hacia-san-antonio/",
+          "fecha": "2026-11-06T15:18:42-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/DfaPq5sRS-T/",
+          "fecha": "2026-11-06T15:26:40-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "eee1e60acfb3",
+      "fecha_publicacion": "2026-11-06T14:42:05-03:00",
+      "fecha_deteccion": "2026-11-06T19:44:35-03:00",
+      "titulo": "Bolsas asiáticas se desploman: Kospi y Nikkei caen cerca de 6% tras el derrumbe de las tecnológicas en Wall Street",
+      "evento": "Deslizamiento en Chile",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "CNN Chile",
+          "url": "https://www.cnnchile.com/negocios/bolsas-asiaticas-se-desploman-kospi-y-nikkei-caen-derrumbe-tecnologicas-wall-street/",
+          "fecha": "2026-11-06T14:42:05-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "fa524d12aa37",
+      "fecha_publicacion": "2026-11-06T11:09:10-03:00",
+      "fecha_deteccion": "2026-11-06T19:44:35-03:00",
+      "titulo": "Avalancha volcánica de Antofagasta es reconocida como Patrimonio Geológico Mundial",
+      "evento": "Alud / avalancha en Antofagasta",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Antofagasta",
+      "comuna": "Antofagasta",
+      "lat": "-23.646374",
+      "lon": "-70.398003",
+      "fuentes": [
+        {
+          "medio": "Calama en Línea – Noticias",
+          "url": "https://noticias.calamaenlinea.cl/region/san-pedro-de-atacama/avalancha-volcanica-de-antofagasta-es-reconocida-como-patrimonio-geologico-mundial/",
+          "fecha": "2026-11-06T11:09:10-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfaMXG8FINw/",
+          "fecha": "2026-11-06T14:56:11-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "3cfd75cb8385",
       "fecha_publicacion": "2026-11-06T09:41:03-03:00",
@@ -47,6 +149,11 @@
           "medio": "Tele13 Radio",
           "url": "https://tele13radio.cl/article/alcaldesa-de-las-condes-por-labores-tras-aluvion-no-puedo-esperar-al-estado",
           "fecha": "2026-11-06T09:21:29-03:00"
+        },
+        {
+          "medio": "X",
+          "url": "https://x.com/Tele13_Radio/status/2118718598117994920",
+          "fecha": "2026-11-06T11:54:12-03:00"
         }
       ],
       "estado": "nuevo",
@@ -121,6 +228,11 @@
           "medio": "- CIPER Chile",
           "url": "https://www.ciperchile.cl/2026/11/05/despues-del-aluvion-de-san-carlos-de-apoquindo-planificar-la-ciudad-con-la-cordillera/",
           "fecha": "2026-11-05T12:23:47-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfaFIS6Efl0/",
+          "fecha": "2026-11-06T13:52:59-03:00"
         }
       ],
       "estado": "nuevo",
