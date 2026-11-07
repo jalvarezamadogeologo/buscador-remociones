@@ -1,7 +1,76 @@
 {
-  "actualizado": "2026-11-06 19:44",
-  "total": 137,
+  "actualizado": "2026-11-07 09:31",
+  "total": 141,
   "eventos": [
+    {
+      "id": "92050021b823",
+      "fecha_publicacion": "2026-11-07T06:00:04-03:00",
+      "fecha_deteccion": "2026-11-07T09:31:39-03:00",
+      "titulo": "🔴 DOS TRABAJADORES HERIDOS TRAS DESPRENDIMIENTO DE ROCA EN MINA DE CABILDO Dos trabajadores resultaron lesionados tras la caída de una roca al interior de la mina Aarón, en Cabildo, Región de Valparaíso. El accidente ocurrió en el tún",
+      "evento": "Caída de rocas en Valparaiso",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Valparaiso",
+      "comuna": "Valparaiso",
+      "lat": "-32.597609",
+      "lon": "-70.852975",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfbqjqEhTTg/",
+          "fecha": "2026-11-07T06:00:04-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "66c2c680da42",
+      "fecha_publicacion": "2026-11-07T03:19:56-03:00",
+      "fecha_deteccion": "2026-11-07T09:31:39-03:00",
+      "titulo": "Avalancha volcánica de Chile es seleccionada dentro de los nuevos 100 lugares geológicos más importantes del mundo",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "Ciencia en Chile",
+          "url": "https://www.cienciaenchile.cl/avalancha-volcanica-de-chile-es-seleccionada-dentro-de-los-nuevos-100-lugares-geologicos-mas-importantes-del-mundo/",
+          "fecha": "2026-11-07T03:19:56-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "b8f994697710",
+      "fecha_publicacion": "2026-11-06T19:15:40-03:00",
+      "fecha_deteccion": "2026-11-07T09:31:39-03:00",
+      "titulo": "Ayuntamiento de Puerto Plata retira tierra producto de derrumbe en la carretera Puerto Plata-Maimón, frente a Cofresí Puerto Plata.– El Ayuntamiento Municipal de San Felipe de Puerto Plata inició este viernes los trabajos de retiro de una gran cantidad de tie",
+      "evento": "Deslizamiento en San Felipe",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Valparaiso",
+      "comuna": "San Felipe",
+      "lat": "-32.750687",
+      "lon": "-70.725269",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfaqDqZGKXy/",
+          "fecha": "2026-11-06T19:15:40-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "6b1da28b6bdd",
       "fecha_publicacion": "2026-11-06T16:24:45-03:00",
@@ -121,6 +190,29 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/AztecaNoticias/posts/denuncian-mes-de-obras-y-sigue-el-socav%C3%B3nvecinos-de-santiago-atzacoalco-denuncia/1525860083076098/",
           "fecha": "2026-11-06T09:41:03-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "17747c3852ee",
+      "fecha_publicacion": "2026-11-06T09:38:00-03:00",
+      "fecha_deteccion": "2026-11-07T09:31:39-03:00",
+      "titulo": "PELIGRO EN LA RUTA ENTRE BUNGE Y CHARLONE Un importante desprendimiento de la carpeta asfáltica en el kilómetro 37 representa un riesgo para quienes circulan entre Emilio V. Bunge y Coronel Charlone. Las imágenes enviadas a Actualidad mue",
+      "evento": "Caída de rocas en Coronel",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Biobio",
+      "comuna": "Coronel",
+      "lat": "-37.016471",
+      "lon": "-73.156195",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfZn8nTFoSW/",
+          "fecha": "2026-11-06T09:38:00-03:00"
         }
       ],
       "estado": "nuevo",

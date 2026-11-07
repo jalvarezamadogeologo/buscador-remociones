@@ -170,5 +170,13 @@
   "antofagasta chile": {
     "lat": -23.6463741,
     "lon": -70.3980033
+  },
+  "valparaiso chile": {
+    "lat": -32.5976089,
+    "lon": -70.8529753
+  },
+  "coronel chile": {
+    "lat": -37.0164712,
+    "lon": -73.1561953
   }
 }
