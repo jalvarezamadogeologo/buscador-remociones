@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-11-07 09:31",
-  "total": 141,
+  "actualizado": "2026-11-08 01:39",
+  "total": 143,
   "eventos": [
+    {
+      "id": "96b97fa459a1",
+      "fecha_publicacion": "2026-11-07T19:35:05-03:00",
+      "fecha_deteccion": "2026-11-08T01:39:03-03:00",
+      "titulo": "🚨 EMERGENCIA EN POBLACIONES CAFETERAS DE LA SIERRA NEVADA: AVALANCHA ATRAPA CAMIÓN QUE TRANSPORTABA GAS Una avalancha atrapó un camión que transportaba gas en la vía hacia San Javier, en el área rural de Ciénaga, Magd",
+      "evento": "Alud / avalancha en San Javier",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Maule",
+      "comuna": "San Javier",
+      "lat": "-35.592393",
+      "lon": "-71.735308",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/DfdQ_mFMDU8/",
+          "fecha": "2026-11-07T19:35:05-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "1ec23750e087",
+      "fecha_publicacion": "2026-11-07T11:43:01-03:00",
+      "fecha_deteccion": "2026-11-08T01:39:03-03:00",
+      "titulo": "#NosEnvían | Reportan desprendimiento de rocas sobre la vía al Porvenir en Bucaramanga tras la fuerte tormenta de la madrugada. Transite con precaución por la zona. 🚗",
+      "evento": "Caída de rocas en Porvenir",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Magallanes",
+      "comuna": "Porvenir",
+      "lat": "-53.295674",
+      "lon": "-70.368740",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/oronoticias_tv/status/2119078173727924490/video/1",
+          "fecha": "2026-11-07T11:43:01-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "92050021b823",
       "fecha_publicacion": "2026-11-07T06:00:04-03:00",
