@@ -182,5 +182,9 @@
   "san javier chile": {
     "lat": -35.5923933,
     "lon": -71.735308
+  },
+  "magallanes chile": {
+    "lat": -53.3527518,
+    "lon": -71.5547782
   }
 }
