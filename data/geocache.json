@@ -186,5 +186,9 @@
   "magallanes chile": {
     "lat": -53.3527518,
     "lon": -71.5547782
+  },
+  "monte patria chile": {
+    "lat": -30.6944769,
+    "lon": -70.9579593
   }
 }

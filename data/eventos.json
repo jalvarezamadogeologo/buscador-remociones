@@ -1,6 +1,31 @@
 {
-  "total": 145,
+  "total": 146,
   "eventos": [
+    {
+      "id": "a7e520b211a2",
+      "fecha_publicacion": "2026-11-08T15:57:31-03:00",
+      "fecha_deteccion": "2026-11-09T01:49:16-03:00",
+      "titulo": "Senapred declara alerta roja en Monte Patria por riesgo de desborde del río Grande",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Coquimbo",
+      "comuna": "Monte Patria",
+      "lat": "-30.694477",
+      "lon": "-70.957959",
+      "fuente_1": "La Tercera on MSN",
+      "url_1": "https://www.msn.com/es-cl/noticias/other/senapred-declara-alerta-roja-en-monte-patria-por-riesgo-de-desborde-del-r%C3%ADo-grande/ar-AA2h1S5K",
+      "fecha_1": "2026-11-08T15:57:31-03:00",
+      "fuente_2": "",
+      "url_2": "",
+      "fecha_2": "",
+      "fuente_3": "",
+      "url_3": "",
+      "fecha_3": "",
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
+      "issue": "125"
+    },
     {
       "id": "653a1c176e5e",
       "fecha_publicacion": "2026-11-08T09:43:15-03:00",
