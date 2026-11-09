@@ -1,10 +1,56 @@
 {
-  "actualizado": "2026-11-09 01:49",
-  "total": 146,
+  "actualizado": "2026-11-09 12:17",
+  "total": 148,
   "eventos": [
     {
+      "id": "944fd5091bf3",
+      "fecha_publicacion": "2026-11-09T08:47:32-03:00",
+      "fecha_deteccion": "2026-11-09T12:17:49-03:00",
+      "titulo": "Un desprendimiento invade parte de la carretera tras el Paso de los Lobos en dirección a Salamanca",
+      "evento": "Caída de rocas en Salamanca",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Coquimbo",
+      "comuna": "Salamanca",
+      "lat": "-31.780467",
+      "lon": "-70.964990",
+      "fuentes": [
+        {
+          "medio": "Noticias Ciudad Rodrigo",
+          "url": "https://noticiasciudadrodrigo.com/2026/11/09/un-desprendimiento-invade-parte-de-la-carretera-tras-el-paso-de-los-lobos-en-direccion-a-salamanca/",
+          "fecha": "2026-11-09T08:47:32-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "58c64516f7b1",
+      "fecha_publicacion": "2026-11-08T20:54:41-03:00",
+      "fecha_deteccion": "2026-11-09T12:17:49-03:00",
+      "titulo": "**ASÍ SE HIZO GIGANTESCA LA AVALANCHA DE ARMERO | ARMERO PARTE 2** La noche del 13 de noviembre de 1985, la avalancha que descendió del Nevado del Ruiz comenzó a llevarse parte de las montañas. Durante miles de años, los ríos Azufrad",
+      "evento": "Alud / avalancha en Los Rios",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Los Rios",
+      "comuna": "",
+      "lat": "-39.974275",
+      "lon": "-72.667701",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/Dff6ZtiOVv4/",
+          "fecha": "2026-11-08T20:54:41-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
       "id": "a7e520b211a2",
-      "fecha_publicacion": "2026-11-08T15:57:31-03:00",
+      "fecha_publicacion": "2026-11-08T15:57:00-03:00",
       "fecha_deteccion": "2026-11-09T01:49:16-03:00",
       "titulo": "Senapred declara alerta roja en Monte Patria por riesgo de desborde del río Grande",
       "evento": "Desborde / inundación en Monte Patria",
@@ -15,6 +61,11 @@
       "lat": "-30.694477",
       "lon": "-70.957959",
       "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/senapred-declara-alerta-roja-en-monte-patria-por-riesgo-de-desborde-del-rio-grande/",
+          "fecha": "2026-11-08T15:57:00-03:00"
+        },
         {
           "medio": "La Tercera on MSN",
           "url": "https://www.msn.com/es-cl/noticias/other/senapred-declara-alerta-roja-en-monte-patria-por-riesgo-de-desborde-del-r%C3%ADo-grande/ar-AA2h1S5K",
@@ -455,6 +506,11 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/p/DfaFIS6Efl0/",
           "fecha": "2026-11-06T13:52:59-03:00"
+        },
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/las-huellas-del-aluvion-que-siguen-preocupando-en-san-carlos-de-apoquindo/",
+          "fecha": "2026-11-09T10:24:03-03:00"
         }
       ],
       "estado": "nuevo",
