@@ -1,7 +1,76 @@
 {
-  "actualizado": "2026-11-10 11:24",
-  "total": 153,
+  "actualizado": "2026-11-10 19:52",
+  "total": 156,
   "eventos": [
+    {
+      "id": "bc830d626ef0",
+      "fecha_publicacion": "2026-11-10T15:15:40-03:00",
+      "fecha_deteccion": "2026-11-10T19:52:46-03:00",
+      "titulo": "🚧💧 ¡Intervienen socavón en la calle 9 de Octubre y avenida Metropolitana! 👷‍♂️ Personal de Agua Potable trabaja en la reparación de la red de aguas servidas, cuyo colapso provocó el debilitamiento del terreno. Debido al deterioro de las tuberías antiguas",
+      "evento": "Socavón en Metropolitana",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Metropolitana",
+      "comuna": "",
+      "lat": "-33.573934",
+      "lon": "-70.620552",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/GADMunicipaldelCantonMontecristi/posts/-intervienen-socav%C3%B3n-en-la-calle-9-de-octubre-y-avenida-metropolitana%EF%B8%8F-personal-/1694449472244405/",
+          "fecha": "2026-11-10T15:15:40-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "f206f4cc340a",
+      "fecha_publicacion": "2026-11-10T13:02:26-03:00",
+      "fecha_deteccion": "2026-11-10T19:52:46-03:00",
+      "titulo": "El sector del mejillón gallego reclama protección a la UE frente a la avalancha de importaciones de Chile",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "El Debate",
+          "url": "https://www.eldebate.com/espana/galicia/20261110/sector-mejillon-gallego-reclama-proteccion-ue-frente-avalancha-importaciones-chile_479344.html",
+          "fecha": "2026-11-10T13:02:26-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "4a151628cd57",
+      "fecha_publicacion": "2026-11-10T10:18:16-03:00",
+      "fecha_deteccion": "2026-11-10T19:52:46-03:00",
+      "titulo": "🚧Debido a un socavón en calle General Amengual, los servicios 210, 210V y 102 presentan modificaciones en sus recorridos en ambos sentidos. 🚌210 y 210V hacia Puente Alto: Callejón Industrias Ugarte–Padre Vicente Irarrázaval –Cinco de Abril–Arica –N",
+      "evento": "Socavón en Puente Alto",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Metropolitana",
+      "comuna": "Puente Alto",
+      "lat": "-33.609528",
+      "lon": "-70.575474",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/conectamobility/status/2120144006189380082",
+          "fecha": "2026-11-10T10:18:16-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "8d28b040dcf6",
       "fecha_publicacion": "2026-11-10T08:00:33-03:00",
