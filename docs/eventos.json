@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-11-09 12:17",
-  "total": 148,
+  "actualizado": "2026-11-09 22:13",
+  "total": 150,
   "eventos": [
+    {
+      "id": "254e111e29be",
+      "fecha_publicacion": "2026-11-09T21:49:45-03:00",
+      "fecha_deteccion": "2026-11-09T22:13:07-03:00",
+      "titulo": "Diversas alertas en la Región de Coquimbo por deshielos y peligrosa crecida de ríos",
+      "evento": "Desborde / inundación en Coquimbo",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Coquimbo",
+      "comuna": "Coquimbo",
+      "lat": "-30.754665",
+      "lon": "-70.900554",
+      "fuentes": [
+        {
+          "medio": "Cooperativa",
+          "url": "https://www.cooperativa.cl/noticias/pais/region-de-coquimbo/diversas-alertas-en-la-region-de-coquimbo-por-deshielos-y-peligrosa/2026-11-09/214945.html",
+          "fecha": "2026-11-09T21:49:45-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "0b408f3037fb",
+      "fecha_publicacion": "2026-11-09T14:30:47-03:00",
+      "fecha_deteccion": "2026-11-09T22:13:07-03:00",
+      "titulo": "Una compleja situación afecta a los vecinos de los cerros de Talcahuano. La presencia de socavones debido a intensas lluvias y remoción en masa evidencian una serie de problemáticas. Además, en las zonas afectadas, subida La Gloria y Los Araucanos, r",
+      "evento": "Deslizamiento en Talcahuano",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Biobio",
+      "comuna": "Talcahuano",
+      "lat": "-36.714486",
+      "lon": "-73.114109",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/Dfh31yNnA-_/",
+          "fecha": "2026-11-09T14:30:47-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "944fd5091bf3",
       "fecha_publicacion": "2026-11-09T08:47:32-03:00",
