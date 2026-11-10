@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-11-09 22:13",
-  "total": 150,
+  "actualizado": "2026-11-10 11:24",
+  "total": 153,
   "eventos": [
+    {
+      "id": "8d28b040dcf6",
+      "fecha_publicacion": "2026-11-10T08:00:33-03:00",
+      "fecha_deteccion": "2026-11-10T11:24:03-03:00",
+      "titulo": "Villa Mirador en Arauco: solo 13 familias han accedido a ser reubicadas a un mes del socavón",
+      "evento": "Socavón en Arauco",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Arauco",
+      "lat": "-37.246248",
+      "lon": "-73.317640",
+      "fuentes": [
+        {
+          "medio": "SoyChile.cl",
+          "url": "https://www.soychile.cl/concepcion/sociedad/2026/11/10/972104/socavon-villa-mirador-arauco.html",
+          "fecha": "2026-11-10T08:00:33-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "4fc3b4d34efd",
+      "fecha_publicacion": "2026-11-09T22:06:23-03:00",
+      "fecha_deteccion": "2026-11-10T11:24:03-03:00",
+      "titulo": "Gaza: Mujer embarazada y tres niños mueren sepultados tras derrumbe provocado por las lluvias",
+      "evento": "Deslizamiento en Chile",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "CNN Chile",
+          "url": "https://www.cnnchile.com/mundo/gaza-mujer-embarazada-y-tres-ninos-mueren-sepultados-tras-derrumbe-provocado-por-las-lluvias/",
+          "fecha": "2026-11-09T22:06:23-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "254e111e29be",
       "fecha_publicacion": "2026-11-09T21:49:45-03:00",
@@ -19,6 +65,29 @@
           "medio": "Cooperativa",
           "url": "https://www.cooperativa.cl/noticias/pais/region-de-coquimbo/diversas-alertas-en-la-region-de-coquimbo-por-deshielos-y-peligrosa/2026-11-09/214945.html",
           "fecha": "2026-11-09T21:49:45-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "5558111a2823",
+      "fecha_publicacion": "2026-11-09T16:51:02-03:00",
+      "fecha_deteccion": "2026-11-10T11:24:03-03:00",
+      "titulo": "⚠️ ¡Precaución! Desprendimiento de carga en pista derecha km 388 Norte a Sur, sector Puente Menelhue, tránsito por pista izquierda. Personal de la Concesionaria en el lugar #Ruta5Sur @RedMaule @RNE_Maule_ @EnLineaMaule @infobiobio @Inform",
+      "evento": "Caída de rocas en Maule",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Maule",
+      "comuna": "",
+      "lat": "-35.597228",
+      "lon": "-71.488680",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/Ruta5Survias/status/2119880462701142165",
+          "fecha": "2026-11-09T16:51:02-03:00"
         }
       ],
       "estado": "nuevo",
