@@ -190,5 +190,9 @@
   "monte patria chile": {
     "lat": -30.6944769,
     "lon": -70.9579593
+  },
+  "camarones chile": {
+    "lat": -18.9633718,
+    "lon": -69.7151907
   }
 }

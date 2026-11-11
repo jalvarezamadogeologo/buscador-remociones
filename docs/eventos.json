@@ -1,7 +1,35 @@
 {
-  "actualizado": "2026-11-10 19:52",
-  "total": 156,
+  "actualizado": "2026-11-11 10:37",
+  "total": 157,
   "eventos": [
+    {
+      "id": "874e2d910267",
+      "fecha_publicacion": "2026-11-11T09:29:27-03:00",
+      "fecha_deteccion": "2026-11-11T10:37:46-03:00",
+      "titulo": "🚧 Vecinos de Azcapotzalco, CDMX, reportan un socavón en Calzada Camarones, donde una reparación por fuga de agua quedó inconclusa. Peatones deben rodear la zona por la ciclovía, lo que representa un riesgo ⚠️ 📹: Iván Aldama (@IvanAldamaF) No",
+      "evento": "Socavón en Camarones",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Arica y Parinacota",
+      "comuna": "Camarones",
+      "lat": "-18.963372",
+      "lon": "-69.715191",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/AztecaNoticias/status/2120494108720476493/video/1",
+          "fecha": "2026-11-11T09:29:27-03:00"
+        },
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/AztecaNoticias/posts/denuncian-un-socav%C3%B3n-mantiene-bloqueada-la-banqueta-en-calzada-camarones-colonia/1531985995796840/",
+          "fecha": "2026-11-11T10:15:35-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "bc830d626ef0",
       "fecha_publicacion": "2026-11-10T15:15:40-03:00",
