@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-12 11:41",
-  "total": 159,
+  "actualizado": "2026-11-12 20:14",
+  "total": 161,
   "eventos": [
+    {
+      "id": "e74d07e4368d",
+      "fecha_publicacion": "2026-11-12T14:05:36-03:00",
+      "fecha_deteccion": "2026-11-12T20:14:52-03:00",
+      "titulo": "Al menos 8 muertos y varios heridos tras derrumbe de edificio en Brooklyn, Nueva York",
+      "evento": "Deslizamiento en Los Angeles",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Biobio",
+      "comuna": "Los Angeles",
+      "lat": "-37.470745",
+      "lon": "-72.351686",
+      "fuentes": [
+        {
+          "medio": "ABC7 Los Angeles",
+          "url": "https://abc7.com/post/al-menos-8-muertos-y-varios-heridos-tras-derrumbe-de-edificio-en-brooklyn-nueva-york/20036097/",
+          "fecha": "2026-11-12T14:05:36-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "baja",
+      "motivo": "derrumbe de una estructura sin evidencia de terreno ('derrumbe de edificio')"
+    },
     {
       "id": "e23ca78ac45e",
       "fecha_publicacion": "2026-11-12T08:04:42-03:00",
@@ -24,6 +47,34 @@
       "estado": "nuevo",
       "confianza": "baja",
       "motivo": "derrumbe de una estructura sin evidencia de terreno ('derrumbe de edificio')"
+    },
+    {
+      "id": "b067ed2eb72b",
+      "fecha_publicacion": "2026-11-12T04:13:00-03:00",
+      "fecha_deteccion": "2026-11-12T20:14:52-03:00",
+      "titulo": "Senapred solicita evacuar sector de Ovalle por desborde del río Grande: Se activó mensajería SAE",
+      "evento": "Desborde / inundación en Ovalle",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Coquimbo",
+      "comuna": "Ovalle",
+      "lat": "-30.603082",
+      "lon": "-71.202989",
+      "fuentes": [
+        {
+          "medio": "EMOL",
+          "url": "https://www.emol.com/noticias/Nacional/2026/11/12/1216920/senapred-evacuacion-ovalle-rio-grande.html",
+          "fecha": "2026-11-12T04:13:00-03:00"
+        },
+        {
+          "medio": "Radio Agricultura",
+          "url": "https://www.radioagricultura.cl/noticias/nacional/alerta-en-ovalle-senapred-ordena-evacuar-sector-la-ensenada-por-desborde-del-rio-grande_20261112/",
+          "fecha": "2026-11-12T06:05:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
     },
     {
       "id": "9a4597a99fe0",
@@ -208,6 +259,11 @@
           "medio": "Cooperativa",
           "url": "https://www.cooperativa.cl/noticias/pais/region-de-coquimbo/diversas-alertas-en-la-region-de-coquimbo-por-deshielos-y-peligrosa/2026-11-09/214945.html",
           "fecha": "2026-11-09T21:49:45-03:00"
+        },
+        {
+          "medio": "BioBioChile on MSN",
+          "url": "https://www.msn.com/es-cl/noticias/other/senapred-solicita-evacuar-sector-trapiche-bajo-por-desborde-del-r%C3%ADo-limar%C3%AD/ar-AA2hjrJ9",
+          "fecha": "2026-11-12T09:15:45-03:00"
         }
       ],
       "estado": "nuevo",
