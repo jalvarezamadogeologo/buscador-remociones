@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-11 21:05",
-  "total": 158,
+  "actualizado": "2026-11-12 11:41",
+  "total": 159,
   "eventos": [
+    {
+      "id": "e23ca78ac45e",
+      "fecha_publicacion": "2026-11-12T08:04:42-03:00",
+      "fecha_deteccion": "2026-11-12T11:41:36-03:00",
+      "titulo": "Al menos dos fallecidos y 17 heridos tras derrumbe de edificio de tres pisos en Nueva York: Continúa búsqueda de supervivientes",
+      "evento": "Deslizamiento en Chile",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "CNN Chile",
+          "url": "https://www.cnnchile.com/mundo/al-menos-dos-fallecidos-y-17-heridos-tras-derrumbe-de-edificio-de-tres-pisos-en-nueva-york-continua-busqueda-de-supervivientes/",
+          "fecha": "2026-11-12T08:04:42-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "baja",
+      "motivo": "derrumbe de una estructura sin evidencia de terreno ('derrumbe de edificio')"
+    },
     {
       "id": "9a4597a99fe0",
       "fecha_publicacion": "2026-11-11T11:36:34-03:00",
