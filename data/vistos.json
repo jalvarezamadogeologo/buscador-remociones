@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-13T02:15:44-03:00",
-  "total": 610,
+  "actualizado": "2026-11-13T10:58:34-03:00",
+  "total": 612,
   "claves": {
     "d7b69219688b": {
       "titulo": "Avalancha en Los Andes chilenos causa al menos tres fallecidos en centro de esquí El Portillo",
@@ -3051,6 +3051,16 @@
       "titulo": "Senapred llama a evacuar sector La Ensenada de Ovalle por desborde del río Grande",
       "url": "https://www.msn.com/es-cl/noticias/other/senapred-llama-a-evacuar-sector-la-ensenada-de-ovalle-por-desborde-del-r%C3%ADo-grande/ar-AA2hjt6m",
       "fecha": "2026-11-13T02:15:44-03:00"
+    },
+    "962b213a167c": {
+      "titulo": "Habilitan tránsito en subida La Gloria de Talcahuano tras socavón",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVExLS19fQmtKS3ZNanZGVUZ5UllTeUNmaTNZSWpFZGFWazVqRTg1NDZqbWt0TDdFVl9pYkg1UjhmcDJlbC02RHdaT1lfZnFpV1FaMnJZOVd2RkV0OFV4TFZOSFBQSkUwd1gzRV9mNU4wem9zSFJqZjM1c0UyR2lpREF3czRIa1VxY0pWM2hWQk1ua05qRlVRbTgzRk0?oc=5",
+      "fecha": "2026-11-13T10:58:34-03:00"
+    },
+    "c44be359d35a": {
+      "titulo": "SENAPRED solicita evacuar sector de Ovalle por desborde del río Limarí y activa alerta SAE",
+      "url": "https://www.radioagricultura.cl/noticias/nacional/senapred-solicita-evacuar-sector-de-ovalle-por-desborde-del-rio-limari-y-activa-alerta-sae_20261112/",
+      "fecha": "2026-11-13T10:58:34-03:00"
     }
   }
 }

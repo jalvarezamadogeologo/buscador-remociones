@@ -1,6 +1,31 @@
 {
-  "total": 161,
+  "total": 162,
   "eventos": [
+    {
+      "id": "962b213a167c",
+      "fecha_publicacion": "2026-11-13T10:02:26-03:00",
+      "fecha_deteccion": "2026-11-13T10:58:34-03:00",
+      "titulo": "Habilitan tránsito en subida La Gloria de Talcahuano tras socavón",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Talcahuano",
+      "lat": "-36.714486",
+      "lon": "-73.114109",
+      "fuente_1": "Sabes.cl",
+      "url_1": "https://sabes.cl/2026/11/13/habilitan-transito-en-subida-la-gloria-de-talcahuano-tras-socavones/",
+      "fecha_1": "2026-11-13T10:02:26-03:00",
+      "fuente_2": "",
+      "url_2": "",
+      "fecha_2": "",
+      "fuente_3": "",
+      "url_3": "",
+      "fecha_3": "",
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
+      "issue": "141"
+    },
     {
       "id": "e74d07e4368d",
       "fecha_publicacion": "2026-11-12T14:05:36-03:00",
