@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-12T20:14:52-03:00",
-  "total": 609,
+  "actualizado": "2026-11-13T02:15:44-03:00",
+  "total": 610,
   "claves": {
     "d7b69219688b": {
       "titulo": "Avalancha en Los Andes chilenos causa al menos tres fallecidos en centro de esquí El Portillo",
@@ -3046,6 +3046,11 @@
       "titulo": "Alerta en Ovalle: SENAPRED ordena evacuar sector La Ensenada por desborde del Río Grande",
       "url": "https://www.radioagricultura.cl/noticias/nacional/alerta-en-ovalle-senapred-ordena-evacuar-sector-la-ensenada-por-desborde-del-rio-grande_20261112/",
       "fecha": "2026-11-12T20:14:52-03:00"
+    },
+    "998d8e658377": {
+      "titulo": "Senapred llama a evacuar sector La Ensenada de Ovalle por desborde del río Grande",
+      "url": "https://www.msn.com/es-cl/noticias/other/senapred-llama-a-evacuar-sector-la-ensenada-de-ovalle-por-desborde-del-r%C3%ADo-grande/ar-AA2hjt6m",
+      "fecha": "2026-11-13T02:15:44-03:00"
     }
   }
 }
