@@ -1,7 +1,76 @@
 {
-  "actualizado": "2026-11-14 02:05",
-  "total": 163,
+  "actualizado": "2026-11-14 18:59",
+  "total": 166,
   "eventos": [
+    {
+      "id": "4a3c4ddab8ce",
+      "fecha_publicacion": "2026-11-14T18:46:08-03:00",
+      "fecha_deteccion": "2026-11-14T18:59:42-03:00",
+      "titulo": "Crecida del río El Carmen: gobernador de Atacama pide a Kast decretar estado de emergencia por deshielos",
+      "evento": "Desborde / inundación en Atacama",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Atacama",
+      "comuna": "",
+      "lat": "-24.556303",
+      "lon": "-69.422648",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/crecida-del-rio-el-carmen-gobernador-de-atacama-pide-a-kast-decretar-estado-de-emergencia-tras-deshielos/",
+          "fecha": "2026-11-14T18:46:08-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "11b2ed57052a",
+      "fecha_publicacion": "2026-11-14T12:18:53-03:00",
+      "fecha_deteccion": "2026-11-14T18:59:42-03:00",
+      "titulo": "Senapred llama a evitar acercamientos al Río del Carmen en Alto del Carmen por alerta de crecida",
+      "evento": "Desborde / inundación en Chile",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/servicios/noticia/senapred-llama-a-evitar-acercamientos-al-rio-del-carmen-en-alto-del-carmen-por-alerta-de-crecida/",
+          "fecha": "2026-11-14T12:18:53-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "dc035650cb38",
+      "fecha_publicacion": "2026-11-14T12:14:49-03:00",
+      "fecha_deteccion": "2026-11-14T18:59:42-03:00",
+      "titulo": "Muncipalidad de Vicuña despliega maquinaria pesada para evitar inundaciones por crecida de ríos en sector de Totoralillo",
+      "evento": "Desborde / inundación en Vicuna",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Coquimbo",
+      "comuna": "Vicuna",
+      "lat": "-30.034048",
+      "lon": "-70.712670",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/muncipalidad-de-vicuna-despliega-maquinaria-pesada-para-evitar-inundaciones-por-crecida-de-rios-en-sector-de-totoralillo/",
+          "fecha": "2026-11-14T12:14:49-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "6a617f31f1fd",
       "fecha_publicacion": "2026-11-14T00:27:02-03:00",
