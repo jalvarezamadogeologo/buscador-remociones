@@ -1,6 +1,31 @@
 {
-  "total": 162,
+  "total": 163,
   "eventos": [
+    {
+      "id": "6a617f31f1fd",
+      "fecha_publicacion": "2026-11-14T00:27:02-03:00",
+      "fecha_deteccion": "2026-11-14T02:05:11-03:00",
+      "titulo": "El derrumbe del miércoles en Flatbush, Brooklyn, dejó un dolor profundo. Recordamos a quienes murieron. 🇨🇴 Nicole Daniela Salvada Rodríguez, 9 años. 🇨🇴 Kevin Santiago Reyes González, 10 años. 🇨🇴 Juan Daniel Salvada Guzmán, 31 años. 🇪🇨 Gabriel",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuente_1": "Instagram",
+      "url_1": "https://www.instagram.com/p/DftFao0uODy/",
+      "fecha_1": "2026-11-14T00:27:02-03:00",
+      "fuente_2": "",
+      "url_2": "",
+      "fecha_2": "",
+      "fuente_3": "",
+      "url_3": "",
+      "fecha_3": "",
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
+      "issue": "142"
+    },
     {
       "id": "962b213a167c",
       "fecha_publicacion": "2026-11-13T10:02:26-03:00",
