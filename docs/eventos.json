@@ -1,7 +1,99 @@
 {
-  "actualizado": "2026-11-15 01:58",
-  "total": 167,
+  "actualizado": "2026-11-15 19:30",
+  "total": 171,
   "eventos": [
+    {
+      "id": "ec2981adfeca",
+      "fecha_publicacion": "2026-11-15T15:07:31-03:00",
+      "fecha_deteccion": "2026-11-15T19:30:26-03:00",
+      "titulo": "Paso a Chile: un alud en Las Cuevas complica el tránsito https://t.co/mnPGO5NF5h",
+      "evento": "Alud / avalancha en Chile",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/elsolonline/status/2122028738145816771",
+          "fecha": "2026-11-15T15:07:31-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "775111d85a2e",
+      "fecha_publicacion": "2026-11-15T14:57:09-03:00",
+      "fecha_deteccion": "2026-11-15T19:30:26-03:00",
+      "titulo": "El desprendimiento en uno de los muros del Cerro de San Vicente obliga a intervenir a los bomberos de Salamanca https://t.co/wkp2FEInAD",
+      "evento": "Caída de rocas en Salamanca",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Coquimbo",
+      "comuna": "Salamanca",
+      "lat": "-31.780467",
+      "lon": "-70.964990",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/Salamanca__hoy/status/2122026132341952747",
+          "fecha": "2026-11-15T14:57:09-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "d91d8414f504",
+      "fecha_publicacion": "2026-11-15T14:08:56-03:00",
+      "fecha_deteccion": "2026-11-15T19:30:26-03:00",
+      "titulo": "Evacúan a personas que se encontraban aisladas en Las Leñas tras crecida de río",
+      "evento": "Desborde / inundación en Machali",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "O'Higgins",
+      "comuna": "Machali",
+      "lat": "-34.182453",
+      "lon": "-70.651158",
+      "fuentes": [
+        {
+          "medio": "El Rancagüino",
+          "url": "https://www.elrancaguino.cl/2026/11/15/evacuan-a-personas-que-se-encontraban-aisladas-en-las-lenas-tras-crecida-de-rio/",
+          "fecha": "2026-11-15T14:08:56-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "3b3965260d17",
+      "fecha_publicacion": "2026-11-15T13:47:08-03:00",
+      "fecha_deteccion": "2026-11-15T19:30:26-03:00",
+      "titulo": "⚠️ Una denuncia ciudadana alertó sobre la presencia de un socavón de importante magnitud, en una vereda del sector Las Compañías, en La Serena, específicamente en la intersección de calle Poeta Pablo Neruda con avenida La Paz. El hundimiento co",
+      "evento": "Socavón en La Serena",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Coquimbo",
+      "comuna": "La Serena",
+      "lat": "-29.902705",
+      "lon": "-71.251958",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DfxPnFxGajt/",
+          "fecha": "2026-11-15T13:47:08-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "5d65d60c2d99",
       "fecha_publicacion": "2026-11-15T00:46:40-03:00",
@@ -407,6 +499,11 @@
           "medio": "BioBioChile on MSN",
           "url": "https://www.msn.com/es-cl/noticias/other/senapred-solicita-evacuar-sector-trapiche-bajo-por-desborde-del-r%C3%ADo-limar%C3%AD/ar-AA2hjrJ9",
           "fecha": "2026-11-12T09:15:45-03:00"
+        },
+        {
+          "medio": "Meganoticias",
+          "url": "https://www.meganoticias.cl/nacional/536386-senapred-orden-evacuacion-alerta-sae-desborde-rios-deshielos-region-coquimbo-y-atacama-14-11-2026.html",
+          "fecha": "2026-11-14T10:25:00-03:00"
         }
       ],
       "estado": "nuevo",
