@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-11-15 19:30",
-  "total": 171,
+  "actualizado": "2026-11-16 01:56",
+  "total": 173,
   "eventos": [
+    {
+      "id": "c12e6009c3ac",
+      "fecha_publicacion": "2026-11-15T23:05:03-03:00",
+      "fecha_deteccion": "2026-11-16T01:56:55-03:00",
+      "titulo": "Crecida del río Huasco obliga a evacuar preventivamente a 29 personas en Freirina",
+      "evento": "Desborde / inundación en Huasco",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Atacama",
+      "comuna": "Huasco",
+      "lat": "-28.465125",
+      "lon": "-71.220795",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/crecida-del-rio-huasco-obliga-a-evacuar-preventivamente-a-29-personas-en-freirina/",
+          "fecha": "2026-11-15T23:05:03-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "409f288fdc3e",
+      "fecha_publicacion": "2026-11-15T16:49:21-03:00",
+      "fecha_deteccion": "2026-11-16T01:56:55-03:00",
+      "titulo": "Senapred declara alerta roja en cuatro comunas de la Región de Valparaíso por riesgo de desborde del río Aconcagua",
+      "evento": "Desborde / inundación en Valparaiso",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Valparaiso",
+      "comuna": "Valparaiso",
+      "lat": "-32.597609",
+      "lon": "-70.852975",
+      "fuentes": [
+        {
+          "medio": "La Tercera on MSN",
+          "url": "https://www.msn.com/es-cl/noticias/otras/senapred-declara-alerta-roja-en-cuatro-comunas-de-la-regi%C3%B3n-de-valpara%C3%ADso-por-riesgo-de-desborde-del-r%C3%ADo-aconcagua/ar-AA2hvG6O",
+          "fecha": "2026-11-15T16:49:21-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "ec2981adfeca",
       "fecha_publicacion": "2026-11-15T15:07:31-03:00",
