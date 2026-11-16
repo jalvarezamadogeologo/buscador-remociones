@@ -1,7 +1,58 @@
 {
-  "actualizado": "2026-11-16 01:56",
-  "total": 173,
+  "actualizado": "2026-11-16 11:54",
+  "total": 175,
   "eventos": [
+    {
+      "id": "f2832050e9ea",
+      "fecha_publicacion": "2026-11-16T10:14:41-03:00",
+      "fecha_deteccion": "2026-11-16T11:54:28-03:00",
+      "titulo": "Carabineros rescata a familia que quedó aislada tras crecida del Río Maipo en Melipilla",
+      "evento": "Desborde / inundación en Melipilla",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Metropolitana",
+      "comuna": "Melipilla",
+      "lat": "-33.685513",
+      "lon": "-71.214580",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/videos/noticia/carabineros-rescata-a-familia-que-quedo-aislada-tras-crecida-del-rio-maipo-en-melipilla/",
+          "fecha": "2026-11-16T10:14:41-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "00649fd10c1e",
+      "fecha_publicacion": "2026-11-15T23:49:01-03:00",
+      "fecha_deteccion": "2026-11-16T11:54:28-03:00",
+      "titulo": "Declaran Alerta Roja para Concón, Quintero, Quillota y Limache por eventual desborde del río Aconcagua",
+      "evento": "Desborde / inundación en Concon",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Valparaiso",
+      "comuna": "Concon",
+      "lat": "-32.922004",
+      "lon": "-71.515957",
+      "fuentes": [
+        {
+          "medio": "BioBioChile on MSN",
+          "url": "https://www.msn.com/es-cl/noticias/otras/declaran-alerta-roja-para-conc%C3%B3n-quintero-quillota-y-limache-por-eventual-desborde-del-r%C3%ADo-aconcagua/ar-AA2hxooV",
+          "fecha": "2026-11-15T23:49:01-03:00"
+        },
+        {
+          "medio": "El Desconcierto",
+          "url": "https://eldesconcierto.cl/actualidad/alerta-roja-concon-quintero-quillota-y-limache-amenaza-desborde-del-rio-aconcagua-n5464067",
+          "fecha": "2026-11-16T00:40:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "c12e6009c3ac",
       "fecha_publicacion": "2026-11-15T23:05:03-03:00",
@@ -42,6 +93,11 @@
           "medio": "La Tercera on MSN",
           "url": "https://www.msn.com/es-cl/noticias/otras/senapred-declara-alerta-roja-en-cuatro-comunas-de-la-regi%C3%B3n-de-valpara%C3%ADso-por-riesgo-de-desborde-del-r%C3%ADo-aconcagua/ar-AA2hvG6O",
           "fecha": "2026-11-15T16:49:21-03:00"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://www.lanacion.cl/declaran-alerta-roja-en-cuatro-comunas-de-valparaiso-por-eventual-desborde-del-rio-aconcagua/",
+          "fecha": "2026-11-15T19:13:00-03:00"
         }
       ],
       "estado": "nuevo",

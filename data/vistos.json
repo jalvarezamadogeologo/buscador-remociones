@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-16T01:56:55-03:00",
-  "total": 628,
+  "actualizado": "2026-11-16T11:54:28-03:00",
+  "total": 632,
   "claves": {
     "d7b69219688b": {
       "titulo": "Avalancha en Los Andes chilenos causa al menos tres fallecidos en centro de esquí El Portillo",
@@ -3141,6 +3141,26 @@
       "titulo": "Crecida del río Huasco obliga a evacuar preventivamente a 29 personas en Freirina",
       "url": "https://www.latercera.com/nacional/noticia/crecida-del-rio-huasco-obliga-a-evacuar-preventivamente-a-29-personas-en-freirina/",
       "fecha": "2026-11-16T01:56:55-03:00"
+    },
+    "33d16a5156de": {
+      "titulo": "Declaran Alerta Roja en cuatro comunas de Valparaíso por eventual desborde del río Aconcagua",
+      "url": "https://www.lanacion.cl/declaran-alerta-roja-en-cuatro-comunas-de-valparaiso-por-eventual-desborde-del-rio-aconcagua/",
+      "fecha": "2026-11-16T11:54:28-03:00"
+    },
+    "00649fd10c1e": {
+      "titulo": "Declaran Alerta Roja para Concón, Quintero, Quillota y Limache por eventual desborde del río Aconcagua",
+      "url": "https://www.msn.com/es-cl/noticias/otras/declaran-alerta-roja-para-conc%C3%B3n-quintero-quillota-y-limache-por-eventual-desborde-del-r%C3%ADo-aconcagua/ar-AA2hxooV",
+      "fecha": "2026-11-16T11:54:28-03:00"
+    },
+    "405f41fb3740": {
+      "titulo": "Alerta Roja en Concón, Quintero, Quillota y Limache por amenaza de desborde del río Aconcagua",
+      "url": "https://eldesconcierto.cl/actualidad/alerta-roja-concon-quintero-quillota-y-limache-amenaza-desborde-del-rio-aconcagua-n5464067",
+      "fecha": "2026-11-16T11:54:28-03:00"
+    },
+    "f2832050e9ea": {
+      "titulo": "Carabineros rescata a familia que quedó aislada tras crecida del Río Maipo en Melipilla",
+      "url": "https://www.latercera.com/videos/noticia/carabineros-rescata-a-familia-que-quedo-aislada-tras-crecida-del-rio-maipo-en-melipilla/",
+      "fecha": "2026-11-16T11:54:28-03:00"
     }
   }
 }
