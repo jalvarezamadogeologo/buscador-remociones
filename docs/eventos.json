@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-16 11:54",
-  "total": 175,
+  "actualizado": "2026-11-16 22:37",
+  "total": 176,
   "eventos": [
+    {
+      "id": "46ed70bdb0ec",
+      "fecha_publicacion": "2026-11-16T19:45:00-03:00",
+      "fecha_deteccion": "2026-11-16T22:37:42-03:00",
+      "titulo": "A seis meses de su derrumbe, terminan las primeras obras de recuperación del Castillo San Pedro de Alcántara: monumento de 350 años será restaurado",
+      "evento": "Deslizamiento en Los Rios",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Los Rios",
+      "comuna": "",
+      "lat": "-39.974275",
+      "lon": "-72.667701",
+      "fuentes": [
+        {
+          "medio": "The Clinic",
+          "url": "https://www.theclinic.cl/2026/11/16/a-seis-meses-de-su-derrumbe-terminan-las-primeras-obras-de-recuperacion-del-castillo-san-pedro-de-alcantara-monumento-de-350-anos-sera-restaurado/",
+          "fecha": "2026-11-16T19:45:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "f2832050e9ea",
       "fecha_publicacion": "2026-11-16T10:14:41-03:00",
