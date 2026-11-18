@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-17 21:35",
-  "total": 178,
+  "actualizado": "2026-11-18 20:54",
+  "total": 179,
   "eventos": [
+    {
+      "id": "8d680d99078a",
+      "fecha_publicacion": "2026-11-18T13:37:28-03:00",
+      "fecha_deteccion": "2026-11-18T20:54:50-03:00",
+      "titulo": "Moradores de La Concepción exigen reparar peligroso socavón en arteria principal del norte de Quito",
+      "evento": "Socavón en Concepcion",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Biobio",
+      "comuna": "Concepcion",
+      "lat": "-36.827070",
+      "lon": "-73.050206",
+      "fuentes": [
+        {
+          "medio": "Teleamazonas",
+          "url": "https://www.teleamazonas.com/actualidad/reportajes-24horas/concepcion-socavon-norte-quito-133451/",
+          "fecha": "2026-11-18T13:37:28-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "17d4cb89b43c",
       "fecha_publicacion": "2026-11-17T18:30:53-03:00",
