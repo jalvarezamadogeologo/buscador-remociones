@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-11-16 22:37",
-  "total": 176,
+  "actualizado": "2026-11-17 21:35",
+  "total": 178,
   "eventos": [
+    {
+      "id": "17d4cb89b43c",
+      "fecha_publicacion": "2026-11-17T18:30:53-03:00",
+      "fecha_deteccion": "2026-11-17T21:35:13-03:00",
+      "titulo": "Encuentran cuerpo en pique minero de Copiapó En un socavón de 10 metros de profundidad arrojaron el cuerpo de un hombre en los sectores altos de Copiapó. Hasta el momento hay dos detenidos por su presunta participación en el homicidio.",
+      "evento": "Socavón en Copiapo",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Atacama",
+      "comuna": "Copiapo",
+      "lat": "-27.366468",
+      "lon": "-70.332275",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/Df25nTCTRBd/",
+          "fecha": "2026-11-17T18:30:53-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "1660d99734c9",
+      "fecha_publicacion": "2026-11-17T12:26:09-03:00",
+      "fecha_deteccion": "2026-11-17T21:35:13-03:00",
+      "titulo": "Reportan retraso vehicular en la carretera Panamericana este #17Nov por deslizamiento de tierra en el tramo Carrizal. El derrumbe se registra antes de llegar al kilómetro 18 San Antonio - Los Teques. Ya las autoridades se encuentran en el lugar. Noticia en",
+      "evento": "Deslizamiento en San Antonio",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Valparaiso",
+      "comuna": "San Antonio",
+      "lat": "-33.580861",
+      "lon": "-71.613238",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/Df2PmjZxlZK/",
+          "fecha": "2026-11-17T12:26:09-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "46ed70bdb0ec",
       "fecha_publicacion": "2026-11-16T19:45:00-03:00",
