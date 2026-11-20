@@ -226,5 +226,9 @@
   "temuco chile": {
     "lat": -38.7358908,
     "lon": -72.590538
+  },
+  "la araucania chile": {
+    "lat": -40.9071314,
+    "lon": -73.157326
   }
 }
