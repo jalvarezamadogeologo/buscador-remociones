@@ -1,7 +1,35 @@
 {
-  "actualizado": "2026-11-20 02:51",
-  "total": 185,
+  "actualizado": "2026-11-20 11:56",
+  "total": 186,
   "eventos": [
+    {
+      "id": "a388923969d3",
+      "fecha_publicacion": "2026-11-20T09:32:00-03:00",
+      "fecha_deteccion": "2026-11-20T11:56:30-03:00",
+      "titulo": "“Se vende”: El aluvión pone a prueba la plusvalía de San Carlos de Apoquindo",
+      "evento": "Aluvión / flujo de detritos en San Carlos",
+      "tipo_evento": "aluvion",
+      "tipo_etiqueta": "Aluvión / flujo de detritos",
+      "region": "Nuble",
+      "comuna": "San Carlos",
+      "lat": "-36.379228",
+      "lon": "-72.017953",
+      "fuentes": [
+        {
+          "medio": "Diario Financiero",
+          "url": "https://www.df.cl/senal-df/el-deal/se-vende-el-aluvion-pone-a-prueba-la-plusvalia-de-san-carlos-de",
+          "fecha": "2026-11-20T09:32:00-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/Df9p0NwHRg-/",
+          "fecha": "2026-11-20T10:49:53-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "eb67a84f70f5",
       "fecha_publicacion": "2026-11-19T20:59:18-03:00",
@@ -379,6 +407,11 @@
           "medio": "X",
           "url": "https://x.com/Salamanca__hoy/status/2122026132341952747",
           "fecha": "2026-11-15T14:57:09-03:00"
+        },
+        {
+          "medio": "La Crónica de Salamanca",
+          "url": "https://lacronicadesalamanca.com/703510-nuevo-desprendimiento-en-catedral-salamanca/",
+          "fecha": "2026-11-20T10:13:30-03:00"
         }
       ],
       "estado": "nuevo",
