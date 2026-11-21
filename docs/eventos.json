@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-21 11:16",
-  "total": 193,
+  "actualizado": "2026-11-21 19:47",
+  "total": 195,
   "eventos": [
     {
       "id": "2e81e767c678",
@@ -19,6 +19,52 @@
           "medio": "La Tercera",
           "url": "https://www.latercera.com/nacional/noticia/mas-de-2-mil-aislados-y-casi-40-viviendas-afectadas-se-registran-en-las-regiones-de-coquimbo-y-atacama/",
           "fecha": "2026-11-21T10:07:39-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "4daa5c364d39",
+      "fecha_publicacion": "2026-11-21T07:33:00-03:00",
+      "fecha_deteccion": "2026-11-21T19:47:48-03:00",
+      "titulo": "Marejadas anormales provocan desborde de estero e inundaciones en Laguna Verde",
+      "evento": "Desborde / inundación en Valparaiso",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Valparaiso",
+      "comuna": "Valparaiso",
+      "lat": "-32.597609",
+      "lon": "-70.852975",
+      "fuentes": [
+        {
+          "medio": "Chilevisión",
+          "url": "https://www.chilevision.cl/noticias/nacional/marejadas-anormales-provocan-desborde-de-estero-e-inundaciones-en-laguna-verde/",
+          "fecha": "2026-11-21T07:33:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "5d7ec5504206",
+      "fecha_publicacion": "2026-11-20T16:47:00-03:00",
+      "fecha_deteccion": "2026-11-21T19:47:48-03:00",
+      "titulo": "Desborde del canal Waddington provoca inundaciones en Limache: agua llegó hasta centro vacacional y abrieron compuertas",
+      "evento": "Desborde / inundación en Limache",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Valparaiso",
+      "comuna": "Limache",
+      "lat": "-33.001874",
+      "lon": "-71.265732",
+      "fuentes": [
+        {
+          "medio": "sabes",
+          "url": "https://sabes.cl/2026/11/21/desborde-del-canal-waddington-provoca-inundaciones-en-limache-agua-llego-hasta-centro-vacacional-y-abrieron-compuertas/",
+          "fecha": "2026-11-20T16:47:00-03:00"
         }
       ],
       "estado": "nuevo",

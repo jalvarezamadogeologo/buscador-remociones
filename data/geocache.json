@@ -230,5 +230,9 @@
   "la araucania chile": {
     "lat": -40.9071314,
     "lon": -73.157326
+  },
+  "limache chile": {
+    "lat": -33.0018741,
+    "lon": -71.2657315
   }
 }

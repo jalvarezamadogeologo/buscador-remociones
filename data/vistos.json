@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-21T11:16:43-03:00",
-  "total": 679,
+  "actualizado": "2026-11-21T19:47:48-03:00",
+  "total": 689,
   "claves": {
     "d7b69219688b": {
       "titulo": "Avalancha en Los Andes chilenos causa al menos tres fallecidos en centro de esquí El Portillo",
@@ -3396,6 +3396,56 @@
       "titulo": "Radio Buenísima PLC. Roger Henry · Trace the Road. Temuco: Reportan 30 lesionados tras derrumbe de tribuna en show de circo en Temuco: al menos 3 con fracturas",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNMTlKelJHaXpxVDdscGprQ0Jub0RsSjlEZWVNNTA1emxFUkhGeDQ4YlEtNGU4bmhqN2stOFJfYUdGd0lUWTNzcTNRcExSQjl0T05IQl9ON254ZnpTamdzbkppMWJEMXRKd2MxdFliM2E3Q3pKalJZQ1lMVDg4aHk3WXJYTDdWQ3prTDNFLUNyQnh1UU1mMDhSMklCNzY0cHd5RVJsaEs1dnhsejBOWlZ0bHhGeTI1SWxjaFZ2ZkdULU5yd2NJWWxVVzV5YkZWRUJyNXlwYmRhZFhIRjg?oc=5",
       "fecha": "2026-11-21T11:16:43-03:00"
+    },
+    "a8c2bd03b79e": {
+      "titulo": "Derrumbe de grada en circo deja 30 heridos en Temuco: Tres de ellas resultaron con lesiones graves",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVVYwYWZBQmdob0VuZGhMY2diN2pRM2lFdFp1SExxZnFaNnJtT0d3Vi1NbWROZGJpMWRHX1o1YjVtOUM1MEN0Z3pWRjJaUlJRSTBEN2RvYS1FLWV4M04wUEhBeEJQQzYzSkxEYWRxbktKc1VoTTctbGlxQXdidkx4anBPTXlMX2Y5OGFaV3NtUmJZQmFuMUo2bHFiakd4dHpQeVg3TVlKUlg3T0FjQzhaTl95UEJNdHhNQWFlSzg3UnFla2JtZXlB?oc=5",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "0a539011939d": {
+      "titulo": "Tres lesionados deja derrumbe de gradería en circo de Temuco - https://estapasando.cl/",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPejFvVVg2QmNkQWxLSHdCMmlaRGJ4c0gtRkctUlJxNWczYnF0eUhsRmRsZ21ld2dRdklHcFVmX0lsOW9xLVVZa2c5TG1CcEM4T20xa2xYUjE1WEVSWkVVTkpBVFdUYUdHVUdhc0JzSVVRaDRQYXllX19LRjBxX3I3X2MyQXY1RFdkVTBfSHZ1aVhPTTc1SkdEMQ?oc=5",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "5c4afe5bb3da": {
+      "titulo": "30 lesionados y 3 personas con fracturas tras derrumbe de tribuna de circo en Temuco",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWHhvOXZPUFJNWGdDV2s3cWwzZ21KdzBlMTQycE51eW5OMDAycXN2cW00RDZYV0ZodWRvUUlOcWVuaTZEa1pZOVFnZTRhNWdsWW1vY3k5RTdvOEZ5aGhBRG1ZRC1Ma2M5Mmo0THBOSmx2ZzE1U182Qzhwc21vSWJBYkRYUHJlNGR1M0p3WXBOQ2I1T1ZINE1Lb215SHZEUFdIa08waktzUy1wa0Y3YUhLNGR4a003ZDViazN5aGRWUmvSAbgBQVVfeXFMT0Y5VFk4cVFqZUJqLVBzb1ZBVU1aTlR0Zm5hYk9HNnBKbXU0SzYwbXJGUzhEdUNVN3dtS2U2Q2VqOUQ2bHVhV2ZGMURtMXhEVWJIWG51WDNWWFpBMmVSSkhac3RnRGk2a05kUDVfNS1OLWpxNjIyUU1OZTQwLWwwY21iUFp0c2FxMklBbnBZZ3YtbzFscTBmNlpoeDhtZEVhaWhYOEt3amRUdjNMZWR5WE9PcTMzX1pVRA?oc=5",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "f7ee50a1f8a3": {
+      "titulo": "Derrumbe en circo de Temuco deja tres lesionados: recinto aún tramitaba permiso municipal",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPeXJUX2ZYTzEyNjNlNDZTeS14dWRxb2VYUGpMYmRpOVNwOE9KdGwxUWxLOGlMSHdTcFczRFhtcGo3Nk8zQzlTaWo5YzR2aXlER0FVM01PUEl3eHQtWjV3MTdlXy1hTlBLQnBqZU14cUlLZlItVUZQYUN1TjlnZ1FCUHc3ckh4LU9KZTRqdzllOGZzakNfVENZMHQzQVoyQkJER0thbVVqNENrT2hBMmY5ZnkwakE2WWFpR3BEVmljMWVRQkhOVml1NXdYaFRXYlpQNl9GQ3YwQjQxTzIwLWVpS0VR?oc=5",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "8bfb6102d0dc": {
+      "titulo": "Tres personas resultan lesionadas tras derrumbe de gradería en circo de Temuco",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaWlya1VXQmgycjlWTC1KT2xNSkxSbXVha0ZoSk8tTVhUeFVqQnZOR2VFd1ZqZDRwWVhkWGFfWlA1S3RjWlVWZVEzQkhjYkN1X2x1MFFFT3ZybGZtVWVNMXI2OHJOTy0xWEYwWi1oM3ZNWnF1TllKMEZOREVrbWkyRmVhU0ItRWVha2dYeldoREpaTmotelNYY3A4MHFNT0dtNnppYjhKamRQV3Rwb0Z5OUtPVWZyY2stVmZaLUVkOGlwUFdpSkNPbFRCbEkyZjNwTGROYnllUmtKWkd0SlZmNdIB4AFBVV95cUxOaWlya1VXQmgycjlWTC1KT2xNSkxSbXVha0ZoSk8tTVhUeFVqQnZOR2VFd1ZqZDRwWVhkWGFfWlA1S3RjWlVWZVEzQkhjYkN1X2x1MFFFT3ZybGZtVWVNMXI2OHJOTy0xWEYwWi1oM3ZNWnF1TllKMEZOREVrbWkyRmVhU0ItRWVha2dYeldoREpaTmotelNYY3A4MHFNT0dtNnppYjhKamRQV3Rwb0Z5OUtPVWZyY2stVmZaLUVkOGlwUFdpSkNPbFRCbEkyZjNwTGROYnllUmtKWkd0SlZmNQ?oc=5",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "8a6100e5d841": {
+      "titulo": "Tres lesionados tras derrumbe de gradería en circo de Temuco: investigan causas del accidente",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTFVOWlotaEZwSGRtQVlEd1J6WWJRSHNPZjBSX1dqSDZ3WWJaU2lmcVowYjVIclRnblBiMnhyWHBqR3lDZFAzZ3NMM01WUkljdnlHc3N5RFg0Z1JVTTROeHJjdnRNazlwaGI5WjB5SlU5c3hRX2NsQ1FGM1lZZ3JFNnVrZ1RFc3N3YkNESGh1QnoxME5aeURpN0J4NndTTlJJbmZ5T01pZERtaTNmUk82M3NpRXBTc3hH?oc=5",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "5d7ec5504206": {
+      "titulo": "Desborde del canal Waddington provoca inundaciones en Limache: agua llegó hasta centro vacacional y abrieron compuertas",
+      "url": "https://sabes.cl/2026/11/21/desborde-del-canal-waddington-provoca-inundaciones-en-limache-agua-llego-hasta-centro-vacacional-y-abrieron-compuertas/",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "4daa5c364d39": {
+      "titulo": "Marejadas anormales provocan desborde de estero e inundaciones en Laguna Verde",
+      "url": "https://www.chilevision.cl/noticias/nacional/marejadas-anormales-provocan-desborde-de-estero-e-inundaciones-en-laguna-verde/",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "747974959a5e": {
+      "titulo": "🚨 EMERGENCIA EN TEMUCO: 30 PERSONAS AFECTADAS TRAS EL DERRUMBE DE UNA TRIBUNA DURANTE SHOW DE CIRCO. Momentos de preocupación se vivieron la noche de este viernes en Temuco, luego de que una de las galerías de un circo",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBEdUgxY2swUGU4QkFpZjRxd1FNVDN5eDFrX0JZSGEtNUEyYV9TMDU5emJONzZaeUxhMHdWcjV4TnlyZ3ZySlY5SHpRbldHUlhfdkE?oc=5",
+      "fecha": "2026-11-21T19:47:48-03:00"
+    },
+    "354cba249b67": {
+      "titulo": "Temuco: Reportan 30 lesionados tras derrumbe de tribuna en show de circo: al menos 3 con fracturas. 📌 Puede escuchar nuestra programación 24/7 🌏 https://www.buenisima.cl 📱 Descargar nuestra aplicación para Android: https://www.buenisima.cl/app 🔉 Di",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOek5keFdYSlYwSm00dFZCYzFQeXQ0UGRWbG9uWFhKUm8tMFdnR1JoYUY3LWowZTVvWlA0U0RBcC1ZeEpVdUp2bzBxemNkRkQ5SWhEWG9ScFdIN0djR2dqMDgxVmRwdDZGU21SRVhtU2c0LWc2VlMyY3lCa1hrSHozdHB2TlZnX0V0YlN1OFR5cDJHVzZLc203dHJoVW4yV0tDeWhleG5IMmtfMjUydnFKQy02NjNsRG5YLXVqaWFVT29FUTA0cFVFekRUY0dsVXVqNmUtWHI1NkxSUQ?oc=5",
+      "fecha": "2026-11-21T19:47:48-03:00"
     }
   }
 }
