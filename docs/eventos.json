@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-21 02:46",
-  "total": 192,
+  "actualizado": "2026-11-21 11:16",
+  "total": 193,
   "eventos": [
+    {
+      "id": "2e81e767c678",
+      "fecha_publicacion": "2026-11-21T10:07:39-03:00",
+      "fecha_deteccion": "2026-11-21T11:16:43-03:00",
+      "titulo": "Crecida de ríos en Atacama y Coquimbo: más de 2 mil aislados y casi 40 viviendas con daños desde mediados de noviembre",
+      "evento": "Desborde / inundación en Coquimbo",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Coquimbo",
+      "comuna": "Coquimbo",
+      "lat": "-30.754665",
+      "lon": "-70.900554",
+      "fuentes": [
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/mas-de-2-mil-aislados-y-casi-40-viviendas-afectadas-se-registran-en-las-regiones-de-coquimbo-y-atacama/",
+          "fecha": "2026-11-21T10:07:39-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "cd7057711c00",
       "fecha_publicacion": "2026-11-20T15:41:14-03:00",
@@ -312,6 +335,11 @@
           "medio": "Facebook",
           "url": "https://www.facebook.com/vozdelupano/posts/-estadovial-%F0%9D%90%84%F0%9D%90%9C%F0%9D%90%AE%F0%9D%9F%97%F0%9D%9F%8F%F0%9D%9F%8F-%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A6%F0%9D%90%9A-%F0%9D%90%9E%F0%9D%90%A5-%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%9A%F0%9D%90%9D%F0%9D%90%A8-%F0%9D%90%9D%F0%9D%90%9E-%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%AC-%F0%9D%90%AF%F0%9D%90%A2%CC%81%F0%9D%90%9A%F0%9D%90%AC-%F0%9D%90%9E%F0%9D%90%A7-%F0%9D%90%8C%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%9A-%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%A2%F0%9D%90%9A%F0%9D%90%A0%F0%9D%90%A8-fecha-19-de/1819496590181747/",
           "fecha": "2026-11-19T09:29:43-03:00"
+        },
+        {
+          "medio": "mediabanco",
+          "url": "https://www.mediabanco.com/aluvion-y-huelga-lo-que-impacta-la-imagen-digital-de-colegios-privados-al-cierre-del-ano/",
+          "fecha": "2026-11-20T21:08:00-03:00"
         }
       ],
       "estado": "nuevo",
@@ -342,9 +370,9 @@
           "fecha": "2026-11-20T23:12:12-03:00"
         },
         {
-          "medio": "Enfoque Digital TV",
-          "url": "https://enfoquedigital.cl/derrumbe-de-tribuna-en-circo-de-temuco-deja-30-afectados-y-tres-heridos-de-gravedad-trasladados-al-hospital-regional/",
-          "fecha": "2026-11-21T00:47:52-03:00"
+          "medio": "X",
+          "url": "https://x.com/biobio/status/2123964111004278842",
+          "fecha": "2026-11-20T23:18:00-03:00"
         }
       ],
       "estado": "nuevo",
