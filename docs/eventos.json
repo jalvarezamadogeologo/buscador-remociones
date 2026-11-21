@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-20 20:42",
-  "total": 190,
+  "actualizado": "2026-11-21 02:46",
+  "total": 192,
   "eventos": [
     {
       "id": "cd7057711c00",
@@ -19,6 +19,29 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/reel/Df-UeZ7BXbI/",
           "fecha": "2026-11-20T15:41:14-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "8b8dcf8616df",
+      "fecha_publicacion": "2026-11-20T14:44:02-03:00",
+      "fecha_deteccion": "2026-11-21T02:46:39-03:00",
+      "titulo": "#Atención | #Ibarra | Se registra un socavón en el ingreso al barrio Los Nogales, en San Antonio de Ibarra. Personal se encuentra en el punto de afectación con maquinaria para solucionar el problema.",
+      "evento": "Socavón en San Antonio",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Valparaiso",
+      "comuna": "San Antonio",
+      "lat": "-33.580861",
+      "lon": "-71.613238",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/elnortedigital/videos/atenci%C3%B3n-ibarra-se-registra-un-socav%C3%B3n-en-el-ingreso-al-barrio-los-nogales-en-sa/1798923551410609/",
+          "fecha": "2026-11-20T14:44:02-03:00"
         }
       ],
       "estado": "nuevo",
@@ -52,6 +75,29 @@
           "medio": "Meganoticias",
           "url": "https://www.meganoticias.cl/nacional/536899-camion-cae-socavon-puente-alto-presidente-alessandri-san-pedro-alcalde-matias-toledo-20-11-2026.html",
           "fecha": "2026-11-20T13:21:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "ac30b9e468c7",
+      "fecha_publicacion": "2026-11-20T09:59:01-03:00",
+      "fecha_deteccion": "2026-11-21T02:46:39-03:00",
+      "titulo": "Socavón de calle Fresia podría comenzar a repararse durante este año El proyecto presentado por la Municipalidad de Angol se encuentra próximo a iniciar su tramitación, lo que permitiría ejecutar las obras durante el tercer o cuarto trimestre, según informó",
+      "evento": "Socavón en Angol",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "La Araucania",
+      "comuna": "Angol",
+      "lat": "-37.798787",
+      "lon": "-72.708610",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/Df9te7uITJ6/",
+          "fecha": "2026-11-20T09:59:01-03:00"
         }
       ],
       "estado": "nuevo",
@@ -164,6 +210,11 @@
           "medio": "La Tercera",
           "url": "https://www.latercera.com/nacional/noticia/a-40-dias-del-aluvion-las-condes-registra-operativos-el-100-de-los-espacios-publicos-afectados/",
           "fecha": "2026-11-19T20:59:18-03:00"
+        },
+        {
+          "medio": "X",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTVVA1WkNoalBXM0liUnJ2aExGalpuVkV5VUFiT2M2SS1qXzVCXzRqYXI2ck9xODB2dXZxbTJoV3dLRWVWa2xDZEs4VGp4NEtTcUY1dTg0ODJrZUsxUTFR?oc=5",
+          "fecha": "2026-11-20T20:00:01-03:00"
         }
       ],
       "estado": "nuevo",
@@ -284,6 +335,16 @@
           "medio": "Alerta Noticias Temuco.cl",
           "url": "https://alertanoticiastemuco.cl/encuentran-2-cuerpos-de-la-familia-que-estaba-desaparecida-tras-deslizamiento-de-tierra-en-curarrehue/",
           "fecha": "2026-11-19T08:14:16-03:00"
+        },
+        {
+          "medio": "BioBioChile",
+          "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPclR0eHVtRnFNcDBzOGpEMU8zcE45MURFTVd6T1Nhdkt6THNIY1FkNVdPVE1aMVdUNTczUEtXakhRamdMY0dWdUFSU2FCcWhQVnJHN0U4Q0pDUUs0dm9PTXEtZ3VNaDRPSW81UHZPT1FHdW14X2h1bGtnX2lJQUZqSHphWlNzMXlMcXFpR0VCWkk0NkNjWFBMdnROVTNLZ3dsS1lISnk4YnlrOTVCV2d0Q2VWUldBU3haak9nOWVDN0RDcWpudU45Z09vOG1USFpXYXpTMUtPRmlTQzNiZTR3X3lEbU05T1RrNmp5cnZaTXJJOEpzUUY0?oc=5",
+          "fecha": "2026-11-20T23:12:12-03:00"
+        },
+        {
+          "medio": "Enfoque Digital TV",
+          "url": "https://enfoquedigital.cl/derrumbe-de-tribuna-en-circo-de-temuco-deja-30-afectados-y-tres-heridos-de-gravedad-trasladados-al-hospital-regional/",
+          "fecha": "2026-11-21T00:47:52-03:00"
         }
       ],
       "estado": "nuevo",
