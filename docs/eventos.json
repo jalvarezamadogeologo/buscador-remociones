@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-21 19:47",
-  "total": 195,
+  "actualizado": "2026-11-22 02:17",
+  "total": 196,
   "eventos": [
     {
       "id": "2e81e767c678",
@@ -26,6 +26,29 @@
       "motivo": ""
     },
     {
+      "id": "0fc4f2452c45",
+      "fecha_publicacion": "2026-11-21T08:00:14-03:00",
+      "fecha_deteccion": "2026-11-22T02:17:19-03:00",
+      "titulo": "#Urgentebo | La concejal, Casimira Lema, informó que se produjo un deslizamiento de más de 3.000 metros cuadrados en Sak'a Churu II, el sector del relleno sanitario de La Paz, lo que estaría poniendo en riesgo una celda operada por Colina y otra de resi",
+      "evento": "Deslizamiento en Colina",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Metropolitana",
+      "comuna": "Colina",
+      "lat": "-33.202472",
+      "lon": "-70.674915",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/Urgente.boPeriodico/posts/urgentebo-la-concejal-casimira-lema-inform%C3%B3-que-se-produjo-un-deslizamiento-de-m/1650248727114965/",
+          "fecha": "2026-11-21T08:00:14-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
       "id": "4daa5c364d39",
       "fecha_publicacion": "2026-11-21T07:33:00-03:00",
       "fecha_deteccion": "2026-11-21T19:47:48-03:00",
@@ -42,6 +65,11 @@
           "medio": "Chilevisión",
           "url": "https://www.chilevision.cl/noticias/nacional/marejadas-anormales-provocan-desborde-de-estero-e-inundaciones-en-laguna-verde/",
           "fecha": "2026-11-21T07:33:00-03:00"
+        },
+        {
+          "medio": "La Tercera",
+          "url": "https://www.latercera.com/nacional/noticia/marejadas-provocan-inundaciones-en-laguna-verde-20-familias-resultaron-afectadas/",
+          "fecha": "2026-11-22T00:32:34-03:00"
         }
       ],
       "estado": "nuevo",
