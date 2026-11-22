@@ -1,7 +1,81 @@
 {
-  "actualizado": "2026-11-22 02:17",
-  "total": 196,
+  "actualizado": "2026-11-22 11:06",
+  "total": 199,
   "eventos": [
+    {
+      "id": "b8180d5e86ee",
+      "fecha_publicacion": "2026-11-22T08:12:42-03:00",
+      "fecha_deteccion": "2026-11-22T11:06:50-03:00",
+      "titulo": "Reportan socavón de 3 x 5 metros frente al Centro Comercial El Progreso en Iquique",
+      "evento": "Socavón en Iquique",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Tarapaca",
+      "comuna": "Iquique",
+      "lat": "-20.214066",
+      "lon": "-70.152465",
+      "fuentes": [
+        {
+          "medio": "El Reportero de Iquique",
+          "url": "https://elreporterodeiquique.com/reportan-socavon-de-3-x-5-metros-frente-al-centro-comercial-el-progreso-en-iquique/",
+          "fecha": "2026-11-22T08:12:42-03:00"
+        },
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DgCwnx5DgB7/",
+          "fecha": "2026-11-22T09:02:47-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "2aaed61beff8",
+      "fecha_publicacion": "2026-11-21T21:15:00-03:00",
+      "fecha_deteccion": "2026-11-22T11:06:50-03:00",
+      "titulo": "Postales del derrumbe industrial: Pauny, 450 empleos directos en riesgo y una apertura importadora descontrolada Con plantas en Las Varillas, Córdoba, y La Banda, Santiago de Estero, atraviesa una crisis profunda. Adeuda dos meses de salarios y no hay",
+      "evento": "Deslizamiento en Santiago",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/radiografica893/status/2124295546215260474",
+          "fecha": "2026-11-21T21:15:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "03191e6d67c4",
+      "fecha_publicacion": "2026-11-21T16:26:00-03:00",
+      "fecha_deteccion": "2026-11-22T11:06:50-03:00",
+      "titulo": "Cogió señal desde el socavón y anunció que le otorgó poder al abogado Santiago Trespalacios.",
+      "evento": "Socavón en Santiago",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Metropolitana",
+      "comuna": "Santiago",
+      "lat": "-33.437700",
+      "lon": "-70.651067",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/sermeca/status/2124222817508209029",
+          "fecha": "2026-11-21T16:26:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "2e81e767c678",
       "fecha_publicacion": "2026-11-21T10:07:39-03:00",
@@ -19,6 +93,11 @@
           "medio": "La Tercera",
           "url": "https://www.latercera.com/nacional/noticia/mas-de-2-mil-aislados-y-casi-40-viviendas-afectadas-se-registran-en-las-regiones-de-coquimbo-y-atacama/",
           "fecha": "2026-11-21T10:07:39-03:00"
+        },
+        {
+          "medio": "Cooperativa",
+          "url": "https://www.cooperativa.cl/noticias/pais/desastres-naturales/inundaciones/deshielos-crecidas-de-rios-dejan-2-032-aislados-y-diversos-danos-en/2026-11-22/101523.html",
+          "fecha": "2026-11-22T10:15:23-03:00"
         }
       ],
       "estado": "nuevo",
