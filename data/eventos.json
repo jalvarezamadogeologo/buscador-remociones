@@ -1,6 +1,31 @@
 {
-  "total": 199,
+  "total": 200,
   "eventos": [
+    {
+      "id": "a40c743ffd03",
+      "fecha_publicacion": "2026-11-23T09:29:51-03:00",
+      "fecha_deteccion": "2026-11-23T14:29:49-03:00",
+      "titulo": "🌧️ EJÉRCITO EVACÚA A FAMILIAS TRAS DESLIZAMIENTO DE TIERRA EN LOS RÍOS El Ejército Ecuatoriano realizó una evacuación de emergencia en la parroquia Zapotal, cantón Ventanas, provincia de Los Ríos, luego de un deslizamiento de tierra regi",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Los Rios",
+      "comuna": "",
+      "lat": "-39.974275",
+      "lon": "-72.667701",
+      "fuente_1": "Instagram",
+      "url_1": "https://www.instagram.com/p/DgFYh2QhOe4/",
+      "fecha_1": "2026-11-23T09:29:51-03:00",
+      "fuente_2": "",
+      "url_2": "",
+      "fecha_2": "",
+      "fuente_3": "",
+      "url_3": "",
+      "fecha_3": "",
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
+      "issue": "179"
+    },
     {
       "id": "b8180d5e86ee",
       "fecha_publicacion": "2026-11-22T08:12:42-03:00",
