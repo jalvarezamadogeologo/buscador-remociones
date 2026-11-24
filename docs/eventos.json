@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-11-23 14:29",
-  "total": 200,
+  "actualizado": "2026-11-24 00:50",
+  "total": 202,
   "eventos": [
+    {
+      "id": "25105dfb4a11",
+      "fecha_publicacion": "2026-11-23T22:45:57-03:00",
+      "fecha_deteccion": "2026-11-24T00:50:43-03:00",
+      "titulo": "Derrumbe de antigua vivienda se registró en pleno centro de Copiapó",
+      "evento": "Deslizamiento en Copiapo",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Atacama",
+      "comuna": "Copiapo",
+      "lat": "-27.366468",
+      "lon": "-70.332275",
+      "fuentes": [
+        {
+          "medio": "Medio digital El Zorro Nortino",
+          "url": "https://www.elzorronortino.cl/actualidad/derrumbe-de-antigua-vivienda-se-registro-en-pleno-centro-de-copiapo/",
+          "fecha": "2026-11-23T22:45:57-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "baja",
+      "motivo": "derrumbe de una estructura sin evidencia de terreno ('derrumbe de antigua vivienda')"
+    },
+    {
+      "id": "72fa9f974dfa",
+      "fecha_publicacion": "2026-11-23T19:32:00-03:00",
+      "fecha_deteccion": "2026-11-24T00:50:43-03:00",
+      "titulo": "Inundaciones y deslizamientos de tierra afectan a varios cantones de Los Ríos",
+      "evento": "Desborde / inundación en Los Rios",
+      "tipo_evento": "desborde_inundacion",
+      "tipo_etiqueta": "Desborde / inundación",
+      "region": "Los Rios",
+      "comuna": "",
+      "lat": "-39.974275",
+      "lon": "-72.667701",
+      "fuentes": [
+        {
+          "medio": "El Universo",
+          "url": "https://www.eluniverso.com/comunidad/ecuador/inundaciones-y-deslizamientos-de-tierra-afectan-a-varios-cantones-de-los-rios-nota/",
+          "fecha": "2026-11-23T19:32:00-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "a40c743ffd03",
       "fecha_publicacion": "2026-11-23T09:29:51-03:00",
@@ -19,6 +65,11 @@
           "medio": "Instagram",
           "url": "https://www.instagram.com/p/DgFYh2QhOe4/",
           "fecha": "2026-11-23T09:29:51-03:00"
+        },
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/revistavistazo/posts/un-deslizamiento-de-tierra-y-lodo-provoc%C3%B3-la-muerte-de-dos-adolescentes-y-dej%C3%B3-t/1622440419911470/",
+          "fecha": "2026-11-23T18:59:17-03:00"
         }
       ],
       "estado": "nuevo",
