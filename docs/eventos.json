@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-24 14:00",
-  "total": 203,
+  "actualizado": "2026-11-24 22:56",
+  "total": 204,
   "eventos": [
+    {
+      "id": "ea29837c319d",
+      "fecha_publicacion": "2026-11-24T18:01:30-03:00",
+      "fecha_deteccion": "2026-11-24T22:56:10-03:00",
+      "titulo": "🔴 La intensa lluvia registrada este martes provocó el desprendimiento de una parte de la capa asfáltica sobre el Boulevard Yegros y Paso Pucú, frente a una conocida estación de servicios de Villarrica. El agua habría arrastrado parte del pavimento, dejando",
+      "evento": "Caída de rocas en Villarrica",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "La Araucania",
+      "comuna": "Villarrica",
+      "lat": "-39.278091",
+      "lon": "-72.227436",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/radiopanambivera/posts/la-intensa-lluvia-registrada-este-martes-provoc%C3%B3-el-desprendimiento-de-una-parte/1790292313106406/",
+          "fecha": "2026-11-24T18:01:30-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "e9bf5eb085c0",
       "fecha_publicacion": "2026-11-24T01:20:08-03:00",
@@ -174,14 +197,14 @@
           "fecha": "2026-11-21T16:26:00-03:00"
         },
         {
-          "medio": "Instagram",
-          "url": "https://www.instagram.com/p/DgH1q52BF6z/",
-          "fecha": "2026-11-24T08:22:58-03:00"
+          "medio": "El Correo Gallego on MSN",
+          "url": "https://www.msn.com/es-es/noticias/otras/un-socav%C3%B3n-en-la-avenida-de-barcelona-corta-uno-de-los-accesos-al-chus-y-complica-el-tr%C3%A1fico-en-santiago/ar-AA2i8jg1",
+          "fecha": "2026-11-23T23:27:14-03:00"
         },
         {
-          "medio": "El Español",
-          "url": "https://www.elespanol.com/quincemil/santiago/20261124/gran-socavon-obliga-desviar-trafico-acceso-hospital-santiago-afecta-m2/1003744470034_0.html",
-          "fecha": "2026-11-24T09:19:24-03:00"
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/reel/DgHr4iGqOQk/",
+          "fecha": "2026-11-24T06:58:12-03:00"
         }
       ],
       "estado": "nuevo",
