@@ -1,7 +1,30 @@
 {
-  "actualizado": "2026-11-24 22:56",
-  "total": 204,
+  "actualizado": "2026-11-25 13:51",
+  "total": 205,
   "eventos": [
+    {
+      "id": "86e5ab3f5f2b",
+      "fecha_publicacion": "2026-11-25T08:27:51-03:00",
+      "fecha_deteccion": "2026-11-25T13:51:05-03:00",
+      "titulo": "Luego de que escombros del derrumbe cayeran sobre Waterloo Street, funcionarios del Departamento de Transporte de Los Ángeles desviaron el tráfico.",
+      "evento": "Deslizamiento en Los Angeles",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Biobio",
+      "comuna": "Los Angeles",
+      "lat": "-37.470745",
+      "lon": "-72.351686",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/Telemundo52/posts/luego-de-que-escombros-del-derrumbe-cayeran-sobre-waterloo-street-funcionarios-d/1578642997632411/",
+          "fecha": "2026-11-25T08:27:51-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "ea29837c319d",
       "fecha_publicacion": "2026-11-24T18:01:30-03:00",
@@ -202,9 +225,9 @@
           "fecha": "2026-11-23T23:27:14-03:00"
         },
         {
-          "medio": "Instagram",
-          "url": "https://www.instagram.com/reel/DgHr4iGqOQk/",
-          "fecha": "2026-11-24T06:58:12-03:00"
+          "medio": "El Español on MSN",
+          "url": "https://www.msn.com/es-es/noticias/otras/un-gran-socav%C3%B3n-obliga-a-desviar-el-tr%C3%A1fico-de-acceso-al-hospital-de-santiago-afecta-a-unos-12-m2/ar-AA2i7Xk4",
+          "fecha": "2026-11-24T02:19:24-03:00"
         }
       ],
       "estado": "nuevo",
