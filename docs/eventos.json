@@ -1,7 +1,53 @@
 {
-  "actualizado": "2026-11-25 13:51",
-  "total": 205,
+  "actualizado": "2026-11-25 22:36",
+  "total": 207,
   "eventos": [
+    {
+      "id": "af1f84d82288",
+      "fecha_publicacion": "2026-11-25T16:54:04-03:00",
+      "fecha_deteccion": "2026-11-25T22:36:32-03:00",
+      "titulo": "🚨 #CierreVialQuito | ¡Por socavón en la vía! 📍 Sector: La Florida 🛣️ Dirección: av. de la Prensa y av. la Florida 🚧 Cierre: sobre la av. la Florida 👮‍♂️ Personal operativo de la AMT se encuentra en el lugar gestionando la movilidad. ⚠️ Reduce la velocidad y c",
+      "evento": "Socavón en La Florida",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Metropolitana",
+      "comuna": "La Florida",
+      "lat": "-33.520418",
+      "lon": "-70.600618",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/AMT_Quito/status/2125679432178221178",
+          "fecha": "2026-11-25T16:54:04-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "b4235468a9db",
+      "fecha_publicacion": "2026-11-25T11:27:14-03:00",
+      "fecha_deteccion": "2026-11-25T22:36:32-03:00",
+      "titulo": "⚠️ CAUQUENES: SOCAVÓN EN CALLE CHACABUCO GENERA PREOCUPACIÓN ENTRE LOS VECINOS Preocupación genera la aparición de un socavón en plena calzada de calle Chacabuco, casi esquina de Bascuñán, en la ciudad de Cauquenes, sit",
+      "evento": "Socavón en Cauquenes",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Maule",
+      "comuna": "Cauquenes",
+      "lat": "-35.967129",
+      "lon": "-72.315427",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DgKvjXgD4az/",
+          "fecha": "2026-11-25T11:27:14-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "86e5ab3f5f2b",
       "fecha_publicacion": "2026-11-25T08:27:51-03:00",
