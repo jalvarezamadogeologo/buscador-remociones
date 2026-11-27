@@ -242,5 +242,9 @@
   "villarrica chile": {
     "lat": -39.2780911,
     "lon": -72.2274364
+  },
+  "vina del mar chile": {
+    "lat": -33.0244535,
+    "lon": -71.5517636
   }
 }

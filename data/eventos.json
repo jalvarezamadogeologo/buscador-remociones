@@ -1,6 +1,31 @@
 {
-  "total": 207,
+  "total": 208,
   "eventos": [
+    {
+      "id": "5e2c01b116a2",
+      "fecha_publicacion": "2026-11-26T16:32:32-03:00",
+      "fecha_deteccion": "2026-11-26T22:30:29-03:00",
+      "titulo": "Tribunal condena al Fisco a indemnizar por socavón en Viña del Mar",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Valparaiso",
+      "comuna": "Vina del Mar",
+      "lat": "-33.024453",
+      "lon": "-71.551764",
+      "fuente_1": "Enfoque Digital TV",
+      "url_1": "https://enfoquedigital.cl/tribunal-condena-al-fisco-a-indemnizar-por-socavon-en-vina-del-mar/",
+      "fecha_1": "2026-11-26T16:32:32-03:00",
+      "fuente_2": "",
+      "url_2": "",
+      "fecha_2": "",
+      "fuente_3": "",
+      "url_3": "",
+      "fecha_3": "",
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": "",
+      "issue": "187"
+    },
     {
       "id": "af1f84d82288",
       "fecha_publicacion": "2026-11-25T16:54:04-03:00",
