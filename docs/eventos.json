@@ -1,7 +1,122 @@
 {
-  "actualizado": "2026-11-26 22:30",
-  "total": 208,
+  "actualizado": "2026-11-27 13:13",
+  "total": 214,
   "eventos": [
+    {
+      "id": "c4e9074d70ab",
+      "fecha_publicacion": "2026-11-27T12:58:26-03:00",
+      "fecha_deteccion": "2026-11-27T13:13:20-03:00",
+      "titulo": "Esquiadores se salvan de impactante avalancha en el Cajón del Maipo 🔴 Un grupo de esquiadores logró ponerse a salvo tras enfrentar una avalancha este jueves en el sector de Punta Valdez, Región Metropolitana. Los deportistas escaparon refugiándose",
+      "evento": "Alud / avalancha en Metropolitana",
+      "tipo_evento": "alud",
+      "tipo_etiqueta": "Alud / avalancha",
+      "region": "Metropolitana",
+      "comuna": "",
+      "lat": "-33.573934",
+      "lon": "-70.620552",
+      "fuentes": [
+        {
+          "medio": "Instagram",
+          "url": "https://www.instagram.com/p/DgP5OatBkeW/",
+          "fecha": "2026-11-27T12:58:26-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "3f1c82d688f9",
+      "fecha_publicacion": "2026-11-27T10:46:01-03:00",
+      "fecha_deteccion": "2026-11-27T13:13:20-03:00",
+      "titulo": "#ATENCION | Un socavón provocó el colapso de un puente sobre el río Cristal en Montalvo, provincia de Los Ríos. El hecho cerró una vía rural y no dejó heridos. El servicio de emergencia coordinó asistencia inmediata con la Policía Nacional y la Comisión",
+      "evento": "Socavón en Los Rios",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Los Rios",
+      "comuna": "",
+      "lat": "-39.974275",
+      "lon": "-72.667701",
+      "fuentes": [
+        {
+          "medio": "Facebook",
+          "url": "https://www.facebook.com/radiocentroec/posts/atencion-un-socav%C3%B3n-provoc%C3%B3-el-colapso-de-un-puente-sobre-el-r%C3%ADo-cristal-en-mont/1737769714606076/",
+          "fecha": "2026-11-27T10:46:01-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "d6e596ec2f41",
+      "fecha_publicacion": "2026-11-27T00:56:55-03:00",
+      "fecha_deteccion": "2026-11-27T13:13:20-03:00",
+      "titulo": "Preocupación por desprendimiento de revestimiento en la Plaza Goleta Ancud: municipio exigirá reparaciones a empresa constructora",
+      "evento": "Caída de rocas en Ancud",
+      "tipo_evento": "caida_rocas",
+      "tipo_etiqueta": "Caída de rocas",
+      "region": "Los Lagos",
+      "comuna": "Ancud",
+      "lat": "-41.868216",
+      "lon": "-73.828722",
+      "fuentes": [
+        {
+          "medio": "Radio Magallanes",
+          "url": "https://radiomagallanes.cl/preocupacion-por-desprendimiento-de-revestimiento-en-la-plaza-goleta-ancud-municipio-exigira-reparaciones-a-empresa-constructora/",
+          "fecha": "2026-11-27T00:56:55-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "2d4e264d31ee",
+      "fecha_publicacion": "2026-11-26T23:00:01-03:00",
+      "fecha_deteccion": "2026-11-27T13:13:20-03:00",
+      "titulo": "Un deslizamiento de tierra se registró en el recinto Valparaíso, perteneciente a la parroquia Febres Cordero, provincia de Los Ríos. El movimiento de tierra estaría relacionado con las intensas precipitaciones y las condiciones climáticas adversas. . La emerg",
+      "evento": "Deslizamiento en Valparaiso",
+      "tipo_evento": "deslizamiento",
+      "tipo_etiqueta": "Deslizamiento",
+      "region": "Valparaiso",
+      "comuna": "Valparaiso",
+      "lat": "-32.597609",
+      "lon": "-70.852975",
+      "fuentes": [
+        {
+          "medio": "X",
+          "url": "https://x.com/sucrenoticiasec/status/2126133916171911248",
+          "fecha": "2026-11-26T23:00:01-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "4586fabb65a2",
+      "fecha_publicacion": "2026-11-26T18:09:44-03:00",
+      "fecha_deteccion": "2026-11-27T13:13:20-03:00",
+      "titulo": "Justicia responsabiliza al Fisco por socavón en Viña y le ordena compensar al propietario de departamento evacuado",
+      "evento": "Socavón en Chile",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "",
+      "comuna": "",
+      "lat": "",
+      "lon": "",
+      "fuentes": [
+        {
+          "medio": "El Informador Chile",
+          "url": "https://www.elinformadorchile.cl/2026/11/26/justicia-responsabiliza-al-fisco-por-socavon-en-vina-y-le-ordena-compensar-al-propietario-de-departamento-evacuado/",
+          "fecha": "2026-11-26T18:09:44-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
     {
       "id": "5e2c01b116a2",
       "fecha_publicacion": "2026-11-26T16:32:32-03:00",
@@ -19,6 +134,29 @@
           "medio": "Enfoque Digital TV",
           "url": "https://enfoquedigital.cl/tribunal-condena-al-fisco-a-indemnizar-por-socavon-en-vina-del-mar/",
           "fecha": "2026-11-26T16:32:32-03:00"
+        }
+      ],
+      "estado": "nuevo",
+      "confianza": "alta",
+      "motivo": ""
+    },
+    {
+      "id": "42e135e96ffb",
+      "fecha_publicacion": "2026-11-26T03:50:00-03:00",
+      "fecha_deteccion": "2026-11-27T13:13:20-03:00",
+      "titulo": "Justicia culpa a Fisco por socavón en Viña y lo obliga a indemnizar a dueño de departamento desalojado",
+      "evento": "Socavón en Valparaiso",
+      "tipo_evento": "socavon",
+      "tipo_etiqueta": "Socavón",
+      "region": "Valparaiso",
+      "comuna": "Valparaiso",
+      "lat": "-32.597609",
+      "lon": "-70.852975",
+      "fuentes": [
+        {
+          "medio": "La Tercera on MSN",
+          "url": "https://www.msn.com/es-cl/noticias/other/justicia-culpa-a-fisco-por-socav%C3%B3n-en-vi%C3%B1a-y-lo-obliga-a-indemnizar-a-due%C3%B1o-de-departamento-desalojado/ar-AA2iivOR",
+          "fecha": "2026-11-26T03:50:00-03:00"
         }
       ],
       "estado": "nuevo",
